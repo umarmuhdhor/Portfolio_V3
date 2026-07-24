@@ -1,0 +1,51 @@
+/* Header — measured from the reference's fixed bar. */
+.site-header {
+  color: #fff;
+  left: 0;
+  mix-blend-mode: difference;
+  padding: 20rem 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+@media (max-width: 767.98px) {
+  .site-header {
+    padding: 10rem 0;
+  }
+}
+
+.site-header a,
+.site-header button {
+  pointer-events: all;
+}
+
+.site-header__row {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.site-header__brand {
+  overflow: hidden;
+  width: 103rem;
+}
+
+.site-header__nav {
+  align-items: center;
+  display: flex;
+  gap: 0.5em;
+}
+
+.site-header__nav li {
+  overflow: hidden;
+}
+
+.site-header__nav .link {
+  display: block;
+  padding-bottom: 0.05em;
+  will-change: transform;
+}

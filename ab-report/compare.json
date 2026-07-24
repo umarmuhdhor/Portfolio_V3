@@ -1,0 +1,1512 @@
+{
+  "pass": 91,
+  "total": 131,
+  "zeroPass": 34,
+  "zeroTotal": 46,
+  "results": [
+    {
+      "id": 1,
+      "tier": "zero",
+      "group": "root",
+      "name": "root font-size formula (desktop)",
+      "expected": "0.0520833333vw  [ref: present]",
+      "actual": "0.0520833vw | 0.266667vw",
+      "ok": true
+    },
+    {
+      "id": 2,
+      "tier": "zero",
+      "group": "root",
+      "name": "root font-size formula (mobile)",
+      "expected": "0.2666666667vw  [ref: present]",
+      "actual": "0.0520833vw | 0.266667vw",
+      "ok": true
+    },
+    {
+      "id": 3,
+      "tier": "zero",
+      "group": "root",
+      "name": "1rem resolves to 1px",
+      "expected": "1px",
+      "actual": "1px",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 4,
+      "tier": "zero",
+      "group": "root",
+      "name": "1rem resolves to 0.75px",
+      "expected": "0.75px",
+      "actual": "0.75px",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 5,
+      "tier": "zero",
+      "group": "root",
+      "name": "1rem resolves to 1px",
+      "expected": "1px",
+      "actual": "1px",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 6,
+      "tier": "zero",
+      "group": "breakpoint",
+      "name": "(max-width:767.98px) declared",
+      "expected": "(max-width:767.98px)",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 7,
+      "tier": "zero",
+      "group": "breakpoint",
+      "name": "(min-width:767.99px) declared",
+      "expected": "(min-width:767.99px)",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 8,
+      "tier": "zero",
+      "group": "breakpoint",
+      "name": "no breakpoint outside the reference set",
+      "expected": "none",
+      "actual": "none",
+      "ok": true
+    },
+    {
+      "id": 9,
+      "tier": "zero",
+      "group": "grid",
+      "name": "grid-template-columns: repeat(15, 1fr)",
+      "expected": "repeat(15, 1fr)",
+      "actual": "repeat(15, 1fr)",
+      "ok": true
+    },
+    {
+      "id": 10,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #000 present",
+      "expected": "#000",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 11,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #fff present",
+      "expected": "#fff",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 12,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #e2e2e2 present",
+      "expected": "#e2e2e2",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 13,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #eee present",
+      "expected": "#eee",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 14,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #f0f0f0 present",
+      "expected": "#f0f0f0",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 15,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #ccc present",
+      "expected": "#ccc",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 16,
+      "tier": "zero",
+      "group": "palette",
+      "name": "core colour #929292 present",
+      "expected": "#929292",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 17,
+      "tier": "zero",
+      "group": "palette",
+      "name": "no colour outside the reference palette",
+      "expected": "none invented",
+      "actual": "rgba(0, 0, 0, 0)",
+      "ok": false
+    },
+    {
+      "id": 18,
+      "tier": "zero",
+      "group": "type",
+      "name": "every rem font-size is on the reference type scale",
+      "expected": "9 12 14 16 18 19 26 30 36 40 80 118 175 200 400",
+      "actual": "all on scale",
+      "ok": true
+    },
+    {
+      "id": 19,
+      "tier": "zero",
+      "group": "motion",
+      "name": "the easing curve is declared",
+      "expected": "cubic-bezier(0.17, 0.84, 0.44, 1)",
+      "actual": "ease | cubic-bezier(.17,.84,.44,1) | linear",
+      "ok": true
+    },
+    {
+      "id": 20,
+      "tier": "zero",
+      "group": "motion",
+      "name": "no timing function outside the reference set",
+      "expected": "none",
+      "actual": "ease, cubic-bezier(.17,.84,.44,1)",
+      "ok": false
+    },
+    {
+      "id": 21,
+      "tier": "zero",
+      "group": "motion",
+      "name": "duration 0.3s declared",
+      "expected": "0.3s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 22,
+      "tier": "zero",
+      "group": "motion",
+      "name": "duration 0.4s declared",
+      "expected": "0.4s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 23,
+      "tier": "zero",
+      "group": "motion",
+      "name": "duration 0.5s declared",
+      "expected": "0.5s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 24,
+      "tier": "zero",
+      "group": "motion",
+      "name": "duration 0.6s declared",
+      "expected": "0.6s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 25,
+      "tier": "zero",
+      "group": "motion",
+      "name": "duration 1.109s declared",
+      "expected": "1.109s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "id": 26,
+      "tier": "zero",
+      "group": "motion",
+      "name": "no duration outside the reference set",
+      "expected": "none",
+      "actual": "none",
+      "ok": true
+    },
+    {
+      "id": 27,
+      "tier": "zero",
+      "group": "motion",
+      "name": "@keyframes count",
+      "expected": "0",
+      "actual": "0",
+      "ok": true
+    },
+    {
+      "id": 28,
+      "tier": "zero",
+      "group": "tokens",
+      "name": "--space-general: 2em",
+      "expected": "2em",
+      "actual": "2em",
+      "ok": true
+    },
+    {
+      "id": 29,
+      "tier": "zero",
+      "group": "tokens",
+      "name": "--space-heading: 1em",
+      "expected": "1em",
+      "actual": "1em",
+      "ok": true
+    },
+    {
+      "id": 30,
+      "tier": "zero",
+      "group": "tokens",
+      "name": "--off: 0.5em",
+      "expected": "0.5em",
+      "actual": ".5em",
+      "ok": true
+    },
+    {
+      "id": 31,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 1: grid-column / margin-top / frame height",
+      "expected": "1 / 8 · 0rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 32,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 2: grid-column / margin-top / frame height",
+      "expected": "9 / -1 · 170rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 33,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 3: grid-column / margin-top / frame height",
+      "expected": "1 / 5 · 416rem · 700rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 34,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 4: grid-column / margin-top / frame height",
+      "expected": "6 / 12 · 188rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 35,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 5: grid-column / margin-top / frame height",
+      "expected": "8 / 15 · -214rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 36,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 6: grid-column / margin-top / frame height",
+      "expected": "5 / 9 · 178rem · 700rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 37,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 7: grid-column / margin-top / frame height",
+      "expected": "1 / 8 · 323rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 38,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 8: grid-column / margin-top / frame height",
+      "expected": "9 / -1 · 154rem · 540rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 39,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 9: grid-column / margin-top / frame height",
+      "expected": "2 / 8 · 638rem · 500rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 40,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "card 10: grid-column / margin-top / frame height",
+      "expected": "11 / -2 · 100rem · 700rem",
+      "actual": "no staggered rules found",
+      "ok": false
+    },
+    {
+      "id": 41,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "body uses the sans",
+      "expected": "sans",
+      "actual": "sans",
+      "ok": true
+    },
+    {
+      "id": 42,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "nav-link uses the sans",
+      "expected": "sans",
+      "actual": "sans",
+      "ok": true
+    },
+    {
+      "id": 43,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "nav-counter uses the sans",
+      "expected": "sans",
+      "actual": "sans",
+      "ok": true
+    },
+    {
+      "id": 44,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "h2 uses the serif",
+      "expected": "serif",
+      "actual": "serif",
+      "ok": true
+    },
+    {
+      "id": 45,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "body-1 uses the sans",
+      "expected": "sans",
+      "actual": "sans",
+      "ok": true
+    },
+    {
+      "id": 46,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "body-2 uses the sans",
+      "expected": "sans",
+      "actual": "sans",
+      "ok": true
+    },
+    {
+      "id": 47,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 48,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 49,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 50,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].w",
+      "expected": "0.9688 ±0.5%",
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 51,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 52,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 53,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 54,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 55,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].x",
+      "expected": "0.8821 ±2.0%",
+      "actual": "0.8816 (Δ0.05%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 56,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].w",
+      "expected": "0.0202 ±2.0%",
+      "actual": "0.0199 (Δ0.03%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 57,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].x",
+      "expected": "0.9065 ±2.0%",
+      "actual": "0.9057 (Δ0.08%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 58,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].w",
+      "expected": "0.0199 ±2.0%",
+      "actual": "0.0203 (Δ0.04%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 59,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].x",
+      "expected": "0.9305 ±2.0%",
+      "actual": "0.9302 (Δ0.04%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 60,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].w",
+      "expected": "0.0222 ±2.0%",
+      "actual": "0.0216 (Δ0.06%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 61,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].x",
+      "expected": "0.9569 ±2.0%",
+      "actual": "0.9560 (Δ0.10%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 62,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].w",
+      "expected": "0.0274 ±2.0%",
+      "actual": "0.0284 (Δ0.10%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 63,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 64,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.0536 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 65,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 66,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].w",
+      "expected": "0.9688 ±2.0%",
+      "actual": "0.7077 (Δ26.11%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 67,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 68,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.4465 (Δ39.29%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 69,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].x",
+      "expected": "0.8821 ±2.0%",
+      "actual": "0.7337 (Δ14.84%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 70,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].w",
+      "expected": "0.0202 ±2.0%",
+      "actual": "0.0466 (Δ2.64%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 71,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 72,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 73,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 74,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].w",
+      "expected": "0.9688 ±0.5%",
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 75,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 76,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 77,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 78,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 79,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].x",
+      "expected": "0.8821 ±2.0%",
+      "actual": "0.8816 (Δ0.04%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 80,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].w",
+      "expected": "0.0202 ±2.0%",
+      "actual": "0.0199 (Δ0.03%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 81,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].x",
+      "expected": "0.9065 ±2.0%",
+      "actual": "0.9057 (Δ0.08%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 82,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].w",
+      "expected": "0.0199 ±2.0%",
+      "actual": "0.0203 (Δ0.04%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 83,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].x",
+      "expected": "0.9305 ±2.0%",
+      "actual": "0.9302 (Δ0.04%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 84,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].w",
+      "expected": "0.0222 ±2.0%",
+      "actual": "0.0216 (Δ0.06%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 85,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].x",
+      "expected": "0.9569 ±2.0%",
+      "actual": "0.9560 (Δ0.10%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 86,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].w",
+      "expected": "0.0274 ±2.0%",
+      "actual": "0.0284 (Δ0.10%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 87,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 88,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.0536 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 89,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 90,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].w",
+      "expected": "0.9688 ±2.0%",
+      "actual": "0.7076 (Δ26.11%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 91,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 92,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.4465 (Δ39.29%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 93,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].x",
+      "expected": "0.8821 ±2.0%",
+      "actual": "0.7337 (Δ14.84%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 94,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].w",
+      "expected": "0.0202 ±2.0%",
+      "actual": "0.0466 (Δ2.64%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 95,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 96,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "container[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 97,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 98,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "grid-root[0].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 99,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 100,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 101,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 102,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "header[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 103,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].x",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.4994 (Δ49.94%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 104,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[0].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0893 (Δ8.93%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 105,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].x",
+      "expected": "0.6110 ±2.0%",
+      "actual": "0.6073 (Δ0.36%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 106,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[1].w",
+      "expected": "0.0892 ±2.0%",
+      "actual": "0.0911 (Δ0.19%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 107,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].x",
+      "expected": "0.7188 ±2.0%",
+      "actual": "0.7170 (Δ0.18%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 108,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[2].w",
+      "expected": "0.0996 ±2.0%",
+      "actual": "0.0969 (Δ0.26%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 109,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].x",
+      "expected": "0.8371 ±2.0%",
+      "actual": "0.8327 (Δ0.44%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 110,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-link[3].w",
+      "expected": "0.1229 ±2.0%",
+      "actual": "0.1273 (Δ0.44%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 111,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 112,
+      "tier": "text",
+      "group": "geometry",
+      "name": "nav-counter[0].w",
+      "expected": "0.2747 ±2.0%",
+      "actual": "0.2747 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 113,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 114,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h2[0].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.5704 (Δ34.97%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 115,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.6637 (Δ62.37%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 116,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].w",
+      "expected": "0.2747 ±2.0%",
+      "actual": "0.1778 (Δ9.69%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 117,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].x",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.8948 (Δ89.48%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 118,
+      "tier": "text",
+      "group": "geometry",
+      "name": "link[0].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.1017 (Δ10.17%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 119,
+      "tier": "text",
+      "group": "role-style",
+      "name": "html-root font-size",
+      "expected": "1px",
+      "actual": "0.999999px",
+      "ok": false
+    },
+    {
+      "id": 120,
+      "tier": "text",
+      "group": "role-style",
+      "name": "container display",
+      "expected": "flex",
+      "actual": "block",
+      "ok": false
+    },
+    {
+      "id": 121,
+      "tier": "text",
+      "group": "role-style",
+      "name": "nav-counter letter-spacing",
+      "expected": "-0.38px",
+      "actual": "-0.32px",
+      "ok": false
+    },
+    {
+      "id": 122,
+      "tier": "text",
+      "group": "role-style",
+      "name": "h2 text-align",
+      "expected": "center",
+      "actual": "start",
+      "ok": false
+    },
+    {
+      "id": 123,
+      "tier": "text",
+      "group": "role-style",
+      "name": "body-1 font-size",
+      "expected": "19px",
+      "actual": "16px",
+      "ok": false
+    },
+    {
+      "id": 124,
+      "tier": "text",
+      "group": "role-style",
+      "name": "body-1 line-height",
+      "expected": "19px",
+      "actual": "19.2px",
+      "ok": false
+    },
+    {
+      "id": 125,
+      "tier": "text",
+      "group": "role-style",
+      "name": "body-1 letter-spacing",
+      "expected": "-0.38px",
+      "actual": "-0.32px",
+      "ok": false
+    },
+    {
+      "id": 126,
+      "tier": "text",
+      "group": "role-style",
+      "name": "body-1 color",
+      "expected": "rgb(255, 255, 255)",
+      "actual": "rgb(0, 0, 0)",
+      "ok": false
+    },
+    {
+      "id": 127,
+      "tier": "text",
+      "group": "role-style",
+      "name": "link font-size",
+      "expected": "16px",
+      "actual": "14px",
+      "ok": false
+    },
+    {
+      "id": 128,
+      "tier": "text",
+      "group": "role-style",
+      "name": "link line-height",
+      "expected": "19.2px",
+      "actual": "16.8px",
+      "ok": false
+    },
+    {
+      "id": 129,
+      "tier": "text",
+      "group": "role-style",
+      "name": "link letter-spacing",
+      "expected": "-0.32px",
+      "actual": "-0.28px",
+      "ok": false
+    },
+    {
+      "id": 130,
+      "tier": "text",
+      "group": "role-style",
+      "name": "link color",
+      "expected": "rgb(255, 255, 255)",
+      "actual": "rgb(146, 146, 146)",
+      "ok": false
+    },
+    {
+      "id": 131,
+      "tier": "text",
+      "group": "role-style",
+      "name": "link display",
+      "expected": "block",
+      "actual": "inline",
+      "ok": false
+    }
+  ],
+  "reported": [
+    {
+      "group": "palette",
+      "name": "reference colours our content has no component for",
+      "detail": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "group": "stagger",
+      "name": "card count differs (content-driven, expected)",
+      "detail": "ref 8 · build 0"
+    },
+    {
+      "group": "geometry",
+      "name": "grid-root[0].y differs (content-driven)",
+      "detail": "ref 1.710 · build 0.115",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "h2[0].y differs (content-driven)",
+      "detail": "ref 0.654 · build 0.115",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "body-1[0].y differs (content-driven)",
+      "detail": "ref 0.008 · build 0.273",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "link[0].y differs (content-driven)",
+      "detail": "ref 0.010 · build 0.273",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "grid-root[0].y differs (content-driven)",
+      "detail": "ref 1.773 · build 0.115",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "h2[0].y differs (content-driven)",
+      "detail": "ref 0.717 · build 0.115",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "body-1[0].y differs (content-driven)",
+      "detail": "ref 0.008 · build 0.273",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "link[0].y differs (content-driven)",
+      "detail": "ref 0.010 · build 0.273",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "grid-root[0].y differs (content-driven)",
+      "detail": "ref 5.265 · build 0.160",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "nav-link[0].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.027",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "h2[0].y differs (content-driven)",
+      "detail": "ref 2.277 · build 0.160",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "body-1[0].y differs (content-driven)",
+      "detail": "ref 0.017 · build 0.267",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "link[0].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.265",
+      "viewport": "375x812"
+    },
+    {
+      "group": "roles",
+      "name": "body font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "container font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "container instance count differs (content-driven)",
+      "detail": "ref 8 · build 2"
+    },
+    {
+      "group": "roles",
+      "name": "grid-root font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "grid-root instance count differs (content-driven)",
+      "detail": "ref 7 · build 1"
+    },
+    {
+      "group": "roles",
+      "name": "section-root font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "section-root instance count differs (content-driven)",
+      "detail": "ref 10 · build 1"
+    },
+    {
+      "group": "roles",
+      "name": "header font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "nav-link font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "nav-counter font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "h1 not present in build",
+      "detail": "ref has 0 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "h2 font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"\"Hedvig Letters Serif\", serif\""
+    },
+    {
+      "group": "roles",
+      "name": "h2 instance count differs (content-driven)",
+      "detail": "ref 7 · build 1"
+    },
+    {
+      "group": "roles",
+      "name": "h3 not present in build",
+      "detail": "ref has 7 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "h4 not present in build",
+      "detail": "ref has 6 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "h5 not present in build",
+      "detail": "ref has 3 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "body-1 font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "body-1 instance count differs (content-driven)",
+      "detail": "ref 17 · build 1"
+    },
+    {
+      "group": "roles",
+      "name": "body-2 not present on the reference homepage",
+      "detail": "build has 1"
+    },
+    {
+      "group": "roles",
+      "name": "btn not present in build",
+      "detail": "ref has 0 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "work-grid not present in build",
+      "detail": "ref has 1 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "work-card not present in build",
+      "detail": "ref has 8 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "work-frame not present in build",
+      "detail": "ref has 8 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "work-meta-row not present in build",
+      "detail": "ref has 8 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "work-caption not present in build",
+      "detail": "ref has 8 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "link font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "link instance count differs (content-driven)",
+      "detail": "ref 29 · build 1"
+    },
+    {
+      "group": "roles",
+      "name": "footer not present in build",
+      "detail": "ref has 1 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "footer-link not present in build",
+      "detail": "ref has 17 instance(s)"
+    }
+  ],
+  "exclusions": {
+    "colors": [
+      {
+        "value": "rgba(255, 0, 0, 0.15)",
+        "why": "dev grid-overlay component (.enz), renders only behind a debug flag"
+      }
+    ],
+    "gridTemplates": [
+      {
+        "value": "repeat(var(--v1327d0d4),1fr)",
+        "why": "the same dev grid overlay — column count is a runtime variable"
+      }
+    ],
+    "ignorePxFontSizes": true
+  }
+}

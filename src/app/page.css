@@ -1,0 +1,26 @@
+.page-intro {
+  padding-bottom: 220rem;
+  padding-top: 220rem;
+}
+
+@media (max-width: 767.98px) {
+  .page-intro {
+    padding-bottom: 60rem;
+    padding-top: 60rem;
+  }
+}
+
+.page-intro__title {
+  grid-column: 1 / 12;
+}
+
+.page-intro__lead {
+  grid-column: 1 / 8;
+  margin-top: 40rem;
+}
+
+.page-intro__meta {
+  color: #929292;
+  grid-column: 12 / -1;
+  margin-top: 40rem;
+}

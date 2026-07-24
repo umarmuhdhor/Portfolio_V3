@@ -14,7 +14,8 @@
     "fingerprint:build": "node scripts/fingerprint.mjs --url http://localhost:3000/ --side build --out build.fingerprint.json",
     "motion:ref": "node scripts/motion-ab.mjs --url https://kononenkogroup.com/ --side ref --out ab-report/motion-ref.json",
     "motion:build": "node scripts/motion-ab.mjs --url http://localhost:3000/ --side build --out ab-report/motion-build.json",
-    "ab": "node scripts/verify-harness.mjs && npm run fingerprint:build && npm run compare && npm run visual"
+    "ab": "node scripts/verify-harness.mjs && npm run fingerprint:build && npm run compare && npm run visual",
+    "gate": "node scripts/gate.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",

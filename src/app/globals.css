@@ -1,40 +1,146 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================================================
+   Design system — measured from kononenkogroup.com, implemented from scratch.
+
+   Everything here is authored in rem, where 1rem resolves to exactly one
+   design pixel. Nothing in this file is a preference; every number came out of
+   the fingerprint in reference.fingerprint.json and is asserted by the A/B
+   harness. Do not "improve" a value here — a change that looks better is a
+   deviation, and the harness will say so.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Fonts
+
+   Switzer stands in for PP Neue Montreal, which is commercially licensed; see
+   DEVIATIONS.md, entry 1. Hedvig Letters Serif is the reference's actual serif
+   and is used exactly. Both self-hosted, both font-display: swap, matching the
+   reference's loading strategy.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-display: swap;
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/switzer-400.woff2') format('woff2');
 }
 
-@media (prefers-color-scheme: dark) {
+@font-face {
+  font-display: swap;
+  font-family: 'Hedvig Letters Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/hedvig-letters-serif-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Hedvig Letters Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/hedvig-letters-serif-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* --------------------------------------------------------------------------
+   Fluid rem — implement first, everything depends on it
+
+   Root font-size is viewport-derived so that 1rem === one design pixel:
+   1920 design width on desktop, 375 on mobile. Every dimension in this project
+   is then authored as the design pixel value in rem, and the whole layout
+   scales with the viewport without a single media query for size.
+
+   px is used only for borders and outlines.
+   -------------------------------------------------------------------------- */
+:root {
+  font-size: 0.0520833333vw;
+}
+
+@media (max-width: 767.98px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    font-size: 0.2666666667vw;
   }
 }
 
-html {
-  height: 100%;
+/* --------------------------------------------------------------------------
+   Motion — one curve, five durations
+
+   These five are the entire duration set. There are zero @keyframes on the
+   reference and there are zero here; everything is a CSS transition or a GSAP
+   tween, and --ease is registered as a GSAP CustomEase so the two are
+   numerically identical.
+   -------------------------------------------------------------------------- */
+:root {
+  --ease: cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-touch-callout: none;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+
+html {
+  font-feature-settings: 'kern' off;
+  font-kerning: none;
+  scroll-behavior: auto;
+  text-rendering: optimizespeed;
+  text-size-adjust: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Switzer', sans-serif;
+  font-size: 16rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@media (max-width: 767.98px) {
+  body {
+    font-size: 14rem;
+  }
+}
+
+/* The reference hides the native scrollbar above the breakpoint and draws its
+   own; see .scrollbar below. */
+@media (min-width: 767.99px) {
+  html {
+    scrollbar-width: none !important;
+  }
+
+  body {
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    height: 0 !important;
+    width: 0 !important;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 a {
@@ -42,8 +148,710 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+svg {
+  height: auto;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+/* --------------------------------------------------------------------------
+   Type scale
+
+   Design px === rem. The serif carries every heading; the sans carries
+   everything else. Which role uses which family is part of the design and is
+   asserted by the harness — the family *names* are expected to differ, the
+   roles are not.
+   -------------------------------------------------------------------------- */
+.fn-h1 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 400rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: normal;
+}
+
+.fn-h2 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 175rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.7;
+}
+
+.fn-h3 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 118rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.fn-h4 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 80rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.8;
+}
+
+.fn-h5 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 40rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.fn-b1 {
+  font-family: 'Switzer', sans-serif;
+  font-size: 16rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.fn-b2 {
+  font-family: 'Switzer', sans-serif;
+  font-size: 14rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.fn-btn {
+  font-family: 'Switzer', sans-serif;
+  font-size: 14rem;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+/* The running counter in the header and the footer meta column. */
+.fn-meta {
+  font-size: 19rem;
+  line-height: 1;
+}
+
+.fn-note {
+  font-size: 9rem;
+}
+
+@media (max-width: 767.98px) {
+  .fn-h1 {
+    font-size: 200rem;
   }
+
+  .fn-h2 {
+    font-size: 40rem;
+  }
+
+  .fn-h3 {
+    font-size: 36rem;
+  }
+
+  .fn-h4 {
+    font-size: 30rem;
+  }
+
+  .fn-h5 {
+    font-size: 26rem;
+  }
+
+  .fn-b1 {
+    font-size: 14rem;
+  }
+
+  .fn-b2,
+  .fn-meta {
+    font-size: 12rem;
+  }
+}
+
+sup {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 14rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  top: -0.5em;
+  vertical-align: baseline;
+}
+
+@media (max-width: 767.98px) {
+  sup {
+    font-size: 12rem;
+  }
+}
+
+.f-sf {
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+.f-mn {
+  font-family: 'Switzer', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Palette — monochrome only
+
+   There is no accent colour on this design system. Do not add one; the harness
+   fails any colour that is not in the reference palette.
+   -------------------------------------------------------------------------- */
+.cl-bk {
+  color: #000;
+}
+
+.bg-bk {
+  background-color: #000;
+}
+
+.cl-wh {
+  color: #fff;
+}
+
+.bg-wh {
+  background-color: #fff;
+}
+
+.cl-gr {
+  color: #eee;
+}
+
+.bg-gr {
+  background-color: #eee;
+}
+
+.cl-gr2 {
+  color: #e2e2e2;
+}
+
+.bg-gr2 {
+  background-color: #e2e2e2;
+}
+
+.cl-gr3 {
+  color: #929292;
+}
+
+.bg-gr3 {
+  background-color: #929292;
+}
+
+.bg-gr4 {
+  background-color: #f8f8f8;
+}
+
+.rule {
+  background-color: #ccc;
+  height: 1px;
+  width: 100%;
+}
+
+.hairline {
+  border-top: 1px solid #e2e2e2;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Layout — 15 columns, one breakpoint
+   -------------------------------------------------------------------------- */
+.grd {
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: repeat(15, 1fr);
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .grd {
+    display: flex;
+  }
+}
+
+.ctr {
+  display: block;
+  padding: 0 30rem;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .ctr {
+    padding: 0 15rem;
+  }
+}
+
+/* Shown above the breakpoint / below it. The reference has no tablet tier and
+   neither does this. */
+.d-desk {
+  display: block;
+}
+
+.d-mob {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .d-desk {
+    display: none;
+  }
+
+  .d-mob {
+    display: block;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Line masking
+
+   --off cancels the leading above and below a masked line so an overflow:hidden
+   wrapper sits tight against the glyphs rather than against the line box.
+   -------------------------------------------------------------------------- */
+.ln-mask {
+  display: block;
+  overflow: hidden;
+}
+
+.ln-mask .ln,
+.ln-mask .wd,
+.ln-mask .ch {
+  will-change: transform;
+}
+
+.ln-mask .ln {
+  display: block;
+}
+
+.ln-mask .wd,
+.ln-mask .ch {
+  display: inline-block;
+}
+
+.e-lh {
+  --off: 0.5em;
+}
+
+.e-lh .ln-mask .ln,
+.e-lh .ln-mask .wd,
+.e-lh .ln-mask .ch {
+  margin-bottom: calc(var(--off) * -1);
+  margin-top: calc(var(--off) * -1);
+  padding-bottom: calc(var(--off) / 2);
+  padding-top: calc(var(--off) / 2);
+}
+
+.e-lh .ln-mask:first-child .ln,
+.e-lh .ln-mask:first-child .wd,
+.e-lh .ln-mask:first-child .ch {
+  margin-top: calc(var(--off) * -0.5);
+}
+
+.e-lh .ln-mask:last-child .ln,
+.e-lh .ln-mask:last-child .wd,
+.e-lh .ln-mask:last-child .ch {
+  margin-bottom: calc(var(--off) * -0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Link underline
+
+   A ::before scaled on X, not a text-decoration, so it can be eased. The
+   active route inverts the whole thing: it rests underlined and collapses on
+   hover. The transform-origin flip is what makes the line wipe in from the
+   left and out to the right rather than growing back from the end it grew to.
+   -------------------------------------------------------------------------- */
+.link {
+  color: currentcolor;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.link:not(.btn):not(button)::before {
+  background: currentcolor;
+  bottom: 0;
+  content: '';
+  height: max(1px, min(0.05em, 0.05em));
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1.109s var(--ease);
+  width: 100%;
+}
+
+.link:not(.btn):not(button):hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.link:not(.btn):not(button).is--a::before {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.link:not(.btn):not(button).is--a:hover::before {
+  transform: scaleX(0);
+  transform-origin: 100% 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  align-items: center;
+  border: 1px solid;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 18rem;
+  gap: 12rem;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8rem 32rem;
+  position: relative;
+  transition: color 0.3s var(--ease);
+}
+
+@media (max-width: 767.98px) {
+  .btn {
+    padding: 16rem 33rem;
+  }
+}
+
+.btn.is--inverted {
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Transitions shared across components
+   -------------------------------------------------------------------------- */
+.t-fade {
+  transition: opacity 0.3s var(--ease);
+}
+
+.t-fade.is--hidden {
+  opacity: 0;
+}
+
+/* Slides a masked block out of view. Used by the header and by section
+   reveals; the 0.5s tier is for transforms that are not the image scale. */
+.t-slide {
+  transition: transform 0.5s var(--ease);
+}
+
+/* The header rides on mix-blend-mode so it inverts over dark sections rather
+   than needing a colour swap. */
+.t-header {
+  transition-duration: 0.6s;
+  transition-property: transform, mix-blend-mode;
+  transition-timing-function: var(--ease);
+  will-change: transform;
+}
+
+/* --------------------------------------------------------------------------
+   Custom scrollbar
+
+   The native bar is hidden above the breakpoint, so the reference draws its
+   own. This is the only use of the 0.4s tier, and the one place the design
+   system does not use the custom curve.
+   -------------------------------------------------------------------------- */
+.scrollbar {
+  bottom: 0;
+  padding: 24px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  user-select: none;
+  z-index: 9998;
+}
+
+@media (max-width: 767.98px) {
+  .scrollbar {
+    display: none;
+  }
+}
+
+.scrollbar-track {
+  height: 100%;
+  position: relative;
+}
+
+.scrollbar-thumb {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 50px;
+  cursor: grab;
+  min-height: 80px;
+  opacity: 0.5;
+  position: absolute;
+  right: 4px;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  width: 8px;
+}
+
+.scrollbar-thumb:hover {
+  opacity: 0.7;
+  width: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Overlays
+   -------------------------------------------------------------------------- */
+.ovl-solid {
+  background: #000;
+  height: 100%;
+  inset: 0;
+  opacity: 0.3;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.ovl-grad {
+  background: linear-gradient(180deg, #000, transparent);
+  height: 100%;
+  inset: 0;
+  opacity: 0.4;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Rich text
+
+   The only place the spacing tokens are consumed. --space-general separates
+   blocks, --space-heading separates a heading from what follows it.
+   -------------------------------------------------------------------------- */
+.art {
+  --space-general: 2em;
+  --space-heading: 1em;
+}
+
+.art h1,
+.art h2 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 175rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.7;
+}
+
+.art h3,
+.art h4,
+.art h5,
+.art h6 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 118rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+@media (max-width: 767.98px) {
+  .art h1,
+  .art h2 {
+    font-size: 40rem;
+  }
+
+  .art h3,
+  .art h4,
+  .art h5,
+  .art h6 {
+    font-size: 36rem;
+  }
+}
+
+.art h1,
+.art h2,
+.art h3,
+.art h4,
+.art h5,
+.art h6 {
+  margin-bottom: var(--space-heading);
+  text-transform: none;
+}
+
+.art p {
+  text-wrap: pretty;
+}
+
+.art p:not(:last-child),
+.art ol,
+.art ul {
+  margin-bottom: var(--space-general);
+}
+
+.art ol,
+.art ul {
+  margin-left: var(--space-heading);
+}
+
+.art li:not(:last-child) {
+  margin-bottom: calc(var(--space-general) / 2);
+}
+
+.art ul {
+  list-style: disc;
+}
+
+.art ol {
+  list-style: decimal;
+}
+
+.art a {
+  text-decoration: underline;
+}
+
+.art a:hover {
+  opacity: 0.8;
+}
+
+.art img,
+.art table {
+  margin-bottom: var(--space-heading);
+}
+
+.art table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.art table th,
+.art table td {
+  border: 1px solid #ccc;
+  padding: calc(var(--space-heading) / 2);
+}
+
+.art table th {
+  background-color: #f0f0f0;
+  font-weight: 700;
+}
+
+.art hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: var(--space-heading) 0;
+}
+
+.art blockquote {
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  margin: var(--space-heading) 0;
+  padding-left: var(--space-heading);
+}
+
+.art code,
+.art pre {
+  background-color: #f0f0f0;
+}
+
+.art code {
+  border-radius: 3px;
+  font-family: monospace;
+  padding: 2px 4px;
+}
+
+.art pre {
+  margin-bottom: var(--space-heading);
+  overflow-x: auto;
+  padding: var(--space-heading);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility
+
+   prefers-reduced-motion bypasses motion completely, not partially — durations
+   go to zero rather than being shortened, so an element lands in its final
+   state instead of animating there faster.
+   -------------------------------------------------------------------------- */
+.v-hid {
+  border: 0;
+  clip-path: inset(0 0 99.9% 99.9%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+  width: 1px;
+}
+
+.skip-link {
+  left: -9999rem;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  background-color: #000;
+  color: #fff;
+  left: 0;
+  padding: 8rem 16rem;
+}
+
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+#main {
+  position: relative;
+  width: 100%;
 }

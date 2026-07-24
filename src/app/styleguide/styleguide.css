@@ -1,0 +1,86 @@
+/* The styleguide is a build tool, not a page of the portfolio. It uses only
+   design-system values so that fingerprinting it cannot introduce a colour or
+   a size that is not already in the system. */
+.sg {
+  padding-bottom: 160rem;
+  padding-top: 160rem;
+}
+
+.sg__section {
+  margin-top: 160rem;
+}
+
+.sg__section:first-child {
+  margin-top: 0;
+}
+
+.sg__label {
+  color: #929292;
+  margin-bottom: 30rem;
+}
+
+.sg__row {
+  align-items: baseline;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  gap: 30rem;
+  padding: 20rem 0;
+}
+
+.sg__row-key {
+  color: #929292;
+  flex-shrink: 0;
+  width: 170rem;
+}
+
+.sg__row-value {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.sg__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rem;
+}
+
+.sg__swatch {
+  width: 170rem;
+}
+
+.sg__chip {
+  border: 1px solid #e2e2e2;
+  height: 80rem;
+  width: 100%;
+}
+
+.sg__chip-label {
+  color: #929292;
+  margin-top: 10rem;
+}
+
+/* Grid overlay — 15 columns drawn over the container so the type and the
+   layout can be checked against the same measure at once. */
+.sg__overlay {
+  position: relative;
+}
+
+.sg__overlay-grid {
+  height: 300rem;
+}
+
+.sg__overlay-col {
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.sg__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+}
+
+.sg__links {
+  display: flex;
+  gap: 30rem;
+}
