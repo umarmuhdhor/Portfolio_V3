@@ -370,10 +370,6 @@
     {
       "label": "px font-sizes (dev overlay / error route, not design system)",
       "detail": "16px, 20px, 32px"
-    },
-    {
-      "label": "other timing functions present",
-      "detail": "linear"
     }
   ],
   "mode": "render-headed"

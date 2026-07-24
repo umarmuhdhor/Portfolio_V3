@@ -1,7 +1,7 @@
 {
-  "pass": 91,
+  "pass": 93,
   "total": 131,
-  "zeroPass": 34,
+  "zeroPass": 36,
   "zeroTotal": 46,
   "results": [
     {
@@ -157,8 +157,8 @@
       "group": "palette",
       "name": "no colour outside the reference palette",
       "expected": "none invented",
-      "actual": "rgba(0, 0, 0, 0)",
-      "ok": false
+      "actual": "none",
+      "ok": true
     },
     {
       "id": 18,
@@ -175,7 +175,7 @@
       "group": "motion",
       "name": "the easing curve is declared",
       "expected": "cubic-bezier(0.17, 0.84, 0.44, 1)",
-      "actual": "ease | cubic-bezier(.17,.84,.44,1) | linear",
+      "actual": "cubic-bezier(0.17,0.84,0.44,1)",
       "ok": true
     },
     {
@@ -184,8 +184,8 @@
       "group": "motion",
       "name": "no timing function outside the reference set",
       "expected": "none",
-      "actual": "ease, cubic-bezier(.17,.84,.44,1)",
-      "ok": false
+      "actual": "none",
+      "ok": true
     },
     {
       "id": 21,

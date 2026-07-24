@@ -1,7 +1,7 @@
 {
   "url": "http://localhost:3000/",
   "side": "build",
-  "capturedAt": "2026-07-24T18:49:01.865Z",
+  "capturedAt": "2026-07-24T18:55:28.412Z",
   "mode": "render-headed",
   "viewports": {
     "1920x1080": {
@@ -833,7 +833,6 @@
           "rgb(146, 146, 146)": 3,
           "rgb(248, 248, 248)": 1,
           "rgb(204, 204, 204)": 4,
-          "rgba(0, 0, 0, 0)": 1,
           "rgb(240, 240, 240)": 2
         },
         "fontSizesRem": {
@@ -862,9 +861,7 @@
           "0.4": 2
         },
         "timings": {
-          "ease": 7,
-          "cubic-bezier(.17,.84,.44,1)": 1,
-          "linear": 1
+          "cubic-bezier(.17,.84,.44,1)": 1
         },
         "gridTemplateColumns": {
           "repeat(15, 1fr)": 1
@@ -1742,7 +1739,6 @@
           "rgb(146, 146, 146)": 3,
           "rgb(248, 248, 248)": 1,
           "rgb(204, 204, 204)": 4,
-          "rgba(0, 0, 0, 0)": 1,
           "rgb(240, 240, 240)": 2
         },
         "fontSizesRem": {
@@ -1771,9 +1767,7 @@
           "0.4": 2
         },
         "timings": {
-          "ease": 7,
-          "cubic-bezier(.17,.84,.44,1)": 1,
-          "linear": 1
+          "cubic-bezier(.17,.84,.44,1)": 1
         },
         "gridTemplateColumns": {
           "repeat(15, 1fr)": 1
@@ -2650,7 +2644,6 @@
           "rgb(146, 146, 146)": 3,
           "rgb(248, 248, 248)": 1,
           "rgb(204, 204, 204)": 4,
-          "rgba(0, 0, 0, 0)": 1,
           "rgb(240, 240, 240)": 2
         },
         "fontSizesRem": {
@@ -2679,9 +2672,7 @@
           "0.4": 2
         },
         "timings": {
-          "ease": 7,
-          "cubic-bezier(.17,.84,.44,1)": 1,
-          "linear": 1
+          "cubic-bezier(.17,.84,.44,1)": 1
         },
         "gridTemplateColumns": {
           "repeat(15, 1fr)": 1

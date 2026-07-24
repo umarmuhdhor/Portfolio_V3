@@ -68,6 +68,23 @@ function observe(group, name, detail, viewport) {
 const norm = (s) => String(s).replace(/\s+/g, ' ').trim();
 const compact = (s) => String(s).replace(/\s+/g, '');
 
+/**
+ * Compare a timing function by value, not by spelling.
+ *
+ * A minifier writes `cubic-bezier(.17,.84,.44,1)` where the source said
+ * `cubic-bezier(0.17, 0.84, 0.44, 1)`, and custom property values are stored
+ * verbatim rather than normalized by the engine — so the two sides can hold
+ * the identical curve and disagree on four leading zeros. The `easing curve is
+ * declared` check already allowed both spellings; this makes the companion
+ * `no timing function outside the reference set` check agree with it instead of
+ * failing a curve the previous assertion just accepted.
+ */
+const normTiming = (s) =>
+  compact(s)
+    .toLowerCase()
+    .replace(/(^|[(,])\./g, '$10.')
+    .replace(/(\d)0+(?=[,)]|$)/g, (m, d) => (/\./.test(m) ? d : m));
+
 
 // ===========================================================================
 // ZERO TOLERANCE — any delta fails
@@ -182,9 +199,9 @@ const unusedType = [...rType].filter((t) => !bType.has(t)).sort((a, b) => a - b)
 if (unusedType.length) observe('type', 'reference sizes not exercised by our content', unusedType.join(' '));
 
 // --- easing + durations ----------------------------------------------------
-const rTim = new Set(Object.keys(rDesk.css.timings).map(compact));
-const bTim = new Set(Object.keys(bDesk.css.timings).map(compact));
-const easeHit = [...bTim].some((t) => t === compact(BRIEF.ease) || t === compact(BRIEF.easeCompact));
+const rTim = new Set(Object.keys(rDesk.css.timings).map(normTiming));
+const bTim = new Set(Object.keys(bDesk.css.timings).map(normTiming));
+const easeHit = [...bTim].some((t) => t === normTiming(BRIEF.ease) || t === normTiming(BRIEF.easeCompact));
 assert({ tier: 'zero', group: 'motion', name: 'the easing curve is declared', expected: BRIEF.ease, actual: [...bTim].join(' | ') || 'none', ok: easeHit });
 const strayTim = [...bTim].filter((t) => !rTim.has(t));
 assert({ tier: 'zero', group: 'motion', name: 'no timing function outside the reference set', expected: 'none', actual: strayTim.join(', ') || 'none', ok: strayTim.length === 0 });

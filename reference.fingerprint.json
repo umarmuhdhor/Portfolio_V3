@@ -1,7 +1,7 @@
 {
   "url": "https://kononenkogroup.com/",
   "side": "ref",
-  "capturedAt": "2026-07-24T18:32:36.924Z",
+  "capturedAt": "2026-07-24T18:55:01.341Z",
   "mode": "render-headed",
   "viewports": {
     "1920x1080": {
@@ -2001,8 +2001,7 @@
           "0.4": 2
         },
         "timings": {
-          "cubic-bezier(0.17,0.84,0.44,1)": 15,
-          "linear": 1
+          "cubic-bezier(0.17,0.84,0.44,1)": 15
         },
         "gridTemplateColumns": {
           "1fr 1.2fr": 2,
@@ -4327,8 +4326,7 @@
           "0.4": 2
         },
         "timings": {
-          "cubic-bezier(0.17,0.84,0.44,1)": 15,
-          "linear": 1
+          "cubic-bezier(0.17,0.84,0.44,1)": 15
         },
         "gridTemplateColumns": {
           "1fr 1.2fr": 2,
@@ -6652,8 +6650,7 @@
           "0.4": 2
         },
         "timings": {
-          "cubic-bezier(0.17,0.84,0.44,1)": 15,
-          "linear": 1
+          "cubic-bezier(0.17,0.84,0.44,1)": 15
         },
         "gridTemplateColumns": {
           "1fr 1.2fr": 2,

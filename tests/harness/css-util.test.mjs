@@ -109,3 +109,28 @@ describe('resolveStagger', () => {
     expect(resolveStagger(mixed, ['.qct'], 540)[0].column).toBe('1 / 8');
   });
 });
+
+describe('timing-function comparison is by value, not spelling', () => {
+  // Mirrors normTiming in compare.mjs. A minifier drops the leading zero and a
+  // custom property keeps whatever was authored, so the same curve reaches the
+  // two sides written two different ways.
+  const compact = (s) => String(s).replace(/\s+/g, '');
+  const normTiming = (s) =>
+    compact(s)
+      .toLowerCase()
+      .replace(/(^|[(,])\./g, '$10.')
+      .replace(/(\d)0+(?=[,)]|$)/g, (m, d) => (/\./.test(m) ? d : m));
+
+  it('folds the minified and authored spellings of the same curve together', () => {
+    expect(normTiming('cubic-bezier(.17,.84,.44,1)')).toBe(normTiming('cubic-bezier(0.17, 0.84, 0.44, 1)'));
+  });
+
+  it('keeps genuinely different curves apart', () => {
+    expect(normTiming('cubic-bezier(0.17, 0.84, 0.44, 1)')).not.toBe(normTiming('cubic-bezier(0.25, 0.1, 0.25, 1)'));
+  });
+
+  it('leaves keyword timing functions alone', () => {
+    expect(normTiming('ease')).toBe('ease');
+    expect(normTiming('linear')).toBe('linear');
+  });
+});

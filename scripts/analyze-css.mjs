@@ -30,8 +30,18 @@ export function analyzeCss(css) {
     return v;
   };
 
+  // Fully transparent is the absence of a colour, not a colour. Chrome keeps
+  // the `transparent` keyword when serializing some gradients and expands it to
+  // `rgba(0, 0, 0, 0)` in others, so the same authored declaration can show up
+  // either way — neither belongs in a palette. The live-DOM walk in
+  // fingerprint.mjs already drops both; this keeps the authored walk consistent
+  // with it.
+  const TRANSPARENT = /^(transparent|rgba\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\))$/;
+
   const palette = {};
   for (const m of css.matchAll(/#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)/g)) {
+    const raw = m[0].toLowerCase().replace(/\s+/g, ' ').trim();
+    if (TRANSPARENT.test(raw)) continue;
     const k = normHex(m[0]);
     palette[k] = (palette[k] || 0) + 1;
   }
@@ -52,10 +62,33 @@ export function analyzeCss(css) {
     }
   }
 
-  const timings = freq(
-    /cubic-bezier\(\s*[^)]*\)|\bease-in-out\b|\bease-out\b|\bease-in\b|\bease\b|\blinear\b|\bsteps\([^)]*\)/g,
-    (m) => m[0].replace(/\s+/g, '')
-  );
+  // Timing functions, read only from the declarations where one means anything.
+  //
+  // Scanning the whole sheet for the bare words produced two false positives.
+  // `linear` matched inside `linear-gradient`, and `ease` matched inside the
+  // custom property name `--ease` and inside `var(--ease)` — so declaring the
+  // curve as a token, which the brief requires, registered as a second timing
+  // function that the reference did not have. The lookarounds fix the word
+  // matches; restricting the scan to transition declarations and to
+  // `animation-timing-function` fixes the rest, since Chrome serializes
+  // `animation: none` as `animation: auto ease 0s 1 normal none running none`
+  // and that `ease` is an initial value, not a design decision.
+  const TIMING = /(?<![-\w])(?:cubic-bezier\(\s*[^)]*\)|steps\([^)]*\)|ease-in-out|ease-out|ease-in|ease|linear)(?![-\w])/g;
+
+  const timings = {};
+  // Custom-property declarations are included because the brief requires the
+  // curve to live in `--ease`. When it does, the literal cubic-bezier never
+  // appears inside a transition declaration — only `var(--ease)` does — so
+  // scanning transitions alone would report that the curve is not declared at
+  // all. The lookarounds still apply to the value, not the property name.
+  for (const decl of css.matchAll(
+    /(?:transition(?:-timing-function)?|animation-timing-function|--[a-zA-Z][\w-]*)\s*:\s*([^;}]+)/g
+  )) {
+    for (const m of decl[1].matchAll(TIMING)) {
+      const k = m[0].replace(/\s+/g, '');
+      timings[k] = (timings[k] || 0) + 1;
+    }
+  }
 
   const gridTemplateColumns = freq(/grid-template-columns:\s*([^;}]+)/g, (m) => m[1].trim().replace(/\s+/g, ' '));
   const breakpoints = freq(/\((?:max|min)-width:\s*[^)]+\)/g, (m) => m[0].replace(/\s+/g, ''));

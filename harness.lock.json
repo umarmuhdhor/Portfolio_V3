@@ -1,9 +1,9 @@
 {
-  "lockedAt": "2026-07-24T18:40:37.440Z",
+  "lockedAt": "2026-07-24T18:55:59.410Z",
   "note": "Frozen after Phase 0. See PORTFOLIO-V4-AUTORUN.md, harness tamper rule.",
   "files": {
     "scripts/compare.mjs": {
-      "sha256": "23db4db2bd0630f38f27a2a10c22825ca4f573de8a3e6eed8bb2f76493afaeef",
+      "sha256": "2d2ffa1e279b2756bcfe24a1689ba80535f984a2f335783a0160b65d18cf1724",
       "why": "the assertions and the exit code"
     },
     "scripts/crosscheck.mjs": {
@@ -15,7 +15,7 @@
       "why": "what gets measured at all"
     },
     "scripts/analyze-css.mjs": {
-      "sha256": "00608641e03c9443355fbba608c6ffc7fd0f5f7b1029571b6ba000ca02f4b6ac",
+      "sha256": "3cbee5854d79c460e811049636509e6d218b5488c03b8c8c5717bcbed2fea892",
       "why": "how authored CSS is read into value sets"
     },
     "scripts/css-util.mjs": {
@@ -27,7 +27,7 @@
       "why": "the role map, the tolerance bands, and the brief ground truth"
     },
     "reference.fingerprint.json": {
-      "sha256": "52c3a1ee77d4e7faa49da33b98945d4ce95382ed8fca832ecd8fa32b6ba3c4f7",
+      "sha256": "5d20daf632f322cfa048b59900bcedf6bc363aab26eb9dfefeb8202de29203fb",
       "why": "the reconciliation anchor — external fact, not our output"
     }
   }

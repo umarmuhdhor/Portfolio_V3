@@ -72,3 +72,40 @@ describe('analyzeCss', () => {
     });
   });
 });
+
+describe('analyzeCss — false positives fixed after Phase 1', () => {
+  it('does not read the --ease token name as an `ease` timing function', () => {
+    const r = analyzeCss(':root{--ease:cubic-bezier(0.17,0.84,0.44,1)}.a{transition:opacity .3s var(--ease)}');
+    expect(r.timings.ease).toBeUndefined();
+    expect(r.timings['cubic-bezier(0.17,0.84,0.44,1)']).toBe(1);
+  });
+
+  it('does not read linear-gradient as a `linear` timing function', () => {
+    const r = analyzeCss('.a{background:linear-gradient(180deg,#000,transparent)}');
+    expect(r.timings.linear).toBeUndefined();
+  });
+
+  it('still reads a genuine ease and linear on a transition', () => {
+    const r = analyzeCss('.a{transition:width .4s ease,opacity .4s linear}');
+    expect(r.timings.ease).toBe(1);
+    expect(r.timings.linear).toBe(1);
+  });
+
+  it('ignores the ease Chrome expands out of `animation: none`', () => {
+    const r = analyzeCss('.a{animation:auto ease 0s 1 normal none running none}');
+    expect(r.timings.ease).toBeUndefined();
+  });
+
+  it('drops fully transparent values from the palette, however they serialize', () => {
+    const r = analyzeCss('.a{background:linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0))}.b{color:transparent}.c{color:#000}');
+    expect(r.palette['rgba(0, 0, 0, 0)']).toBeUndefined();
+    // rgb() is kept verbatim here; folding to hex happens in css-util.toHex
+    expect(r.palette['rgb(0, 0, 0)']).toBe(1);
+    expect(r.palette['#000000']).toBe(1);
+  });
+
+  it('keeps a partially transparent colour, which is a real design value', () => {
+    const r = analyzeCss('.a{background:rgba(0, 0, 0, 0.4)}');
+    expect(r.palette['rgba(0, 0, 0, 0.4)']).toBe(1);
+  });
+});
