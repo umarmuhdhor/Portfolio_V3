@@ -1,0 +1,380 @@
+{
+  "pass": 42,
+  "total": 44,
+  "pct": 95.45454545454545,
+  "results": [
+    {
+      "group": "root",
+      "name": "root font-size (desktop) = 0.0520833333vw",
+      "expected": "0.0520833333vw",
+      "actual": "0.0520833vw",
+      "ok": true
+    },
+    {
+      "group": "root",
+      "name": "root font-size (mobile) = 0.2666666667vw",
+      "expected": "0.2666666667vw",
+      "actual": "0.266667vw",
+      "ok": true
+    },
+    {
+      "group": "breakpoint",
+      "name": "max-width: 767.98px present",
+      "expected": "(max-width:767.98px)",
+      "actual": "(max-width:767.98px)",
+      "ok": true
+    },
+    {
+      "group": "breakpoint",
+      "name": "min-width: 767.99px present",
+      "expected": "(min-width:767.99px)",
+      "actual": "(min-width:767.99px)",
+      "ok": true
+    },
+    {
+      "group": "grid",
+      "name": "grid-template-columns: repeat(15, 1fr)",
+      "expected": "repeat(15, 1fr)",
+      "actual": "repeat(15, 1fr)",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #000 in use",
+      "expected": "#000",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #fff in use",
+      "expected": "#fff",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #e2e2e2 in use",
+      "expected": "#e2e2e2",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #eee in use",
+      "expected": "#eee",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #f0f0f0 in use",
+      "expected": "#f0f0f0",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #ccc in use",
+      "expected": "#ccc",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "palette",
+      "name": "colour #929292 in use",
+      "expected": "#929292",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 12rem",
+      "expected": "12rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 14rem",
+      "expected": "14rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 16rem",
+      "expected": "16rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 18rem",
+      "expected": "18rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 19rem",
+      "expected": "19rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 20rem",
+      "expected": "20rem",
+      "actual": "only as 20px",
+      "ok": false
+    },
+    {
+      "group": "type",
+      "name": "type scale 26rem",
+      "expected": "26rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 30rem",
+      "expected": "30rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 32rem",
+      "expected": "32rem",
+      "actual": "only as 32px",
+      "ok": false
+    },
+    {
+      "group": "type",
+      "name": "type scale 36rem",
+      "expected": "36rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 40rem",
+      "expected": "40rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 80rem",
+      "expected": "80rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 118rem",
+      "expected": "118rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 175rem",
+      "expected": "175rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 200rem",
+      "expected": "200rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "type",
+      "name": "type scale 400rem",
+      "expected": "400rem",
+      "actual": "present (rem)",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "easing curve cubic-bezier(0.17, 0.84, 0.44, 1)",
+      "expected": "cubic-bezier(0.17, 0.84, 0.44, 1)",
+      "actual": "cubic-bezier(0.17,0.84,0.44,1)",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "duration 0.3s",
+      "expected": "0.3s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "duration 0.4s",
+      "expected": "0.4s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "duration 0.5s",
+      "expected": "0.5s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "duration 0.6s",
+      "expected": "0.6s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "motion",
+      "name": "duration 1.109s",
+      "expected": "1.109s",
+      "actual": "present",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+1",
+      "expected": "col 1 / 8 · mt 0rem · h 540rem",
+      "actual": "col 1 / 8 · mt 0rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+2",
+      "expected": "col 9 / -1 · mt 170rem · h 540rem",
+      "actual": "col 9 / -1 · mt 170rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+3",
+      "expected": "col 1 / 5 · mt 416rem · h 700rem",
+      "actual": "col 1 / 5 · mt 416rem · h 700rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+4",
+      "expected": "col 6 / 12 · mt 188rem · h 540rem",
+      "actual": "col 6 / 12 · mt 188rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+5",
+      "expected": "col 8 / 15 · mt -214rem · h 540rem",
+      "actual": "col 8 / 15 · mt -214rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+6",
+      "expected": "col 5 / 9 · mt 178rem · h 700rem",
+      "actual": "col 5 / 9 · mt 178rem · h 700rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+7",
+      "expected": "col 1 / 8 · mt 323rem · h 540rem",
+      "actual": "col 1 / 8 · mt 323rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+8",
+      "expected": "col 9 / -1 · mt 154rem · h 540rem",
+      "actual": "col 9 / -1 · mt 154rem · h 540rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 9n+9",
+      "expected": "col 2 / 8 · mt 638rem · h 500rem",
+      "actual": "col 2 / 8 · mt 638rem · h 500rem",
+      "ok": true
+    },
+    {
+      "group": "stagger",
+      "name": "nth 10n+10",
+      "expected": "col 11 / -2 · mt 100rem · h 700rem",
+      "actual": "col 11 / -2 · mt 100rem · h 700rem",
+      "ok": true
+    }
+  ],
+  "supplementary": [
+    {
+      "name": "token --space-general",
+      "expected": "2em",
+      "actual": "2em",
+      "ok": true
+    },
+    {
+      "name": "token --space-heading",
+      "expected": "1em",
+      "actual": "1em",
+      "ok": true
+    },
+    {
+      "name": "token --off",
+      "expected": "0.5em",
+      "actual": ".5em",
+      "ok": false
+    },
+    {
+      "name": "@keyframes count",
+      "expected": "0",
+      "actual": "0",
+      "ok": true
+    },
+    {
+      "name": "@font-face families",
+      "expected": "2 (sans + serif), font-display: swap",
+      "actual": "2 → n/swap, h/swap",
+      "ok": false
+    },
+    {
+      "name": "hover: image scale",
+      "expected": "1.035",
+      "actual": "see build phase",
+      "ok": false
+    }
+  ],
+  "notes": [
+    {
+      "label": "1rem = 1 design px",
+      "detail": "1920 → 1px, 1440 → 0.75px, 375 → 1px"
+    },
+    {
+      "label": "other grid templates (sub-layouts)",
+      "detail": "1fr 1.2fr | 1fr 1fr | repeat(var(--v1327d0d4),1fr) | repeat(4, 1fr) | repeat(2, 1fr)"
+    },
+    {
+      "label": "colours found but NOT in brief",
+      "detail": "#f8f8f8, rgba(0, 0, 0, 0.4), rgba(255, 0, 0, 0.15)"
+    },
+    {
+      "label": "rem font-sizes found but NOT in brief",
+      "detail": "9rem"
+    },
+    {
+      "label": "px font-sizes (dev overlay / error route, not design system)",
+      "detail": "16px, 20px, 32px"
+    },
+    {
+      "label": "other timing functions present",
+      "detail": "linear"
+    }
+  ],
+  "mode": "render-headed"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "portfolio-v4",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "crosscheck": "node scripts/crosscheck.mjs",
+    "compare": "node scripts/compare.mjs",
+    "visual": "node scripts/visual-ab.mjs",
+    "fingerprint:ref": "node scripts/fingerprint.mjs --url https://kononenkogroup.com/ --side ref --out reference.fingerprint.json",
+    "fingerprint:build": "node scripts/fingerprint.mjs --url http://localhost:3000/ --side build --out build.fingerprint.json",
+    "motion:ref": "node scripts/motion-ab.mjs --url https://kononenkogroup.com/ --side ref --out ab-report/motion-ref.json",
+    "motion:build": "node scripts/motion-ab.mjs --url http://localhost:3000/ --side build --out ab-report/motion-build.json",
+    "ab": "node scripts/verify-harness.mjs && npm run fingerprint:build && npm run compare && npm run visual"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.25",
+    "next": "16.2.11",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.185.1",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.61.1",
+    "pngjs": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

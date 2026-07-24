@@ -1,0 +1,34 @@
+{
+  "lockedAt": "2026-07-24T18:40:37.440Z",
+  "note": "Frozen after Phase 0. See PORTFOLIO-V4-AUTORUN.md, harness tamper rule.",
+  "files": {
+    "scripts/compare.mjs": {
+      "sha256": "23db4db2bd0630f38f27a2a10c22825ca4f573de8a3e6eed8bb2f76493afaeef",
+      "why": "the assertions and the exit code"
+    },
+    "scripts/crosscheck.mjs": {
+      "sha256": "50a4d4867dcaebe387e1290e9acd9fad5310c25a5665d2b8ebed17cee9c18d65",
+      "why": "the Phase 0 baseline validation"
+    },
+    "scripts/fingerprint.mjs": {
+      "sha256": "6f91ffdb1f17f16c445ba2dc7d9666ee93a5a576013442c7502aefbc282fe483",
+      "why": "what gets measured at all"
+    },
+    "scripts/analyze-css.mjs": {
+      "sha256": "00608641e03c9443355fbba608c6ffc7fd0f5f7b1029571b6ba000ca02f4b6ac",
+      "why": "how authored CSS is read into value sets"
+    },
+    "scripts/css-util.mjs": {
+      "sha256": "1420c56a1e23709e1129fbe55e4f00049803824db6b9615899990e3aac34224f",
+      "why": "the stagger cascade resolver"
+    },
+    "scripts/roles.mjs": {
+      "sha256": "033291ebe594fe0c28246ec0e7b9d127d93a403378907f8f38fde090b68bf96e",
+      "why": "the role map, the tolerance bands, and the brief ground truth"
+    },
+    "reference.fingerprint.json": {
+      "sha256": "52c3a1ee77d4e7faa49da33b98945d4ce95382ed8fca832ecd8fa32b6ba3c4f7",
+      "why": "the reconciliation anchor — external fact, not our output"
+    }
+  }
+}
