@@ -1,0 +1,1086 @@
+{
+  "side": "build",
+  "url": "http://localhost:3000/",
+  "fps": 30,
+  "summary": {
+    "imageSettleFrame": 33,
+    "captionOutSettleFrame": 18,
+    "captionInSettleFrame": 19,
+    "fps": 30,
+    "declared": {
+      "image": {
+        "duration": "1.109s, 0.3s",
+        "timing": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "duration": "0.6s",
+        "timing": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "duration": "0.6s",
+        "timing": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      }
+    },
+    "finalImageTransform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+    "finalCaptionOut": "matrix(1, 0, 0, 1, 0, -19.3873)",
+    "finalCaptionIn": "matrix(1, 0, 0, 1, 0, 0)"
+  },
+  "before": {
+    "image": {
+      "transform": "none",
+      "opacity": "1",
+      "transitionDuration": "1.109s, 0.3s",
+      "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+    },
+    "out": {
+      "transform": "none",
+      "opacity": "1",
+      "transitionDuration": "0.6s",
+      "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+    },
+    "in": {
+      "transform": "matrix(1, 0, 0, 1, 0, 19.3873)",
+      "opacity": "1",
+      "transitionDuration": "0.6s",
+      "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+    },
+    "t": 4476.799999982119
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "ms": 0,
+      "image": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4549.899999976158
+    },
+    {
+      "frame": 1,
+      "ms": 35,
+      "image": {
+        "transform": "matrix(1.0048, 0, 0, 1.0048, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -4.60094)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 14.7863)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4585.399999976158
+    },
+    {
+      "frame": 2,
+      "ms": 69,
+      "image": {
+        "transform": "matrix(1.00792, 0, 0, 1.00792, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -7.26761)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 12.1197)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4618.899999976158
+    },
+    {
+      "frame": 3,
+      "ms": 102,
+      "image": {
+        "transform": "matrix(1.01241, 0, 0, 1.01241, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -10.6696)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 8.71768)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4652.5999999940395
+    },
+    {
+      "frame": 4,
+      "ms": 135,
+      "image": {
+        "transform": "matrix(1.0154, 0, 0, 1.0154, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -12.6671)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 6.72014)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4685.299999982119
+    },
+    {
+      "frame": 5,
+      "ms": 169,
+      "image": {
+        "transform": "matrix(1.01729, 0, 0, 1.01729, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -13.8186)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 5.5687)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4719.5
+    },
+    {
+      "frame": 6,
+      "ms": 202,
+      "image": {
+        "transform": "matrix(1.01967, 0, 0, 1.01967, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -15.1454)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 4.24187)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4752.699999988079
+    },
+    {
+      "frame": 7,
+      "ms": 234,
+      "image": {
+        "transform": "matrix(1.02168, 0, 0, 1.02168, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -16.1618)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 3.22549)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4784.899999976158
+    },
+    {
+      "frame": 8,
+      "ms": 269,
+      "image": {
+        "transform": "matrix(1.02384, 0, 0, 1.02384, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -17.1318)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 2.25547)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4819.299999982119
+    },
+    {
+      "frame": 9,
+      "ms": 302,
+      "image": {
+        "transform": "matrix(1.02533, 0, 0, 1.02533, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -17.7241)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 1.66321)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4852.699999988079
+    },
+    {
+      "frame": 10,
+      "ms": 336,
+      "image": {
+        "transform": "matrix(1.0263, 0, 0, 1.0263, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -18.0757)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 1.31155)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4886.399999976158
+    },
+    {
+      "frame": 11,
+      "ms": 369,
+      "image": {
+        "transform": "matrix(1.02776, 0, 0, 1.02776, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -18.5428)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.844437)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4919.5999999940395
+    },
+    {
+      "frame": 12,
+      "ms": 401,
+      "image": {
+        "transform": "matrix(1.02873, 0, 0, 1.02873, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -18.8109)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.576352)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4951.5
+    },
+    {
+      "frame": 13,
+      "ms": 436,
+      "image": {
+        "transform": "matrix(1.0298, 0, 0, 1.0298, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.0569)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.330329)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 4986.5999999940395
+    },
+    {
+      "frame": 14,
+      "ms": 468,
+      "image": {
+        "transform": "matrix(1.0302, 0, 0, 1.0302, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.1361)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.251161)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5019.5
+    },
+    {
+      "frame": 15,
+      "ms": 503,
+      "image": {
+        "transform": "matrix(1.03105, 0, 0, 1.03105, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.2717)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.115596)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5054.5
+    },
+    {
+      "frame": 16,
+      "ms": 535,
+      "image": {
+        "transform": "matrix(1.03166, 0, 0, 1.03166, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3408)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0464596)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5086.199999988079
+    },
+    {
+      "frame": 17,
+      "ms": 568,
+      "image": {
+        "transform": "matrix(1.03217, 0, 0, 1.03217, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3764)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0109028)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5118.799999982119
+    },
+    {
+      "frame": 18,
+      "ms": 602,
+      "image": {
+        "transform": "matrix(1.03262, 0, 0, 1.03262, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 2.28968e-10)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5152
+    },
+    {
+      "frame": 19,
+      "ms": 636,
+      "image": {
+        "transform": "matrix(1.03302, 0, 0, 1.03302, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5186.5999999940395
+    },
+    {
+      "frame": 20,
+      "ms": 667,
+      "image": {
+        "transform": "matrix(1.03328, 0, 0, 1.03328, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5217.199999988079
+    },
+    {
+      "frame": 21,
+      "ms": 702,
+      "image": {
+        "transform": "matrix(1.03359, 0, 0, 1.03359, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5252.0999999940395
+    },
+    {
+      "frame": 22,
+      "ms": 736,
+      "image": {
+        "transform": "matrix(1.03386, 0, 0, 1.03386, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5286.0999999940395
+    },
+    {
+      "frame": 23,
+      "ms": 770,
+      "image": {
+        "transform": "matrix(1.03419, 0, 0, 1.03419, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5320.399999976158
+    },
+    {
+      "frame": 24,
+      "ms": 802,
+      "image": {
+        "transform": "matrix(1.03433, 0, 0, 1.03433, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5352.899999976158
+    },
+    {
+      "frame": 25,
+      "ms": 836,
+      "image": {
+        "transform": "matrix(1.03449, 0, 0, 1.03449, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5387
+    },
+    {
+      "frame": 26,
+      "ms": 868,
+      "image": {
+        "transform": "matrix(1.03462, 0, 0, 1.03462, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5418.199999988079
+    },
+    {
+      "frame": 27,
+      "ms": 902,
+      "image": {
+        "transform": "matrix(1.03471, 0, 0, 1.03471, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5452.399999976158
+    },
+    {
+      "frame": 28,
+      "ms": 935,
+      "image": {
+        "transform": "matrix(1.0348, 0, 0, 1.0348, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5485.299999982119
+    },
+    {
+      "frame": 29,
+      "ms": 969,
+      "image": {
+        "transform": "matrix(1.03487, 0, 0, 1.03487, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5518.899999976158
+    },
+    {
+      "frame": 30,
+      "ms": 1003,
+      "image": {
+        "transform": "matrix(1.03494, 0, 0, 1.03494, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5553.799999982119
+    },
+    {
+      "frame": 31,
+      "ms": 1035,
+      "image": {
+        "transform": "matrix(1.03497, 0, 0, 1.03497, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5585.699999988079
+    },
+    {
+      "frame": 32,
+      "ms": 1066,
+      "image": {
+        "transform": "matrix(1.03499, 0, 0, 1.03499, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5617
+    },
+    {
+      "frame": 33,
+      "ms": 1103,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5653.0999999940395
+    },
+    {
+      "frame": 34,
+      "ms": 1136,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5686.5
+    },
+    {
+      "frame": 35,
+      "ms": 1169,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5719.5
+    },
+    {
+      "frame": 36,
+      "ms": 1202,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5753.299999982119
+    },
+    {
+      "frame": 37,
+      "ms": 1235,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5785.799999982119
+    },
+    {
+      "frame": 38,
+      "ms": 1267,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5817.899999976158
+    },
+    {
+      "frame": 39,
+      "ms": 1301,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5851.199999988079
+    },
+    {
+      "frame": 40,
+      "ms": 1334,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5883.899999976158
+    },
+    {
+      "frame": 41,
+      "ms": 1368,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5918.799999982119
+    },
+    {
+      "frame": 42,
+      "ms": 1401,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5951.799999982119
+    },
+    {
+      "frame": 43,
+      "ms": 1436,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 5987.0999999940395
+    },
+    {
+      "frame": 44,
+      "ms": 1468,
+      "image": {
+        "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "1.109s, 0.3s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "out": {
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3873)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "in": {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "transitionDuration": "0.6s",
+        "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
+      },
+      "t": 6019.0999999940395
+    }
+  ]
+}

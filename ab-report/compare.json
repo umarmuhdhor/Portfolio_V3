@@ -1,8 +1,8 @@
 {
-  "pass": 93,
-  "total": 131,
-  "zeroPass": 36,
-  "zeroTotal": 46,
+  "pass": 397,
+  "total": 477,
+  "zeroPass": 90,
+  "zeroTotal": 90,
   "results": [
     {
       "id": 1,
@@ -283,8 +283,8 @@
       "group": "stagger",
       "name": "card 1: grid-column / margin-top / frame height",
       "expected": "1 / 8 · 0rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "1 / 8 · 0rem · 540rem",
+      "ok": true
     },
     {
       "id": 32,
@@ -292,8 +292,8 @@
       "group": "stagger",
       "name": "card 2: grid-column / margin-top / frame height",
       "expected": "9 / -1 · 170rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "9 / -1 · 170rem · 540rem",
+      "ok": true
     },
     {
       "id": 33,
@@ -301,8 +301,8 @@
       "group": "stagger",
       "name": "card 3: grid-column / margin-top / frame height",
       "expected": "1 / 5 · 416rem · 700rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "1 / 5 · 416rem · 700rem",
+      "ok": true
     },
     {
       "id": 34,
@@ -310,8 +310,8 @@
       "group": "stagger",
       "name": "card 4: grid-column / margin-top / frame height",
       "expected": "6 / 12 · 188rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "6 / 12 · 188rem · 540rem",
+      "ok": true
     },
     {
       "id": 35,
@@ -319,8 +319,8 @@
       "group": "stagger",
       "name": "card 5: grid-column / margin-top / frame height",
       "expected": "8 / 15 · -214rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "8 / 15 · -214rem · 540rem",
+      "ok": true
     },
     {
       "id": 36,
@@ -328,8 +328,8 @@
       "group": "stagger",
       "name": "card 6: grid-column / margin-top / frame height",
       "expected": "5 / 9 · 178rem · 700rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "5 / 9 · 178rem · 700rem",
+      "ok": true
     },
     {
       "id": 37,
@@ -337,8 +337,8 @@
       "group": "stagger",
       "name": "card 7: grid-column / margin-top / frame height",
       "expected": "1 / 8 · 323rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "1 / 8 · 323rem · 540rem",
+      "ok": true
     },
     {
       "id": 38,
@@ -346,8 +346,8 @@
       "group": "stagger",
       "name": "card 8: grid-column / margin-top / frame height",
       "expected": "9 / -1 · 154rem · 540rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "9 / -1 · 154rem · 540rem",
+      "ok": true
     },
     {
       "id": 39,
@@ -355,8 +355,8 @@
       "group": "stagger",
       "name": "card 9: grid-column / margin-top / frame height",
       "expected": "2 / 8 · 638rem · 500rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "2 / 8 · 638rem · 500rem",
+      "ok": true
     },
     {
       "id": 40,
@@ -364,11 +364,155 @@
       "group": "stagger",
       "name": "card 10: grid-column / margin-top / frame height",
       "expected": "11 / -2 · 100rem · 700rem",
-      "actual": "no staggered rules found",
-      "ok": false
+      "actual": "11 / -2 · 100rem · 700rem",
+      "ok": true
     },
     {
       "id": 41,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 1 grid-column",
+      "expected": "1 / 8",
+      "actual": "1 / 8",
+      "ok": true
+    },
+    {
+      "id": 42,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 1 margin-top (rem)",
+      "expected": "0rem",
+      "actual": "0rem",
+      "ok": true
+    },
+    {
+      "id": 43,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 2 grid-column",
+      "expected": "9 / -1",
+      "actual": "9 / -1",
+      "ok": true
+    },
+    {
+      "id": 44,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 2 margin-top (rem)",
+      "expected": "170rem",
+      "actual": "170rem",
+      "ok": true
+    },
+    {
+      "id": 45,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 3 grid-column",
+      "expected": "1 / 5",
+      "actual": "1 / 5",
+      "ok": true
+    },
+    {
+      "id": 46,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 3 margin-top (rem)",
+      "expected": "416rem",
+      "actual": "416rem",
+      "ok": true
+    },
+    {
+      "id": 47,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 4 grid-column",
+      "expected": "6 / 12",
+      "actual": "6 / 12",
+      "ok": true
+    },
+    {
+      "id": 48,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 4 margin-top (rem)",
+      "expected": "188rem",
+      "actual": "188rem",
+      "ok": true
+    },
+    {
+      "id": 49,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 5 grid-column",
+      "expected": "8 / 15",
+      "actual": "8 / 15",
+      "ok": true
+    },
+    {
+      "id": 50,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 5 margin-top (rem)",
+      "expected": "-214rem",
+      "actual": "-214rem",
+      "ok": true
+    },
+    {
+      "id": 51,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 6 grid-column",
+      "expected": "5 / 9",
+      "actual": "5 / 9",
+      "ok": true
+    },
+    {
+      "id": 52,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 6 margin-top (rem)",
+      "expected": "178rem",
+      "actual": "178rem",
+      "ok": true
+    },
+    {
+      "id": 53,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 7 grid-column",
+      "expected": "1 / 8",
+      "actual": "1 / 8",
+      "ok": true
+    },
+    {
+      "id": 54,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 7 margin-top (rem)",
+      "expected": "323rem",
+      "actual": "323rem",
+      "ok": true
+    },
+    {
+      "id": 55,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 8 grid-column",
+      "expected": "9 / -1",
+      "actual": "9 / -1",
+      "ok": true
+    },
+    {
+      "id": 56,
+      "tier": "zero",
+      "group": "stagger",
+      "name": "resolved card 8 margin-top (rem)",
+      "expected": "154rem",
+      "actual": "154rem",
+      "ok": true
+    },
+    {
+      "id": 57,
       "tier": "zero",
       "group": "font-role",
       "name": "body uses the sans",
@@ -377,7 +521,7 @@
       "ok": true
     },
     {
-      "id": 42,
+      "id": 58,
       "tier": "zero",
       "group": "font-role",
       "name": "nav-link uses the sans",
@@ -386,7 +530,7 @@
       "ok": true
     },
     {
-      "id": 43,
+      "id": 59,
       "tier": "zero",
       "group": "font-role",
       "name": "nav-counter uses the sans",
@@ -395,7 +539,7 @@
       "ok": true
     },
     {
-      "id": 44,
+      "id": 60,
       "tier": "zero",
       "group": "font-role",
       "name": "h2 uses the serif",
@@ -404,7 +548,34 @@
       "ok": true
     },
     {
-      "id": 45,
+      "id": 61,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "h3 uses the serif",
+      "expected": "serif",
+      "actual": "serif",
+      "ok": true
+    },
+    {
+      "id": 62,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "h4 uses the serif",
+      "expected": "serif",
+      "actual": "serif",
+      "ok": true
+    },
+    {
+      "id": 63,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "h5 uses the serif",
+      "expected": "serif",
+      "actual": "serif",
+      "ok": true
+    },
+    {
+      "id": 64,
       "tier": "zero",
       "group": "font-role",
       "name": "body-1 uses the sans",
@@ -413,7 +584,7 @@
       "ok": true
     },
     {
-      "id": 46,
+      "id": 65,
       "tier": "zero",
       "group": "font-role",
       "name": "body-2 uses the sans",
@@ -422,7 +593,16 @@
       "ok": true
     },
     {
-      "id": 47,
+      "id": 66,
+      "tier": "zero",
+      "group": "font-role",
+      "name": "work-caption uses the serif",
+      "expected": "serif",
+      "actual": "serif",
+      "ok": true
+    },
+    {
+      "id": 67,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -432,7 +612,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 48,
+      "id": 68,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -442,7 +622,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 49,
+      "id": 69,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -452,7 +632,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 50,
+      "id": 70,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -462,7 +642,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 51,
+      "id": 71,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -472,7 +652,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 52,
+      "id": 72,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -482,7 +662,187 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 53,
+      "id": 73,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 74,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 75,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 76,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 77,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 78,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 79,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 80,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 81,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 82,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 83,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 84,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 85,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 86,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 87,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 88,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 89,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 90,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 91,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -492,7 +852,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 54,
+      "id": 92,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -502,7 +862,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 55,
+      "id": 93,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -512,7 +872,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 56,
+      "id": 94,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -522,7 +882,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 57,
+      "id": 95,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -532,7 +892,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 58,
+      "id": 96,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -542,7 +902,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 59,
+      "id": 97,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -552,7 +912,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 60,
+      "id": 98,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -562,7 +922,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 61,
+      "id": 99,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -572,7 +932,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 62,
+      "id": 100,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -582,7 +942,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 63,
+      "id": 101,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -592,7 +952,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 64,
+      "id": 102,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -602,7 +962,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 65,
+      "id": 103,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -612,57 +972,977 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 66,
+      "id": 104,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
       "expected": "0.9688 ±2.0%",
-      "actual": "0.7077 (Δ26.11%)",
-      "ok": false,
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
       "viewport": "1920x1080"
     },
     {
-      "id": 67,
+      "id": 105,
       "tier": "text",
       "group": "geometry",
-      "name": "body-1[0].x",
+      "name": "h3[0].x",
       "expected": "0.0156 ±2.0%",
       "actual": "0.0156 (Δ0.00%)",
       "ok": true,
       "viewport": "1920x1080"
     },
     {
-      "id": 68,
+      "id": 106,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h3[0].w",
+      "expected": "0.9688 ±2.0%",
+      "actual": "0.5118 (Δ45.69%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 107,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 108,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].w",
+      "expected": "0.3646 ±2.0%",
+      "actual": "0.0526 (Δ31.20%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 109,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].x",
+      "expected": "0.3412 ±2.0%",
+      "actual": "0.3420 (Δ0.09%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 110,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].w",
+      "expected": "0.5781 ±2.0%",
+      "actual": "0.6424 (Δ6.42%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 111,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.5378 (Δ52.22%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 112,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
       "expected": "0.0537 ±2.0%",
-      "actual": "0.4465 (Δ39.29%)",
-      "ok": false,
+      "actual": "0.0549 (Δ0.12%)",
+      "ok": true,
       "viewport": "1920x1080"
     },
     {
-      "id": 69,
+      "id": 113,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 114,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].w",
+      "expected": "0.9688 ±0.5%",
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 115,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 116,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 117,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 118,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 119,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 120,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 121,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].x",
+      "expected": "0.3420 ±0.5%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 122,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].w",
+      "expected": "0.3812 ±0.5%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 123,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].x",
+      "expected": "0.4726 ±0.5%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 124,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 125,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].x",
+      "expected": "0.2767 ±0.5%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 126,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 127,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 128,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 129,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 130,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 131,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 132,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 133,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 134,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 135,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 136,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 137,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].x",
+      "expected": "0.3420 ±0.5%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 138,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].w",
+      "expected": "0.3812 ±0.5%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 139,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].x",
+      "expected": "0.4726 ±0.5%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 140,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 141,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].x",
+      "expected": "0.2767 ±0.5%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 142,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 143,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 144,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 145,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 146,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 147,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].x",
-      "expected": "0.8821 ±2.0%",
-      "actual": "0.7337 (Δ14.84%)",
-      "ok": false,
+      "name": "work-meta-row[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
       "viewport": "1920x1080"
     },
     {
-      "id": 70,
+      "id": 148,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].w",
-      "expected": "0.0202 ±2.0%",
-      "actual": "0.0466 (Δ2.64%)",
+      "name": "work-meta-row[0].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 149,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].x",
+      "expected": "0.5379 ±2.0%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 150,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 151,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 152,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].w",
+      "expected": "0.2507 ±2.0%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 153,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].x",
+      "expected": "0.3420 ±2.0%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 154,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].w",
+      "expected": "0.3812 ±2.0%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 155,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].x",
+      "expected": "0.4726 ±2.0%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 156,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 157,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 158,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].w",
+      "expected": "0.2507 ±2.0%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 159,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 160,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 161,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].x",
+      "expected": "0.5379 ±2.0%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 162,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 163,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].x",
+      "expected": "0.4409 ±2.0%",
+      "actual": "0.3907 (Δ5.03%)",
       "ok": false,
       "viewport": "1920x1080"
     },
     {
-      "id": 71,
+      "id": 164,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0212 ±2.0%",
+      "actual": "0.0715 (Δ5.03%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 165,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].x",
+      "expected": "0.9554 ±2.0%",
+      "actual": "0.9261 (Δ2.93%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 166,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].w",
+      "expected": "0.0290 ±2.0%",
+      "actual": "0.0583 (Δ2.93%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 167,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].x",
+      "expected": "0.2353 ±2.0%",
+      "actual": "0.1865 (Δ4.88%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 168,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].w",
+      "expected": "0.0310 ±2.0%",
+      "actual": "0.0798 (Δ4.88%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 169,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].x",
+      "expected": "0.6937 ±2.0%",
+      "actual": "0.6722 (Δ2.16%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 170,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].w",
+      "expected": "0.0295 ±2.0%",
+      "actual": "0.0511 (Δ2.16%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 171,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].x",
+      "expected": "0.8859 ±2.0%",
+      "actual": "0.8491 (Δ3.68%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 172,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].w",
+      "expected": "0.0332 ±2.0%",
+      "actual": "0.0700 (Δ3.68%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 173,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].x",
+      "expected": "0.5047 ±2.0%",
+      "actual": "0.4559 (Δ4.87%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 174,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].w",
+      "expected": "0.0228 ±2.0%",
+      "actual": "0.0715 (Δ4.87%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 175,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].x",
+      "expected": "0.4278 ±2.0%",
+      "actual": "0.3956 (Δ3.23%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 176,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].w",
+      "expected": "0.0343 ±2.0%",
+      "actual": "0.0666 (Δ3.23%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 177,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].x",
+      "expected": "0.9606 ±2.0%",
+      "actual": "0.8996 (Δ6.10%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 178,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].w",
+      "expected": "0.0238 ±2.0%",
+      "actual": "0.0847 (Δ6.10%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 179,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 180,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 181,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.2767 (Δ26.11%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 182,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.0246 (Δ2.91%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 183,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 184,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].w",
+      "expected": "0.0188 ±2.0%",
+      "actual": "0.0306 (Δ1.18%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 185,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 186,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].w",
+      "expected": "0.0208 ±2.0%",
+      "actual": "0.0198 (Δ0.09%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 187,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.06%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 188,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].w",
+      "expected": "0.0185 ±2.0%",
+      "actual": "0.0203 (Δ0.19%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 189,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.06%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 190,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].w",
+      "expected": "0.0198 ±2.0%",
+      "actual": "0.0216 (Δ0.18%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 191,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.06%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 192,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].w",
+      "expected": "0.0274 ±2.0%",
+      "actual": "0.0533 (Δ2.59%)",
+      "ok": false,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 193,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[0] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 194,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[1] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 195,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[2] height (rem)",
+      "expected": "700rem",
+      "actual": "699.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 196,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[3] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 197,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[4] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 198,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[5] height (rem)",
+      "expected": "700rem",
+      "actual": "699.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 199,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[6] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 200,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[7] height (rem)",
+      "expected": "540rem",
+      "actual": "539.993rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 201,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -672,7 +1952,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 72,
+      "id": 202,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -682,7 +1962,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 73,
+      "id": 203,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -692,7 +1972,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 74,
+      "id": 204,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -702,7 +1982,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 75,
+      "id": 205,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -712,7 +1992,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 76,
+      "id": 206,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -722,7 +2002,187 @@
       "viewport": "1440x900"
     },
     {
-      "id": 77,
+      "id": 207,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 208,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 209,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 210,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 211,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 212,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 213,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 214,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 215,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 216,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 217,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 218,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 219,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 220,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 221,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 222,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 223,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 224,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 225,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -732,7 +2192,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 78,
+      "id": 226,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -742,7 +2202,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 79,
+      "id": 227,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -752,7 +2212,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 80,
+      "id": 228,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -762,7 +2222,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 81,
+      "id": 229,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -772,7 +2232,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 82,
+      "id": 230,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -782,7 +2242,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 83,
+      "id": 231,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -792,7 +2252,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 84,
+      "id": 232,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -802,7 +2262,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 85,
+      "id": 233,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -812,7 +2272,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 86,
+      "id": 234,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -822,7 +2282,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 87,
+      "id": 235,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -832,7 +2292,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 88,
+      "id": 236,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -842,7 +2302,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 89,
+      "id": 237,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -852,57 +2312,977 @@
       "viewport": "1440x900"
     },
     {
-      "id": 90,
+      "id": 238,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
       "expected": "0.9688 ±2.0%",
-      "actual": "0.7076 (Δ26.11%)",
-      "ok": false,
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
       "viewport": "1440x900"
     },
     {
-      "id": 91,
+      "id": 239,
       "tier": "text",
       "group": "geometry",
-      "name": "body-1[0].x",
+      "name": "h3[0].x",
       "expected": "0.0156 ±2.0%",
       "actual": "0.0156 (Δ0.00%)",
       "ok": true,
       "viewport": "1440x900"
     },
     {
-      "id": 92,
+      "id": 240,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h3[0].w",
+      "expected": "0.9688 ±2.0%",
+      "actual": "0.5118 (Δ45.69%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 241,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 242,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].w",
+      "expected": "0.3646 ±2.0%",
+      "actual": "0.0526 (Δ31.20%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 243,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].x",
+      "expected": "0.3412 ±2.0%",
+      "actual": "0.3420 (Δ0.09%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 244,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].w",
+      "expected": "0.5781 ±2.0%",
+      "actual": "0.6424 (Δ6.42%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 245,
+      "tier": "text",
+      "group": "geometry",
+      "name": "body-1[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.5378 (Δ52.22%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 246,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
       "expected": "0.0537 ±2.0%",
-      "actual": "0.4465 (Δ39.29%)",
-      "ok": false,
+      "actual": "0.0549 (Δ0.12%)",
+      "ok": true,
       "viewport": "1440x900"
     },
     {
-      "id": 93,
+      "id": 247,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 248,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].w",
+      "expected": "0.9688 ±0.5%",
+      "actual": "0.9688 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 249,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 250,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 251,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 252,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 253,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 254,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 255,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].x",
+      "expected": "0.3420 ±0.5%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 256,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].w",
+      "expected": "0.3812 ±0.5%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 257,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].x",
+      "expected": "0.4726 ±0.5%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 258,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 259,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].x",
+      "expected": "0.2767 ±0.5%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 260,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 261,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 262,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 263,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 264,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 265,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 266,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 267,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 268,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 269,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 270,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 271,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].x",
+      "expected": "0.3420 ±0.5%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 272,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].w",
+      "expected": "0.3812 ±0.5%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 273,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].x",
+      "expected": "0.4726 ±0.5%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 274,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 275,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].x",
+      "expected": "0.2767 ±0.5%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 276,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].w",
+      "expected": "0.2507 ±0.5%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 277,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].x",
+      "expected": "0.0156 ±0.5%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 278,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 279,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].x",
+      "expected": "0.5379 ±0.5%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 280,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].w",
+      "expected": "0.4465 ±0.5%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 281,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].x",
-      "expected": "0.8821 ±2.0%",
-      "actual": "0.7337 (Δ14.84%)",
-      "ok": false,
+      "name": "work-meta-row[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
       "viewport": "1440x900"
     },
     {
-      "id": 94,
+      "id": 282,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].w",
-      "expected": "0.0202 ±2.0%",
-      "actual": "0.0466 (Δ2.64%)",
+      "name": "work-meta-row[0].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 283,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].x",
+      "expected": "0.5379 ±2.0%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 284,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 285,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 286,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].w",
+      "expected": "0.2507 ±2.0%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 287,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].x",
+      "expected": "0.3420 ±2.0%",
+      "actual": "0.3420 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 288,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].w",
+      "expected": "0.3812 ±2.0%",
+      "actual": "0.3813 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 289,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].x",
+      "expected": "0.4726 ±2.0%",
+      "actual": "0.4726 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 290,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 291,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 292,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].w",
+      "expected": "0.2507 ±2.0%",
+      "actual": "0.2507 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 293,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.0156 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 294,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 295,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].x",
+      "expected": "0.5379 ±2.0%",
+      "actual": "0.5378 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 296,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].w",
+      "expected": "0.4465 ±2.0%",
+      "actual": "0.4465 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 297,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].x",
+      "expected": "0.4409 ±2.0%",
+      "actual": "0.3907 (Δ5.03%)",
       "ok": false,
       "viewport": "1440x900"
     },
     {
-      "id": 95,
+      "id": 298,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0212 ±2.0%",
+      "actual": "0.0715 (Δ5.03%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 299,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].x",
+      "expected": "0.9554 ±2.0%",
+      "actual": "0.9261 (Δ2.93%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 300,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].w",
+      "expected": "0.0290 ±2.0%",
+      "actual": "0.0583 (Δ2.93%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 301,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].x",
+      "expected": "0.2353 ±2.0%",
+      "actual": "0.1866 (Δ4.87%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 302,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].w",
+      "expected": "0.0310 ±2.0%",
+      "actual": "0.0798 (Δ4.88%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 303,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].x",
+      "expected": "0.6937 ±2.0%",
+      "actual": "0.6722 (Δ2.16%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 304,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].w",
+      "expected": "0.0295 ±2.0%",
+      "actual": "0.0511 (Δ2.16%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 305,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].x",
+      "expected": "0.8859 ±2.0%",
+      "actual": "0.8491 (Δ3.68%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 306,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].w",
+      "expected": "0.0332 ±2.0%",
+      "actual": "0.0700 (Δ3.68%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 307,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].x",
+      "expected": "0.5047 ±2.0%",
+      "actual": "0.4560 (Δ4.87%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 308,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].w",
+      "expected": "0.0228 ±2.0%",
+      "actual": "0.0715 (Δ4.87%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 309,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].x",
+      "expected": "0.4278 ±2.0%",
+      "actual": "0.3956 (Δ3.23%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 310,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].w",
+      "expected": "0.0343 ±2.0%",
+      "actual": "0.0666 (Δ3.23%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 311,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].x",
+      "expected": "0.9606 ±2.0%",
+      "actual": "0.8996 (Δ6.10%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 312,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].w",
+      "expected": "0.0238 ±2.0%",
+      "actual": "0.0847 (Δ6.10%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 313,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 314,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 315,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].x",
+      "expected": "0.0156 ±2.0%",
+      "actual": "0.2767 (Δ26.11%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 316,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].w",
+      "expected": "0.0537 ±2.0%",
+      "actual": "0.0246 (Δ2.91%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 317,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 318,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].w",
+      "expected": "0.0188 ±2.0%",
+      "actual": "0.0306 (Δ1.18%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 319,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.2767 (Δ0.00%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 320,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].w",
+      "expected": "0.0208 ±2.0%",
+      "actual": "0.0198 (Δ0.09%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 321,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.05%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 322,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].w",
+      "expected": "0.0185 ±2.0%",
+      "actual": "0.0203 (Δ0.19%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 323,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.05%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 324,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].w",
+      "expected": "0.0198 ±2.0%",
+      "actual": "0.0216 (Δ0.18%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 325,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].x",
+      "expected": "0.2767 ±2.0%",
+      "actual": "0.4073 (Δ13.05%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 326,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].w",
+      "expected": "0.0274 ±2.0%",
+      "actual": "0.0533 (Δ2.59%)",
+      "ok": false,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 327,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[0] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 328,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[1] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 329,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[2] height (rem)",
+      "expected": "700rem",
+      "actual": "699.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 330,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[3] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 331,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[4] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 332,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[5] height (rem)",
+      "expected": "700rem",
+      "actual": "699.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 333,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[6] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 334,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[7] height (rem)",
+      "expected": "540rem",
+      "actual": "539.99rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 335,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -912,7 +3292,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 96,
+      "id": 336,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -922,7 +3302,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 97,
+      "id": 337,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -932,7 +3312,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 98,
+      "id": 338,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -942,7 +3322,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 99,
+      "id": 339,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -952,7 +3332,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 100,
+      "id": 340,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -962,7 +3342,187 @@
       "viewport": "375x812"
     },
     {
-      "id": 101,
+      "id": 341,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 342,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[1].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 343,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 344,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[2].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 345,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 346,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[3].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 347,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 348,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[4].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 349,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 350,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[5].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 351,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 352,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[6].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 353,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 354,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[7].w",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 355,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 356,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[8].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 357,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 358,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "section-root[9].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 359,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -972,7 +3532,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 102,
+      "id": 360,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -982,7 +3542,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 103,
+      "id": 361,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -992,7 +3552,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 104,
+      "id": 362,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -1002,7 +3562,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 105,
+      "id": 363,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -1012,7 +3572,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 106,
+      "id": 364,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -1022,7 +3582,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 107,
+      "id": 365,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -1032,7 +3592,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 108,
+      "id": 366,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -1042,7 +3602,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 109,
+      "id": 367,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -1052,7 +3612,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 110,
+      "id": 368,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -1062,7 +3622,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 111,
+      "id": 369,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -1072,7 +3632,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 112,
+      "id": 370,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -1082,7 +3642,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 113,
+      "id": 371,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -1092,57 +3652,977 @@
       "viewport": "375x812"
     },
     {
-      "id": 114,
+      "id": 372,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
       "expected": "0.9200 ±2.0%",
-      "actual": "0.5704 (Δ34.97%)",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 373,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h3[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 374,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h3[0].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 375,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 376,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h4[0].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.2308 (Δ68.92%)",
       "ok": false,
       "viewport": "375x812"
     },
     {
-      "id": 115,
+      "id": 377,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 378,
+      "tier": "text",
+      "group": "geometry",
+      "name": "h5[0].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 379,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].x",
       "expected": "0.0400 ±2.0%",
-      "actual": "0.6637 (Δ62.37%)",
-      "ok": false,
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
       "viewport": "375x812"
     },
     {
-      "id": 116,
+      "id": 380,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
       "expected": "0.2747 ±2.0%",
-      "actual": "0.1778 (Δ9.69%)",
+      "actual": "0.9200 (Δ64.53%)",
       "ok": false,
       "viewport": "375x812"
     },
     {
-      "id": 117,
+      "id": 381,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 382,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-grid[0].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 383,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 384,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[0].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 385,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 386,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[1].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 387,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 388,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[2].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 389,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 390,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[3].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 391,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 392,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[4].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 393,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 394,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[5].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 395,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 396,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[6].w",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 397,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 398,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-card[7].w",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 399,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 400,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[0].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 401,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 402,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[1].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 403,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 404,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[2].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 405,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 406,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[3].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 407,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 408,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[4].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 409,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].x",
+      "expected": "0.0400 ±0.5%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 410,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[5].w",
+      "expected": "0.9200 ±0.5%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 411,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 412,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[6].w",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 413,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 414,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "work-frame[7].w",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 415,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].x",
-      "expected": "0.0000 ±2.0%",
-      "actual": "0.8948 (Δ89.48%)",
-      "ok": false,
+      "name": "work-meta-row[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
       "viewport": "375x812"
     },
     {
-      "id": 118,
+      "id": 416,
       "tier": "text",
       "group": "geometry",
-      "name": "link[0].w",
+      "name": "work-meta-row[0].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 417,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 418,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[1].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 419,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 420,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[2].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 421,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 422,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[3].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 423,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 424,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[4].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 425,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 426,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[5].w",
+      "expected": "0.9200 ±2.0%",
+      "actual": "0.9200 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 427,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].x",
       "expected": "0.0000 ±2.0%",
-      "actual": "0.1017 (Δ10.17%)",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 428,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[6].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 429,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].x",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 430,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-meta-row[7].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 431,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].x",
+      "expected": "0.8649 ±2.0%",
+      "actual": "0.6396 (Δ22.53%)",
       "ok": false,
       "viewport": "375x812"
     },
     {
-      "id": 119,
+      "id": 432,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0951 ±2.0%",
+      "actual": "0.3204 (Δ22.53%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 433,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].x",
+      "expected": "0.8300 ±2.0%",
+      "actual": "0.6988 (Δ13.13%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 434,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[1].w",
+      "expected": "0.1300 ±2.0%",
+      "actual": "0.2612 (Δ13.13%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 435,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].x",
+      "expected": "0.8211 ±2.0%",
+      "actual": "0.6025 (Δ21.85%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 436,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[2].w",
+      "expected": "0.1389 ±2.0%",
+      "actual": "0.3575 (Δ21.85%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 437,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].x",
+      "expected": "0.8277 ±2.0%",
+      "actual": "0.7310 (Δ9.67%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 438,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[3].w",
+      "expected": "0.1323 ±2.0%",
+      "actual": "0.2290 (Δ9.67%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 439,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].x",
+      "expected": "0.8112 ±2.0%",
+      "actual": "0.6463 (Δ16.49%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 440,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[4].w",
+      "expected": "0.1488 ±2.0%",
+      "actual": "0.3137 (Δ16.49%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 441,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].x",
+      "expected": "0.8580 ±2.0%",
+      "actual": "0.6396 (Δ21.83%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 442,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[5].w",
+      "expected": "0.1020 ±2.0%",
+      "actual": "0.3204 (Δ21.83%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 443,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].x",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 444,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[6].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 445,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].x",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 446,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[7].w",
+      "expected": "0.0000 ±2.0%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 447,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].x",
+      "expected": "0.0000 ±0.5%",
+      "actual": "0.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 448,
+      "tier": "geometry",
+      "group": "geometry",
+      "name": "footer[0].w",
+      "expected": "1.0000 ±0.5%",
+      "actual": "1.0000 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 449,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 450,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[0].w",
+      "expected": "0.2747 ±2.0%",
+      "actual": "0.1101 (Δ16.46%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 451,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 452,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[1].w",
+      "expected": "0.0842 ±2.0%",
+      "actual": "0.1373 (Δ5.31%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 453,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 454,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[2].w",
+      "expected": "0.0930 ±2.0%",
+      "actual": "0.0888 (Δ0.42%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 455,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 456,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[3].w",
+      "expected": "0.0827 ±2.0%",
+      "actual": "0.0911 (Δ0.84%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 457,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 458,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[4].w",
+      "expected": "0.0888 ±2.0%",
+      "actual": "0.0969 (Δ0.81%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 459,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].x",
+      "expected": "0.0400 ±2.0%",
+      "actual": "0.0400 (Δ0.00%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 460,
+      "tier": "text",
+      "group": "geometry",
+      "name": "footer-link[5].w",
+      "expected": "0.1229 ±2.0%",
+      "actual": "0.2389 (Δ11.60%)",
+      "ok": false,
+      "viewport": "375x812"
+    },
+    {
+      "id": 461,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[0] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 462,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[1] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 463,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[2] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 464,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[3] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 465,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[4] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 466,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[5] height (rem)",
+      "expected": "215rem",
+      "actual": "215rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 467,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[6] height (rem)",
+      "expected": "0rem",
+      "actual": "0rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 468,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[7] height (rem)",
+      "expected": "0rem",
+      "actual": "0rem",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 469,
       "tier": "text",
       "group": "role-style",
       "name": "html-root font-size",
@@ -1151,7 +4631,7 @@
       "ok": false
     },
     {
-      "id": 120,
+      "id": 470,
       "tier": "text",
       "group": "role-style",
       "name": "container display",
@@ -1160,25 +4640,25 @@
       "ok": false
     },
     {
-      "id": 121,
+      "id": 471,
       "tier": "text",
       "group": "role-style",
-      "name": "nav-counter letter-spacing",
-      "expected": "-0.38px",
-      "actual": "-0.32px",
+      "name": "h4 font-size",
+      "expected": "80px",
+      "actual": "79.9999px",
       "ok": false
     },
     {
-      "id": 122,
+      "id": 472,
       "tier": "text",
       "group": "role-style",
-      "name": "h2 text-align",
-      "expected": "center",
-      "actual": "start",
+      "name": "h4 color",
+      "expected": "rgb(255, 255, 255)",
+      "actual": "rgb(0, 0, 0)",
       "ok": false
     },
     {
-      "id": 123,
+      "id": 473,
       "tier": "text",
       "group": "role-style",
       "name": "body-1 font-size",
@@ -1187,7 +4667,7 @@
       "ok": false
     },
     {
-      "id": 124,
+      "id": 474,
       "tier": "text",
       "group": "role-style",
       "name": "body-1 line-height",
@@ -1196,7 +4676,7 @@
       "ok": false
     },
     {
-      "id": 125,
+      "id": 475,
       "tier": "text",
       "group": "role-style",
       "name": "body-1 letter-spacing",
@@ -1205,7 +4685,7 @@
       "ok": false
     },
     {
-      "id": 126,
+      "id": 476,
       "tier": "text",
       "group": "role-style",
       "name": "body-1 color",
@@ -1214,48 +4694,12 @@
       "ok": false
     },
     {
-      "id": 127,
+      "id": 477,
       "tier": "text",
       "group": "role-style",
-      "name": "link font-size",
-      "expected": "16px",
-      "actual": "14px",
-      "ok": false
-    },
-    {
-      "id": 128,
-      "tier": "text",
-      "group": "role-style",
-      "name": "link line-height",
-      "expected": "19.2px",
-      "actual": "16.8px",
-      "ok": false
-    },
-    {
-      "id": 129,
-      "tier": "text",
-      "group": "role-style",
-      "name": "link letter-spacing",
-      "expected": "-0.32px",
-      "actual": "-0.28px",
-      "ok": false
-    },
-    {
-      "id": 130,
-      "tier": "text",
-      "group": "role-style",
-      "name": "link color",
-      "expected": "rgb(255, 255, 255)",
-      "actual": "rgb(146, 146, 146)",
-      "ok": false
-    },
-    {
-      "id": 131,
-      "tier": "text",
-      "group": "role-style",
-      "name": "link display",
-      "expected": "block",
-      "actual": "inline",
+      "name": "footer-link position",
+      "expected": "static",
+      "actual": "relative",
       "ok": false
     }
   ],
@@ -1268,60 +4712,738 @@
     {
       "group": "stagger",
       "name": "card count differs (content-driven, expected)",
-      "detail": "ref 8 · build 0"
+      "detail": "ref 8 · build 9"
     },
     {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.710 · build 0.115",
+      "detail": "ref 1.710 · build 0.271",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[0].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.115",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[1].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.115",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[2].y differs (content-driven)",
+      "detail": "ref 0.654 · build 0.930",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[3].y differs (content-driven)",
+      "detail": "ref 1.512 · build 1.640",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[4].y differs (content-driven)",
+      "detail": "ref 2.011 · build 1.931",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[5].y differs (content-driven)",
+      "detail": "ref 2.733 · build 2.242",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[6].y differs (content-driven)",
+      "detail": "ref 5.272 · build 3.263",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[7].y differs (content-driven)",
+      "detail": "ref 7.699 · build 6.217",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[8].y differs (content-driven)",
+      "detail": "ref 8.824 · build 6.887",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[9].y differs (content-driven)",
+      "detail": "ref 11.768 · build 7.581",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 0.654 · build 0.115",
+      "detail": "ref 0.654 · build 0.271",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "h3[0].y differs (content-driven)",
+      "detail": "ref 1.996 · build 0.930",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "h4[0].y differs (content-driven)",
+      "detail": "ref 0.476 · build 7.060",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "h5[0].y differs (content-driven)",
+      "detail": "ref 1.507 · build 1.640",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 0.273",
+      "detail": "ref 0.008 · build 0.930",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
-      "name": "link[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.273",
+      "name": "work-grid[0].y differs (content-driven)",
+      "detail": "ref 5.387 · build 3.370",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[0].y differs (content-driven)",
+      "detail": "ref 5.538 · build 3.370",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[1].y differs (content-driven)",
+      "detail": "ref 5.626 · build 3.459",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[2].y differs (content-driven)",
+      "detail": "ref 6.196 · build 3.977",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[3].y differs (content-driven)",
+      "detail": "ref 6.035 · build 3.858",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[4].y differs (content-driven)",
+      "detail": "ref 6.437 · build 4.251",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[5].y differs (content-driven)",
+      "detail": "ref 6.882 · build 4.645",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[6].y differs (content-driven)",
+      "detail": "ref 7.403 · build 5.198",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[7].y differs (content-driven)",
+      "detail": "ref 7.315 · build 5.110",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[0].y differs (content-driven)",
+      "detail": "ref 5.538 · build 3.370",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[1].y differs (content-driven)",
+      "detail": "ref 5.626 · build 3.459",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[2].y differs (content-driven)",
+      "detail": "ref 6.196 · build 3.977",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[3].y differs (content-driven)",
+      "detail": "ref 6.035 · build 3.858",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[4].y differs (content-driven)",
+      "detail": "ref 6.437 · build 4.251",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[5].y differs (content-driven)",
+      "detail": "ref 6.882 · build 4.645",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[6].y differs (content-driven)",
+      "detail": "ref 7.403 · build 5.198",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[7].y differs (content-driven)",
+      "detail": "ref 7.315 · build 5.110",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[0].y differs (content-driven)",
+      "detail": "ref 5.828 · build 3.651",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[1].y differs (content-driven)",
+      "detail": "ref 5.917 · build 3.740",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[2].y differs (content-driven)",
+      "detail": "ref 6.570 · build 4.342",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[3].y differs (content-driven)",
+      "detail": "ref 6.326 · build 4.140",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[4].y differs (content-driven)",
+      "detail": "ref 6.727 · build 4.532",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[5].y differs (content-driven)",
+      "detail": "ref 7.256 · build 5.010",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[6].y differs (content-driven)",
+      "detail": "ref 7.694 · build 5.479",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[7].y differs (content-driven)",
+      "detail": "ref 7.606 · build 5.391",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[0].y differs (content-driven)",
+      "detail": "ref 5.828 · build 3.651",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[1].y differs (content-driven)",
+      "detail": "ref 5.917 · build 3.740",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[2].y differs (content-driven)",
+      "detail": "ref 6.570 · build 4.342",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[3].y differs (content-driven)",
+      "detail": "ref 6.326 · build 4.140",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[4].y differs (content-driven)",
+      "detail": "ref 6.727 · build 4.532",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[5].y differs (content-driven)",
+      "detail": "ref 7.256 · build 5.010",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[6].y differs (content-driven)",
+      "detail": "ref 7.694 · build 5.479",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[7].y differs (content-driven)",
+      "detail": "ref 7.606 · build 5.391",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer[0].y differs (content-driven)",
+      "detail": "ref 12.395 · build 7.791",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[0].y differs (content-driven)",
+      "detail": "ref 12.478 · build 7.893",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[1].y differs (content-driven)",
+      "detail": "ref 12.488 · build 7.914",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[2].y differs (content-driven)",
+      "detail": "ref 12.498 · build 7.934",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[3].y differs (content-driven)",
+      "detail": "ref 12.508 · build 7.893",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[4].y differs (content-driven)",
+      "detail": "ref 12.518 · build 7.914",
+      "viewport": "1920x1080"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[5].y differs (content-driven)",
+      "detail": "ref 12.538 · build 7.934",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.773 · build 0.115",
+      "detail": "ref 1.773 · build 0.271",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[0].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.115",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[1].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.115",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[2].y differs (content-driven)",
+      "detail": "ref 0.717 · build 0.930",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[3].y differs (content-driven)",
+      "detail": "ref 1.575 · build 1.640",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[4].y differs (content-driven)",
+      "detail": "ref 2.073 · build 1.931",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[5].y differs (content-driven)",
+      "detail": "ref 2.795 · build 2.242",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[6].y differs (content-driven)",
+      "detail": "ref 5.335 · build 3.263",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[7].y differs (content-driven)",
+      "detail": "ref 7.762 · build 6.217",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[8].y differs (content-driven)",
+      "detail": "ref 9.012 · build 6.888",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[9].y differs (content-driven)",
+      "detail": "ref 11.956 · build 7.583",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 0.717 · build 0.115",
+      "detail": "ref 0.717 · build 0.271",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "h3[0].y differs (content-driven)",
+      "detail": "ref 2.058 · build 0.930",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "h4[0].y differs (content-driven)",
+      "detail": "ref 0.538 · build 7.061",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "h5[0].y differs (content-driven)",
+      "detail": "ref 1.569 · build 1.640",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 0.273",
+      "detail": "ref 0.008 · build 0.930",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
-      "name": "link[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.273",
+      "name": "work-grid[0].y differs (content-driven)",
+      "detail": "ref 5.450 · build 3.370",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[0].y differs (content-driven)",
+      "detail": "ref 5.600 · build 3.370",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[1].y differs (content-driven)",
+      "detail": "ref 5.689 · build 3.459",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[2].y differs (content-driven)",
+      "detail": "ref 6.258 · build 3.977",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[3].y differs (content-driven)",
+      "detail": "ref 6.098 · build 3.858",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[4].y differs (content-driven)",
+      "detail": "ref 6.500 · build 4.251",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[5].y differs (content-driven)",
+      "detail": "ref 6.945 · build 4.645",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[6].y differs (content-driven)",
+      "detail": "ref 7.466 · build 5.198",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[7].y differs (content-driven)",
+      "detail": "ref 7.378 · build 5.110",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[0].y differs (content-driven)",
+      "detail": "ref 5.600 · build 3.370",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[1].y differs (content-driven)",
+      "detail": "ref 5.689 · build 3.459",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[2].y differs (content-driven)",
+      "detail": "ref 6.258 · build 3.977",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[3].y differs (content-driven)",
+      "detail": "ref 6.098 · build 3.858",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[4].y differs (content-driven)",
+      "detail": "ref 6.500 · build 4.251",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[5].y differs (content-driven)",
+      "detail": "ref 6.945 · build 4.645",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[6].y differs (content-driven)",
+      "detail": "ref 7.466 · build 5.198",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[7].y differs (content-driven)",
+      "detail": "ref 7.378 · build 5.110",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[0].y differs (content-driven)",
+      "detail": "ref 5.891 · build 3.651",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[1].y differs (content-driven)",
+      "detail": "ref 5.980 · build 3.740",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[2].y differs (content-driven)",
+      "detail": "ref 6.632 · build 4.342",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[3].y differs (content-driven)",
+      "detail": "ref 6.389 · build 4.140",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[4].y differs (content-driven)",
+      "detail": "ref 6.790 · build 4.532",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[5].y differs (content-driven)",
+      "detail": "ref 7.319 · build 5.010",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[6].y differs (content-driven)",
+      "detail": "ref 7.757 · build 5.479",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[7].y differs (content-driven)",
+      "detail": "ref 7.669 · build 5.391",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[0].y differs (content-driven)",
+      "detail": "ref 5.891 · build 3.651",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[1].y differs (content-driven)",
+      "detail": "ref 5.980 · build 3.740",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[2].y differs (content-driven)",
+      "detail": "ref 6.632 · build 4.342",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[3].y differs (content-driven)",
+      "detail": "ref 6.389 · build 4.140",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[4].y differs (content-driven)",
+      "detail": "ref 6.790 · build 4.532",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[5].y differs (content-driven)",
+      "detail": "ref 7.319 · build 5.010",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[6].y differs (content-driven)",
+      "detail": "ref 7.757 · build 5.479",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[7].y differs (content-driven)",
+      "detail": "ref 7.669 · build 5.391",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer[0].y differs (content-driven)",
+      "detail": "ref 12.582 · build 7.792",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[0].y differs (content-driven)",
+      "detail": "ref 12.666 · build 7.894",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[1].y differs (content-driven)",
+      "detail": "ref 12.675 · build 7.915",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[2].y differs (content-driven)",
+      "detail": "ref 12.685 · build 7.935",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[3].y differs (content-driven)",
+      "detail": "ref 12.695 · build 7.894",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[4].y differs (content-driven)",
+      "detail": "ref 12.705 · build 7.915",
+      "viewport": "1440x900"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[5].y differs (content-driven)",
+      "detail": "ref 12.726 · build 7.935",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 5.265 · build 0.160",
+      "detail": "ref 5.265 · build 0.480",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[0].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.160",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[1].y differs (content-driven)",
+      "detail": "ref 0.000 · build 0.160",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[2].y differs (content-driven)",
+      "detail": "ref 2.277 · build 1.523",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[3].y differs (content-driven)",
+      "detail": "ref 3.784 · build 3.703",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[4].y differs (content-driven)",
+      "detail": "ref 7.159 · build 5.816",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[5].y differs (content-driven)",
+      "detail": "ref 10.628 · build 7.589",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[6].y differs (content-driven)",
+      "detail": "ref 16.507 · build 10.911",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[8].y differs (content-driven)",
+      "detail": "ref 21.125 · build 15.933",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "section-root[9].y differs (content-driven)",
+      "detail": "ref 25.087 · build 17.877",
       "viewport": "375x812"
     },
     {
@@ -1333,19 +5455,223 @@
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 2.277 · build 0.160",
+      "detail": "ref 2.277 · build 0.480",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "h3[0].y differs (content-driven)",
+      "detail": "ref 7.135 · build 1.523",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "h4[0].y differs (content-driven)",
+      "detail": "ref 1.962 · build 16.512",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "h5[0].y differs (content-driven)",
+      "detail": "ref 4.249 · build 4.356",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.017 · build 0.267",
+      "detail": "ref 0.017 · build 1.942",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
-      "name": "link[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.265",
+      "name": "work-grid[0].y differs (content-driven)",
+      "detail": "ref 16.678 · build 11.264",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[0].y differs (content-driven)",
+      "detail": "ref 17.001 · build 11.264",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[1].y differs (content-driven)",
+      "detail": "ref 17.688 · build 12.042",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[2].y differs (content-driven)",
+      "detail": "ref 18.376 · build 12.820",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[3].y differs (content-driven)",
+      "detail": "ref 19.063 · build 13.598",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[4].y differs (content-driven)",
+      "detail": "ref 19.751 · build 14.376",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-card[5].y differs (content-driven)",
+      "detail": "ref 20.438 · build 15.155",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[0].y differs (content-driven)",
+      "detail": "ref 17.001 · build 11.264",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[1].y differs (content-driven)",
+      "detail": "ref 17.688 · build 12.042",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[2].y differs (content-driven)",
+      "detail": "ref 18.376 · build 12.820",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[3].y differs (content-driven)",
+      "detail": "ref 19.063 · build 13.598",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[4].y differs (content-driven)",
+      "detail": "ref 19.751 · build 14.376",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-frame[5].y differs (content-driven)",
+      "detail": "ref 20.438 · build 15.155",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[0].y differs (content-driven)",
+      "detail": "ref 17.601 · build 11.837",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[1].y differs (content-driven)",
+      "detail": "ref 18.288 · build 12.615",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[2].y differs (content-driven)",
+      "detail": "ref 18.976 · build 13.393",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[3].y differs (content-driven)",
+      "detail": "ref 19.663 · build 14.172",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[4].y differs (content-driven)",
+      "detail": "ref 20.351 · build 14.950",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-meta-row[5].y differs (content-driven)",
+      "detail": "ref 21.038 · build 15.728",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[0].y differs (content-driven)",
+      "detail": "ref 17.601 · build 11.837",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[1].y differs (content-driven)",
+      "detail": "ref 18.288 · build 12.615",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[2].y differs (content-driven)",
+      "detail": "ref 18.976 · build 13.393",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[3].y differs (content-driven)",
+      "detail": "ref 19.663 · build 14.172",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[4].y differs (content-driven)",
+      "detail": "ref 20.351 · build 14.950",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "work-caption[5].y differs (content-driven)",
+      "detail": "ref 21.038 · build 15.728",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer[0].y differs (content-driven)",
+      "detail": "ref 26.056 · build 19.692",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[0].y differs (content-driven)",
+      "detail": "ref 26.323 · build 20.242",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[1].y differs (content-driven)",
+      "detail": "ref 26.641 · build 20.340",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[2].y differs (content-driven)",
+      "detail": "ref 26.686 · build 20.438",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[3].y differs (content-driven)",
+      "detail": "ref 26.730 · build 20.735",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[4].y differs (content-driven)",
+      "detail": "ref 26.775 · build 20.833",
+      "viewport": "375x812"
+    },
+    {
+      "group": "geometry",
+      "name": "footer-link[5].y differs (content-driven)",
+      "detail": "ref 26.873 · build 20.931",
       "viewport": "375x812"
     },
     {
@@ -1361,7 +5687,7 @@
     {
       "group": "roles",
       "name": "container instance count differs (content-driven)",
-      "detail": "ref 8 · build 2"
+      "detail": "ref 8 · build 11"
     },
     {
       "group": "roles",
@@ -1371,17 +5697,12 @@
     {
       "group": "roles",
       "name": "grid-root instance count differs (content-driven)",
-      "detail": "ref 7 · build 1"
+      "detail": "ref 7 · build 10"
     },
     {
       "group": "roles",
       "name": "section-root font-family string differs (expected — Switzer substitution)",
       "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
-    },
-    {
-      "group": "roles",
-      "name": "section-root instance count differs (content-driven)",
-      "detail": "ref 10 · build 1"
     },
     {
       "group": "roles",
@@ -1415,18 +5736,33 @@
     },
     {
       "group": "roles",
-      "name": "h3 not present in build",
-      "detail": "ref has 7 instance(s)"
+      "name": "h3 font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"h, serif\" · build \"\"Hedvig Letters Serif\", serif\""
     },
     {
       "group": "roles",
-      "name": "h4 not present in build",
-      "detail": "ref has 6 instance(s)"
+      "name": "h3 instance count differs (content-driven)",
+      "detail": "ref 7 · build 1"
     },
     {
       "group": "roles",
-      "name": "h5 not present in build",
-      "detail": "ref has 3 instance(s)"
+      "name": "h4 font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"\"Hedvig Letters Serif\", serif\""
+    },
+    {
+      "group": "roles",
+      "name": "h4 instance count differs (content-driven)",
+      "detail": "ref 6 · build 4"
+    },
+    {
+      "group": "roles",
+      "name": "h5 font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"h, serif\" · build \"\"Hedvig Letters Serif\", serif\""
+    },
+    {
+      "group": "roles",
+      "name": "h5 instance count differs (content-driven)",
+      "detail": "ref 3 · build 2"
     },
     {
       "group": "roles",
@@ -1436,12 +5772,12 @@
     {
       "group": "roles",
       "name": "body-1 instance count differs (content-driven)",
-      "detail": "ref 17 · build 1"
+      "detail": "ref 17 · build 2"
     },
     {
       "group": "roles",
       "name": "body-2 not present on the reference homepage",
-      "detail": "build has 1"
+      "detail": "build has 4"
     },
     {
       "group": "roles",
@@ -1450,48 +5786,68 @@
     },
     {
       "group": "roles",
-      "name": "work-grid not present in build",
-      "detail": "ref has 1 instance(s)"
-    },
-    {
-      "group": "roles",
-      "name": "work-card not present in build",
-      "detail": "ref has 8 instance(s)"
-    },
-    {
-      "group": "roles",
-      "name": "work-frame not present in build",
-      "detail": "ref has 8 instance(s)"
-    },
-    {
-      "group": "roles",
-      "name": "work-meta-row not present in build",
-      "detail": "ref has 8 instance(s)"
-    },
-    {
-      "group": "roles",
-      "name": "work-caption not present in build",
-      "detail": "ref has 8 instance(s)"
-    },
-    {
-      "group": "roles",
-      "name": "link font-family string differs (expected — Switzer substitution)",
+      "name": "work-grid font-family string differs (expected — Switzer substitution)",
       "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
     },
     {
       "group": "roles",
-      "name": "link instance count differs (content-driven)",
-      "detail": "ref 29 · build 1"
+      "name": "work-card font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
     },
     {
       "group": "roles",
-      "name": "footer not present in build",
-      "detail": "ref has 1 instance(s)"
+      "name": "work-card instance count differs (content-driven)",
+      "detail": "ref 8 · build 9"
     },
     {
       "group": "roles",
-      "name": "footer-link not present in build",
-      "detail": "ref has 17 instance(s)"
+      "name": "work-frame font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "work-frame instance count differs (content-driven)",
+      "detail": "ref 8 · build 9"
+    },
+    {
+      "group": "roles",
+      "name": "work-meta-row font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "work-meta-row instance count differs (content-driven)",
+      "detail": "ref 8 · build 9"
+    },
+    {
+      "group": "roles",
+      "name": "work-caption font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"h, serif\" · build \"\"Hedvig Letters Serif\", serif\""
+    },
+    {
+      "group": "roles",
+      "name": "work-caption instance count differs (content-driven)",
+      "detail": "ref 8 · build 9"
+    },
+    {
+      "group": "roles",
+      "name": "link not present in build",
+      "detail": "ref has 29 instance(s)"
+    },
+    {
+      "group": "roles",
+      "name": "footer font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "footer-link font-family string differs (expected — Switzer substitution)",
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "footer-link instance count differs (content-driven)",
+      "detail": "ref 17 · build 6"
     }
   ],
   "exclusions": {

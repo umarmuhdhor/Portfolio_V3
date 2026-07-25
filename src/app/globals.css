@@ -267,6 +267,7 @@ h6 {
 /* The running counter in the header and the footer meta column. */
 .fn-meta {
   font-size: 19rem;
+  letter-spacing: -0.02em;
   line-height: 1;
 }
 
@@ -402,8 +403,12 @@ sup {
 }
 
 @media (max-width: 767.98px) {
+  /* Below the breakpoint the 15-column grid stops being a grid. Column
+     direction is not optional here — left as a flex row, fifteen tracks worth
+     of children push the container past the viewport. */
   .grd {
     display: flex;
+    flex-direction: column;
   }
 }
 

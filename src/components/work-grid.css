@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Project grid — the exact stagger.
+
+   Ten-item cycle over the 15-column grid. Every number here is measured, and
+   compare.mjs asserts all ten rows at zero tolerance, resolved through the
+   cascade the same way the browser resolves them. Two things are easy to get
+   wrong and are called out where they happen: the 10n+4 frame-height override
+   has to come *after* the 700rem group, and the ninth selector is genuinely
+   9n+9 rather than 10n+9.
+   ========================================================================== */
+
+.work-grid {
+  width: 100%;
+}
+
+.work-card {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 18rem;
+  width: 100%;
+}
+
+/* Frames that run tall. Written as one selector list, matching the source, so
+   the override below reads the way it does in the reference. */
+[data-role="work-card"]:nth-child(10n + 3) [data-role="work-frame"],
+[data-role="work-card"]:nth-child(10n + 4) [data-role="work-frame"],
+[data-role="work-card"]:nth-child(10n + 6) [data-role="work-frame"],
+[data-role="work-card"]:nth-child(10n + 10) [data-role="work-frame"] {
+  height: 700rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 1) {
+  grid-column: 1 / 8;
+}
+
+[data-role="work-card"]:nth-child(10n + 2) {
+  grid-column: 9 / -1;
+  margin-top: 170rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 3) {
+  grid-column: 1 / 5;
+  margin-top: 416rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 4) {
+  grid-column: 6 / 12;
+  margin-top: 188rem;
+}
+
+/* Position 4 is in the 700rem group above and takes it back. Order matters —
+   move this up and card 4 renders 160rem too tall. */
+[data-role="work-card"]:nth-child(10n + 4) [data-role="work-frame"] {
+  height: 540rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 5) {
+  grid-column: 8 / 15;
+  margin-top: -214rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 6) {
+  grid-column: 5 / 9;
+  margin-top: 178rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 7) {
+  grid-column: 1 / 8;
+  margin-top: 323rem;
+}
+
+[data-role="work-card"]:nth-child(10n + 8) {
+  grid-column: 9 / -1;
+  margin-top: 154rem;
+}
+
+/* 9n, not 10n. Within one cycle it selects position 9 either way, but across
+   cycles it drifts — which is the behaviour being reproduced. */
+[data-role="work-card"]:nth-child(9n + 9) {
+  grid-column: 2 / 8;
+  margin-top: 638rem;
+}
+
+[data-role="work-card"]:nth-child(9n + 9) [data-role="work-frame"] {
+  height: 500rem;
+}
+
+[data-role="work-card"]:nth-child(10n) {
+  grid-column: 11 / -2;
+  margin-top: 100rem;
+}
+
+/* --------------------------------------------------------------------------
+   Frame + image
+   -------------------------------------------------------------------------- */
+.work-frame {
+  height: 540rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.work-frame img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.109s var(--ease), opacity 0.3s var(--ease);
+  width: 100%;
+}
+
+.work-card:hover .work-frame img {
+  transform: scale(1.035);
+}
+
+/* --------------------------------------------------------------------------
+   Caption row
+
+   Two lines occupying the same box: the outgoing one sits in flow, the
+   incoming one is absolutely positioned on top of it, parked one line below.
+   On hover they swap by translating past each other, which is why both use
+   101% rather than 100% — the extra percent hides the glyph overhang that
+   would otherwise show at the mask edge.
+   -------------------------------------------------------------------------- */
+.work-meta-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-title,
+.work-metric {
+  overflow: hidden;
+}
+
+.work-caption {
+  font-family: 'Hedvig Letters Serif', serif;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  will-change: transform;
+}
+
+.caption-out,
+.caption-in {
+  transition: transform 0.6s var(--ease);
+}
+
+.caption-out {
+  /* A transform is ignored on a non-replaced inline box, so without this the
+     outgoing line simply never moves — the incoming one rolls up over a
+     stationary caption. The motion A/B catches it; a static diff does not. */
+  display: block;
+  will-change: transform;
+}
+
+.caption-in {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(101%);
+  will-change: transform;
+}
+
+.caption-in::before {
+  transition-delay: 0s;
+}
+
+.work-card:hover .caption-out {
+  transform: translateY(-101%);
+}
+
+.work-card:hover .caption-in {
+  transform: translateY(0);
+}
+
+/* The incoming line's underline waits for the roll to be half over before it
+   wipes, so the two motions read as one gesture rather than two. */
+.work-card:hover .caption-in::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition-delay: 0.3s;
+}
+
+/* --------------------------------------------------------------------------
+   States
+
+   is--a  — the card is present but not navigable.
+   is--b  — no image exists for this project, so the frame shows as an outlined
+           empty plate rather than borrowing an unrelated picture.
+   -------------------------------------------------------------------------- */
+.work-card.is--a {
+  pointer-events: none;
+}
+
+.work-card.is--b .work-frame {
+  outline: 2px solid #eee;
+  outline-offset: -2px;
+}
+
+.work-card.is--b .work-frame img {
+  opacity: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — the stagger collapses entirely
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .work-grid {
+    flex-direction: column;
+    gap: 60rem;
+  }
+
+  /* The reference truncates the grid below the breakpoint rather than letting
+     a long staggered list turn into an endless mobile scroll. Matching it. */
+  .work-card:nth-child(n + 7) {
+    display: none;
+  }
+
+  .work-card {
+    gap: 10rem;
+    grid-column: auto !important;
+    margin-top: 0 !important;
+    width: 100%;
+  }
+
+  .work-card .work-frame {
+    height: 215rem !important;
+  }
+}
