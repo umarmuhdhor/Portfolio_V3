@@ -3,35 +3,32 @@
 Every difference between this build and kononenkogroup.com, with a reason.
 
 The expected end state is **two** entries: the sans substitution, and any
-letter-spacing calibration it required. A third entry means something is
-unfinished, not that a third deviation was discovered.
-
-Status: **Phase 0 complete.** No UI has been written yet, so no build-side
-deviations exist. The permanent entry below is recorded up front because it is
-a decision, not a discovery.
+letter-spacing calibration it required. Anything beyond that is unfinished
+work, not a deviation — so the sections after them are labelled for what they
+are rather than padded into this list.
 
 ---
 
 ## 1. Sans typeface — Switzer Regular in place of PP Neue Montreal Regular
 
-**Permanent. Decided in the brief, not a build failure.**
+**Permanent. A decision in the brief, not a build failure.**
 
-The reference sets its sans in PP Neue Montreal Regular (Pangram Pangram, a
-commercial licence). No licence was purchased, and the reference's own
+The reference sets its sans in PP Neue Montreal Regular (Pangram Pangram,
+commercially licensed). No licence was bought, and the reference's own
 `n.woff2` is licensed to them — reusing it would be redistribution regardless
 of how easy it is to fetch.
 
 Switzer Regular (400) from Fontshare is used instead: free for commercial use,
-the closest free neo-grotesque to Neue Montreal, with the same geometric
-skeleton and near-identical x-height and cap-height ratios.
+the closest free neo-grotesque to Neue Montreal, same geometric skeleton, near
+identical x-height and cap-height ratios.
 
 The serif is **not** a substitution. Hedvig Letters Serif 24pt Regular is the
 reference's actual serif, it is SIL OFL, and it is used exactly.
 
-### What this costs, and how the harness accounts for it
+### What it costs, and how the harness accounts for it
 
-Switzer's glyph advance widths differ slightly from Neue Montreal. Nothing that
-is not text-metric-derived is affected:
+Switzer's glyph advance widths differ from Neue Montreal's. Nothing that is not
+text-metric-derived is affected:
 
 | Unaffected — still zero tolerance | Affected — widened tolerance |
 |---|---|
@@ -42,46 +39,120 @@ is not text-metric-derived is affected:
 | the palette | |
 | the easing curve and the five durations | |
 | the type scale in `rem` | |
-| the breakpoint | |
-| the root font-size formula | |
+| the breakpoint and the root font-size formula | |
 
 Geometry tolerance is therefore **±2% of viewport width for text-bounded
-elements only**, and stays at **±0.5%** for grid cards, section roots, and image
+elements only** and stays at **±0.5%** for grid cards, section roots and image
 frames. Both bands are constants in `scripts/roles.mjs`, which is frozen and
-hash-locked after Phase 0.
+hash-locked.
 
-The `font-family` string is expected to differ on every role and is reported
-rather than failed. What *is* asserted is that the correct one of the two
-families is applied per role — sans vs serif — because which elements use the
-serif is part of the design and must match.
+The `font-family` string differs on every role and is reported rather than
+failed. What *is* asserted is that the correct one of the two families applies
+per role — sans vs serif — because which elements take the serif is part of the
+design. That assertion passes on every mapped role.
 
 ---
 
 ## 2. Letter-spacing calibration for Switzer
 
-**Not yet required.** Reserved for Phase 1, where cap-height and x-height are
-compared between the two faces at a fixed size. If Switzer renders visibly
-lighter or tighter, `letter-spacing` and `font-size` may be adjusted as a
-documented calibration here.
+**Not required. No calibration was applied.**
 
-The `rem` type scale values themselves are never adjusted.
+The brief reserved this entry in case Switzer rendered visibly lighter or
+tighter than Neue Montreal at a fixed size. It did not, and the `rem` type
+scale is used exactly as measured, with no adjustment to `font-size` or
+`letter-spacing` anywhere in the scale.
+
+One `letter-spacing` declaration was added, on `.fn-meta`, and it is **not** a
+calibration: `letter-spacing` inherits as a computed length, so an element that
+changes its own `font-size` keeps the parent's spacing in absolute pixels
+unless it restates the `em` value. The reference restates it on the same
+element for the same reason. Without it the counter sat at `-0.32px` where the
+reference has `-0.38px`.
+
+Honest limit on this entry: cap-height and x-height could not be compared
+between the two faces directly, because that needs the Neue Montreal binary —
+the thing that was not licensed. What was compared is the rendered result
+against the reference's own rendering, which is the measurement that matters.
 
 ---
 
-## Corrections to Part 1 of the brief
+# Not deviations — known limits, stated rather than padded into the list above
 
-Not deviations in the build — these are places where the captured measurement
-disagreed with the hand-measured values in the brief. Per the brief's own rule,
-the measurement wins and is reported rather than silently reconciled.
+## A. Text-bounded geometry cannot converge, because the words differ
+
+71 of 192 text-bounded geometry assertions fail. Median delta 6.1%, max 68.9%;
+121 pass.
+
+This is a contradiction inside the brief rather than a defect in the build. The
+brief requires the content to be entirely mine, and separately asserts the
+bounding box of text-driven elements within ±2%. That band was created for one
+specific cause — Switzer's advance widths — and it holds for that. It cannot
+hold for *different words*: "Andi Muhammad Alief Fauzan" is not the width of
+the reference's studio name, "Next.js · TypeScript" is not the width of an m²
+figure, and nine project captions are not eight.
+
+The failures concentrate exactly where the copy differs most: `work-caption`
+(44), `footer-link` (15), the rest spread across headings.
+
+Per the brief's own rule that the measurement wins and must be reported rather
+than silently reconciled, this is reported. It was not resolved by widening the
+band, which would have been the Goodhart move the harness lock exists to
+prevent.
+
+## B. `#929292` fails WCAG AA contrast, and it is the reference's own value
+
+Lighthouse accessibility: **96** on the build, **90** on the reference. The one
+substantive failure on both sides is the same: `#929292` on `#fff` measures
+3.11:1, below the 4.5:1 required for body text.
+
+It cannot be fixed without breaking fidelity. `#929292` is one of the seven
+core palette values in Part 1, and `compare.mjs` asserts at zero tolerance both
+that every core colour is present and that no colour outside the reference
+palette appears. Darkening it fails the first assertion.
+
+Faithfully matching a design reproduces its flaws. Flagging rather than
+choosing: raising the muted grey to roughly `#767676` would clear AA and would
+become a third entry in the list above.
+
+---
+
+# Corrections to Part 1 of the brief
+
+Places where the captured measurement disagreed with the hand-measured values.
+Per the brief's rule, the measurement wins and is reported.
 
 | Brief says | Capture found | Treatment |
 |---|---|---|
-| Type scale includes `20` and `32` | Neither exists as a `rem` font-size. `20px` and `32px` exist, in the dev grid overlay and the Nuxt error route respectively — neither is part of the design system. | Both dropped from the build's type scale. |
-| Type scale omits `9` | `9rem` is present in the authored CSS (×2). | Added to the build's available scale. |
-| Palette has 7 colours | `#f8f8f8` and `rgba(0, 0, 0, 0.4)` are also in production use. | Available to the build; not required, since our content may have no component that uses them. |
-| Nav underline transitions `width, opacity 0.4s ease` | The nav underline is `transform 1.109s var(--ease)`, scaled on X. The `0.4s ease` pair belongs to the custom scrollbar thumb (`width` and `opacity`). | The `0.4s` duration is real and stays in the set; it is attributed to the scrollbar, not the nav. |
-| "Serif is used for project captions and display accents only" | The serif carries **all** headings — `fn-h1` through `fn-h5` and every `h1`–`h6` — plus captions and the footer meta block. | The build follows the capture. |
+| Type scale includes `20` and `32` | Neither exists as a `rem` font-size. `20px` and `32px` exist only in the dev grid overlay and the Nuxt error route. | Dropped from the build's type scale. |
+| Type scale omits `9` | `9rem` is in the authored CSS. | Added. |
+| Palette has 7 colours | `#f8f8f8` and `rgba(0, 0, 0, 0.4)` are also in production use. | Available; `#f8f8f8` is used by the logo wall. |
+| Nav underline is `width, opacity 0.4s ease` | The nav underline is `transform 1.109s var(--ease)`, scaled on X. The `0.4s ease` pair belongs to the custom scrollbar thumb. | The `0.4s` duration is real and stays in the set, attributed to the scrollbar. |
+| Serif is for "project captions and display accents only" | The serif carries **all** headings, `fn-h1` through `fn-h5` and every `h1`–`h6`, plus captions and the footer meta block. | The build follows the capture. |
 
-None of these changed a zero-tolerance value. The cross-check scored **42/44
-(95.5%)** against the brief; the two misses are the `20`/`32` type-scale entries
-above.
+The Phase 0 cross-check scored **42/44 (95.5%)** against Part 1; the two misses
+are the `20` and `32` type-scale entries above.
+
+---
+
+# Harness changes made after Phase 0
+
+The harness was frozen and hash-locked at the end of Phase 0. Four false
+positives were found during Phase 1, each surfaced before the frozen files were
+touched, and the lock was re-cut so the change appears in the diff.
+
+1. Timing functions were scanned across the whole sheet, so `linear` matched
+   inside `linear-gradient` and `ease` matched inside the token name `--ease`.
+   Declaring the curve as a token — which the brief requires — registered as a
+   timing function the reference does not have.
+2. Custom property declarations had to be added to the timing scan: when the
+   curve lives in `--ease`, the literal `cubic-bezier` never appears inside a
+   transition, so the curve read as undeclared.
+3. Fully transparent was counted as a palette colour. Chrome serializes the
+   same authored `transparent` as the keyword in one gradient and as
+   `rgba(0, 0, 0, 0)` in another; the live-DOM walk already dropped both.
+4. `compare.mjs` compared timing functions by spelling — a minifier writes
+   `.17` where the source said `0.17` — while the assertion directly above it
+   already accepted both forms.
+
+The reference was recaptured with the corrected analyzer and the Phase 0
+cross-check was unchanged at 42/44, confirming none of it moved the baseline.
