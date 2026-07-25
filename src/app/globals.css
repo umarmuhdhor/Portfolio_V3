@@ -860,3 +860,50 @@ sup {
   position: relative;
   width: 100%;
 }
+
+/* --------------------------------------------------------------------------
+   WebGL layer
+
+   A fixed, pointer-transparent canvas above the page. The DOM images stay in
+   the document — they are what ships, what is indexed and what a screen reader
+   sees — and a frame only hands its picture over to the canvas once the
+   texture has actually loaded. Below the breakpoint, without a WebGL context,
+   or under prefers-reduced-motion, the canvas is never created and the images
+   are simply what you see.
+   -------------------------------------------------------------------------- */
+.wglw {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.wgl-canvas {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Set only after the corresponding texture is on the GPU. */
+[data-gl].is--gl img {
+  opacity: 0;
+}
+
+@media (max-width: 767.98px) {
+  .wglw {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wglw {
+    display: none;
+  }
+
+  [data-gl].is--gl img {
+    opacity: 1;
+  }
+}

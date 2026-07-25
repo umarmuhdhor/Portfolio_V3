@@ -1,4 +1,6 @@
+import ScrollMotion from '@/components/ScrollMotion';
 import SiteHeader from '@/components/SiteHeader';
+import WebGLLayer from '@/components/WebGLLayer';
 import WorkGrid from '@/components/WorkGrid';
 import {
   ABOUT,
@@ -22,7 +24,17 @@ import './page.css';
 export default function Home() {
   return (
     <>
+      <ScrollMotion />
+      <WebGLLayer />
       <SiteHeader counter="01" />
+
+      {/* The reference hides the native bar above the breakpoint and draws its
+          own; the thumb is positioned from scroll progress in ScrollMotion. */}
+      <div aria-hidden="true" className="scrollbar">
+        <div className="scrollbar-track">
+          <div className="scrollbar-thumb" />
+        </div>
+      </div>
 
       <main id="main">
         {/* The reference wraps its sections in a single div inside #main; its own
@@ -33,10 +45,10 @@ export default function Home() {
         <section className="sec hero" data-role="section" id="index">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h1 className="fn-h2 hero__name e-lh hero__name--centred" data-role="h2">
+              <h1 className="fn-h2 hero__name e-lh hero__name--centred" data-role="h2" data-split>
                 {NAME}
               </h1>
-              <div className="hero__frame">
+              <div className="hero__frame" data-gl>
                 <img alt="" src="/images/profile/foto_alief.webp" />
               </div>
             </div>
@@ -47,12 +59,12 @@ export default function Home() {
         <section className="sec" data-role="section">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h2 className="fn-h3 statement__tagline" data-role="h3">
+              <h2 className="fn-h3 statement__tagline" data-role="h3" data-split>
                 {TAGLINE}
               </h2>
 
               {SERVICES.map((s) => (
-                <div className="statement__col" key={s.heading}>
+                <div className="statement__col" data-reveal key={s.heading}>
                   <p className="fn-b1 statement__col-heading" data-role="body-1">
                     {s.heading}
                   </p>
@@ -66,7 +78,7 @@ export default function Home() {
                 </div>
               ))}
 
-              <div className="statement__frame">
+              <div className="statement__frame" data-gl>
                 <img alt="" loading="lazy" src="/images/work/grooth.webp" />
               </div>
             </div>
@@ -88,7 +100,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="about__manifesto">
+              <div className="about__manifesto" data-reveal>
                 {ABOUT.manifesto.map((p) => (
                   <p className="fn-h5" data-role="h5" key={p.slice(0, 24)}>
                     {p}
@@ -104,7 +116,7 @@ export default function Home() {
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
               {CAPABILITIES.groups.map((g) => (
-                <div className="caps__group" key={g.heading}>
+                <div className="caps__group" data-reveal key={g.heading}>
                   <p className="caps__heading fn-b1">{g.heading}</p>
                   <ul>
                     {g.items.map((i) => (
@@ -132,18 +144,18 @@ export default function Home() {
         <section className="sec" data-role="section">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h2 className="fn-h3 process__heading">{PROCESS.heading}</h2>
+              <h2 className="fn-h3 process__heading" data-split>{PROCESS.heading}</h2>
 
-              <div className="process__frame">
+              <div className="process__frame" data-gl>
                 <img alt="" loading="lazy" src="/images/work/keretaxpress-web.webp" />
               </div>
-              <div className="process__frame">
+              <div className="process__frame" data-gl>
                 <img alt="" loading="lazy" src="/images/work/peduliPasal.webp" />
               </div>
 
               <div className="process__steps">
                 {PROCESS.steps.map((s) => (
-                  <div className="process__step" key={s.no}>
+                  <div className="process__step" data-reveal key={s.no}>
                     <p className="fn-b2 process__step-no">{s.no}</p>
                     <p className="fn-h5 process__step-title">{s.title}</p>
                     <p className="fn-b1 process__step-body">{s.body}</p>
@@ -158,7 +170,7 @@ export default function Home() {
         <section className="sec" data-role="section" id="work">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h2 className="fn-h3 work__heading">Selected work</h2>
+              <h2 className="fn-h3 work__heading" data-split>Selected work</h2>
             </div>
             <WorkGrid projects={PROJECTS} />
           </div>
@@ -168,11 +180,11 @@ export default function Home() {
         <section className="sec sec--desk" data-role="section">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h2 className="fn-h3 principles__heading">Tools</h2>
+              <h2 className="fn-h3 principles__heading" data-split>Tools</h2>
 
               <ol className="principles__list">
                 {PRINCIPLES.map((p) => (
-                  <li className="principles__item" key={p.no}>
+                  <li className="principles__item" data-reveal key={p.no}>
                     <span className="fn-b2 principles__no">{p.no}</span>
                     <span className="fn-h5 principles__title">{p.title}</span>
                     <span className="fn-b1 principles__body">{p.body}</span>
@@ -187,7 +199,7 @@ export default function Home() {
         <section className="sec" data-role="section">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h2 className="fn-h3 stats__heading">Certifications, and the hours behind them</h2>
+              <h2 className="fn-h3 stats__heading" data-split>Certifications, and the hours behind them</h2>
 
               <div className="stats__row">
                 {STATS.map((s) => (
@@ -201,7 +213,7 @@ export default function Home() {
               </div>
 
               <div className="stats__wall">
-                <div className="stats__wall-frame">
+                <div className="stats__wall-frame" data-gl>
                   <img alt="" loading="lazy" src="/images/work/arcadeCalc.webp" />
                 </div>
               </div>
@@ -217,7 +229,7 @@ export default function Home() {
 
               <div className="logos__row">
                 {LOGOS.map((l) => (
-                  <div className="logos__item" key={l.src}>
+                  <div className="logos__item" data-reveal key={l.src}>
                     <img alt={l.alt} loading="lazy" src={l.src} />
                   </div>
                 ))}

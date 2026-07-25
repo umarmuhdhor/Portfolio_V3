@@ -23,7 +23,7 @@ export default function WorkGrid({ projects }: { projects: Project[] }) {
               rel="noreferrer noopener"
               target="_blank"
             >
-              <div className="work-frame" data-role="work-frame">
+              <div className="work-frame" data-gl data-role="work-frame">
                 {/* Nothing is substituted when there is no screenshot — the
                     frame is left genuinely empty and is--b outlines it. */}
                 {p.image ? <img alt={`${p.title} — ${p.subtitle}`} loading="lazy" src={p.image} /> : null}
