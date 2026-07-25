@@ -58,7 +58,7 @@ export default function ScrollMotion() {
     /** Everything hidden by this component, so it can all be shown again. */
     const hidden = new Set<HTMLElement>();
     const release = (el: HTMLElement) => {
-      gsap.set(el, { clearProps: 'opacity,transform,y,yPercent' });
+      gsap.set(el, { clearProps: 'opacity,visibility,transform,y,yPercent,color' });
       hidden.delete(el);
     };
 
@@ -105,9 +105,62 @@ export default function ScrollMotion() {
         });
       });
 
+      // --- word-level reveal ----------------------------------------------
+      // A timeline rather than a bare tween, per the GSAP guidance: the words
+      // stagger up while the whole run fades, so the two stay locked together
+      // instead of drifting apart as separate tweens. autoAlpha over opacity
+      // so the element leaves the hit-testing tree while it is invisible.
+      gsap.utils.toArray<HTMLElement>('[data-split-words]').forEach((el) => {
+        const split = new SplitText(el, { type: 'words,lines', wordsClass: 'wd', linesClass: 'ln' });
+        splits.push(split);
+        const words = split.words as HTMLElement[];
+
+        gsap.set(words, { yPercent: 60, autoAlpha: 0 });
+        words.forEach((w) => hidden.add(w));
+
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 90%',
+          once: true,
+          onEnter: () => {
+            gsap
+              .timeline({ onComplete: () => words.forEach(release) })
+              .to(words, {
+                yPercent: 0,
+                autoAlpha: 1,
+                duration: DURATION.roll,
+                ease: EASE_NAME,
+                stagger: { each: 0.02, from: 'start' },
+              });
+          },
+        });
+      });
+
+      // --- scrub: long copy resolves as it crosses the viewport ------------
+      // Tied to scroll position rather than fired once, so the reader controls
+      // the pace. Each word lifts out of grey on its own offset.
+      gsap.utils.toArray<HTMLElement>('[data-split-scrub]').forEach((el) => {
+        const split = new SplitText(el, { type: 'words', wordsClass: 'wd' });
+        splits.push(split);
+        const words = split.words as HTMLElement[];
+
+        gsap.set(words, { color: '#929292' });
+        gsap.to(words, {
+          color: '#000',
+          ease: 'none',
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            end: 'bottom 55%',
+            scrub: true,
+          },
+        });
+      });
+
       // --- blocks: a short lift -------------------------------------------
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
-        gsap.set(el, { opacity: 0, y: 40 });
+        gsap.set(el, { autoAlpha: 0, y: 40 });
         hidden.add(el);
         ScrollTrigger.create({
           trigger: el,
@@ -115,7 +168,7 @@ export default function ScrollMotion() {
           once: true,
           onEnter: () =>
             gsap.to(el, {
-              opacity: 1,
+              autoAlpha: 1,
               y: 0,
               duration: DURATION.transform,
               ease: EASE_NAME,
@@ -127,7 +180,7 @@ export default function ScrollMotion() {
       // --- work cards: staggered in, in grid order ------------------------
       const cards = gsap.utils.toArray<HTMLElement>('[data-role="work-card"]');
       cards.forEach((card) => {
-        gsap.set(card, { opacity: 0, y: 60 });
+        gsap.set(card, { autoAlpha: 0, y: 60 });
         hidden.add(card);
         ScrollTrigger.create({
           trigger: card,
@@ -135,7 +188,7 @@ export default function ScrollMotion() {
           once: true,
           onEnter: () =>
             gsap.to(card, {
-              opacity: 1,
+              autoAlpha: 1,
               y: 0,
               duration: DURATION.roll,
               ease: EASE_NAME,
@@ -221,26 +274,41 @@ export default function ScrollMotion() {
 
     // Fonts change line breaking, which changes every trigger position, so the
     // refresh waits for them. Anything already on screen fires on this pass.
+    // Fonts change line breaking, which moves every trigger; the splash locks
+    // the scroll height while it is up. Refresh after both, and once more when
+    // the splash releases the page.
     const refresh = () => ScrollTrigger.refresh();
     if (document.fonts?.ready) document.fonts.ready.then(refresh);
     else refresh();
     const onLoad = () => refresh();
     window.addEventListener('load', onLoad);
 
+    const splashWatcher = new MutationObserver(() => {
+      if (!document.documentElement.classList.contains('is--loading')) {
+        refresh();
+        splashWatcher.disconnect();
+      }
+    });
+    splashWatcher.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
     // Safety net. If a trigger is still holding something invisible well after
     // load, show it. A missing animation is a blemish; a permanently blank
     // section is a broken page, and this file is the only thing that hid it.
     const sweep = window.setTimeout(() => {
-      if (!hidden.size) return;
+      // Masks are released unconditionally, including the ones authored in the
+      // markup rather than created here — a mask nothing ever opens spends the
+      // page clipping the glyphs it was meant to reveal.
       document.querySelectorAll<HTMLElement>('.ln-mask').forEach((m) => {
         m.style.overflow = 'visible';
       });
+      if (!hidden.size) return;
       [...hidden].forEach(release);
       ScrollTrigger.refresh();
     }, 2500);
 
     return () => {
       window.clearTimeout(sweep);
+      splashWatcher.disconnect();
       window.removeEventListener('load', onLoad);
       ctx.revert();
       splits.forEach((s) => s.revert());

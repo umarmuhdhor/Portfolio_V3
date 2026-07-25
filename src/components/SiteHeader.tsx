@@ -8,10 +8,10 @@
 import './site-header.css';
 
 const NAV = [
-  { label: 'Index', href: '#index' },
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Index', href: '/' },
+  { label: 'Work', href: '/work' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function SiteHeader({ counter = '01' }: { counter?: string }) {

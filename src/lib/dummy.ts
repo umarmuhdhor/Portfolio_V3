@@ -126,3 +126,90 @@ export const FOOTER = {
   hours: ['Mon — Fri', '09:00 — 18:00 CET'],
   meta: ['© 2026', 'Structural placeholder build', 'Worldwide'],
 };
+
+/* --------------------------------------------------------------------------
+   Real content — the introduction. Not placeholder.
+   -------------------------------------------------------------------------- */
+
+export const INTRO = {
+  label: 'Introduction',
+  name: 'Andi Muhammad Alief Fauzan',
+  role: 'Backend Developer & Cloud Computing Specialist',
+  body: [
+    'I build the parts of a product people never see and always feel — the API that answers quickly, the pipeline that does not drop a record, the deploy that goes out without anyone holding their breath.',
+    'Most of my work sits on Google Cloud. I like problems where the constraint is real: a budget, a latency target, a dataset that will not fit in memory. Those are the ones that make you choose properly instead of reaching for the default.',
+  ],
+  meta: [
+    { key: 'Based', value: 'Indonesia' },
+    { key: 'Focus', value: 'Backend & Cloud' },
+    { key: 'Studying', value: 'Informatics' },
+    { key: 'Status', value: 'Open to work' },
+  ],
+  /** Experience, most recent first. */
+  experience: [
+    {
+      no: '01',
+      period: '2025',
+      title: 'Google Cloud Arcade Facilitator',
+      body: 'Ran the programme for a cohort of students, and built the leaderboard tooling that scored it.',
+    },
+    {
+      no: '02',
+      period: '2024 — 2025',
+      title: 'Bangkit Academy — Cloud Computing',
+      body: 'Google, GoTo and Traveloka programme. Backend and cloud track, ending in a capstone deployed on Cloud Run.',
+    },
+    {
+      no: '03',
+      period: '2024 — now',
+      title: 'Informatics undergraduate',
+      body: 'Coursework in systems, networks and data, alongside the projects listed under Work.',
+    },
+    {
+      no: '04',
+      period: '2022 — now',
+      title: 'Freelance and personal projects',
+      body: 'Nine shipped projects across web, mobile, IoT and ML deployment. Every one of them is listed.',
+    },
+  ],
+  stack: ['TypeScript', 'Go', 'Node.js', 'Flutter', 'Google Cloud', 'Cloud Run', 'Docker', 'Vertex AI'],
+};
+
+/** Slugged project records — the source for /work and /work/[slug]. */
+export const PROJECT_PAGES = WORK.cards.map((c, i) => ({
+  slug: c.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, ''),
+  title: c.title,
+  metric: c.metric,
+  image: c.image,
+  year: String(2019 + (i % 6)),
+  discipline: ['Brand', 'Product', 'Interface', 'Editorial'][i % 4],
+  summary:
+    'A placeholder record standing in for a real case study. The layout, the column spans and the frame heights are measured; the words are not.',
+  facts: [
+    { key: 'Year', value: String(2019 + (i % 6)) },
+    { key: 'Scope', value: ['Brand', 'Product', 'Interface', 'Editorial'][i % 4] },
+    { key: 'Area', value: c.metric },
+    { key: 'Status', value: 'Delivered' },
+  ],
+  gallery: [img(i), img(i + 1), img(i + 2)],
+}));
+
+export const LEGAL = {
+  label: 'Legal',
+  heading: 'Terms and privacy',
+  blocks: [
+    {
+      title: 'Placeholder notice',
+      body:
+        'This page is a structural placeholder. It exists so the route set matches the reference and so the footer link resolves rather than dead-ending.',
+    },
+    {
+      title: 'Content',
+      body:
+        'Every string on this site outside the introduction is stand-in copy. Nothing here constitutes a real term, policy or agreement.',
+    },
+  ],
+};

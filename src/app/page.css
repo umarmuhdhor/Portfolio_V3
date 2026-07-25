@@ -706,3 +706,113 @@
     gap: 16rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Introduction — name, what the work is, and the experience behind it
+   -------------------------------------------------------------------------- */
+.sec-intro__label {
+  color: #929292;
+  grid-column: 1 / 3;
+}
+
+.sec-intro__name {
+  grid-column: 1 / -1;
+  margin-top: 40rem;
+}
+
+.sec-intro__role {
+  color: #929292;
+  grid-column: 1 / 9;
+  margin-top: 40rem;
+}
+
+.sec-intro__body {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  grid-column: 1 / 7;
+  margin-top: 160rem;
+}
+
+.sec-intro__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  grid-column: 11 / -1;
+  margin-top: 160rem;
+}
+
+.sec-intro__meta dt {
+  color: #929292;
+}
+
+.sec-intro__exp {
+  grid-column: 1 / -1;
+  margin-top: 160rem;
+}
+
+.sec-intro__exp-item {
+  align-items: baseline;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  gap: 30rem;
+  padding: 30rem 0;
+}
+
+.sec-intro__exp-no,
+.sec-intro__exp-period {
+  color: #929292;
+  flex-shrink: 0;
+}
+
+.sec-intro__exp-no {
+  width: 60rem;
+}
+
+.sec-intro__exp-period {
+  width: 170rem;
+}
+
+.sec-intro__exp-title {
+  flex-shrink: 0;
+  width: 480rem;
+}
+
+.sec-intro__exp-body {
+  color: #929292;
+  width: 100%;
+}
+
+.sec-intro__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rem;
+  grid-column: 1 / -1;
+  margin-top: 60rem;
+}
+
+.sec-intro__stack li {
+  border: 1px solid #e2e2e2;
+  color: #929292;
+  padding: 8rem 20rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-intro__body,
+  .sec-intro__meta,
+  .sec-intro__exp {
+    margin-top: 40rem;
+  }
+
+  .sec-intro__exp-item {
+    flex-direction: column;
+    gap: 10rem;
+    padding: 20rem 0;
+  }
+
+  .sec-intro__exp-no,
+  .sec-intro__exp-period,
+  .sec-intro__exp-title {
+    width: 100%;
+  }
+}

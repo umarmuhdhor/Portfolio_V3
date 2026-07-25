@@ -1,0 +1,68 @@
+import { FOOTER } from '@/lib/dummy';
+
+/** The footer, shared by every route. */
+export default function SiteFooter() {
+  return (
+    <footer className="footer" data-role="footer" id="contact">
+      <div className="ctr" data-role="container">
+        <div className="grd" data-role="grid">
+          <a className="fn-b1 footer__brand" data-role="footer-link" href="/">
+            {FOOTER.brand}
+          </a>
+
+          <div className="footer__links">
+            {FOOTER.columns.map((c) => (
+              <div key={c.heading}>
+                <p className="fn-b2 footer__col-heading">{c.heading}</p>
+                <ul>
+                  {c.links.map((l) => (
+                    <li key={l.label}>
+                      <a className="link fn-b1" data-role="footer-link" href={l.href}>
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="footer__col footer__col--a">
+            <p className="fn-b2 footer__col-heading">Address</p>
+            <ul>
+              {FOOTER.address.map((a) => (
+                <li className="fn-b1" key={a}>
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer__col footer__col--b">
+            <p className="fn-b2 footer__col-heading">Hours</p>
+            <ul>
+              {FOOTER.hours.map((h) => (
+                <li className="fn-b1" key={h}>
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer__meta">
+            <div className="footer__meta-row">
+              {FOOTER.meta.map((m) => (
+                <span className="fn-b2" key={m}>
+                  {m}
+                </span>
+              ))}
+              <a className="link fn-b2" href="/legal">
+                Legal
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -922,3 +922,71 @@ sup {
   display: block;
   line-height: 0.95;
 }
+
+/* --------------------------------------------------------------------------
+   Splash
+
+   A white plate over the viewport with the count bottom-left and a 4px rule
+   filling along the top. The page underneath does not scroll while it is up.
+   -------------------------------------------------------------------------- */
+.splash {
+  background-color: #fff;
+  color: #000;
+  height: 100vh;
+  inset: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+@media (max-width: 767.98px) {
+  .splash {
+    height: 100dvh;
+  }
+}
+
+.splash__inner {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+  padding: 38rem 0;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .splash__inner {
+    height: 100dvh;
+    padding: 20rem 0;
+  }
+}
+
+.splash__count {
+  display: block;
+}
+
+.splash-bar {
+  background-color: #000;
+  height: 4px;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+  will-change: transform;
+  z-index: 10000;
+}
+
+html.is--loading,
+html.is--loading body {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash,
+  .splash-bar {
+    display: none;
+  }
+}

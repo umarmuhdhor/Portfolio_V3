@@ -1,10 +1,11 @@
 import RadialDiagram from '@/components/RadialDiagram';
 import ScrollMotion from '@/components/ScrollMotion';
+import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import WebGLLayer from '@/components/WebGLLayer';
 import WorkGrid from '@/components/WorkGrid';
 import {
-  ABOUT,
+  INTRO,
   CAPABILITIES,
   CONTACT,
   DIAGRAM,
@@ -84,34 +85,59 @@ export default function Home() {
             <Frame className="sec-statement__plate" src={img(1)} />
           </section>
 
-          {/* 3 — about ------------------------------------------------------ */}
-          <section className="sec sec--tight" data-role="section" id="about">
+          {/* 3 — introduction: who this is, and what they have done.
+              Occupies the reference's about slot, so the section indices below
+              it keep lining up with theirs. */}
+          <section className="sec sec-intro" data-role="section" id="about">
             <div className="ctr" data-role="container">
-              <div className="sec-about__lead">
-                <p className="fn-b1 sec-about__label" data-role="body-1">
-                  {ABOUT.label}
-                </p>
-                <p className="fn-h5 sec-about__body" data-role="h5" data-reveal>
-                  {ABOUT.body}
-                </p>
-              </div>
+              <div className="grd" data-role="grid">
+                <p className="fn-b2 sec-intro__label">{INTRO.label}</p>
 
-              <div className="grd sec-about__cols" data-role="grid">
-                {ABOUT.columns.map((c, i) => (
-                  <div className={`sec-about__col sec-about__col--${i === 0 ? 'a' : 'b'}`} data-reveal key={c.no}>
-                    <h3 className="fn-b1 f-sf sec-about__col-no">{c.no}</h3>
-                    <div className="sec-about__col-body">
-                      <p className="fn-b1">{c.heading}</p>
-                      <ul>
-                        {c.items.map((it) => (
-                          <li className="fn-b2" key={it}>
-                            {it}
-                          </li>
-                        ))}
-                      </ul>
+                <h2 className="fn-h3 sec-intro__name">
+                  <span className="lh-open" data-split>
+                    {INTRO.name}
+                  </span>
+                </h2>
+
+                <p className="fn-h5 sec-intro__role" data-split-words>
+                  {INTRO.role}
+                </p>
+
+                <div className="sec-intro__body">
+                  {INTRO.body.map((b) => (
+                    <p className="fn-b1" data-reveal key={b.slice(0, 20)}>
+                      {b}
+                    </p>
+                  ))}
+                </div>
+
+                <dl className="sec-intro__meta" data-reveal>
+                  {INTRO.meta.map((m) => (
+                    <div key={m.key}>
+                      <dt className="fn-b2">{m.key}</dt>
+                      <dd className="fn-b1">{m.value}</dd>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </dl>
+
+                <ol className="sec-intro__exp">
+                  {INTRO.experience.map((e) => (
+                    <li className="sec-intro__exp-item" data-reveal key={e.no}>
+                      <span className="fn-b2 sec-intro__exp-no">{e.no}</span>
+                      <span className="fn-b2 sec-intro__exp-period">{e.period}</span>
+                      <span className="fn-h5 sec-intro__exp-title">{e.title}</span>
+                      <span className="fn-b1 sec-intro__exp-body">{e.body}</span>
+                    </li>
+                  ))}
+                </ol>
+
+                <ul className="sec-intro__stack" data-reveal>
+                  {INTRO.stack.map((t) => (
+                    <li className="fn-b2" key={t}>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </section>
@@ -145,7 +171,7 @@ export default function Home() {
                   </h2>
                   <Frame className="sec-process__plate" src={img(i + 2)} />
                   <div className="grd sec-process__spread" data-role="grid">
-                    <p className="fn-h5 lh-open sec-process__lead" data-reveal>
+                    <p className="fn-h5 lh-open sec-process__lead" data-split-scrub>
                       {b.lead}
                     </p>
                     <div className="sec-process__note" data-reveal>
@@ -253,7 +279,7 @@ export default function Home() {
                 <h2 className="lh-open fn-h2 f-mn sec-contact__heading" data-split>
                   {CONTACT.heading.join(' ')}
                 </h2>
-                <p className="fn-b1 sec-contact__body" data-reveal>
+                <p className="fn-b1 sec-contact__body" data-split-words>
                   {CONTACT.body}
                 </p>
                 <a className="link fn-h5 sec-contact__cta" href={`mailto:${CONTACT.cta}`}>
@@ -263,65 +289,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 10 — footer ------------------------------------------------------ */}
-          <footer className="footer" data-role="footer">
-            <div className="ctr" data-role="container">
-              <div className="grd" data-role="grid">
-                <a className="fn-b1 footer__brand" data-role="footer-link" href="#index">
-                  {FOOTER.brand}
-                </a>
-
-                <div className="footer__links">
-                  {FOOTER.columns.map((c) => (
-                    <div key={c.heading}>
-                      <p className="fn-b2 footer__col-heading">{c.heading}</p>
-                      <ul>
-                        {c.links.map((l) => (
-                          <li key={l.label}>
-                            <a className="link fn-b1" data-role="footer-link" href={l.href}>
-                              {l.label}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="footer__col footer__col--a">
-                  <p className="fn-b2 footer__col-heading">Address</p>
-                  <ul>
-                    {FOOTER.address.map((a) => (
-                      <li className="fn-b1" key={a}>
-                        {a}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="footer__col footer__col--b">
-                  <p className="fn-b2 footer__col-heading">Hours</p>
-                  <ul>
-                    {FOOTER.hours.map((h) => (
-                      <li className="fn-b1" key={h}>
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="footer__meta">
-                  <div className="footer__meta-row">
-                    {FOOTER.meta.map((m) => (
-                      <span className="fn-b2" key={m}>
-                        {m}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer>
+          <SiteFooter />
         </div>
       </main>
     </>

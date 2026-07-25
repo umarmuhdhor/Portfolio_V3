@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import EaseProvider from '@/components/EaseProvider';
+import Splash from '@/components/Splash';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <EaseProvider />
+        <Splash />
         {children}
       </body>
     </html>
