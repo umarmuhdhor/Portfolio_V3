@@ -1,8 +1,8 @@
 {
-  "pass": 474,
-  "total": 474,
-  "zeroPass": 90,
-  "zeroTotal": 90,
+  "pass": 473,
+  "total": 473,
+  "zeroPass": 89,
+  "zeroTotal": 89,
   "results": [
     {
       "id": 1,
@@ -542,9 +542,9 @@
       "id": 60,
       "tier": "zero",
       "group": "font-role",
-      "name": "h2 uses the serif",
-      "expected": "serif",
-      "actual": "serif",
+      "name": "h2 uses the sans",
+      "expected": "sans",
+      "actual": "sans",
       "ok": true
     },
     {
@@ -560,9 +560,9 @@
       "id": 62,
       "tier": "zero",
       "group": "font-role",
-      "name": "h4 uses the serif",
-      "expected": "serif",
-      "actual": "serif",
+      "name": "h4 uses the sans",
+      "expected": "sans",
+      "actual": "sans",
       "ok": true
     },
     {
@@ -587,22 +587,13 @@
       "id": 65,
       "tier": "zero",
       "group": "font-role",
-      "name": "body-2 uses the sans",
-      "expected": "sans",
-      "actual": "sans",
-      "ok": true
-    },
-    {
-      "id": 66,
-      "tier": "zero",
-      "group": "font-role",
       "name": "work-caption uses the serif",
       "expected": "serif",
       "actual": "serif",
       "ok": true
     },
     {
-      "id": 67,
+      "id": 66,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -612,7 +603,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 68,
+      "id": 67,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -622,7 +613,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 69,
+      "id": 68,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -632,7 +623,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 70,
+      "id": 69,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -642,7 +633,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 71,
+      "id": 70,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -652,7 +643,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 72,
+      "id": 71,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -662,7 +653,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 73,
+      "id": 72,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].x",
@@ -672,7 +663,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 74,
+      "id": 73,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].w",
@@ -682,7 +673,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 75,
+      "id": 74,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].x",
@@ -692,7 +683,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 76,
+      "id": 75,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].w",
@@ -702,7 +693,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 77,
+      "id": 76,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].x",
@@ -712,7 +703,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 78,
+      "id": 77,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].w",
@@ -722,7 +713,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 79,
+      "id": 78,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].x",
@@ -732,7 +723,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 80,
+      "id": 79,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].w",
@@ -742,7 +733,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 81,
+      "id": 80,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].x",
@@ -752,7 +743,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 82,
+      "id": 81,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].w",
@@ -762,7 +753,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 83,
+      "id": 82,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].x",
@@ -772,7 +763,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 84,
+      "id": 83,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].w",
@@ -782,7 +773,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 85,
+      "id": 84,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].x",
@@ -792,7 +783,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 86,
+      "id": 85,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].w",
@@ -802,7 +793,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 87,
+      "id": 86,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].x",
@@ -812,7 +803,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 88,
+      "id": 87,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].w",
@@ -822,7 +813,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 89,
+      "id": 88,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].x",
@@ -832,7 +823,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 90,
+      "id": 89,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].w",
@@ -842,7 +833,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 91,
+      "id": 90,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -852,7 +843,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 92,
+      "id": 91,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -862,7 +853,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 93,
+      "id": 92,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -872,7 +863,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 94,
+      "id": 93,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -882,7 +873,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 95,
+      "id": 94,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -892,7 +883,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 96,
+      "id": 95,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -902,7 +893,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 97,
+      "id": 96,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -912,7 +903,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 98,
+      "id": 97,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -922,7 +913,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 99,
+      "id": 98,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -932,7 +923,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 100,
+      "id": 99,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -942,7 +933,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 101,
+      "id": 100,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -952,7 +943,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 102,
+      "id": 101,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -962,7 +953,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 103,
+      "id": 102,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -972,7 +963,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 104,
+      "id": 103,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
@@ -982,7 +973,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 105,
+      "id": 104,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].x",
@@ -992,7 +983,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 106,
+      "id": 105,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].w",
@@ -1002,7 +993,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 107,
+      "id": 106,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].x",
@@ -1012,7 +1003,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 108,
+      "id": 107,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].w",
@@ -1022,17 +1013,17 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 109,
+      "id": 108,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].x",
       "expected": "0.3412 ±2.0%",
-      "actual": "0.3420 (Δ0.09%)",
+      "actual": "0.3412 (Δ0.00%)",
       "ok": true,
       "viewport": "1920x1080"
     },
     {
-      "id": 110,
+      "id": 109,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].w",
@@ -1042,7 +1033,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 111,
+      "id": 110,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].x",
@@ -1052,7 +1043,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 112,
+      "id": 111,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
@@ -1062,7 +1053,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 113,
+      "id": 112,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].x",
@@ -1072,7 +1063,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 114,
+      "id": 113,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].w",
@@ -1082,7 +1073,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 115,
+      "id": 114,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].x",
@@ -1092,7 +1083,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 116,
+      "id": 115,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].w",
@@ -1102,7 +1093,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 117,
+      "id": 116,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].x",
@@ -1112,7 +1103,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 118,
+      "id": 117,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].w",
@@ -1122,7 +1113,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 119,
+      "id": 118,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].x",
@@ -1132,7 +1123,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 120,
+      "id": 119,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].w",
@@ -1142,7 +1133,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 121,
+      "id": 120,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].x",
@@ -1152,7 +1143,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 122,
+      "id": 121,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].w",
@@ -1162,7 +1153,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 123,
+      "id": 122,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].x",
@@ -1172,7 +1163,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 124,
+      "id": 123,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].w",
@@ -1182,7 +1173,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 125,
+      "id": 124,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].x",
@@ -1192,7 +1183,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 126,
+      "id": 125,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].w",
@@ -1202,7 +1193,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 127,
+      "id": 126,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].x",
@@ -1212,7 +1203,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 128,
+      "id": 127,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].w",
@@ -1222,7 +1213,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 129,
+      "id": 128,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].x",
@@ -1232,7 +1223,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 130,
+      "id": 129,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].w",
@@ -1242,7 +1233,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 131,
+      "id": 130,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].x",
@@ -1252,7 +1243,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 132,
+      "id": 131,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].w",
@@ -1262,7 +1253,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 133,
+      "id": 132,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].x",
@@ -1272,7 +1263,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 134,
+      "id": 133,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].w",
@@ -1282,7 +1273,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 135,
+      "id": 134,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].x",
@@ -1292,7 +1283,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 136,
+      "id": 135,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].w",
@@ -1302,7 +1293,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 137,
+      "id": 136,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].x",
@@ -1312,7 +1303,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 138,
+      "id": 137,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].w",
@@ -1322,7 +1313,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 139,
+      "id": 138,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].x",
@@ -1332,7 +1323,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 140,
+      "id": 139,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].w",
@@ -1342,7 +1333,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 141,
+      "id": 140,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].x",
@@ -1352,7 +1343,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 142,
+      "id": 141,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].w",
@@ -1362,7 +1353,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 143,
+      "id": 142,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].x",
@@ -1372,7 +1363,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 144,
+      "id": 143,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].w",
@@ -1382,7 +1373,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 145,
+      "id": 144,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].x",
@@ -1392,7 +1383,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 146,
+      "id": 145,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].w",
@@ -1402,7 +1393,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 147,
+      "id": 146,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].x",
@@ -1412,7 +1403,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 148,
+      "id": 147,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].w",
@@ -1422,7 +1413,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 149,
+      "id": 148,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].x",
@@ -1432,7 +1423,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 150,
+      "id": 149,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].w",
@@ -1442,7 +1433,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 151,
+      "id": 150,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].x",
@@ -1452,7 +1443,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 152,
+      "id": 151,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].w",
@@ -1462,7 +1453,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 153,
+      "id": 152,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].x",
@@ -1472,7 +1463,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 154,
+      "id": 153,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].w",
@@ -1482,7 +1473,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 155,
+      "id": 154,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].x",
@@ -1492,7 +1483,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 156,
+      "id": 155,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].w",
@@ -1502,7 +1493,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 157,
+      "id": 156,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].x",
@@ -1512,7 +1503,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 158,
+      "id": 157,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].w",
@@ -1522,7 +1513,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 159,
+      "id": 158,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].x",
@@ -1532,7 +1523,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 160,
+      "id": 159,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].w",
@@ -1542,7 +1533,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 161,
+      "id": 160,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].x",
@@ -1552,7 +1543,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 162,
+      "id": 161,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].w",
@@ -1562,12 +1553,22 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 163,
+      "id": 162,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.4409 ±2.0%",
-      "actual": "0.4416 (Δ0.06%)",
+      "actual": "0.4374 (Δ0.35%)",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 163,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0212 ±2.0%",
+      "actual": "0.0248 (Δ0.35%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1575,9 +1576,9 @@
       "id": 164,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[0].w",
-      "expected": "0.0212 ±2.0%",
-      "actual": "0.0206 (Δ0.06%)",
+      "name": "work-caption[1].x",
+      "expected": "0.9554 ±2.0%",
+      "actual": "0.9567 (Δ0.13%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1585,9 +1586,9 @@
       "id": 165,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].x",
-      "expected": "0.9554 ±2.0%",
-      "actual": "0.9566 (Δ0.12%)",
+      "name": "work-caption[1].w",
+      "expected": "0.0290 ±2.0%",
+      "actual": "0.0277 (Δ0.13%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1595,9 +1596,9 @@
       "id": 166,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].w",
-      "expected": "0.0290 ±2.0%",
-      "actual": "0.0278 (Δ0.12%)",
+      "name": "work-caption[2].x",
+      "expected": "0.2353 ±2.0%",
+      "actual": "0.2353 (Δ0.00%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1605,9 +1606,9 @@
       "id": 167,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].x",
-      "expected": "0.2353 ±2.0%",
-      "actual": "0.2355 (Δ0.02%)",
+      "name": "work-caption[2].w",
+      "expected": "0.0310 ±2.0%",
+      "actual": "0.0311 (Δ0.00%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1615,9 +1616,9 @@
       "id": 168,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].w",
-      "expected": "0.0310 ±2.0%",
-      "actual": "0.0308 (Δ0.02%)",
+      "name": "work-caption[3].x",
+      "expected": "0.6937 ±2.0%",
+      "actual": "0.6926 (Δ0.11%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1625,9 +1626,9 @@
       "id": 169,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].x",
-      "expected": "0.6937 ±2.0%",
-      "actual": "0.6905 (Δ0.32%)",
+      "name": "work-caption[3].w",
+      "expected": "0.0295 ±2.0%",
+      "actual": "0.0307 (Δ0.11%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1635,9 +1636,9 @@
       "id": 170,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].w",
-      "expected": "0.0295 ±2.0%",
-      "actual": "0.0327 (Δ0.32%)",
+      "name": "work-caption[4].x",
+      "expected": "0.8859 ±2.0%",
+      "actual": "0.8898 (Δ0.39%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1645,9 +1646,9 @@
       "id": 171,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].x",
-      "expected": "0.8859 ±2.0%",
-      "actual": "0.8844 (Δ0.15%)",
+      "name": "work-caption[4].w",
+      "expected": "0.0332 ±2.0%",
+      "actual": "0.0294 (Δ0.39%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1655,9 +1656,9 @@
       "id": 172,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].w",
-      "expected": "0.0332 ±2.0%",
-      "actual": "0.0347 (Δ0.15%)",
+      "name": "work-caption[5].x",
+      "expected": "0.5047 ±2.0%",
+      "actual": "0.5035 (Δ0.11%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1665,9 +1666,9 @@
       "id": 173,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[5].x",
-      "expected": "0.5047 ±2.0%",
-      "actual": "0.5069 (Δ0.22%)",
+      "name": "work-caption[5].w",
+      "expected": "0.0228 ±2.0%",
+      "actual": "0.0239 (Δ0.11%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1675,9 +1676,9 @@
       "id": 174,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[5].w",
-      "expected": "0.0228 ±2.0%",
-      "actual": "0.0206 (Δ0.22%)",
+      "name": "work-caption[6].x",
+      "expected": "0.4278 ±2.0%",
+      "actual": "0.4312 (Δ0.34%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1685,9 +1686,9 @@
       "id": 175,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[6].x",
-      "expected": "0.4278 ±2.0%",
-      "actual": "0.4360 (Δ0.81%)",
+      "name": "work-caption[6].w",
+      "expected": "0.0343 ±2.0%",
+      "actual": "0.0310 (Δ0.34%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1695,9 +1696,9 @@
       "id": 176,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[6].w",
-      "expected": "0.0343 ±2.0%",
-      "actual": "0.0262 (Δ0.81%)",
+      "name": "work-caption[7].x",
+      "expected": "0.9606 ±2.0%",
+      "actual": "0.9568 (Δ0.38%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1705,24 +1706,14 @@
       "id": 177,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[7].x",
-      "expected": "0.9606 ±2.0%",
-      "actual": "0.9493 (Δ1.13%)",
+      "name": "work-caption[7].w",
+      "expected": "0.0238 ±2.0%",
+      "actual": "0.0276 (Δ0.38%)",
       "ok": true,
       "viewport": "1920x1080"
     },
     {
       "id": 178,
-      "tier": "text",
-      "group": "geometry",
-      "name": "work-caption[7].w",
-      "expected": "0.0238 ±2.0%",
-      "actual": "0.0351 (Δ1.13%)",
-      "ok": true,
-      "viewport": "1920x1080"
-    },
-    {
-      "id": 179,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].x",
@@ -1732,7 +1723,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 180,
+      "id": 179,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].w",
@@ -1742,7 +1733,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 181,
+      "id": 180,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].x",
@@ -1752,7 +1743,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 182,
+      "id": 181,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].w",
@@ -1762,7 +1753,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 183,
+      "id": 182,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].x",
@@ -1772,7 +1763,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 184,
+      "id": 183,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].w",
@@ -1782,7 +1773,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 185,
+      "id": 184,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].x",
@@ -1792,7 +1783,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 186,
+      "id": 185,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].w",
@@ -1802,7 +1793,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 187,
+      "id": 186,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].x",
@@ -1812,7 +1803,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 188,
+      "id": 187,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].w",
@@ -1822,7 +1813,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 189,
+      "id": 188,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].x",
@@ -1832,7 +1823,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 190,
+      "id": 189,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].w",
@@ -1842,7 +1833,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 191,
+      "id": 190,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].x",
@@ -1852,7 +1843,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 192,
+      "id": 191,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].w",
@@ -1862,7 +1853,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 193,
+      "id": 192,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].x",
@@ -1872,7 +1863,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 194,
+      "id": 193,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].w",
@@ -1882,10 +1873,20 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 195,
+      "id": 194,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[0] height (rem)",
+      "expected": "540rem",
+      "actual": "540rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 195,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[1] height (rem)",
       "expected": "540rem",
       "actual": "540rem",
       "ok": true,
@@ -1895,16 +1896,6 @@
       "id": 196,
       "tier": "zero",
       "group": "geometry",
-      "name": "work-frame[1] height (rem)",
-      "expected": "540rem",
-      "actual": "540rem",
-      "ok": true,
-      "viewport": "1920x1080"
-    },
-    {
-      "id": 197,
-      "tier": "zero",
-      "group": "geometry",
       "name": "work-frame[2] height (rem)",
       "expected": "700rem",
       "actual": "700rem",
@@ -1912,10 +1903,20 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 198,
+      "id": 197,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[3] height (rem)",
+      "expected": "540rem",
+      "actual": "540rem",
+      "ok": true,
+      "viewport": "1920x1080"
+    },
+    {
+      "id": 198,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[4] height (rem)",
       "expected": "540rem",
       "actual": "540rem",
       "ok": true,
@@ -1925,16 +1926,6 @@
       "id": 199,
       "tier": "zero",
       "group": "geometry",
-      "name": "work-frame[4] height (rem)",
-      "expected": "540rem",
-      "actual": "540rem",
-      "ok": true,
-      "viewport": "1920x1080"
-    },
-    {
-      "id": 200,
-      "tier": "zero",
-      "group": "geometry",
       "name": "work-frame[5] height (rem)",
       "expected": "700rem",
       "actual": "700rem",
@@ -1942,7 +1933,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 201,
+      "id": 200,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[6] height (rem)",
@@ -1952,7 +1943,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 202,
+      "id": 201,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[7] height (rem)",
@@ -1962,7 +1953,7 @@
       "viewport": "1920x1080"
     },
     {
-      "id": 203,
+      "id": 202,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -1972,7 +1963,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 204,
+      "id": 203,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -1982,7 +1973,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 205,
+      "id": 204,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -1992,7 +1983,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 206,
+      "id": 205,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -2002,7 +1993,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 207,
+      "id": 206,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -2012,7 +2003,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 208,
+      "id": 207,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -2022,7 +2013,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 209,
+      "id": 208,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].x",
@@ -2032,7 +2023,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 210,
+      "id": 209,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].w",
@@ -2042,7 +2033,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 211,
+      "id": 210,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].x",
@@ -2052,7 +2043,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 212,
+      "id": 211,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].w",
@@ -2062,7 +2053,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 213,
+      "id": 212,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].x",
@@ -2072,7 +2063,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 214,
+      "id": 213,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].w",
@@ -2082,7 +2073,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 215,
+      "id": 214,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].x",
@@ -2092,7 +2083,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 216,
+      "id": 215,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].w",
@@ -2102,7 +2093,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 217,
+      "id": 216,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].x",
@@ -2112,7 +2103,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 218,
+      "id": 217,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].w",
@@ -2122,7 +2113,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 219,
+      "id": 218,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].x",
@@ -2132,7 +2123,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 220,
+      "id": 219,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].w",
@@ -2142,7 +2133,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 221,
+      "id": 220,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].x",
@@ -2152,7 +2143,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 222,
+      "id": 221,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].w",
@@ -2162,7 +2153,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 223,
+      "id": 222,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].x",
@@ -2172,7 +2163,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 224,
+      "id": 223,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].w",
@@ -2182,7 +2173,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 225,
+      "id": 224,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].x",
@@ -2192,7 +2183,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 226,
+      "id": 225,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].w",
@@ -2202,7 +2193,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 227,
+      "id": 226,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -2212,7 +2203,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 228,
+      "id": 227,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -2222,7 +2213,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 229,
+      "id": 228,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -2232,7 +2223,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 230,
+      "id": 229,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -2242,7 +2233,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 231,
+      "id": 230,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -2252,7 +2243,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 232,
+      "id": 231,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -2262,7 +2253,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 233,
+      "id": 232,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -2272,7 +2263,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 234,
+      "id": 233,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -2282,7 +2273,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 235,
+      "id": 234,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -2292,7 +2283,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 236,
+      "id": 235,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -2302,7 +2293,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 237,
+      "id": 236,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -2312,7 +2303,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 238,
+      "id": 237,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -2322,7 +2313,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 239,
+      "id": 238,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -2332,7 +2323,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 240,
+      "id": 239,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
@@ -2342,7 +2333,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 241,
+      "id": 240,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].x",
@@ -2352,7 +2343,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 242,
+      "id": 241,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].w",
@@ -2362,7 +2353,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 243,
+      "id": 242,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].x",
@@ -2372,7 +2363,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 244,
+      "id": 243,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].w",
@@ -2382,17 +2373,17 @@
       "viewport": "1440x900"
     },
     {
-      "id": 245,
+      "id": 244,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].x",
       "expected": "0.3412 ±2.0%",
-      "actual": "0.3420 (Δ0.09%)",
+      "actual": "0.3412 (Δ0.00%)",
       "ok": true,
       "viewport": "1440x900"
     },
     {
-      "id": 246,
+      "id": 245,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].w",
@@ -2402,7 +2393,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 247,
+      "id": 246,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].x",
@@ -2412,7 +2403,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 248,
+      "id": 247,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
@@ -2422,7 +2413,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 249,
+      "id": 248,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].x",
@@ -2432,7 +2423,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 250,
+      "id": 249,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].w",
@@ -2442,7 +2433,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 251,
+      "id": 250,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].x",
@@ -2452,7 +2443,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 252,
+      "id": 251,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].w",
@@ -2462,7 +2453,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 253,
+      "id": 252,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].x",
@@ -2472,7 +2463,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 254,
+      "id": 253,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].w",
@@ -2482,7 +2473,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 255,
+      "id": 254,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].x",
@@ -2492,7 +2483,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 256,
+      "id": 255,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].w",
@@ -2502,7 +2493,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 257,
+      "id": 256,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].x",
@@ -2512,7 +2503,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 258,
+      "id": 257,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].w",
@@ -2522,7 +2513,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 259,
+      "id": 258,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].x",
@@ -2532,7 +2523,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 260,
+      "id": 259,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].w",
@@ -2542,7 +2533,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 261,
+      "id": 260,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].x",
@@ -2552,7 +2543,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 262,
+      "id": 261,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].w",
@@ -2562,7 +2553,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 263,
+      "id": 262,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].x",
@@ -2572,7 +2563,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 264,
+      "id": 263,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].w",
@@ -2582,7 +2573,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 265,
+      "id": 264,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].x",
@@ -2592,7 +2583,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 266,
+      "id": 265,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].w",
@@ -2602,7 +2593,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 267,
+      "id": 266,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].x",
@@ -2612,7 +2603,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 268,
+      "id": 267,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].w",
@@ -2622,7 +2613,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 269,
+      "id": 268,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].x",
@@ -2632,7 +2623,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 270,
+      "id": 269,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].w",
@@ -2642,7 +2633,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 271,
+      "id": 270,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].x",
@@ -2652,7 +2643,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 272,
+      "id": 271,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].w",
@@ -2662,7 +2653,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 273,
+      "id": 272,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].x",
@@ -2672,7 +2663,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 274,
+      "id": 273,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].w",
@@ -2682,7 +2673,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 275,
+      "id": 274,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].x",
@@ -2692,7 +2683,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 276,
+      "id": 275,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].w",
@@ -2702,7 +2693,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 277,
+      "id": 276,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].x",
@@ -2712,7 +2703,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 278,
+      "id": 277,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].w",
@@ -2722,7 +2713,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 279,
+      "id": 278,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].x",
@@ -2732,7 +2723,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 280,
+      "id": 279,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].w",
@@ -2742,7 +2733,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 281,
+      "id": 280,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].x",
@@ -2752,7 +2743,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 282,
+      "id": 281,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].w",
@@ -2762,7 +2753,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 283,
+      "id": 282,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].x",
@@ -2772,7 +2763,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 284,
+      "id": 283,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].w",
@@ -2782,7 +2773,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 285,
+      "id": 284,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].x",
@@ -2792,7 +2783,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 286,
+      "id": 285,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].w",
@@ -2802,7 +2793,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 287,
+      "id": 286,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].x",
@@ -2812,7 +2803,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 288,
+      "id": 287,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].w",
@@ -2822,7 +2813,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 289,
+      "id": 288,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].x",
@@ -2832,7 +2823,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 290,
+      "id": 289,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].w",
@@ -2842,7 +2833,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 291,
+      "id": 290,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].x",
@@ -2852,7 +2843,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 292,
+      "id": 291,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].w",
@@ -2862,7 +2853,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 293,
+      "id": 292,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].x",
@@ -2872,7 +2863,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 294,
+      "id": 293,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].w",
@@ -2882,7 +2873,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 295,
+      "id": 294,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].x",
@@ -2892,7 +2883,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 296,
+      "id": 295,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].w",
@@ -2902,7 +2893,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 297,
+      "id": 296,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].x",
@@ -2912,7 +2903,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 298,
+      "id": 297,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].w",
@@ -2922,12 +2913,22 @@
       "viewport": "1440x900"
     },
     {
-      "id": 299,
+      "id": 298,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.4409 ±2.0%",
-      "actual": "0.4416 (Δ0.06%)",
+      "actual": "0.4374 (Δ0.35%)",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 299,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0212 ±2.0%",
+      "actual": "0.0248 (Δ0.35%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2935,9 +2936,9 @@
       "id": 300,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[0].w",
-      "expected": "0.0212 ±2.0%",
-      "actual": "0.0206 (Δ0.06%)",
+      "name": "work-caption[1].x",
+      "expected": "0.9554 ±2.0%",
+      "actual": "0.9567 (Δ0.13%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2945,9 +2946,9 @@
       "id": 301,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].x",
-      "expected": "0.9554 ±2.0%",
-      "actual": "0.9566 (Δ0.12%)",
+      "name": "work-caption[1].w",
+      "expected": "0.0290 ±2.0%",
+      "actual": "0.0277 (Δ0.13%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2955,9 +2956,9 @@
       "id": 302,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].w",
-      "expected": "0.0290 ±2.0%",
-      "actual": "0.0278 (Δ0.12%)",
+      "name": "work-caption[2].x",
+      "expected": "0.2353 ±2.0%",
+      "actual": "0.2353 (Δ0.00%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2965,9 +2966,9 @@
       "id": 303,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].x",
-      "expected": "0.2353 ±2.0%",
-      "actual": "0.2355 (Δ0.02%)",
+      "name": "work-caption[2].w",
+      "expected": "0.0310 ±2.0%",
+      "actual": "0.0311 (Δ0.00%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2975,9 +2976,9 @@
       "id": 304,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].w",
-      "expected": "0.0310 ±2.0%",
-      "actual": "0.0308 (Δ0.02%)",
+      "name": "work-caption[3].x",
+      "expected": "0.6937 ±2.0%",
+      "actual": "0.6926 (Δ0.11%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2985,9 +2986,9 @@
       "id": 305,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].x",
-      "expected": "0.6937 ±2.0%",
-      "actual": "0.6905 (Δ0.32%)",
+      "name": "work-caption[3].w",
+      "expected": "0.0295 ±2.0%",
+      "actual": "0.0307 (Δ0.11%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2995,9 +2996,9 @@
       "id": 306,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].w",
-      "expected": "0.0295 ±2.0%",
-      "actual": "0.0327 (Δ0.32%)",
+      "name": "work-caption[4].x",
+      "expected": "0.8859 ±2.0%",
+      "actual": "0.8898 (Δ0.39%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3005,9 +3006,9 @@
       "id": 307,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].x",
-      "expected": "0.8859 ±2.0%",
-      "actual": "0.8844 (Δ0.15%)",
+      "name": "work-caption[4].w",
+      "expected": "0.0332 ±2.0%",
+      "actual": "0.0294 (Δ0.39%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3015,9 +3016,9 @@
       "id": 308,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].w",
-      "expected": "0.0332 ±2.0%",
-      "actual": "0.0347 (Δ0.15%)",
+      "name": "work-caption[5].x",
+      "expected": "0.5047 ±2.0%",
+      "actual": "0.5035 (Δ0.11%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3025,9 +3026,9 @@
       "id": 309,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[5].x",
-      "expected": "0.5047 ±2.0%",
-      "actual": "0.5069 (Δ0.22%)",
+      "name": "work-caption[5].w",
+      "expected": "0.0228 ±2.0%",
+      "actual": "0.0239 (Δ0.11%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3035,9 +3036,9 @@
       "id": 310,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[5].w",
-      "expected": "0.0228 ±2.0%",
-      "actual": "0.0206 (Δ0.22%)",
+      "name": "work-caption[6].x",
+      "expected": "0.4278 ±2.0%",
+      "actual": "0.4312 (Δ0.34%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3045,9 +3046,9 @@
       "id": 311,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[6].x",
-      "expected": "0.4278 ±2.0%",
-      "actual": "0.4360 (Δ0.81%)",
+      "name": "work-caption[6].w",
+      "expected": "0.0343 ±2.0%",
+      "actual": "0.0310 (Δ0.34%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3055,9 +3056,9 @@
       "id": 312,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[6].w",
-      "expected": "0.0343 ±2.0%",
-      "actual": "0.0262 (Δ0.81%)",
+      "name": "work-caption[7].x",
+      "expected": "0.9606 ±2.0%",
+      "actual": "0.9568 (Δ0.38%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3065,24 +3066,14 @@
       "id": 313,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[7].x",
-      "expected": "0.9606 ±2.0%",
-      "actual": "0.9493 (Δ1.13%)",
+      "name": "work-caption[7].w",
+      "expected": "0.0238 ±2.0%",
+      "actual": "0.0276 (Δ0.38%)",
       "ok": true,
       "viewport": "1440x900"
     },
     {
       "id": 314,
-      "tier": "text",
-      "group": "geometry",
-      "name": "work-caption[7].w",
-      "expected": "0.0238 ±2.0%",
-      "actual": "0.0351 (Δ1.13%)",
-      "ok": true,
-      "viewport": "1440x900"
-    },
-    {
-      "id": 315,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].x",
@@ -3092,7 +3083,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 316,
+      "id": 315,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].w",
@@ -3102,7 +3093,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 317,
+      "id": 316,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].x",
@@ -3112,7 +3103,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 318,
+      "id": 317,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].w",
@@ -3122,7 +3113,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 319,
+      "id": 318,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].x",
@@ -3132,7 +3123,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 320,
+      "id": 319,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].w",
@@ -3142,7 +3133,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 321,
+      "id": 320,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].x",
@@ -3152,7 +3143,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 322,
+      "id": 321,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].w",
@@ -3162,7 +3153,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 323,
+      "id": 322,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].x",
@@ -3172,7 +3163,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 324,
+      "id": 323,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].w",
@@ -3182,7 +3173,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 325,
+      "id": 324,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].x",
@@ -3192,7 +3183,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 326,
+      "id": 325,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].w",
@@ -3202,7 +3193,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 327,
+      "id": 326,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].x",
@@ -3212,7 +3203,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 328,
+      "id": 327,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].w",
@@ -3222,7 +3213,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 329,
+      "id": 328,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].x",
@@ -3232,7 +3223,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 330,
+      "id": 329,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].w",
@@ -3242,10 +3233,20 @@
       "viewport": "1440x900"
     },
     {
-      "id": 331,
+      "id": 330,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[0] height (rem)",
+      "expected": "540rem",
+      "actual": "540rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 331,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[1] height (rem)",
       "expected": "540rem",
       "actual": "540rem",
       "ok": true,
@@ -3255,16 +3256,6 @@
       "id": 332,
       "tier": "zero",
       "group": "geometry",
-      "name": "work-frame[1] height (rem)",
-      "expected": "540rem",
-      "actual": "540rem",
-      "ok": true,
-      "viewport": "1440x900"
-    },
-    {
-      "id": 333,
-      "tier": "zero",
-      "group": "geometry",
       "name": "work-frame[2] height (rem)",
       "expected": "700rem",
       "actual": "700rem",
@@ -3272,10 +3263,20 @@
       "viewport": "1440x900"
     },
     {
-      "id": 334,
+      "id": 333,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[3] height (rem)",
+      "expected": "540rem",
+      "actual": "540rem",
+      "ok": true,
+      "viewport": "1440x900"
+    },
+    {
+      "id": 334,
+      "tier": "zero",
+      "group": "geometry",
+      "name": "work-frame[4] height (rem)",
       "expected": "540rem",
       "actual": "540rem",
       "ok": true,
@@ -3285,16 +3286,6 @@
       "id": 335,
       "tier": "zero",
       "group": "geometry",
-      "name": "work-frame[4] height (rem)",
-      "expected": "540rem",
-      "actual": "540rem",
-      "ok": true,
-      "viewport": "1440x900"
-    },
-    {
-      "id": 336,
-      "tier": "zero",
-      "group": "geometry",
       "name": "work-frame[5] height (rem)",
       "expected": "700rem",
       "actual": "700rem",
@@ -3302,7 +3293,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 337,
+      "id": 336,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[6] height (rem)",
@@ -3312,7 +3303,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 338,
+      "id": 337,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[7] height (rem)",
@@ -3322,7 +3313,7 @@
       "viewport": "1440x900"
     },
     {
-      "id": 339,
+      "id": 338,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].x",
@@ -3332,7 +3323,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 340,
+      "id": 339,
       "tier": "geometry",
       "group": "geometry",
       "name": "container[0].w",
@@ -3342,7 +3333,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 341,
+      "id": 340,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].x",
@@ -3352,7 +3343,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 342,
+      "id": 341,
       "tier": "geometry",
       "group": "geometry",
       "name": "grid-root[0].w",
@@ -3362,7 +3353,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 343,
+      "id": 342,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].x",
@@ -3372,7 +3363,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 344,
+      "id": 343,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[0].w",
@@ -3382,7 +3373,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 345,
+      "id": 344,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].x",
@@ -3392,7 +3383,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 346,
+      "id": 345,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[1].w",
@@ -3402,7 +3393,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 347,
+      "id": 346,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].x",
@@ -3412,7 +3403,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 348,
+      "id": 347,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[2].w",
@@ -3422,7 +3413,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 349,
+      "id": 348,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].x",
@@ -3432,7 +3423,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 350,
+      "id": 349,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[3].w",
@@ -3442,7 +3433,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 351,
+      "id": 350,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].x",
@@ -3452,7 +3443,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 352,
+      "id": 351,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[4].w",
@@ -3462,7 +3453,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 353,
+      "id": 352,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].x",
@@ -3472,7 +3463,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 354,
+      "id": 353,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[5].w",
@@ -3482,7 +3473,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 355,
+      "id": 354,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].x",
@@ -3492,7 +3483,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 356,
+      "id": 355,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[6].w",
@@ -3502,7 +3493,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 357,
+      "id": 356,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].x",
@@ -3512,7 +3503,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 358,
+      "id": 357,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[7].w",
@@ -3522,7 +3513,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 359,
+      "id": 358,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].x",
@@ -3532,7 +3523,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 360,
+      "id": 359,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[8].w",
@@ -3542,7 +3533,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 361,
+      "id": 360,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].x",
@@ -3552,7 +3543,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 362,
+      "id": 361,
       "tier": "geometry",
       "group": "geometry",
       "name": "section-root[9].w",
@@ -3562,7 +3553,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 363,
+      "id": 362,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].x",
@@ -3572,7 +3563,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 364,
+      "id": 363,
       "tier": "geometry",
       "group": "geometry",
       "name": "header[0].w",
@@ -3582,7 +3573,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 365,
+      "id": 364,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].x",
@@ -3592,7 +3583,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 366,
+      "id": 365,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[0].w",
@@ -3602,7 +3593,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 367,
+      "id": 366,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].x",
@@ -3612,7 +3603,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 368,
+      "id": 367,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[1].w",
@@ -3622,7 +3613,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 369,
+      "id": 368,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].x",
@@ -3632,7 +3623,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 370,
+      "id": 369,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[2].w",
@@ -3642,7 +3633,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 371,
+      "id": 370,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].x",
@@ -3652,7 +3643,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 372,
+      "id": 371,
       "tier": "text",
       "group": "geometry",
       "name": "nav-link[3].w",
@@ -3662,7 +3653,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 373,
+      "id": 372,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].x",
@@ -3672,7 +3663,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 374,
+      "id": 373,
       "tier": "text",
       "group": "geometry",
       "name": "nav-counter[0].w",
@@ -3682,7 +3673,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 375,
+      "id": 374,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].x",
@@ -3692,7 +3683,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 376,
+      "id": 375,
       "tier": "text",
       "group": "geometry",
       "name": "h2[0].w",
@@ -3702,7 +3693,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 377,
+      "id": 376,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].x",
@@ -3712,7 +3703,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 378,
+      "id": 377,
       "tier": "text",
       "group": "geometry",
       "name": "h3[0].w",
@@ -3722,7 +3713,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 379,
+      "id": 378,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].x",
@@ -3732,7 +3723,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 380,
+      "id": 379,
       "tier": "text",
       "group": "geometry",
       "name": "h4[0].w",
@@ -3742,7 +3733,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 381,
+      "id": 380,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].x",
@@ -3752,7 +3743,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 382,
+      "id": 381,
       "tier": "text",
       "group": "geometry",
       "name": "h5[0].w",
@@ -3762,7 +3753,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 383,
+      "id": 382,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].x",
@@ -3772,7 +3763,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 384,
+      "id": 383,
       "tier": "text",
       "group": "geometry",
       "name": "body-1[0].w",
@@ -3782,7 +3773,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 385,
+      "id": 384,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].x",
@@ -3792,7 +3783,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 386,
+      "id": 385,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-grid[0].w",
@@ -3802,7 +3793,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 387,
+      "id": 386,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].x",
@@ -3812,7 +3803,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 388,
+      "id": 387,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[0].w",
@@ -3822,7 +3813,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 389,
+      "id": 388,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].x",
@@ -3832,7 +3823,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 390,
+      "id": 389,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[1].w",
@@ -3842,7 +3833,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 391,
+      "id": 390,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].x",
@@ -3852,7 +3843,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 392,
+      "id": 391,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[2].w",
@@ -3862,7 +3853,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 393,
+      "id": 392,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].x",
@@ -3872,7 +3863,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 394,
+      "id": 393,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[3].w",
@@ -3882,7 +3873,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 395,
+      "id": 394,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].x",
@@ -3892,7 +3883,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 396,
+      "id": 395,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[4].w",
@@ -3902,7 +3893,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 397,
+      "id": 396,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].x",
@@ -3912,7 +3903,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 398,
+      "id": 397,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[5].w",
@@ -3922,7 +3913,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 399,
+      "id": 398,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].x",
@@ -3932,7 +3923,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 400,
+      "id": 399,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[6].w",
@@ -3942,7 +3933,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 401,
+      "id": 400,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].x",
@@ -3952,7 +3943,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 402,
+      "id": 401,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-card[7].w",
@@ -3962,7 +3953,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 403,
+      "id": 402,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].x",
@@ -3972,7 +3963,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 404,
+      "id": 403,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[0].w",
@@ -3982,7 +3973,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 405,
+      "id": 404,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].x",
@@ -3992,7 +3983,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 406,
+      "id": 405,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[1].w",
@@ -4002,7 +3993,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 407,
+      "id": 406,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].x",
@@ -4012,7 +4003,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 408,
+      "id": 407,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[2].w",
@@ -4022,7 +4013,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 409,
+      "id": 408,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].x",
@@ -4032,7 +4023,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 410,
+      "id": 409,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[3].w",
@@ -4042,7 +4033,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 411,
+      "id": 410,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].x",
@@ -4052,7 +4043,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 412,
+      "id": 411,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[4].w",
@@ -4062,7 +4053,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 413,
+      "id": 412,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].x",
@@ -4072,7 +4063,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 414,
+      "id": 413,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[5].w",
@@ -4082,7 +4073,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 415,
+      "id": 414,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].x",
@@ -4092,7 +4083,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 416,
+      "id": 415,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[6].w",
@@ -4102,7 +4093,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 417,
+      "id": 416,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].x",
@@ -4112,7 +4103,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 418,
+      "id": 417,
       "tier": "geometry",
       "group": "geometry",
       "name": "work-frame[7].w",
@@ -4122,7 +4113,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 419,
+      "id": 418,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].x",
@@ -4132,7 +4123,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 420,
+      "id": 419,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[0].w",
@@ -4142,7 +4133,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 421,
+      "id": 420,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].x",
@@ -4152,7 +4143,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 422,
+      "id": 421,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[1].w",
@@ -4162,7 +4153,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 423,
+      "id": 422,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].x",
@@ -4172,7 +4163,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 424,
+      "id": 423,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[2].w",
@@ -4182,7 +4173,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 425,
+      "id": 424,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].x",
@@ -4192,7 +4183,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 426,
+      "id": 425,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[3].w",
@@ -4202,7 +4193,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 427,
+      "id": 426,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].x",
@@ -4212,7 +4203,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 428,
+      "id": 427,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[4].w",
@@ -4222,7 +4213,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 429,
+      "id": 428,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].x",
@@ -4232,7 +4223,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 430,
+      "id": 429,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[5].w",
@@ -4242,7 +4233,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 431,
+      "id": 430,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].x",
@@ -4252,7 +4243,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 432,
+      "id": 431,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[6].w",
@@ -4262,7 +4253,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 433,
+      "id": 432,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].x",
@@ -4272,7 +4263,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 434,
+      "id": 433,
       "tier": "text",
       "group": "geometry",
       "name": "work-meta-row[7].w",
@@ -4282,12 +4273,22 @@
       "viewport": "375x812"
     },
     {
-      "id": 435,
+      "id": 434,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.8649 ±2.0%",
-      "actual": "0.8678 (Δ0.29%)",
+      "actual": "0.8491 (Δ1.58%)",
+      "ok": true,
+      "viewport": "375x812"
+    },
+    {
+      "id": 435,
+      "tier": "text",
+      "group": "geometry",
+      "name": "work-caption[0].w",
+      "expected": "0.0951 ±2.0%",
+      "actual": "0.1109 (Δ1.58%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4295,9 +4296,9 @@
       "id": 436,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[0].w",
-      "expected": "0.0951 ±2.0%",
-      "actual": "0.0922 (Δ0.29%)",
+      "name": "work-caption[1].x",
+      "expected": "0.8300 ±2.0%",
+      "actual": "0.8359 (Δ0.59%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4305,9 +4306,9 @@
       "id": 437,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].x",
-      "expected": "0.8300 ±2.0%",
-      "actual": "0.8356 (Δ0.56%)",
+      "name": "work-caption[1].w",
+      "expected": "0.1300 ±2.0%",
+      "actual": "0.1241 (Δ0.59%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4315,9 +4316,9 @@
       "id": 438,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[1].w",
-      "expected": "0.1300 ±2.0%",
-      "actual": "0.1244 (Δ0.56%)",
+      "name": "work-caption[2].x",
+      "expected": "0.8211 ±2.0%",
+      "actual": "0.8209 (Δ0.02%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4325,9 +4326,9 @@
       "id": 439,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].x",
-      "expected": "0.8211 ±2.0%",
-      "actual": "0.8221 (Δ0.11%)",
+      "name": "work-caption[2].w",
+      "expected": "0.1389 ±2.0%",
+      "actual": "0.1391 (Δ0.02%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4335,9 +4336,9 @@
       "id": 440,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[2].w",
-      "expected": "0.1389 ±2.0%",
-      "actual": "0.1379 (Δ0.11%)",
+      "name": "work-caption[3].x",
+      "expected": "0.8277 ±2.0%",
+      "actual": "0.8226 (Δ0.51%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4345,9 +4346,9 @@
       "id": 441,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].x",
-      "expected": "0.8277 ±2.0%",
-      "actual": "0.8135 (Δ1.42%)",
+      "name": "work-caption[3].w",
+      "expected": "0.1323 ±2.0%",
+      "actual": "0.1374 (Δ0.51%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4355,9 +4356,9 @@
       "id": 442,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[3].w",
-      "expected": "0.1323 ±2.0%",
-      "actual": "0.1465 (Δ1.42%)",
+      "name": "work-caption[4].x",
+      "expected": "0.8112 ±2.0%",
+      "actual": "0.8285 (Δ1.74%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4365,9 +4366,9 @@
       "id": 443,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].x",
-      "expected": "0.8112 ±2.0%",
-      "actual": "0.8046 (Δ0.66%)",
+      "name": "work-caption[4].w",
+      "expected": "0.1488 ±2.0%",
+      "actual": "0.1315 (Δ1.74%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4375,9 +4376,9 @@
       "id": 444,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[4].w",
-      "expected": "0.1488 ±2.0%",
-      "actual": "0.1554 (Δ0.66%)",
+      "name": "work-caption[5].x",
+      "expected": "0.8580 ±2.0%",
+      "actual": "0.8530 (Δ0.50%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4385,24 +4386,14 @@
       "id": 445,
       "tier": "text",
       "group": "geometry",
-      "name": "work-caption[5].x",
-      "expected": "0.8580 ±2.0%",
-      "actual": "0.8678 (Δ0.99%)",
+      "name": "work-caption[5].w",
+      "expected": "0.1020 ±2.0%",
+      "actual": "0.1070 (Δ0.50%)",
       "ok": true,
       "viewport": "375x812"
     },
     {
       "id": 446,
-      "tier": "text",
-      "group": "geometry",
-      "name": "work-caption[5].w",
-      "expected": "0.1020 ±2.0%",
-      "actual": "0.0922 (Δ0.99%)",
-      "ok": true,
-      "viewport": "375x812"
-    },
-    {
-      "id": 447,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[6].x",
@@ -4412,7 +4403,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 448,
+      "id": 447,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[6].w",
@@ -4422,7 +4413,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 449,
+      "id": 448,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[7].x",
@@ -4432,7 +4423,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 450,
+      "id": 449,
       "tier": "text",
       "group": "geometry",
       "name": "work-caption[7].w",
@@ -4442,7 +4433,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 451,
+      "id": 450,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].x",
@@ -4452,7 +4443,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 452,
+      "id": 451,
       "tier": "geometry",
       "group": "geometry",
       "name": "footer[0].w",
@@ -4462,7 +4453,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 453,
+      "id": 452,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].x",
@@ -4472,7 +4463,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 454,
+      "id": 453,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[0].w",
@@ -4482,7 +4473,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 455,
+      "id": 454,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].x",
@@ -4492,7 +4483,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 456,
+      "id": 455,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[1].w",
@@ -4502,7 +4493,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 457,
+      "id": 456,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].x",
@@ -4512,7 +4503,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 458,
+      "id": 457,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[2].w",
@@ -4522,7 +4513,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 459,
+      "id": 458,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].x",
@@ -4532,7 +4523,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 460,
+      "id": 459,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[3].w",
@@ -4542,7 +4533,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 461,
+      "id": 460,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].x",
@@ -4552,7 +4543,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 462,
+      "id": 461,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[4].w",
@@ -4562,7 +4553,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 463,
+      "id": 462,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].x",
@@ -4572,7 +4563,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 464,
+      "id": 463,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[5].w",
@@ -4582,7 +4573,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 465,
+      "id": 464,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].x",
@@ -4592,7 +4583,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 466,
+      "id": 465,
       "tier": "text",
       "group": "geometry",
       "name": "footer-link[6].w",
@@ -4602,7 +4593,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 467,
+      "id": 466,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[0] height (rem)",
@@ -4612,7 +4603,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 468,
+      "id": 467,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[1] height (rem)",
@@ -4622,7 +4613,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 469,
+      "id": 468,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[2] height (rem)",
@@ -4632,7 +4623,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 470,
+      "id": 469,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[3] height (rem)",
@@ -4642,7 +4633,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 471,
+      "id": 470,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[4] height (rem)",
@@ -4652,7 +4643,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 472,
+      "id": 471,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[5] height (rem)",
@@ -4662,7 +4653,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 473,
+      "id": 472,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[6] height (rem)",
@@ -4672,7 +4663,7 @@
       "viewport": "375x812"
     },
     {
-      "id": 474,
+      "id": 473,
       "tier": "zero",
       "group": "geometry",
       "name": "work-frame[7] height (rem)",
@@ -4689,962 +4680,915 @@
       "detail": "rgba(0, 0, 0, 0.4)"
     },
     {
-      "group": "stagger",
-      "name": "card count differs (content-driven, expected)",
-      "detail": "ref 8 · build 9"
-    },
-    {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.710 · build 0.271",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.115",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[1].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.115",
+      "detail": "ref 1.710 · build 1.861",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[2].y differs (content-driven)",
-      "detail": "ref 0.654 · build 0.975",
+      "detail": "ref 0.654 · build 0.677",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 1.512 · build 1.657",
+      "detail": "ref 1.512 · build 1.708",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 2.011 · build 1.971",
+      "detail": "ref 2.011 · build 2.019",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 2.733 · build 2.192",
+      "detail": "ref 2.733 · build 2.532",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 5.272 · build 3.099",
+      "detail": "ref 5.272 · build 4.558",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[7].y differs (content-driven)",
-      "detail": "ref 7.699 · build 6.053",
+      "detail": "ref 7.699 · build 6.988",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 8.824 · build 6.723",
+      "detail": "ref 8.824 · build 8.227",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 11.768 · build 7.417",
+      "detail": "ref 11.768 · build 10.706",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 0.654 · build 0.271",
+      "detail": "ref 0.654 · build 0.677",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 1.996 · build 0.975",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "h4[0].y differs (content-driven)",
-      "detail": "ref 0.476 · build 7.786",
+      "detail": "ref 1.996 · build 2.019",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "h5[0].y differs (content-driven)",
-      "detail": "ref 1.507 · build 1.657",
+      "detail": "ref 1.507 · build 1.708",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 5.387 · build 3.206",
+      "detail": "ref 5.387 · build 4.671",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 5.538 · build 3.206",
+      "detail": "ref 5.538 · build 4.671",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 5.626 · build 3.295",
+      "detail": "ref 5.626 · build 4.759",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 6.196 · build 3.813",
+      "detail": "ref 6.196 · build 5.278",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 6.035 · build 3.694",
+      "detail": "ref 6.035 · build 5.159",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 6.437 · build 4.087",
+      "detail": "ref 6.437 · build 5.551",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 6.882 · build 4.481",
+      "detail": "ref 6.882 · build 5.946",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[6].y differs (content-driven)",
-      "detail": "ref 7.403 · build 5.034",
+      "detail": "ref 7.403 · build 6.499",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[7].y differs (content-driven)",
-      "detail": "ref 7.315 · build 4.946",
+      "detail": "ref 7.315 · build 6.411",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 5.538 · build 3.206",
+      "detail": "ref 5.538 · build 4.671",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 5.626 · build 3.295",
+      "detail": "ref 5.626 · build 4.759",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 6.196 · build 3.813",
+      "detail": "ref 6.196 · build 5.278",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 6.035 · build 3.694",
+      "detail": "ref 6.035 · build 5.159",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 6.437 · build 4.087",
+      "detail": "ref 6.437 · build 5.551",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 6.882 · build 4.481",
+      "detail": "ref 6.882 · build 5.946",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[6].y differs (content-driven)",
-      "detail": "ref 7.403 · build 5.034",
+      "detail": "ref 7.403 · build 6.499",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[7].y differs (content-driven)",
-      "detail": "ref 7.315 · build 4.946",
+      "detail": "ref 7.315 · build 6.411",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 5.828 · build 3.487",
+      "detail": "ref 5.828 · build 4.952",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 5.917 · build 3.576",
+      "detail": "ref 5.917 · build 5.041",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 6.570 · build 4.178",
+      "detail": "ref 6.570 · build 5.642",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 6.326 · build 3.976",
+      "detail": "ref 6.326 · build 5.440",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 6.727 · build 4.368",
+      "detail": "ref 6.727 · build 5.833",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 7.256 · build 4.846",
+      "detail": "ref 7.256 · build 6.310",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[6].y differs (content-driven)",
-      "detail": "ref 7.694 · build 5.315",
+      "detail": "ref 7.694 · build 6.780",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[7].y differs (content-driven)",
-      "detail": "ref 7.606 · build 5.227",
+      "detail": "ref 7.606 · build 6.692",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 5.828 · build 3.487",
+      "detail": "ref 5.828 · build 4.952",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 5.917 · build 3.576",
+      "detail": "ref 5.917 · build 5.041",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 6.570 · build 4.178",
+      "detail": "ref 6.570 · build 5.642",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 6.326 · build 3.976",
+      "detail": "ref 6.326 · build 5.440",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 6.727 · build 4.368",
+      "detail": "ref 6.727 · build 5.833",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 7.256 · build 4.846",
+      "detail": "ref 7.256 · build 6.310",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[6].y differs (content-driven)",
-      "detail": "ref 7.694 · build 5.315",
+      "detail": "ref 7.694 · build 6.780",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[7].y differs (content-driven)",
-      "detail": "ref 7.606 · build 5.227",
+      "detail": "ref 7.606 · build 6.692",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 12.395 · build 7.627",
+      "detail": "ref 12.395 · build 11.032",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 12.478 · build 7.710",
+      "detail": "ref 12.478 · build 11.116",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 12.488 · build 7.882",
+      "detail": "ref 12.488 · build 11.135",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 12.498 · build 7.905",
+      "detail": "ref 12.498 · build 11.158",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 12.508 · build 7.969",
+      "detail": "ref 12.508 · build 11.222",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 12.518 · build 7.993",
+      "detail": "ref 12.518 · build 11.245",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 12.538 · build 8.056",
+      "detail": "ref 12.538 · build 11.309",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 12.548 · build 8.080",
+      "detail": "ref 12.548 · build 11.333",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.773 · build 0.271",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.115",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[1].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.115",
+      "detail": "ref 1.773 · build 1.861",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[2].y differs (content-driven)",
-      "detail": "ref 0.717 · build 0.975",
+      "detail": "ref 0.717 · build 0.677",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 1.575 · build 1.657",
+      "detail": "ref 1.575 · build 1.708",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 2.073 · build 1.971",
+      "detail": "ref 2.073 · build 2.019",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 2.795 · build 2.192",
+      "detail": "ref 2.795 · build 2.533",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 5.335 · build 3.099",
+      "detail": "ref 5.335 · build 4.559",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[7].y differs (content-driven)",
-      "detail": "ref 7.762 · build 6.053",
+      "detail": "ref 7.762 · build 6.989",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 9.012 · build 6.724",
+      "detail": "ref 9.012 · build 8.228",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 11.956 · build 7.419",
+      "detail": "ref 11.956 · build 10.707",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 0.717 · build 0.271",
+      "detail": "ref 0.717 · build 0.677",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 2.058 · build 0.975",
+      "detail": "ref 2.058 · build 2.019",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h4[0].y differs (content-driven)",
-      "detail": "ref 0.538 · build 7.787",
+      "detail": "ref 0.538 · build 0.464",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h5[0].y differs (content-driven)",
-      "detail": "ref 1.569 · build 1.657",
+      "detail": "ref 1.569 · build 1.708",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 5.450 · build 3.206",
+      "detail": "ref 5.450 · build 4.672",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 5.600 · build 3.206",
+      "detail": "ref 5.600 · build 4.672",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 5.689 · build 3.295",
+      "detail": "ref 5.689 · build 4.761",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 6.258 · build 3.813",
+      "detail": "ref 6.258 · build 5.279",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 6.098 · build 3.694",
+      "detail": "ref 6.098 · build 5.160",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 6.500 · build 4.087",
+      "detail": "ref 6.500 · build 5.552",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 6.945 · build 4.481",
+      "detail": "ref 6.945 · build 5.947",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[6].y differs (content-driven)",
-      "detail": "ref 7.466 · build 5.034",
+      "detail": "ref 7.466 · build 6.500",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[7].y differs (content-driven)",
-      "detail": "ref 7.378 · build 4.946",
+      "detail": "ref 7.378 · build 6.412",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 5.600 · build 3.206",
+      "detail": "ref 5.600 · build 4.672",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 5.689 · build 3.295",
+      "detail": "ref 5.689 · build 4.761",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 6.258 · build 3.813",
+      "detail": "ref 6.258 · build 5.279",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 6.098 · build 3.694",
+      "detail": "ref 6.098 · build 5.160",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 6.500 · build 4.087",
+      "detail": "ref 6.500 · build 5.552",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 6.945 · build 4.481",
+      "detail": "ref 6.945 · build 5.947",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[6].y differs (content-driven)",
-      "detail": "ref 7.466 · build 5.034",
+      "detail": "ref 7.466 · build 6.500",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[7].y differs (content-driven)",
-      "detail": "ref 7.378 · build 4.946",
+      "detail": "ref 7.378 · build 6.412",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 5.891 · build 3.487",
+      "detail": "ref 5.891 · build 4.953",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 5.980 · build 3.576",
+      "detail": "ref 5.980 · build 5.042",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 6.632 · build 4.178",
+      "detail": "ref 6.632 · build 5.643",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 6.389 · build 3.976",
+      "detail": "ref 6.389 · build 5.441",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 6.790 · build 4.368",
+      "detail": "ref 6.790 · build 5.834",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 7.319 · build 4.846",
+      "detail": "ref 7.319 · build 6.311",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[6].y differs (content-driven)",
-      "detail": "ref 7.757 · build 5.315",
+      "detail": "ref 7.757 · build 6.781",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[7].y differs (content-driven)",
-      "detail": "ref 7.669 · build 5.227",
+      "detail": "ref 7.669 · build 6.693",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 5.891 · build 3.487",
+      "detail": "ref 5.891 · build 4.953",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 5.980 · build 3.576",
+      "detail": "ref 5.980 · build 5.042",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 6.632 · build 4.178",
+      "detail": "ref 6.632 · build 5.643",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 6.389 · build 3.976",
+      "detail": "ref 6.389 · build 5.441",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 6.790 · build 4.368",
+      "detail": "ref 6.790 · build 5.834",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 7.319 · build 4.846",
+      "detail": "ref 7.319 · build 6.311",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[6].y differs (content-driven)",
-      "detail": "ref 7.757 · build 5.315",
+      "detail": "ref 7.757 · build 6.781",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[7].y differs (content-driven)",
-      "detail": "ref 7.669 · build 5.227",
+      "detail": "ref 7.669 · build 6.693",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 12.582 · build 7.628",
+      "detail": "ref 12.582 · build 11.033",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 12.666 · build 7.711",
+      "detail": "ref 12.666 · build 11.117",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 12.675 · build 7.883",
+      "detail": "ref 12.675 · build 11.136",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 12.685 · build 7.907",
+      "detail": "ref 12.685 · build 11.159",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 12.695 · build 7.970",
+      "detail": "ref 12.695 · build 11.223",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 12.705 · build 7.994",
+      "detail": "ref 12.705 · build 11.247",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 12.726 · build 8.057",
+      "detail": "ref 12.726 · build 11.310",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 12.736 · build 8.081",
+      "detail": "ref 12.736 · build 11.334",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 5.265 · build 0.480",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.160",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[1].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.160",
+      "detail": "ref 5.265 · build 4.126",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[2].y differs (content-driven)",
-      "detail": "ref 2.277 · build 1.576",
+      "detail": "ref 2.277 · build 1.760",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 3.784 · build 3.757",
+      "detail": "ref 3.784 · build 3.357",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 7.159 · build 5.869",
+      "detail": "ref 7.159 · build 5.090",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 10.628 · build 7.642",
+      "detail": "ref 10.628 · build 6.888",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 16.507 · build 10.964",
+      "detail": "ref 16.507 · build 10.634",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 21.125 · build 15.986",
+      "detail": "ref 21.125 · build 15.757",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 25.087 · build 17.930",
+      "detail": "ref 25.087 · build 20.046",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "h2[0].y differs (content-driven)",
-      "detail": "ref 2.277 · build 0.480",
+      "detail": "ref 2.277 · build 1.760",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 7.135 · build 1.576",
+      "detail": "ref 7.135 · build 5.090",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "h4[0].y differs (content-driven)",
-      "detail": "ref 1.962 · build 20.478",
+      "detail": "ref 1.962 · build 1.347",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "h5[0].y differs (content-driven)",
-      "detail": "ref 4.249 · build 4.409",
+      "detail": "ref 4.249 · build 3.508",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 16.678 · build 11.317",
+      "detail": "ref 16.678 · build 10.884",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 17.001 · build 11.317",
+      "detail": "ref 17.001 · build 10.884",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 17.688 · build 12.095",
+      "detail": "ref 17.688 · build 11.662",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 18.376 · build 12.873",
+      "detail": "ref 18.376 · build 12.440",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 19.063 · build 13.652",
+      "detail": "ref 19.063 · build 13.218",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 19.751 · build 14.430",
+      "detail": "ref 19.751 · build 13.996",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 20.438 · build 15.208",
+      "detail": "ref 20.438 · build 14.774",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 17.001 · build 11.317",
+      "detail": "ref 17.001 · build 10.884",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 17.688 · build 12.095",
+      "detail": "ref 17.688 · build 11.662",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 18.376 · build 12.873",
+      "detail": "ref 18.376 · build 12.440",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 19.063 · build 13.652",
+      "detail": "ref 19.063 · build 13.218",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 19.751 · build 14.430",
+      "detail": "ref 19.751 · build 13.996",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 20.438 · build 15.208",
+      "detail": "ref 20.438 · build 14.774",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 17.601 · build 11.891",
+      "detail": "ref 17.601 · build 11.457",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 18.288 · build 12.669",
+      "detail": "ref 18.288 · build 12.235",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 18.976 · build 13.447",
+      "detail": "ref 18.976 · build 13.013",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 19.663 · build 14.225",
+      "detail": "ref 19.663 · build 13.791",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 20.351 · build 15.003",
+      "detail": "ref 20.351 · build 14.569",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 21.038 · build 15.781",
+      "detail": "ref 21.038 · build 15.348",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 17.601 · build 11.891",
+      "detail": "ref 17.601 · build 11.457",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 18.288 · build 12.669",
+      "detail": "ref 18.288 · build 12.235",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 18.976 · build 13.447",
+      "detail": "ref 18.976 · build 13.013",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 19.663 · build 14.225",
+      "detail": "ref 19.663 · build 13.791",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 20.351 · build 15.003",
+      "detail": "ref 20.351 · build 14.569",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 21.038 · build 15.781",
+      "detail": "ref 21.038 · build 15.348",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 26.056 · build 19.745",
+      "detail": "ref 26.056 · build 20.991",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 26.323 · build 20.012",
+      "detail": "ref 26.323 · build 21.258",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 26.641 · build 20.751",
+      "detail": "ref 26.641 · build 21.464",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 26.686 · build 20.865",
+      "detail": "ref 26.686 · build 21.578",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 26.730 · build 21.177",
+      "detail": "ref 26.730 · build 21.891",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 26.775 · build 21.291",
+      "detail": "ref 26.775 · build 22.005",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 26.873 · build 21.604",
+      "detail": "ref 26.873 · build 22.317",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 26.918 · build 21.718",
+      "detail": "ref 26.918 · build 22.431",
       "viewport": "375x812"
     },
     {
@@ -5660,7 +5604,7 @@
     {
       "group": "roles",
       "name": "container instance count differs (content-driven)",
-      "detail": "ref 8 · build 11"
+      "detail": "ref 8 · build 10"
     },
     {
       "group": "roles",
@@ -5670,7 +5614,7 @@
     {
       "group": "roles",
       "name": "grid-root instance count differs (content-driven)",
-      "detail": "ref 7 · build 10"
+      "detail": "ref 7 · build 6"
     },
     {
       "group": "roles",
@@ -5700,7 +5644,7 @@
     {
       "group": "roles",
       "name": "h2 font-family string differs (expected — Switzer substitution)",
-      "detail": "ref \"n, sans-serif\" · build \"\"Hedvig Letters Serif\", serif\""
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
     },
     {
       "group": "roles",
@@ -5720,7 +5664,7 @@
     {
       "group": "roles",
       "name": "h4 font-family string differs (expected — Switzer substitution)",
-      "detail": "ref \"n, sans-serif\" · build \"\"Hedvig Letters Serif\", serif\""
+      "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
     },
     {
       "group": "roles",
@@ -5735,7 +5679,7 @@
     {
       "group": "roles",
       "name": "h5 instance count differs (content-driven)",
-      "detail": "ref 3 · build 2"
+      "detail": "ref 3 · build 1"
     },
     {
       "group": "roles",
@@ -5745,12 +5689,12 @@
     {
       "group": "roles",
       "name": "body-1 instance count differs (content-driven)",
-      "detail": "ref 17 · build 3"
+      "detail": "ref 17 · build 2"
     },
     {
       "group": "roles",
-      "name": "body-2 not present on the reference homepage",
-      "detail": "build has 4"
+      "name": "body-2 not present in build",
+      "detail": "ref has 0 instance(s)"
     },
     {
       "group": "roles",
@@ -5769,18 +5713,8 @@
     },
     {
       "group": "roles",
-      "name": "work-card instance count differs (content-driven)",
-      "detail": "ref 8 · build 9"
-    },
-    {
-      "group": "roles",
       "name": "work-frame font-family string differs (expected — Switzer substitution)",
       "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
-    },
-    {
-      "group": "roles",
-      "name": "work-frame instance count differs (content-driven)",
-      "detail": "ref 8 · build 9"
     },
     {
       "group": "roles",
@@ -5789,18 +5723,8 @@
     },
     {
       "group": "roles",
-      "name": "work-meta-row instance count differs (content-driven)",
-      "detail": "ref 8 · build 9"
-    },
-    {
-      "group": "roles",
       "name": "work-caption font-family string differs (expected — Switzer substitution)",
       "detail": "ref \"h, serif\" · build \"\"Hedvig Letters Serif\", serif\""
-    },
-    {
-      "group": "roles",
-      "name": "work-caption instance count differs (content-driven)",
-      "detail": "ref 8 · build 9"
     },
     {
       "group": "roles",

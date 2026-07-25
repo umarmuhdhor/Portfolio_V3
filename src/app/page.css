@@ -1,10 +1,9 @@
 /* ==========================================================================
-   Page sections.
+   Page sections — measured from the reference, block by block.
 
-   The section rhythm is the reference's: 220rem of air above and below a
-   normal section, 160/134 for the tighter ones. Column spans come off the
-   15-column grid and hold at both desktop widths because the grid is fluid —
-   which is why the A/B normalizes geometry to viewport width rather than px.
+   Every column span, frame height and margin here came out of a DOM read of
+   the live page at 1920, then authored in rem so it holds at any width. The
+   content is placeholder; the measure is not.
    ========================================================================== */
 
 .sec {
@@ -31,142 +30,108 @@
   }
 }
 
-/* An eight-row numbered table is the section the reference drops on mobile
-   rather than letting it become an endless scroll. Matching that call. */
+/* An eight-row diagram is the block the reference drops on mobile. */
 @media (max-width: 767.98px) {
   .sec--desk {
     display: none;
-  }
-}
-
-.sec__label {
-  color: #929292;
-  grid-column: 1 / 3;
-}
-
-@media (max-width: 767.98px) {
-  /* An eight-row numbered table is the section the reference drops on mobile
-   rather than letting it become an endless scroll. Matching that call. */
-@media (max-width: 767.98px) {
-  .sec--desk {
-    display: none;
-  }
-}
-
-.sec__label {
-    margin-bottom: 20rem;
   }
 }
 
 /* --------------------------------------------------------------------------
-   1 — hero
+   1 — hero: a full-bleed plate with the name set low over it
    -------------------------------------------------------------------------- */
-.hero {
-  padding-top: 300rem;
-}
-
-/* The reference's first container is a flex box, not a block. */
-.hero > .ctr {
-  align-items: flex-start;
-  display: flex;
-}
-
-@media (max-width: 767.98px) {
-  .hero {
-    padding-top: 120rem;
-  }
-}
-
-.hero__name {
-  grid-column: 1 / -1;
-}
-
-/* The reference centres its hero display line rather than ranging it left. */
-.hero__name--centred {
-  text-align: center;
-}
-
-.hero__name-inner {
-  display: block;
-  line-height: 0.95;
-}
-
-.hero__frame {
-  grid-column: 1 / -1;
-  height: 700rem;
-  margin-top: 80rem;
-  overflow: hidden;
+.sec-hero {
+  height: 1080rem;
   position: relative;
   width: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .hero__frame {
-    height: 215rem;
-    margin-top: 40rem;
+  .sec-hero {
+    height: 600rem;
   }
 }
 
-.hero__frame img {
+.sec-hero__plate {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+.sec-hero__plate img {
   height: 100%;
   object-fit: cover;
-  /* Head-and-shoulders portrait — anchor the crop to the top so a wide frame
-     keeps the face rather than centring on the collar. */
-  object-position: 50% 18%;
+  object-position: 50% 40%;
   width: 100%;
+}
+
+.sec-hero__title {
+  bottom: 38rem;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.sec-hero__title h1 {
+  max-width: 700rem;
 }
 
 /* --------------------------------------------------------------------------
    2 — statement
    -------------------------------------------------------------------------- */
-.statement__tagline {
-  grid-column: 1 / -1;
-}
-
-.statement__col {
-  display: flex;
-  flex-direction: column;
-  gap: 14rem;
-}
-
-.statement__col--a {
-  grid-column: 10 / 13;
-}
-
-.statement__col--b {
-  grid-column: 13 / -1;
+.sec-statement {
+  margin-top: 220rem;
 }
 
 @media (max-width: 767.98px) {
-  .statement__col {
-    margin-top: 40rem;
+  .sec-statement {
+    margin-top: 60rem;
   }
 }
 
-.statement__col-heading {
-  margin-bottom: 20rem;
+/* The reference centres this heading rather than ranging it left. */
+.sec-statement__head h2 {
+  text-align: center;
 }
 
-.statement__col li {
-  color: #929292;
+.sec-statement__meta {
+  display: flex;
+  gap: 30rem;
+  margin-top: 70rem;
 }
 
-.statement__frame {
-  grid-column: 1 / -1;
-  height: 540rem;
-  margin-top: 160rem;
+@media (max-width: 767.98px) {
+  /* The reference centres this heading rather than ranging it left. */
+.sec-statement__head h2 {
+  text-align: center;
+}
+
+.sec-statement__meta {
+    flex-wrap: wrap;
+    gap: 16rem;
+    margin-top: 30rem;
+  }
+}
+
+.sec-statement__plate {
+  height: 960rem;
+  margin-top: 132rem;
   overflow: hidden;
   width: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .statement__frame {
-    height: 215rem;
+  .sec-statement__plate {
+    height: 300rem;
     margin-top: 60rem;
   }
 }
 
-.statement__frame img {
+.sec-statement__plate img {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -175,294 +140,477 @@
 /* --------------------------------------------------------------------------
    3 — about
    -------------------------------------------------------------------------- */
-.about__meta {
+.sec-about__lead {
   display: flex;
-  flex-direction: column;
-  gap: 20rem;
-  grid-column: 1 / 5;
+  gap: 270rem;
 }
 
-.about__meta-key {
+@media (max-width: 767.98px) {
+  .sec-about__lead {
+    flex-direction: column;
+    gap: 40rem;
+  }
+}
+
+.sec-about__label {
   color: #929292;
+  flex-shrink: 0;
+  width: 355rem;
 }
 
-.about__manifesto {
-  display: flex;
-  flex-direction: column;
-  gap: 30rem;
-  grid-column: 6 / -1;
+@media (max-width: 767.98px) {
+  .sec-about__label {
+    width: 100%;
+  }
+}
+
+.sec-about__body {
   max-width: 1110rem;
-}
-
-@media (max-width: 767.98px) {
-  .about__manifesto {
-    margin-top: 40rem;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   4 — capabilities
-   -------------------------------------------------------------------------- */
-.caps__group {
-  display: flex;
-  flex-direction: column;
-  gap: 14rem;
-}
-
-.caps__group--a {
-  grid-column: 1 / 5;
-}
-
-.caps__group--b {
-  grid-column: 5 / 9;
-}
-
-.caps__meta {
-  display: flex;
-  flex-direction: column;
-  gap: 20rem;
-  grid-column: 11 / -1;
-}
-
-@media (max-width: 767.98px) {
-  .caps__group,
-  .caps__meta {
-    margin-top: 40rem;
-  }
-}
-
-.caps__group li,
-.caps__meta-key {
-  color: #929292;
-}
-
-.caps__heading {
-  margin-bottom: 20rem;
-}
-
-/* --------------------------------------------------------------------------
-   5 — process, a two-image editorial spread
-   -------------------------------------------------------------------------- */
-.process__heading {
-  grid-column: 1 / 9;
-  margin-bottom: 100rem;
-}
-
-.process__frame {
-  height: 700rem;
-  overflow: hidden;
   width: 100%;
 }
 
-.process__frame--a {
-  grid-column: 1 / 7;
-}
-
-.process__frame--b {
-  grid-column: 9 / -1;
-  margin-top: 170rem;
-}
-
-@media (max-width: 767.98px) {
-  .process__frame {
-    height: 215rem;
-    margin-top: 20rem;
-  }
-}
-
-.process__frame img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.process__steps {
-  display: flex;
-  gap: 30rem;
-  grid-column: 1 / -1;
+.sec-about__cols {
   margin-top: 160rem;
 }
 
 @media (max-width: 767.98px) {
-  .process__steps {
+  .sec-about__cols {
     flex-direction: column;
     gap: 40rem;
     margin-top: 60rem;
   }
 }
 
-.process__step {
+.sec-about__col {
+  display: contents;
+}
+
+.sec-about__col-no {
+  color: #929292;
+}
+
+.sec-about__col--a .sec-about__col-no {
+  grid-column: 1 / 2;
+}
+
+.sec-about__col--a .sec-about__col-body {
+  grid-column: 6 / 8;
+}
+
+.sec-about__col--b .sec-about__col-no {
+  grid-column: 10 / 11;
+}
+
+.sec-about__col--b .sec-about__col-body {
+  grid-column: 11 / 13;
+}
+
+.sec-about__col-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14rem;
+}
+
+.sec-about__col-body li {
+  color: #929292;
+}
+
+/* --------------------------------------------------------------------------
+   4 — capabilities
+   -------------------------------------------------------------------------- */
+.sec-caps__heading {
+  grid-column: 1 / -1;
+}
+
+.sec-caps__label {
+  color: #929292;
+  grid-column: 5 / 6;
+  margin-top: 100rem;
+}
+
+.sec-caps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  grid-column: 6 / 13;
+  margin-top: 100rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-caps__label,
+  .sec-caps__list {
+    margin-top: 40rem;
+  }
+}
+
+.sec-caps__item {
+  border-top: 1px solid #e2e2e2;
+  padding-top: 20rem;
+}
+
+/* --------------------------------------------------------------------------
+   5 — process, two editorial blocks
+   -------------------------------------------------------------------------- */
+.sec-process {
+  margin-bottom: 200rem;
+  margin-top: 200rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-process {
+    margin-bottom: 60rem;
+    margin-top: 60rem;
+  }
+}
+
+.sec-process__block + .sec-process__block {
+  margin-top: 230rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-process__block + .sec-process__block {
+    margin-top: 60rem;
+  }
+}
+
+.sec-process__heading {
+  max-width: 450rem;
+}
+
+.sec-process__plate {
+  height: 1100rem;
+  margin-top: 100rem;
+  overflow: hidden;
   width: 100%;
 }
 
-.process__step-no {
-  color: #929292;
-  margin-bottom: 20rem;
+@media (max-width: 767.98px) {
+  .sec-process__plate {
+    height: 300rem;
+    margin-top: 40rem;
+  }
 }
 
-.process__step-title {
-  margin-bottom: 20rem;
+.sec-process__plate img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.process__step-body {
+.sec-process__spread {
+  margin-top: 97rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-process__spread {
+    flex-direction: column;
+    gap: 30rem;
+    margin-top: 40rem;
+  }
+}
+
+.sec-process__lead {
+  grid-column: 1 / 7;
+}
+
+.sec-process__note {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  grid-column: 7 / 11;
+  margin-top: 115rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-process__note {
+    margin-top: 0;
+  }
+}
+
+.sec-process__note p:first-child {
   color: #929292;
 }
 
 /* --------------------------------------------------------------------------
    6 — selected work
    -------------------------------------------------------------------------- */
-.work__heading {
-  grid-column: 1 / 9;
-  margin-bottom: 100rem;
-}
-
-/* --------------------------------------------------------------------------
-   7 — principles, numbered 01–08
-   -------------------------------------------------------------------------- */
-.principles__heading {
-  grid-column: 1 / 9;
-  margin-bottom: 100rem;
-}
-
-.principles__list {
-  grid-column: 1 / -1;
-}
-
-.principles__item {
-  border-top: 1px solid #e2e2e2;
-  display: flex;
-  gap: 30rem;
-  padding: 30rem 0;
+.sec-work {
+  margin-bottom: 220rem;
+  margin-top: 300rem;
 }
 
 @media (max-width: 767.98px) {
-  .principles__item {
-    flex-direction: column;
-    gap: 10rem;
-    padding: 20rem 0;
+  .sec-work {
+    margin-bottom: 60rem;
+    margin-top: 80rem;
   }
 }
 
-.principles__no {
-  color: #929292;
-  flex-shrink: 0;
-  width: 105rem;
+.sec-work__heading {
+  max-width: 500rem;
 }
 
-.principles__title {
-  flex-shrink: 0;
-  width: 355rem;
+.sec-work .work-grid {
+  margin-top: 65rem;
 }
 
-@media (max-width: 767.98px) {
-  .principles__title {
-    width: 100%;
-  }
-}
-
-.principles__body {
-  color: #929292;
-  width: 100%;
-}
-
-/* --------------------------------------------------------------------------
-   8 — stats and the image wall
-   -------------------------------------------------------------------------- */
-.stats__heading {
-  grid-column: 1 / 12;
-  margin-bottom: 100rem;
-}
-
-.stats__row {
-  display: flex;
-  grid-column: 1 / -1;
-  justify-content: space-between;
+.sec-work__cta {
+  display: block;
+  margin-top: 140rem;
 }
 
 @media (max-width: 767.98px) {
-  .stats__row {
-    flex-wrap: wrap;
-    gap: 40rem;
-  }
-}
-
-.stats__label {
-  color: #929292;
-  margin-top: 20rem;
-}
-
-.stats__wall {
-  grid-column: 1 / -1;
-  margin-top: 160rem;
-}
-
-@media (max-width: 767.98px) {
-  .stats__wall {
+  .sec-work__cta {
     margin-top: 60rem;
   }
 }
 
-.stats__wall-frame {
-  height: 500rem;
+/* --------------------------------------------------------------------------
+   7 — radial diagram
+
+   The section runs two viewports tall and the stage sticks for the first one,
+   so the ring turns while the page scrolls past it.
+   -------------------------------------------------------------------------- */
+.sec-diagram {
+  height: 2160rem;
+  position: relative;
+}
+
+.sec-diagram__stage {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sec-diagram__marquees {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.sec-diagram__marquee {
+  max-width: 600rem;
+  position: absolute;
+}
+
+.sec-diagram__marquee--a {
+  left: 30rem;
+  top: 22%;
+}
+
+.sec-diagram__marquee--b {
+  bottom: 22%;
+  right: 30rem;
+  text-align: right;
+}
+
+.radial {
+  height: 864rem;
+  position: relative;
+  width: 864rem;
+}
+
+.radial__svg {
+  height: 100%;
+  width: 100%;
+}
+
+.radial__nodes {
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.radial__node {
+  color: #929292;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------------------------------
+   8 — people, marquee band and stats
+   -------------------------------------------------------------------------- */
+.sec-people {
+  margin-bottom: 220rem;
+  margin-top: 220rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-people {
+    margin-bottom: 60rem;
+    margin-top: 60rem;
+  }
+}
+
+.sec-people__intro {
+  max-width: 1130rem;
+}
+
+.sec-people__label {
+  color: #929292;
+  margin-bottom: 40rem;
+  width: 105rem;
+}
+
+.sec-people__band {
+  margin-top: 300rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-people__band {
+    margin-top: 60rem;
+  }
+}
+
+.sec-people__marquee {
+  align-items: center;
+  display: flex;
+  height: 298rem;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .stats__wall-frame {
-    height: 215rem;
+  .sec-people__marquee {
+    height: 160rem;
   }
 }
 
-.stats__wall-frame img {
+.sec-people__track {
+  display: flex;
+  gap: 20rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.sec-people__tile {
+  flex-shrink: 0;
+  height: 377rem;
+  overflow: hidden;
+  width: 377rem;
+}
+
+.sec-people__tile img {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-/* --------------------------------------------------------------------------
-   9 — logo wall
-   -------------------------------------------------------------------------- */
-.logos__heading {
-  grid-column: 1 / 9;
-  margin-bottom: 60rem;
+/* The heading sits over the band and inverts against it. */
+.sec-people__over {
+  color: #fff;
+  max-width: 990rem;
+  mix-blend-mode: difference;
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 
-.logos__row {
-  align-items: center;
+.sec-people__cols {
   display: flex;
-  gap: 30rem;
-  grid-column: 1 / -1;
-  justify-content: space-between;
+  gap: 80rem;
+  margin-top: 70rem;
+  max-width: 792rem;
 }
 
 @media (max-width: 767.98px) {
-  .logos__row {
-    flex-wrap: wrap;
+  .sec-people__cols {
+    flex-direction: column;
     gap: 20rem;
+    margin-top: 40rem;
   }
 }
 
-.logos__item {
-  background-color: #f8f8f8;
-  display: flex;
-  height: 118rem;
-  justify-content: center;
-  padding: 20rem;
-  width: 100%;
+.sec-people__col {
+  width: 356rem;
 }
 
-.logos__item img {
-  height: 100%;
-  object-fit: contain;
-  width: auto;
+@media (max-width: 767.98px) {
+  .sec-people__col {
+    width: 100%;
+  }
+}
+
+.sec-people__stats {
+  margin-top: 300rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-people__stats {
+    margin-top: 60rem;
+  }
+}
+
+.sec-people__stats-col {
+  display: flex;
+  flex-direction: column;
+  gap: 150rem;
+  width: 857rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-people__stats-col {
+    gap: 60rem;
+    width: 100%;
+  }
+}
+
+.sec-people__stat h3:first-child {
+  margin-bottom: 40rem;
+}
+
+/* --------------------------------------------------------------------------
+   9 — contact
+   -------------------------------------------------------------------------- */
+.sec-contact {
+  margin-bottom: 220rem;
+  margin-top: 220rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-contact {
+    margin-bottom: 60rem;
+    margin-top: 60rem;
+  }
+}
+
+.sec-contact__label {
+  color: #929292;
+  grid-column: 1 / 3;
+}
+
+.sec-contact__heading {
+  grid-column: 1 / -1;
+  margin-top: 40rem;
+}
+
+.sec-contact__body {
+  grid-column: 1 / 6;
+  margin-top: 100rem;
+}
+
+.sec-contact__cta {
+  grid-column: 10 / -1;
+  margin-top: 100rem;
+}
+
+@media (max-width: 767.98px) {
+  .sec-contact__body,
+  .sec-contact__cta {
+    margin-top: 40rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
    10 — footer
    -------------------------------------------------------------------------- */
-/* The footer inverts — black plate, white type — which is why the header's
-   mix-blend-mode matters: it flips to black over this section on its own. */
 .footer {
   background-color: #000;
   color: #fff;
@@ -482,25 +630,6 @@
   width: 103rem;
 }
 
-.footer__name {
-  grid-column: 12 / -1;
-  text-align: right;
-}
-
-/* A large serif line on the dark plate — the reference's white h4. */
-.footer__headline {
-  grid-column: 1 / -1;
-  margin-top: 100rem;
-  max-width: 700rem;
-}
-
-.footer__col {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Both link groups share one column on the reference — every footer anchor
-   after the brand sits at the same x. */
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -508,10 +637,13 @@
   grid-column: 5 / 9;
 }
 
-/* Restores the row spacing after the two link groups were merged into one
-   column — without it consecutive tap targets sit flush against each other. */
 .footer__links li + li {
   margin-top: 20rem;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__col--a {
@@ -527,27 +659,20 @@
   margin-bottom: 20rem;
 }
 
-.footer__meta,
-.footer__col-heading {
-  color: #929292;
-}
-
 .footer__col li {
   margin-top: 20rem;
+}
+
+.footer__col li:first-child {
+  margin-top: 0;
 }
 
 .footer__col a,
 .footer__links a,
 .footer__brand {
   display: block;
-  /* Lifts the tap target to 24px without touching the box width, which the
-     A/B asserts. Padding on the top only, so the underline stays on the text
-     baseline rather than floating below it. */
+  /* Lifts the tap target to 24px without touching the box width. */
   padding-top: 6rem;
-}
-
-.footer__col li:first-child {
-  margin-top: 0;
 }
 
 @media (max-width: 767.98px) {

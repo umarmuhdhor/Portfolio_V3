@@ -1,3 +1,4 @@
+import RadialDiagram from '@/components/RadialDiagram';
 import ScrollMotion from '@/components/ScrollMotion';
 import SiteHeader from '@/components/SiteHeader';
 import WebGLLayer from '@/components/WebGLLayer';
@@ -5,21 +6,30 @@ import WorkGrid from '@/components/WorkGrid';
 import {
   ABOUT,
   CAPABILITIES,
+  CONTACT,
+  DIAGRAM,
   FOOTER,
-  LOGOS,
-  NAME,
-  PRINCIPLES,
+  HERO,
+  PEOPLE,
   PROCESS,
-  PROJECTS,
-  SERVICES,
-  STATS,
-  TAGLINE,
-} from '@/lib/content';
+  STATEMENT,
+  WORK,
+  img,
+} from '@/lib/dummy';
 import './page.css';
 
+/** A full-bleed image frame that the WebGL layer can take over. */
+function Frame({ className, src, alt = '' }: { className: string; src: string; alt?: string }) {
+  return (
+    <div className={className} data-gl>
+      <img alt={alt} loading="lazy" src={src} />
+    </div>
+  );
+}
+
 /**
- * The portfolio — ten sections, mapped one-for-one onto the reference's
- * structure. The content is mine; the grid, rhythm and type are measured.
+ * The page — every block from hero to footer, in the reference's order and at
+ * its measure. Content is placeholder; see src/lib/dummy.ts.
  */
 export default function Home() {
   return (
@@ -28,8 +38,6 @@ export default function Home() {
       <WebGLLayer />
       <SiteHeader counter="01" />
 
-      {/* The reference hides the native bar above the breakpoint and draws its
-          own; the thumb is positioned from scroll progress in ScrollMotion. */}
       <div aria-hidden="true" className="scrollbar">
         <div className="scrollbar-track">
           <div className="scrollbar-thumb" />
@@ -37,282 +45,283 @@ export default function Home() {
       </div>
 
       <main id="main">
-        {/* The reference wraps its sections in a single div inside #main; its own
-            section selector counts that wrapper, so the shape is reproduced here
-            or every section index compares against the wrong counterpart. */}
         <div className="page" data-role="section">
-        {/* 1 — hero -------------------------------------------------------- */}
-        <section className="sec hero" data-role="section" id="index">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              {/* The 0.7 leading on fn-h2 is measured and stays on the
-                  heading itself. A 26-character name sets over two lines at
-                  175rem, and at 0.7 those two lines collide, so the leading is
-                  loosened on an inner wrapper — the type scale is untouched. */}
-              <h1 className="fn-h2 hero__name hero__name--centred" data-role="h2">
-                <span className="hero__name-inner" data-split>
-                  {NAME}
-                </span>
-              </h1>
-              <div className="hero__frame" data-gl>
-                <img alt="" src="/images/profile/foto_alief.webp" />
+          {/* 1 — hero: full-bleed plate, name set low ---------------------- */}
+          <section className="sec-hero" data-role="section" id="index">
+            <Frame className="sec-hero__plate" src={img(0)} />
+            <div className="sec-hero__title">
+              <div className="ctr" data-role="container">
+                {/* The measured 0.8 leading stays on the heading; the wrap
+                    spacing opens on an inner span so a two-line display line
+                    does not collapse into itself. */}
+                <h1 className="fn-h4 f-mn" data-role="h4">
+                  <span className="lh-open" data-split>
+                    {HERO.lines.join(' ')}
+                  </span>
+                </h1>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* 2 — statement --------------------------------------------------- */}
-        <section className="sec" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h3 statement__tagline" data-role="h3" data-split>
-                {TAGLINE}
-              </h2>
-
-              {SERVICES.map((s, i) => (
-                <div className={`statement__col statement__col--${i === 0 ? 'a' : 'b'}`} data-reveal key={s.heading}>
-                  <p className="fn-b1 statement__col-heading" data-role="body-1">
-                    {s.heading}
-                  </p>
-                  <ul>
-                    {s.items.map((i) => (
-                      <li className="fn-b2" key={i}>
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
+          {/* 2 — statement -------------------------------------------------- */}
+          <section className="sec-statement" data-role="section">
+            <div className="ctr" data-role="container">
+              <div className="sec-statement__head">
+                <h2 className="fn-h2 f-mn" data-role="h2">
+                  <span className="lh-open" data-split>
+                    {STATEMENT.heading}
+                  </span>
+                </h2>
+                <div className="sec-statement__meta">
+                  {STATEMENT.meta.map((m) => (
+                    <span className="fn-b1" key={m}>
+                      {m}
+                    </span>
+                  ))}
                 </div>
-              ))}
-
-              <div className="statement__frame" data-gl>
-                <img alt="" loading="lazy" src="/images/work/grooth.webp" />
               </div>
             </div>
-          </div>
-        </section>
+            <Frame className="sec-statement__plate" src={img(1)} />
+          </section>
 
-        {/* 3 — about ------------------------------------------------------- */}
-        <section className="sec" data-role="section" id="about">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <div className="about__meta">
-                {ABOUT.meta.map((m) => (
-                  <div key={m.key}>
-                    <p className="about__meta-key fn-b2" data-role="body-2">
-                      {m.key}
+          {/* 3 — about ------------------------------------------------------ */}
+          <section className="sec sec--tight" data-role="section" id="about">
+            <div className="ctr" data-role="container">
+              <div className="sec-about__lead">
+                <p className="fn-b1 sec-about__label" data-role="body-1">
+                  {ABOUT.label}
+                </p>
+                <p className="fn-h5 sec-about__body" data-role="h5" data-reveal>
+                  {ABOUT.body}
+                </p>
+              </div>
+
+              <div className="grd sec-about__cols" data-role="grid">
+                {ABOUT.columns.map((c, i) => (
+                  <div className={`sec-about__col sec-about__col--${i === 0 ? 'a' : 'b'}`} data-reveal key={c.no}>
+                    <h3 className="fn-b1 f-sf sec-about__col-no">{c.no}</h3>
+                    <div className="sec-about__col-body">
+                      <p className="fn-b1">{c.heading}</p>
+                      <ul>
+                        {c.items.map((it) => (
+                          <li className="fn-b2" key={it}>
+                            {it}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4 — capabilities ----------------------------------------------- */}
+          <section className="sec" data-role="section">
+            <div className="ctr" data-role="container">
+              <div className="grd" data-role="grid">
+                <h2 className="fn-h3 sec-caps__heading" data-role="h3" data-split>
+                  {CAPABILITIES.heading}
+                </h2>
+                <p className="fn-b2 sec-caps__label">{CAPABILITIES.label}</p>
+                <ul className="sec-caps__list">
+                  {CAPABILITIES.items.map((i) => (
+                    <li className="fn-h5 sec-caps__item" data-reveal key={i}>
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* 5 — process, two editorial blocks ------------------------------- */}
+          <section className="sec-process" data-role="section">
+            <div className="ctr" data-role="container">
+              {PROCESS.map((b, i) => (
+                <div className="sec-process__block" key={b.note}>
+                  <h2 className="lh-open fn-h4 f-mn sec-process__heading" data-split>
+                    {b.heading.join(' ')}
+                  </h2>
+                  <Frame className="sec-process__plate" src={img(i + 2)} />
+                  <div className="grd sec-process__spread" data-role="grid">
+                    <p className="fn-h5 lh-open sec-process__lead" data-reveal>
+                      {b.lead}
                     </p>
-                    <p className="fn-b1">{m.value}</p>
+                    <div className="sec-process__note" data-reveal>
+                      <p className="fn-b1 f-sf">{b.note}</p>
+                      <p className="fn-b1">{b.body}</p>
+                    </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 6 — selected work ----------------------------------------------- */}
+          <section className="sec-work" data-role="section" id="work">
+            <div className="ctr" data-role="container">
+              <p className="lh-open fn-h4 f-mn sec-work__heading" data-split>
+                {WORK.heading.join(' ')}
+              </p>
+              <WorkGrid projects={WORK.cards} />
+              <a className="link fn-b1 is--a sec-work__cta" href="#work">
+                {WORK.cta}
+              </a>
+            </div>
+          </section>
+
+          {/* 7 — radial diagram, desktop only -------------------------------- */}
+          <section className="sec-diagram sec--desk" data-role="section">
+            <div className="sec-diagram__stage">
+              <div className="sec-diagram__marquees">
+                {DIAGRAM.headings.map((h, i) => (
+                  <h2 className={`fn-h4 f-mn lh-open sec-diagram__marquee sec-diagram__marquee--${i === 0 ? 'a' : 'b'}`} key={h[0]}>
+                    <span className="ln-mask">
+                      <span className="ln">{h[0]}</span>
+                    </span>
+                    <span className="ln-mask">
+                      <span className="ln">{h[1]}</span>
+                    </span>
+                  </h2>
                 ))}
               </div>
+              <RadialDiagram />
+            </div>
+          </section>
 
-              <div className="about__manifesto" data-reveal>
-                {ABOUT.manifesto.map((p) => (
-                  <p className="fn-h5" data-role="h5" key={p.slice(0, 24)}>
-                    {p}
-                  </p>
-                ))}
+          {/* 8 — people, marquee and stats ----------------------------------- */}
+          <section className="sec-people" data-role="section">
+            <div className="ctr" data-role="container">
+              <div className="sec-people__intro">
+                <h2 className="fn-b1 f-sf sec-people__label">
+                  {PEOPLE.label.map((l) => (
+                    <span className="ln-mask" key={l}>
+                      <span className="ln">{l}</span>
+                    </span>
+                  ))}
+                </h2>
+                <h3 className="lh-open fn-h3 sec-people__heading" data-split>
+                  {PEOPLE.heading.join(' ')}
+                </h3>
+              </div>
+
+              <div className="sec-people__band">
+                <div className="sec-people__marquee">
+                  <div className="sec-people__track">
+                    {Array.from({ length: 17 }, (_, i) => (
+                      <div className="sec-people__tile" key={i}>
+                        <img alt="" loading="lazy" src={img(i)} />
+                      </div>
+                    ))}
+                  </div>
+                  <h2 className="fn-h2 f-mn lh-open sec-people__over">
+                    {PEOPLE.marqueeHeading.map((l) => (
+                      <span className="ln-mask" key={l}>
+                        <span className="ln">{l}</span>
+                      </span>
+                    ))}
+                  </h2>
+                </div>
+                <div className="sec-people__cols">
+                  {PEOPLE.columns.map((c) => (
+                    <p className="fn-b1 sec-people__col" data-reveal key={c.slice(0, 16)}>
+                      {c}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="sec-people__stats">
+                <div className="sec-people__stats-col">
+                  {PEOPLE.stats.map((s) => (
+                    <div className="sec-people__stat" data-reveal key={s.value}>
+                      <h3 className="fn-h2 f-mn">{s.value}</h3>
+                      <h3 className="fn-h3 lh-open">{s.label}</h3>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* 4 — capabilities ------------------------------------------------ */}
-        <section className="sec" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              {CAPABILITIES.groups.map((g, i) => (
-                <div className={`caps__group caps__group--${i === 0 ? 'a' : 'b'}`} data-reveal key={g.heading}>
-                  <p className="caps__heading fn-b1">{g.heading}</p>
+          {/* 9 — contact ------------------------------------------------------ */}
+          <section className="sec-contact" data-role="section" id="contact">
+            <div className="ctr" data-role="container">
+              <div className="grd" data-role="grid">
+                <p className="fn-b2 sec-contact__label">{CONTACT.label}</p>
+                <h2 className="lh-open fn-h2 f-mn sec-contact__heading" data-split>
+                  {CONTACT.heading.join(' ')}
+                </h2>
+                <p className="fn-b1 sec-contact__body" data-reveal>
+                  {CONTACT.body}
+                </p>
+                <a className="link fn-h5 sec-contact__cta" href={`mailto:${CONTACT.cta}`}>
+                  {CONTACT.cta}
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* 10 — footer ------------------------------------------------------ */}
+          <footer className="footer" data-role="footer">
+            <div className="ctr" data-role="container">
+              <div className="grd" data-role="grid">
+                <a className="fn-b1 footer__brand" data-role="footer-link" href="#index">
+                  {FOOTER.brand}
+                </a>
+
+                <div className="footer__links">
+                  {FOOTER.columns.map((c) => (
+                    <div key={c.heading}>
+                      <p className="fn-b2 footer__col-heading">{c.heading}</p>
+                      <ul>
+                        {c.links.map((l) => (
+                          <li key={l.label}>
+                            <a className="link fn-b1" data-role="footer-link" href={l.href}>
+                              {l.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="footer__col footer__col--a">
+                  <p className="fn-b2 footer__col-heading">Address</p>
                   <ul>
-                    {g.items.map((i) => (
-                      <li className="fn-b2" key={i}>
-                        {i}
+                    {FOOTER.address.map((a) => (
+                      <li className="fn-b1" key={a}>
+                        {a}
                       </li>
                     ))}
                   </ul>
                 </div>
-              ))}
 
-              <div className="caps__meta">
-                {CAPABILITIES.meta.map((m) => (
-                  <div key={m.key}>
-                    <p className="caps__meta-key fn-b2">{m.key}</p>
-                    <p className="fn-b1">{m.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 5 — process ----------------------------------------------------- */}
-        <section className="sec" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h3 process__heading" data-split>{PROCESS.heading}</h2>
-
-              <div className="process__frame process__frame--a" data-gl>
-                <img alt="" loading="lazy" src="/images/work/keretaxpress-web.webp" />
-              </div>
-              <div className="process__frame process__frame--b" data-gl>
-                <img alt="" loading="lazy" src="/images/work/peduliPasal.webp" />
-              </div>
-
-              <div className="process__steps">
-                {PROCESS.steps.map((s) => (
-                  <div className="process__step" data-reveal key={s.no}>
-                    <p className="fn-b2 process__step-no">{s.no}</p>
-                    <p className="fn-h5 process__step-title">{s.title}</p>
-                    <p className="fn-b1 process__step-body">{s.body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 6 — selected work ----------------------------------------------- */}
-        <section className="sec" data-role="section" id="work">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h3 work__heading" data-split>Selected work</h2>
-            </div>
-            <WorkGrid projects={PROJECTS} />
-          </div>
-        </section>
-
-        {/* 7 — principles -------------------------------------------------- */}
-        <section className="sec sec--desk" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h3 principles__heading" data-split>Tools</h2>
-
-              <ol className="principles__list">
-                {PRINCIPLES.map((p) => (
-                  <li className="principles__item" data-reveal key={p.no}>
-                    <span className="fn-b2 principles__no">{p.no}</span>
-                    <span className="fn-h5 principles__title">{p.title}</span>
-                    <span className="fn-b1 principles__body">{p.body}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
-
-        {/* 8 — stats and image wall ---------------------------------------- */}
-        <section className="sec" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h3 stats__heading" data-split>Certifications, and the hours behind them</h2>
-
-              <div className="stats__row">
-                {STATS.map((s) => (
-                  <div key={s.label}>
-                    <p className="fn-h4">{s.value}</p>
-                    <p className="fn-b2 stats__label">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="stats__wall">
-                <div className="stats__wall-frame" data-gl>
-                  <img alt="" loading="lazy" src="/images/work/arcadeCalc.webp" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 9 — logo wall --------------------------------------------------- */}
-        <section className="sec sec--tight" data-role="section">
-          <div className="ctr" data-role="container">
-            <div className="grd" data-role="grid">
-              <h2 className="fn-h5 logos__heading">Programmes and issuers</h2>
-
-              <div className="logos__row">
-                {LOGOS.map((l) => (
-                  <div className="logos__item" data-reveal key={l.src}>
-                    <img alt={l.alt} loading="lazy" src={l.src} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* 10 — footer ------------------------------------------------------- */}
-      <footer className="footer" data-role="footer" id="contact">
-        <div className="ctr" data-role="container">
-          <div className="grd" data-role="grid">
-            {/* The reference opens its footer with a ~103rem brand mark at
-                column 1. It is a plain anchor — no underline treatment — so it
-                stays position: static. */}
-            <a className="fn-b1 footer__brand" data-role="footer-link" href={FOOTER.brand.href}>
-              {FOOTER.brand.label}
-            </a>
-
-            <p className="fn-meta footer__name">{NAME}</p>
-
-            <h2 className="fn-h4 footer__headline" data-role="h4">
-              Open to backend and cloud work
-            </h2>
-
-            <div className="footer__links">
-              {FOOTER.columns.map((c) => (
-                <div key={c.heading}>
-                  <p className="fn-b2 footer__col-heading">{c.heading}</p>
+                <div className="footer__col footer__col--b">
+                  <p className="fn-b2 footer__col-heading">Hours</p>
                   <ul>
-                    {c.links.map((l) => (
-                      <li key={l.href}>
-                        <a
-                          className="link fn-b1"
-                          data-role="footer-link"
-                          href={l.href}
-                          rel={l.href.startsWith('http') ? 'noreferrer noopener' : undefined}
-                          target={l.href.startsWith('http') ? '_blank' : undefined}
-                        >
-                          {l.label}
-                        </a>
+                    {FOOTER.hours.map((h) => (
+                      <li className="fn-b1" key={h}>
+                        {h}
                       </li>
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
 
-            <div className="footer__col footer__col--a">
-              <p className="fn-b2 footer__col-heading">Address</p>
-              <ul>
-                {FOOTER.address.map((a) => (
-                  <li className="fn-b1" key={a}>
-                    {a}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="footer__col footer__col--b">
-              <p className="fn-b2 footer__col-heading">Hours</p>
-              <ul>
-                {FOOTER.hours.map((h) => (
-                  <li className="fn-b1" key={h}>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="footer__meta">
-              <div className="footer__meta-row">
-                <span className="fn-b2">© 2026</span>
-                <span className="fn-b2">Built from a measured spec</span>
-                <span className="fn-b2">Indonesia</span>
+                <div className="footer__meta">
+                  <div className="footer__meta-row">
+                    {FOOTER.meta.map((m) => (
+                      <span className="fn-b2" key={m}>
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        </footer>
+          </footer>
         </div>
       </main>
     </>

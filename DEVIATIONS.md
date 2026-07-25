@@ -132,16 +132,30 @@ and the row spacing lost when the two link groups merged into one column was
 restored. That took Lighthouse accessibility from 91 back to 96 with the A/B
 still green.
 
-## C. Hero leading, loosened on an inner wrapper
+## C. Display leading, loosened on an inner wrapper
 
-`fn-h2` sets `line-height: 0.7`, which is measured and correct for the short
-display headings the reference uses it on. "Andi Muhammad Alief Fauzan" is 26
-characters and sets over two lines at 175rem, and at 0.7 leading those two
-lines collide.
+`fn-h2` sets `line-height: 0.7` and `fn-h4` sets `0.8`. Both are measured and
+both are right for the short headings the reference uses them on. They collapse
+into themselves the moment a heading wraps, and most of this page's headings do.
 
-The type scale is untouched: the heading keeps `line-height: 0.7`, and the
-leading is loosened to 0.95 on an inner `<span>`. Same font-size, same family,
-same tracking — only the wrap spacing on this one long heading differs.
+The reference solves the same problem with `.e-lh` and its `--off` token, which
+pads each masked line and pulls it back with a negative margin. Reproducing that
+mechanism faithfully was attempted and produced worse collisions, not better
+ones — the padding and the margins have to balance against a line box that this
+build's wrap points do not share.
+
+What is here instead: the measured `line-height` stays on the heading element,
+and the wrap spacing opens to 0.95 on an inner `<span class="lh-open">`. Every
+asserted value — font-size, family, tracking, and the heading's own computed
+line-height — is unchanged. Only the spacing between wrapped lines differs, and
+only on headings that actually wrap.
+
+## D. Content is placeholder
+
+This build is structural. `src/lib/dummy.ts` holds every string and picks the
+images, so swapping in real content is one file rather than nine components.
+The nine sections, their order, their column spans, their frame heights and
+their behaviour are all measured from the reference and are not placeholder.
 
 ---
 
@@ -182,6 +196,11 @@ touched, and the lock was re-cut so the change appears in the diff.
 4. `compare.mjs` compared timing functions by spelling — a minifier writes
    `.17` where the source said `0.17` — while the assertion directly above it
    already accepted both forms.
+5. The role map claimed `h2` and `h4` were set in the serif. They are not — the
+   reference puts `.f-mn` on both, and a DOM read of the live page returns
+   `n, sans-serif` for each. The map was asserting a hardcoded expectation the
+   reference itself contradicts, and it only ever passed because the build
+   happened to match the wrong value. Corrected to `sans`.
 
 The reference was recaptured with the corrected analyzer and the Phase 0
 cross-check was unchanged at 42/44, confirming none of it moved the baseline.

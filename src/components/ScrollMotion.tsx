@@ -144,6 +144,21 @@ export default function ScrollMotion() {
         });
       });
 
+      // --- people band: the tile strip drifts with scroll ------------------
+      const tiles = document.querySelector<HTMLElement>('.sec-people__track');
+      const marquee = document.querySelector<HTMLElement>('.sec-people__marquee');
+      if (tiles && marquee) {
+        const travel = () => tiles.scrollWidth - marquee.clientWidth;
+        gsap.set(tiles, { x: 0 });
+        ScrollTrigger.create({
+          trigger: marquee,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+          onUpdate: (self) => gsap.set(tiles, { x: -travel() * self.progress }),
+        });
+      }
+
       // --- header: hides going down, returns going up ---------------------
       const header = document.querySelector<HTMLElement>('[data-role="header"]');
       if (header) {

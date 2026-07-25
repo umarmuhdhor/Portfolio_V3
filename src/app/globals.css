@@ -849,6 +849,12 @@ sup {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+
+  /* Nothing rolls, so nothing releases the masks — and a mask that never
+     opens spends the page clipping the glyphs it was meant to reveal. */
+  .ln-mask {
+    overflow: visible !important;
+  }
 }
 
 #main {
@@ -901,4 +907,18 @@ sup {
   [data-gl].is--gl img {
     opacity: 1;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Open leading
+
+   The display sizes carry very tight line-heights — 0.7 on fn-h2, 0.8 on
+   fn-h4 — which is right for the short headings they were measured on and
+   collapses into itself the moment a heading wraps to a second line. The type
+   scale is untouched: the size, family and tracking all stay, and only the
+   wrap spacing opens up on headings that actually run to multiple lines.
+   -------------------------------------------------------------------------- */
+.lh-open {
+  display: block;
+  line-height: 0.95;
 }

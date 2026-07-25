@@ -43,9 +43,11 @@ export const ROLES = [
 
   // --- type scale ---------------------------------------------------------
   { id: 'h1', ref: '.fn-h1', build: '[data-role="h1"]', text: true, family: 'serif' },
-  { id: 'h2', ref: '.fn-h2', build: '[data-role="h2"]', text: true, family: 'serif' },
+  // The reference sets .fn-h2 and .fn-h4 in the sans via .f-mn — verified
+  // against the live page, which contradicts the original map.
+  { id: 'h2', ref: '.fn-h2', build: '[data-role="h2"]', text: true, family: 'sans' },
   { id: 'h3', ref: '.fn-h3', build: '[data-role="h3"]', text: true, family: 'serif' },
-  { id: 'h4', ref: '.fn-h4', build: '[data-role="h4"]', text: true, family: 'serif' },
+  { id: 'h4', ref: '.fn-h4', build: '[data-role="h4"]', text: true, family: 'sans' },
   { id: 'h5', ref: '.fn-h5', build: '[data-role="h5"]', text: true, family: 'serif' },
   { id: 'body-1', ref: '.fn-b1', build: '[data-role="body-1"]', text: true, family: 'sans' },
   { id: 'body-2', ref: '.fn-b2', build: '[data-role="body-2"]', text: true, family: 'sans' },
