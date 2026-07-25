@@ -57,25 +57,37 @@ try {
 
   const card = page.locator(sel.card).first();
   await card.scrollIntoViewIfNeeded({ timeout: 30_000 });
-  await page.waitForTimeout(800);
+  // Both sides run a smooth-scroll layer, so the card keeps moving for about a
+  // second after scrollIntoView returns. Playwright's hover() would re-scroll
+  // and re-measure into that moving target, so the pointer is driven directly
+  // instead — park it clear, let everything settle, then move onto the card.
+  await page.mouse.move(2, 2);
+  await page.waitForTimeout(3_000);
 
-  // baseline, then hover, then sample every frame
   const sample = () =>
     page.evaluate(
-      (s) => {
-        const pick = (q) => {
-          const el = document.querySelector(q);
+      (q) => {
+        const pick = (selector) => {
+          const el = document.querySelector(selector);
           if (!el) return null;
           const c = getComputedStyle(el);
-          return { transform: c.transform, opacity: c.opacity, transitionDuration: c.transitionDuration, transitionTimingFunction: c.transitionTimingFunction };
+          return {
+            transform: c.transform,
+            opacity: c.opacity,
+            transitionDuration: c.transitionDuration,
+            transitionTimingFunction: c.transitionTimingFunction,
+          };
         };
-        return { image: pick(s.image), out: pick(s.out), in: pick(s.in), t: performance.now() };
+        return { image: pick(q.image), out: pick(q.out), in: pick(q.in), t: performance.now() };
       },
       sel
     );
 
   const before = await sample();
-  await card.hover({ timeout: 30_000 });
+
+  const box = await card.boundingBox();
+  if (!box) throw new Error('card has no box — is it scrolled into view?');
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
 
   const frames = [];
   const t0 = Date.now();

@@ -5,7 +5,7 @@
   "summary": {
     "imageSettleFrame": 33,
     "captionOutSettleFrame": 18,
-    "captionInSettleFrame": 19,
+    "captionInSettleFrame": 18,
     "fps": 30,
     "declared": {
       "image": {
@@ -44,7 +44,7 @@
       "transitionDuration": "0.6s",
       "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
     },
-    "t": 8825.899999976158
+    "t": 14372.300000011921
   },
   "frames": [
     {
@@ -68,404 +68,404 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9699
+      "t": 14425.40000000596
     },
     {
       "frame": 1,
-      "ms": 36,
+      "ms": 35,
       "image": {
-        "transform": "matrix(1.00372, 0, 0, 1.00372, 0, 0)",
+        "transform": "matrix(1.00489, 0, 0, 1.00489, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -3.62111)",
+        "transform": "matrix(1, 0, 0, 1, 0, -4.68072)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 15.7662)",
+        "transform": "matrix(1, 0, 0, 1, 0, 14.7065)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9734
+      "t": 14460.300000011921
     },
     {
       "frame": 2,
-      "ms": 69,
+      "ms": 68,
       "image": {
-        "transform": "matrix(1.00372, 0, 0, 1.00372, 0, 0)",
+        "transform": "matrix(1.00895, 0, 0, 1.00895, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -3.62111)",
+        "transform": "matrix(1, 0, 0, 1, 0, -8.09565)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 15.7662)",
+        "transform": "matrix(1, 0, 0, 1, 0, 11.2916)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9767.09999999404
+      "t": 14493
     },
     {
       "frame": 3,
-      "ms": 101,
+      "ms": 100,
       "image": {
-        "transform": "matrix(1.00372, 0, 0, 1.00372, 0, 0)",
+        "transform": "matrix(1.01243, 0, 0, 1.01243, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -3.62111)",
+        "transform": "matrix(1, 0, 0, 1, 0, -10.6883)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 15.7662)",
+        "transform": "matrix(1, 0, 0, 1, 0, 8.69898)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9799.699999988079
+      "t": 14526.100000023842
     },
     {
       "frame": 4,
       "ms": 135,
       "image": {
-        "transform": "matrix(1.01595, 0, 0, 1.01595, 0, 0)",
+        "transform": "matrix(1.01543, 0, 0, 1.01543, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -13.012)",
+        "transform": "matrix(1, 0, 0, 1, 0, -12.6868)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 6.37528)",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.70043)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9833.799999982119
+      "t": 14560.5
     },
     {
       "frame": 5,
-      "ms": 168,
+      "ms": 167,
       "image": {
-        "transform": "matrix(1.01846, 0, 0, 1.01846, 0, 0)",
+        "transform": "matrix(1.018, 0, 0, 1.018, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -14.4911)",
+        "transform": "matrix(1, 0, 0, 1, 0, -14.2294)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 4.89617)",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.15788)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9867
+      "t": 14592.5
     },
     {
       "frame": 6,
-      "ms": 203,
+      "ms": 201,
       "image": {
-        "transform": "matrix(1.02069, 0, 0, 1.02069, 0, 0)",
+        "transform": "matrix(1.02024, 0, 0, 1.02024, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -15.6726)",
+        "transform": "matrix(1, 0, 0, 1, 0, -15.4463)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 3.71463)",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.941)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9901.299999982119
+      "t": 14626.800000011921
     },
     {
       "frame": 7,
-      "ms": 235,
+      "ms": 234,
       "image": {
-        "transform": "matrix(1.02214, 0, 0, 1.02214, 0, 0)",
+        "transform": "matrix(1.02219, 0, 0, 1.02219, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -16.3765)",
+        "transform": "matrix(1, 0, 0, 1, 0, -16.3982)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 3.01073)",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.98909)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9933.59999999404
+      "t": 14664.700000017881
     },
     {
       "frame": 8,
-      "ms": 268,
+      "ms": 265,
       "image": {
-        "transform": "matrix(1.02384, 0, 0, 1.02384, 0, 0)",
+        "transform": "matrix(1.02387, 0, 0, 1.02387, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -17.1295)",
+        "transform": "matrix(1, 0, 0, 1, 0, -17.1425)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 2.25777)",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.24472)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 9967.199999988079
+      "t": 14691
     },
     {
       "frame": 9,
-      "ms": 301,
+      "ms": 303,
       "image": {
-        "transform": "matrix(1.02532, 0, 0, 1.02532, 0, 0)",
+        "transform": "matrix(1.02534, 0, 0, 1.02534, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -17.7191)",
+        "transform": "matrix(1, 0, 0, 1, 0, -17.7294)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 1.66813)",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.6579)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10000
+      "t": 14728.700000017881
     },
     {
       "frame": 10,
       "ms": 335,
       "image": {
-        "transform": "matrix(1.02687, 0, 0, 1.02687, 0, 0)",
+        "transform": "matrix(1.0266, 0, 0, 1.0266, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -18.2658)",
+        "transform": "matrix(1, 0, 0, 1, 0, -18.1774)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 1.12147)",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.20985)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10034.59999999404
+      "t": 14760.700000017881
     },
     {
       "frame": 11,
       "ms": 368,
       "image": {
-        "transform": "matrix(1.02775, 0, 0, 1.02775, 0, 0)",
+        "transform": "matrix(1.02777, 0, 0, 1.02777, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -18.5402)",
+        "transform": "matrix(1, 0, 0, 1, 0, -18.5454)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.847072)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.841864)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10067.299999982119
+      "t": 14793.90000000596
     },
     {
       "frame": 12,
-      "ms": 404,
+      "ms": 401,
       "image": {
-        "transform": "matrix(1.02897, 0, 0, 1.02897, 0, 0)",
+        "transform": "matrix(1.02876, 0, 0, 1.02876, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -18.8703)",
+        "transform": "matrix(1, 0, 0, 1, 0, -18.8186)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.516941)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.568698)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10103.399999976158
+      "t": 14827.100000023842
     },
     {
       "frame": 13,
-      "ms": 436,
+      "ms": 435,
       "image": {
-        "transform": "matrix(1.0298, 0, 0, 1.0298, 0, 0)",
+        "transform": "matrix(1.02963, 0, 0, 1.02963, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -19.0582)",
+        "transform": "matrix(1, 0, 0, 1, 0, -19.0224)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.329085)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.364867)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10135.09999999404
+      "t": 14861.300000011921
     },
     {
       "frame": 14,
-      "ms": 469,
+      "ms": 467,
       "image": {
-        "transform": "matrix(1.03055, 0, 0, 1.03055, 0, 0)",
+        "transform": "matrix(1.0304, 0, 0, 1.0304, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -19.1968)",
+        "transform": "matrix(1, 0, 0, 1, 0, -19.1718)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.190475)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.215487)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10168.299999982119
+      "t": 14892.600000023842
     },
     {
       "frame": 15,
       "ms": 502,
       "image": {
-        "transform": "matrix(1.03121, 0, 0, 1.03121, 0, 0)",
+        "transform": "matrix(1.03107, 0, 0, 1.03107, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -19.2933)",
+        "transform": "matrix(1, 0, 0, 1, 0, -19.2754)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0939176)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.111867)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10202.199999988079
+      "t": 14927.800000011921
     },
     {
       "frame": 16,
-      "ms": 536,
+      "ms": 535,
       "image": {
-        "transform": "matrix(1.03179, 0, 0, 1.03179, 0, 0)",
+        "transform": "matrix(1.03165, 0, 0, 1.03165, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -19.3519)",
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3399)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.0354134)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0474038)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10236.899999976158
+      "t": 14960.600000023842
     },
     {
       "frame": 17,
-      "ms": 569,
+      "ms": 567,
       "image": {
-        "transform": "matrix(1.03229, 0, 0, 1.03229, 0, 0)",
+        "transform": "matrix(1.03218, 0, 0, 1.03218, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "out": {
-        "transform": "matrix(1, 0, 0, 1, 0, -19.3811)",
+        "transform": "matrix(1, 0, 0, 1, 0, -19.3767)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 0.00619495)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0105392)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10269.899999976158
+      "t": 14993.300000011921
     },
     {
       "frame": 18,
-      "ms": 602,
+      "ms": 601,
       "image": {
-        "transform": "matrix(1.03262, 0, 0, 1.03262, 0, 0)",
+        "transform": "matrix(1.03263, 0, 0, 1.03263, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -477,18 +477,18 @@
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
       "in": {
-        "transform": "matrix(1, 0, 0, 1, 0, 3.66365e-09)",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
         "opacity": "1",
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10301
+      "t": 15026.700000017881
     },
     {
       "frame": 19,
-      "ms": 636,
+      "ms": 634,
       "image": {
-        "transform": "matrix(1.03311, 0, 0, 1.03311, 0, 0)",
+        "transform": "matrix(1.03303, 0, 0, 1.03303, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -505,13 +505,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10335.799999982119
+      "t": 15059.600000023842
     },
     {
       "frame": 20,
-      "ms": 669,
+      "ms": 666,
       "image": {
-        "transform": "matrix(1.03343, 0, 0, 1.03343, 0, 0)",
+        "transform": "matrix(1.03336, 0, 0, 1.03336, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -528,13 +528,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10368.5
+      "t": 15091.90000000596
     },
     {
       "frame": 21,
-      "ms": 703,
+      "ms": 701,
       "image": {
-        "transform": "matrix(1.03373, 0, 0, 1.03373, 0, 0)",
+        "transform": "matrix(1.03367, 0, 0, 1.03367, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -551,13 +551,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10403.299999982119
+      "t": 15126.100000023842
     },
     {
       "frame": 22,
-      "ms": 734,
+      "ms": 735,
       "image": {
-        "transform": "matrix(1.03392, 0, 0, 1.03392, 0, 0)",
+        "transform": "matrix(1.03393, 0, 0, 1.03393, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -574,7 +574,7 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10432.699999988079
+      "t": 15160.300000011921
     },
     {
       "frame": 23,
@@ -597,13 +597,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10466.899999976158
+      "t": 15193.200000017881
     },
     {
       "frame": 24,
-      "ms": 803,
+      "ms": 802,
       "image": {
-        "transform": "matrix(1.03437, 0, 0, 1.03437, 0, 0)",
+        "transform": "matrix(1.03433, 0, 0, 1.03433, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -620,11 +620,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10501.399999976158
+      "t": 15226.90000000596
     },
     {
       "frame": 25,
-      "ms": 835,
+      "ms": 833,
       "image": {
         "transform": "matrix(1.03449, 0, 0, 1.03449, 0, 0)",
         "opacity": "1",
@@ -643,13 +643,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10533.899999976158
+      "t": 15258.40000000596
     },
     {
       "frame": 26,
-      "ms": 869,
+      "ms": 867,
       "image": {
-        "transform": "matrix(1.03465, 0, 0, 1.03465, 0, 0)",
+        "transform": "matrix(1.03462, 0, 0, 1.03462, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -666,13 +666,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10568.899999976158
+      "t": 15292.100000023842
     },
     {
       "frame": 27,
-      "ms": 903,
+      "ms": 902,
       "image": {
-        "transform": "matrix(1.03475, 0, 0, 1.03475, 0, 0)",
+        "transform": "matrix(1.03473, 0, 0, 1.03473, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -689,13 +689,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10602.399999976158
+      "t": 15326.800000011921
     },
     {
       "frame": 28,
-      "ms": 936,
+      "ms": 932,
       "image": {
-        "transform": "matrix(1.03484, 0, 0, 1.03484, 0, 0)",
+        "transform": "matrix(1.03482, 0, 0, 1.03482, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -712,13 +712,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10635.799999982119
+      "t": 15358
     },
     {
       "frame": 29,
-      "ms": 969,
+      "ms": 968,
       "image": {
-        "transform": "matrix(1.0349, 0, 0, 1.0349, 0, 0)",
+        "transform": "matrix(1.03489, 0, 0, 1.03489, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -735,13 +735,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10668.299999982119
+      "t": 15392.700000017881
     },
     {
       "frame": 30,
-      "ms": 1004,
+      "ms": 1001,
       "image": {
-        "transform": "matrix(1.03495, 0, 0, 1.03495, 0, 0)",
+        "transform": "matrix(1.03494, 0, 0, 1.03494, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -758,13 +758,13 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10703.199999988079
+      "t": 15426.300000011921
     },
     {
       "frame": 31,
-      "ms": 1036,
+      "ms": 1035,
       "image": {
-        "transform": "matrix(1.03498, 0, 0, 1.03498, 0, 0)",
+        "transform": "matrix(1.03497, 0, 0, 1.03497, 0, 0)",
         "opacity": "1",
         "transitionDuration": "1.109s, 0.3s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1), cubic-bezier(0.17, 0.84, 0.44, 1)"
@@ -781,11 +781,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10736.899999976158
+      "t": 15459.800000011921
     },
     {
       "frame": 32,
-      "ms": 1068,
+      "ms": 1066,
       "image": {
         "transform": "matrix(1.03499, 0, 0, 1.03499, 0, 0)",
         "opacity": "1",
@@ -804,7 +804,7 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10767.899999976158
+      "t": 15491.40000000596
     },
     {
       "frame": 33,
@@ -827,11 +827,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10801.799999982119
+      "t": 15527
     },
     {
       "frame": 34,
-      "ms": 1136,
+      "ms": 1134,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -850,11 +850,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10835
+      "t": 15559.40000000596
     },
     {
       "frame": 35,
-      "ms": 1169,
+      "ms": 1167,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -873,7 +873,7 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10868
+      "t": 15592.90000000596
     },
     {
       "frame": 36,
@@ -896,11 +896,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10900.299999982119
+      "t": 15626.40000000596
     },
     {
       "frame": 37,
-      "ms": 1234,
+      "ms": 1235,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -919,11 +919,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10933.899999976158
+      "t": 15660.700000017881
     },
     {
       "frame": 38,
-      "ms": 1269,
+      "ms": 1266,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -942,11 +942,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 10969
+      "t": 15691.90000000596
     },
     {
       "frame": 39,
-      "ms": 1303,
+      "ms": 1301,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -965,11 +965,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11002.299999982119
+      "t": 15727.200000017881
     },
     {
       "frame": 40,
-      "ms": 1336,
+      "ms": 1334,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -988,11 +988,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11036.299999982119
+      "t": 15759.800000011921
     },
     {
       "frame": 41,
-      "ms": 1369,
+      "ms": 1368,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -1011,7 +1011,7 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11068.59999999404
+      "t": 15793.5
     },
     {
       "frame": 42,
@@ -1034,11 +1034,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11100.699999988079
+      "t": 15826.90000000596
     },
     {
       "frame": 43,
-      "ms": 1436,
+      "ms": 1435,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -1057,11 +1057,11 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11134.899999976158
+      "t": 15860.90000000596
     },
     {
       "frame": 44,
-      "ms": 1469,
+      "ms": 1468,
       "image": {
         "transform": "matrix(1.035, 0, 0, 1.035, 0, 0)",
         "opacity": "1",
@@ -1080,7 +1080,7 @@
         "transitionDuration": "0.6s",
         "transitionTimingFunction": "cubic-bezier(0.17, 0.84, 0.44, 1)"
       },
-      "t": 11168.399999976158
+      "t": 15894
     }
   ]
 }

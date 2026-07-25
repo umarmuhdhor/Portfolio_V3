@@ -12,16 +12,23 @@ import { DURATION, EASE_NAME, prefersReducedMotion, registerEase } from '@/lib/e
  * Scroll motion — Lenis drives, GSAP reacts.
  *
  * Lenis is the single scroll source of truth. ScrollTrigger is told to read
- * position from it rather than from the native scroll event; adding a second
- * smooth-scroll layer on top would fight it and produce the drift you see on
- * sites that bolt two together.
+ * position from it rather than from the native scroll event; a second
+ * smooth-scroll layer on top would fight it.
  *
- * Every tween here runs on the CustomEase built from `--ease` and on one of the
- * five durations. There is no sixth duration and no second curve.
+ * Two rules this file exists to enforce, both learned the hard way:
  *
- * prefers-reduced-motion bypasses all of it — not a shortened version, no
- * motion at all. Lenis is never constructed, no trigger is created, and the
- * elements are left in their final state by the CSS.
+ *  1. **Nothing is hidden unless something is guaranteed to show it again.**
+ *     `gsap.from()` applies its start state the moment the tween is built, so
+ *     if the ScrollTrigger never fires — a mis-measured page, a refresh that
+ *     ran before layout settled, a viewport taller than the trigger expected —
+ *     the content stays invisible forever. Every reveal here sets its own
+ *     start state and is driven by an explicit `onEnter`, with a refresh
+ *     afterwards so anything already on screen fires straight away, and a
+ *     final safety sweep that shows anything still hidden.
+ *
+ *  2. **A mask is temporary.** Line masks exist so a line can slide up from
+ *     nothing. Once it has arrived, the mask is released — otherwise it spends
+ *     the rest of the page clipping the descenders off a 118rem serif.
  */
 export default function ScrollMotion() {
   useEffect(() => {
@@ -30,70 +37,114 @@ export default function ScrollMotion() {
     registerEase();
     gsap.registerPlugin(ScrollTrigger, Observer, SplitText);
 
+    // The browser restores the previous scroll offset before Lenis exists, and
+    // Lenis then adopts it — so a reload lands mid-page with every reveal above
+    // already spent. Start from the top and let the anchor links do the moving.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+
     const lenis = new Lenis({
-      // Matches the reference's feel: long, low-friction glide rather than a
-      // short damped one.
       duration: 1.109,
       easing: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
       smoothWheel: true,
     });
 
-    // ScrollTrigger reads from Lenis, not from the native scroll position.
     lenis.on('scroll', ScrollTrigger.update);
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
+    const splits: SplitText[] = [];
+    /** Everything hidden by this component, so it can all be shown again. */
+    const hidden = new Set<HTMLElement>();
+    const release = (el: HTMLElement) => {
+      gsap.set(el, { clearProps: 'opacity,transform,y,yPercent' });
+      hidden.delete(el);
+    };
+
     const ctx = gsap.context(() => {
-      // --- headings: split to lines, reveal from behind a mask -------------
-      const splits: SplitText[] = [];
+      // --- headings: split to lines, each masked, then unmasked ------------
       gsap.utils.toArray<HTMLElement>('[data-split]').forEach((el) => {
         const split = new SplitText(el, { type: 'lines', linesClass: 'ln' });
         splits.push(split);
 
-        // Each line needs its own overflow:hidden parent or the mask clips the
-        // whole block instead of each line.
+        const masks: HTMLElement[] = [];
         split.lines.forEach((line) => {
+          // Each line needs its own clipping parent, or the mask clips the
+          // block as a whole instead of clipping line by line.
           const mask = document.createElement('span');
           mask.className = 'ln-mask';
           line.parentNode?.insertBefore(mask, line);
           mask.appendChild(line);
+          masks.push(mask);
         });
 
-        gsap.from(split.lines, {
-          yPercent: 101,
-          duration: DURATION.roll,
-          ease: EASE_NAME,
-          stagger: 0.06,
-          scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+        const lines = split.lines as HTMLElement[];
+        gsap.set(lines, { yPercent: 101 });
+        lines.forEach((l) => hidden.add(l));
+
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 95%',
+          once: true,
+          onEnter: () =>
+            gsap.to(lines, {
+              yPercent: 0,
+              duration: DURATION.roll,
+              ease: EASE_NAME,
+              stagger: 0.06,
+              onComplete: () => {
+                // Released once arrived. A permanent mask on a tight
+                // line-height eats the ascenders and descenders.
+                masks.forEach((m) => {
+                  m.style.overflow = 'visible';
+                });
+                lines.forEach(release);
+              },
+            }),
         });
       });
 
-      // --- blocks: a short lift, nothing more -----------------------------
+      // --- blocks: a short lift -------------------------------------------
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
-        gsap.from(el, {
-          opacity: 0,
-          y: 40,
-          duration: DURATION.transform,
-          ease: EASE_NAME,
-          scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        gsap.set(el, { opacity: 0, y: 40 });
+        hidden.add(el);
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 95%',
+          once: true,
+          onEnter: () =>
+            gsap.to(el, {
+              opacity: 1,
+              y: 0,
+              duration: DURATION.transform,
+              ease: EASE_NAME,
+              onComplete: () => release(el),
+            }),
         });
       });
 
       // --- work cards: staggered in, in grid order ------------------------
       const cards = gsap.utils.toArray<HTMLElement>('[data-role="work-card"]');
-      if (cards.length) {
-        gsap.from(cards, {
-          opacity: 0,
-          y: 60,
-          duration: DURATION.roll,
-          ease: EASE_NAME,
-          stagger: 0.08,
-          scrollTrigger: { trigger: cards[0], start: 'top 90%', once: true },
+      cards.forEach((card) => {
+        gsap.set(card, { opacity: 0, y: 60 });
+        hidden.add(card);
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 95%',
+          once: true,
+          onEnter: () =>
+            gsap.to(card, {
+              opacity: 1,
+              y: 0,
+              duration: DURATION.roll,
+              ease: EASE_NAME,
+              onComplete: () => release(card),
+            }),
         });
-      }
+      });
 
-      // --- header: hides on the way down, returns on the way up -----------
+      // --- header: hides going down, returns going up ---------------------
       const header = document.querySelector<HTMLElement>('[data-role="header"]');
       if (header) {
         Observer.create({
@@ -106,9 +157,9 @@ export default function ScrollMotion() {
         });
       }
 
-      // --- nav: mark the section currently in view ------------------------
+      // --- nav: mark the section in view ----------------------------------
       const navLinks = gsap.utils.toArray<HTMLAnchorElement>('[data-role="nav-link"]');
-      const setActive = (id: string | null) => {
+      const setActive = (id: string) => {
         navLinks.forEach((a) => a.classList.toggle('is--a', a.getAttribute('href') === `#${id}`));
       };
       ['index', 'work', 'about', 'contact'].forEach((id) => {
@@ -124,8 +175,8 @@ export default function ScrollMotion() {
 
       // --- running counter ------------------------------------------------
       const counter = document.querySelector<HTMLElement>('[data-role="nav-counter"]');
-      if (counter) {
-        const sections = gsap.utils.toArray<HTMLElement>('[data-role="section"]');
+      const sections = gsap.utils.toArray<HTMLElement>('section');
+      if (counter && sections.length) {
         ScrollTrigger.create({
           trigger: document.body,
           start: 'top top',
@@ -137,7 +188,7 @@ export default function ScrollMotion() {
         });
       }
 
-      // --- scrollbar thumb ------------------------------------------------
+      // --- scrollbar thumb -------------------------------------------------
       const thumb = document.querySelector<HTMLElement>('.scrollbar-thumb');
       const track = document.querySelector<HTMLElement>('.scrollbar-track');
       if (thumb && track) {
@@ -151,14 +202,33 @@ export default function ScrollMotion() {
           },
         });
       }
-
-      ScrollTrigger.refresh();
-
-      return () => splits.forEach((s) => s.revert());
     });
 
+    // Fonts change line breaking, which changes every trigger position, so the
+    // refresh waits for them. Anything already on screen fires on this pass.
+    const refresh = () => ScrollTrigger.refresh();
+    if (document.fonts?.ready) document.fonts.ready.then(refresh);
+    else refresh();
+    const onLoad = () => refresh();
+    window.addEventListener('load', onLoad);
+
+    // Safety net. If a trigger is still holding something invisible well after
+    // load, show it. A missing animation is a blemish; a permanently blank
+    // section is a broken page, and this file is the only thing that hid it.
+    const sweep = window.setTimeout(() => {
+      if (!hidden.size) return;
+      document.querySelectorAll<HTMLElement>('.ln-mask').forEach((m) => {
+        m.style.overflow = 'visible';
+      });
+      [...hidden].forEach(release);
+      ScrollTrigger.refresh();
+    }, 2500);
+
     return () => {
+      window.clearTimeout(sweep);
+      window.removeEventListener('load', onLoad);
       ctx.revert();
+      splits.forEach((s) => s.revert());
       gsap.ticker.remove(raf);
       lenis.destroy();
       ScrollTrigger.getAll().forEach((t) => t.kill());

@@ -132,6 +132,17 @@ and the row spacing lost when the two link groups merged into one column was
 restored. That took Lighthouse accessibility from 91 back to 96 with the A/B
 still green.
 
+## C. Hero leading, loosened on an inner wrapper
+
+`fn-h2` sets `line-height: 0.7`, which is measured and correct for the short
+display headings the reference uses it on. "Andi Muhammad Alief Fauzan" is 26
+characters and sets over two lines at 175rem, and at 0.7 leading those two
+lines collide.
+
+The type scale is untouched: the heading keeps `line-height: 0.7`, and the
+leading is loosened to 0.95 on an inner `<span>`. Same font-size, same family,
+same tracking — only the wrap spacing on this one long heading differs.
+
 ---
 
 # Corrections to Part 1 of the brief

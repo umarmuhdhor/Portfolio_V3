@@ -45,8 +45,14 @@ export default function Home() {
         <section className="sec hero" data-role="section" id="index">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              <h1 className="fn-h2 hero__name e-lh hero__name--centred" data-role="h2" data-split>
-                {NAME}
+              {/* The 0.7 leading on fn-h2 is measured and stays on the
+                  heading itself. A 26-character name sets over two lines at
+                  175rem, and at 0.7 those two lines collide, so the leading is
+                  loosened on an inner wrapper — the type scale is untouched. */}
+              <h1 className="fn-h2 hero__name hero__name--centred" data-role="h2">
+                <span className="hero__name-inner" data-split>
+                  {NAME}
+                </span>
               </h1>
               <div className="hero__frame" data-gl>
                 <img alt="" src="/images/profile/foto_alief.webp" />
@@ -63,8 +69,8 @@ export default function Home() {
                 {TAGLINE}
               </h2>
 
-              {SERVICES.map((s) => (
-                <div className="statement__col" data-reveal key={s.heading}>
+              {SERVICES.map((s, i) => (
+                <div className={`statement__col statement__col--${i === 0 ? 'a' : 'b'}`} data-reveal key={s.heading}>
                   <p className="fn-b1 statement__col-heading" data-role="body-1">
                     {s.heading}
                   </p>
@@ -115,8 +121,8 @@ export default function Home() {
         <section className="sec" data-role="section">
           <div className="ctr" data-role="container">
             <div className="grd" data-role="grid">
-              {CAPABILITIES.groups.map((g) => (
-                <div className="caps__group" data-reveal key={g.heading}>
+              {CAPABILITIES.groups.map((g, i) => (
+                <div className={`caps__group caps__group--${i === 0 ? 'a' : 'b'}`} data-reveal key={g.heading}>
                   <p className="caps__heading fn-b1">{g.heading}</p>
                   <ul>
                     {g.items.map((i) => (
@@ -146,10 +152,10 @@ export default function Home() {
             <div className="grd" data-role="grid">
               <h2 className="fn-h3 process__heading" data-split>{PROCESS.heading}</h2>
 
-              <div className="process__frame" data-gl>
+              <div className="process__frame process__frame--a" data-gl>
                 <img alt="" loading="lazy" src="/images/work/keretaxpress-web.webp" />
               </div>
-              <div className="process__frame" data-gl>
+              <div className="process__frame process__frame--b" data-gl>
                 <img alt="" loading="lazy" src="/images/work/peduliPasal.webp" />
               </div>
 
@@ -275,7 +281,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="footer__col">
+            <div className="footer__col footer__col--a">
               <p className="fn-b2 footer__col-heading">Address</p>
               <ul>
                 {FOOTER.address.map((a) => (
@@ -286,7 +292,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="footer__col">
+            <div className="footer__col footer__col--b">
               <p className="fn-b2 footer__col-heading">Hours</p>
               <ul>
                 {FOOTER.hours.map((h) => (

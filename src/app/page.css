@@ -86,6 +86,11 @@
   text-align: center;
 }
 
+.hero__name-inner {
+  display: block;
+  line-height: 0.95;
+}
+
 .hero__frame {
   grid-column: 1 / -1;
   height: 700rem;
@@ -105,6 +110,9 @@
 .hero__frame img {
   height: 100%;
   object-fit: cover;
+  /* Head-and-shoulders portrait — anchor the crop to the top so a wide frame
+     keeps the face rather than centring on the collar. */
+  object-position: 50% 18%;
   width: 100%;
 }
 
@@ -121,11 +129,11 @@
   gap: 14rem;
 }
 
-.statement__col:nth-of-type(2) {
+.statement__col--a {
   grid-column: 10 / 13;
 }
 
-.statement__col:nth-of-type(3) {
+.statement__col--b {
   grid-column: 13 / -1;
 }
 
@@ -201,11 +209,11 @@
   gap: 14rem;
 }
 
-.caps__group:nth-of-type(2) {
+.caps__group--a {
   grid-column: 1 / 5;
 }
 
-.caps__group:nth-of-type(3) {
+.caps__group--b {
   grid-column: 5 / 9;
 }
 
@@ -246,11 +254,11 @@
   width: 100%;
 }
 
-.process__frame:nth-of-type(2) {
+.process__frame--a {
   grid-column: 1 / 7;
 }
 
-.process__frame:nth-of-type(3) {
+.process__frame--b {
   grid-column: 9 / -1;
   margin-top: 170rem;
 }
@@ -506,11 +514,11 @@
   margin-top: 20rem;
 }
 
-.footer__col:nth-of-type(1) {
+.footer__col--a {
   grid-column: 9 / 12;
 }
 
-.footer__col:nth-of-type(2) {
+.footer__col--b {
   grid-column: 12 / -1;
 }
 
