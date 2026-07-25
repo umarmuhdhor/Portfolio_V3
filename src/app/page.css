@@ -65,6 +65,12 @@
   padding-top: 300rem;
 }
 
+/* The reference's first container is a flex box, not a block. */
+.hero > .ctr {
+  align-items: flex-start;
+  display: flex;
+}
+
 @media (max-width: 767.98px) {
   .hero {
     padding-top: 120rem;
@@ -106,7 +112,7 @@
    2 — statement
    -------------------------------------------------------------------------- */
 .statement__tagline {
-  grid-column: 1 / 9;
+  grid-column: 1 / -1;
 }
 
 .statement__col {
@@ -177,6 +183,7 @@
   flex-direction: column;
   gap: 30rem;
   grid-column: 6 / -1;
+  max-width: 1110rem;
 }
 
 @media (max-width: 767.98px) {
@@ -462,14 +469,49 @@
   }
 }
 
+.footer__brand {
+  grid-column: 1 / 3;
+  width: 103rem;
+}
+
 .footer__name {
-  grid-column: 1 / 5;
+  grid-column: 12 / -1;
+  text-align: right;
+}
+
+/* A large serif line on the dark plate — the reference's white h4. */
+.footer__headline {
+  grid-column: 1 / -1;
+  margin-top: 100rem;
+  max-width: 700rem;
 }
 
 .footer__col {
   display: flex;
   flex-direction: column;
-  grid-column: span 2;
+}
+
+/* Both link groups share one column on the reference — every footer anchor
+   after the brand sits at the same x. */
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 60rem;
+  grid-column: 5 / 9;
+}
+
+/* Restores the row spacing after the two link groups were merged into one
+   column — without it consecutive tap targets sit flush against each other. */
+.footer__links li + li {
+  margin-top: 20rem;
+}
+
+.footer__col:nth-of-type(1) {
+  grid-column: 9 / 12;
+}
+
+.footer__col:nth-of-type(2) {
+  grid-column: 12 / -1;
 }
 
 .footer__col-heading {
@@ -486,8 +528,14 @@
   margin-top: 20rem;
 }
 
-.footer__col a {
+.footer__col a,
+.footer__links a,
+.footer__brand {
   display: block;
+  /* Lifts the tap target to 24px without touching the box width, which the
+     A/B asserts. Padding on the top only, so the underline stays on the text
+     baseline rather than floating below it. */
+  padding-top: 6rem;
 }
 
 .footer__col li:first-child {

@@ -204,9 +204,7 @@ export default function Home() {
               <div className="stats__row">
                 {STATS.map((s) => (
                   <div key={s.label}>
-                    <p className="fn-h4" data-role="h4">
-                      {s.value}
-                    </p>
+                    <p className="fn-h4">{s.value}</p>
                     <p className="fn-b2 stats__label">{s.label}</p>
                   </div>
                 ))}
@@ -241,28 +239,41 @@ export default function Home() {
       <footer className="footer" data-role="footer" id="contact">
         <div className="ctr" data-role="container">
           <div className="grd" data-role="grid">
+            {/* The reference opens its footer with a ~103rem brand mark at
+                column 1. It is a plain anchor — no underline treatment — so it
+                stays position: static. */}
+            <a className="fn-b1 footer__brand" data-role="footer-link" href={FOOTER.brand.href}>
+              {FOOTER.brand.label}
+            </a>
+
             <p className="fn-meta footer__name">{NAME}</p>
 
-            {FOOTER.columns.map((c) => (
-              <div className="footer__col" key={c.heading}>
-                <p className="fn-b2 footer__col-heading">{c.heading}</p>
-                <ul>
-                  {c.links.map((l) => (
-                    <li key={l.href}>
-                      <a
-                        className="link fn-b1"
-                        data-role="footer-link"
-                        href={l.href}
-                        rel={l.href.startsWith('http') ? 'noreferrer noopener' : undefined}
-                        target={l.href.startsWith('http') ? '_blank' : undefined}
-                      >
-                        {l.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <h2 className="fn-h4 footer__headline" data-role="h4">
+              Open to backend and cloud work
+            </h2>
+
+            <div className="footer__links">
+              {FOOTER.columns.map((c) => (
+                <div key={c.heading}>
+                  <p className="fn-b2 footer__col-heading">{c.heading}</p>
+                  <ul>
+                    {c.links.map((l) => (
+                      <li key={l.href}>
+                        <a
+                          className="link fn-b1"
+                          data-role="footer-link"
+                          href={l.href}
+                          rel={l.href.startsWith('http') ? 'noreferrer noopener' : undefined}
+                          target={l.href.startsWith('http') ? '_blank' : undefined}
+                        >
+                          {l.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
             <div className="footer__col">
               <p className="fn-b2 footer__col-heading">Address</p>

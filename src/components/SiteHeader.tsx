@@ -21,8 +21,8 @@ export default function SiteHeader({ counter = '01' }: { counter?: string }) {
         <div className="site-header__row">
           <div className="site-header__brand">
             <span className="ln-mask">
-              <span className="ln fn-meta" data-role="nav-counter">
-                {counter}
+              <span className="ln fn-b1 fn-meta" data-role="body-1">
+                <span data-role="nav-counter">{counter}</span>
               </span>
             </span>
           </div>

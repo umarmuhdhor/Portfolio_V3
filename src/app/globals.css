@@ -54,15 +54,10 @@
 
    px is used only for borders and outlines.
    -------------------------------------------------------------------------- */
-:root {
-  font-size: 0.0520833333vw;
-}
-
-@media (max-width: 767.98px) {
-  :root {
-    font-size: 0.2666666667vw;
-  }
-}
+/* The root font-size lives in an inline <style> in the document head, not
+   here — see layout.tsx. The CSS minifier truncates the literal to
+   0.0520833vw, and that rounding is enough to make 1rem compute to 0.999999px
+   instead of 1px, which then shows up on every rem-derived measurement. */
 
 /* --------------------------------------------------------------------------
    Motion — one curve, five durations

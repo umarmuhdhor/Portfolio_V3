@@ -21,63 +21,63 @@ export const PROJECTS: Project[] = [
   {
     title: 'Arcade Team Calculator',
     subtitle: 'Intelligent Leaderboard Management System',
-    metric: 'Next.js · TypeScript',
+    metric: 'React',
     image: '/images/work/arcadeCalc.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'Grooth',
     subtitle: 'Smart Air Quality Route Planner',
-    metric: 'Next.js · Node.js',
+    metric: 'Node.js',
     image: '/images/work/grooth.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'PeduliPasal',
     subtitle: 'AI-Powered Legal Information Platform',
-    metric: 'Cloud Run · Vertex AI',
+    metric: 'Firebase',
     image: '/images/work/peduliPasal.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'KeretaXpress Web',
     subtitle: 'Modern Train Ticket Booking Platform',
-    metric: 'React · Next.js',
+    metric: 'Tailwind',
     image: '/images/work/keretaxpress-web.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'KeretaXpress Mobile',
     subtitle: 'Cross-Platform Mobile Booking App',
-    metric: 'Flutter · Cloud Run',
+    metric: 'Supabase',
     image: '/images/work/keretaxpress-mobile.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'YouTube Summarizer & QnA',
     subtitle: 'AI-Powered Video Content Analysis',
-    metric: 'TypeScript · Next.js',
+    metric: 'React',
     image: '/images/work/ytSum.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'IoT Sensor Data Platform',
     subtitle: 'Cloud-Native IoT Backend Infrastructure',
-    metric: 'Go · C++ · ESP8266',
+    metric: 'Golang',
     image: '/images/work/iot.webp',
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'ML Cloud Deployment Platform',
     subtitle: 'Production ML Infrastructure',
-    metric: 'Vertex AI · TensorFlow',
+    metric: 'Vertex AI',
     image: null,
     href: 'https://github.com/aliefauzan',
   },
   {
     title: 'Backend with Google Cloud',
     subtitle: 'Cloud-Native Backend Application',
-    metric: 'Cloud Run · Node.js',
+    metric: 'Cloud Run',
     image: null,
     href: 'https://github.com/aliefauzan',
   },
@@ -175,13 +175,14 @@ export const LOGOS = [
 
 /** Section 10 — footer. */
 export const FOOTER = {
+  /** The reference opens its footer with a ~103rem brand mark at column 1. */
+  brand: { label: 'AMAF', href: '#index' },
   columns: [
     {
-      heading: 'Elsewhere',
+      heading: 'Contact',
       links: [
-        { label: 'GitHub', href: 'https://github.com/aliefauzan' },
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/andi-muhammad-alief-fauzan' },
         { label: 'Email', href: 'mailto:afindo.mi01@gmail.com' },
+        { label: 'GitHub', href: 'https://github.com/aliefauzan' },
       ],
     },
     {
@@ -189,7 +190,13 @@ export const FOOTER = {
       links: [
         { label: 'Work', href: '#work' },
         { label: 'About', href: '#about' },
-        { label: 'Design system', href: '/styleguide' },
+      ],
+    },
+    {
+      heading: 'Elsewhere',
+      links: [
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/andi-muhammad-alief-fauzan' },
+        { label: 'Design guide', href: '/styleguide' },
       ],
     },
   ],

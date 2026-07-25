@@ -12,6 +12,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/*
+          Fluid rem: 1rem === one design pixel, 1920 on desktop and 375 below
+          the breakpoint. Inlined rather than authored in globals.css because
+          the CSS minifier truncates the literal's precision, and the rounding
+          error propagates into every measurement derived from rem.
+        */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html:
+              ':root{font-size:0.0520833333vw}@media (max-width:767.98px){:root{font-size:0.2666666667vw}}',
+          }}
+        />
         {/* Both faces are self-hosted and font-display: swap, so preloading the
             sans avoids a flash on the body copy that carries most of the page. */}
         <link rel="preload" href="/fonts/switzer-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

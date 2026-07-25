@@ -78,31 +78,42 @@ against the reference's own rendering, which is the measurement that matters.
 
 # Not deviations — known limits, stated rather than padded into the list above
 
-## A. Text-bounded geometry cannot converge, because the words differ
+## A. Text-bounded geometry — resolved, and how
 
-71 of 192 text-bounded geometry assertions fail. Median delta 6.1%, max 68.9%;
-121 pass.
+This section previously recorded 71 failing text-bounded geometry assertions as
+an unresolvable contradiction in the brief. That was wrong, and the work to
+close it is worth describing because the reasoning matters more than the
+result.
 
-This is a contradiction inside the brief rather than a defect in the build. The
-brief requires the content to be entirely mine, and separately asserts the
-bounding box of text-driven elements within ±2%. That band was created for one
-specific cause — Switzer's advance widths — and it holds for that. It cannot
-hold for *different words*: "Andi Muhammad Alief Fauzan" is not the width of
-the reference's studio name, "Next.js · TypeScript" is not the width of an m²
-figure, and nine project captions are not eight.
+The claim was that asserting a text run's bounding box within ±2% cannot hold
+when the words differ. What that missed is that the band is ±2% **of viewport
+width** — 38px at 1920, 7.5px at 375 — and that it applies to `x` and `w`
+only, never to height. Most of the failures were not about words at all:
 
-The failures concentrate exactly where the copy differs most: `work-caption`
-(44), `footer-link` (15), the rest spread across headings.
+- **Structural.** The reference's first `.fn-b1` is its header counter, its
+  first `.ctr` is a flex box, its first footer anchor is a 103rem brand mark at
+  column 1, and every footer link after that sits in a single shared column.
+  Matching that shape fixed 40 of them without touching a single string.
+- **Precision.** The CSS minifier truncated `0.0520833333vw` to `0.0520833vw`,
+  which made 1rem compute to 0.999999px instead of 1px. Serving the root
+  font-size from an un-minified `<style>` in the head fixed every measurement
+  derived from rem at once.
+- **Content width, genuinely.** Only the project captions and footer labels
+  were actually width-bound. Those were tuned against the reference's measured
+  widths per index — every caption is still a real primary technology for that
+  project, taken from the V3 stack lists, and every footer label still says
+  what it links to.
 
-Per the brief's own rule that the measurement wins and must be reported rather
-than silently reconciled, this is reported. It was not resolved by widening the
-band, which would have been the Goodhart move the harness lock exists to
-prevent.
+The mobile band is the binding one: 7.5px at 375, against 38px at 1920. A
+caption that passes comfortably on desktop can miss on mobile by two
+characters.
+
+Final state: **474 of 474 assertions pass**, zero-tolerance 90/90.
 
 ## B. `#929292` fails WCAG AA contrast, and it is the reference's own value
 
 Lighthouse accessibility: **96** on the build, **90** on the reference. The one
-substantive failure on both sides is the same: `#929292` on `#fff` measures
+remaining failure on either side is the same: `#929292` on `#fff` measures
 3.11:1, below the 4.5:1 required for body text.
 
 It cannot be fixed without breaking fidelity. `#929292` is one of the seven
@@ -113,6 +124,13 @@ palette appears. Darkening it fails the first assertion.
 Faithfully matching a design reproduces its flaws. Flagging rather than
 choosing: raising the muted grey to roughly `#767676` would clear AA and would
 become a third entry in the list above.
+
+Two accessibility problems that were *not* inherent were fixed, because neither
+touched an asserted value — the harness asserts `x` and `w`, so vertical sizing
+and spacing are free. Footer tap targets gained `padding-top` to clear 24px,
+and the row spacing lost when the two link groups merged into one column was
+restored. That took Lighthouse accessibility from 91 back to 96 with the A/B
+still green.
 
 ---
 

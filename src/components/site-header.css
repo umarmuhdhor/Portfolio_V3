@@ -1,4 +1,8 @@
-/* Header — measured from the reference's fixed bar. */
+/* Header — measured from the reference's fixed bar.
+
+   mix-blend-mode: difference is what lets one white header sit over both the
+   light sections and the black footer without a colour swap, which is why the
+   transition covers mix-blend-mode as well as transform. */
 .site-header {
   color: #fff;
   left: 0;
@@ -22,16 +26,30 @@
   pointer-events: all;
 }
 
+/* The document's first container is this one, and it is a flex box on the
+   reference — the row inside it is what actually does the distributing. */
+.site-header > .ctr {
+  align-items: flex-start;
+  display: flex;
+}
+
 .site-header__row {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
   position: relative;
+  width: 100%;
 }
 
 .site-header__brand {
   overflow: hidden;
   width: 103rem;
+}
+
+/* The counter value is a block inside the masked line so it can be rolled
+   vertically as the number changes. */
+.site-header__brand [data-role='nav-counter'] {
+  display: block;
 }
 
 .site-header__nav {
@@ -48,4 +66,12 @@
   display: block;
   padding-bottom: 0.05em;
   will-change: transform;
+}
+
+@media (max-width: 767.98px) {
+  /* The reference keeps the row below the breakpoint and drops the first nav
+     item rather than wrapping four of them into 375px. */
+  .site-header__nav li:first-child {
+    display: none;
+  }
 }
