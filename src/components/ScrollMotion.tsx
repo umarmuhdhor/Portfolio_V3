@@ -63,9 +63,18 @@ export default function ScrollMotion() {
     };
 
     const ctx = gsap.context(() => {
-      // --- headings: split to lines, each masked, then unmasked ------------
+      // --- headings: masked lines, staggered by word ------------------------
+      // This used to slide each whole line up as one rigid block, six
+      // hundredths apart. It read as a slideshow: every heading on the page
+      // arrived the same way, at the same speed, in the same number of
+      // pieces. Splitting to words *inside* the line mask and staggering
+      // those instead keeps the discipline — nothing ever escapes its line
+      // box, the mask still comes off at the end — while giving the type
+      // somewhere to travel from. The words are close enough together
+      // (0.025) that a heading still reads as one gesture rather than as
+      // letters being typed.
       gsap.utils.toArray<HTMLElement>('[data-split]').forEach((el) => {
-        const split = new SplitText(el, { type: 'lines', linesClass: 'ln' });
+        const split = new SplitText(el, { type: 'lines,words', linesClass: 'ln', wordsClass: 'wd' });
         splits.push(split);
 
         const masks: HTMLElement[] = [];
@@ -80,25 +89,29 @@ export default function ScrollMotion() {
         });
 
         const lines = split.lines as HTMLElement[];
-        gsap.set(lines, { yPercent: 101 });
-        lines.forEach((l) => hidden.add(l));
+        const words = split.words as HTMLElement[];
+        // Words carry the motion; the line stays put so the mask has a fixed
+        // edge to clip against.
+        gsap.set(words, { yPercent: 108 });
+        words.forEach((w) => hidden.add(w));
 
         ScrollTrigger.create({
           trigger: el,
           start: 'top 95%',
           once: true,
           onEnter: () =>
-            gsap.to(lines, {
+            gsap.to(words, {
               yPercent: 0,
               duration: DURATION.roll,
               ease: EASE_NAME,
-              stagger: 0.06,
+              stagger: { each: 0.025, from: 'start' },
               onComplete: () => {
                 // Released once arrived. A permanent mask on a tight
                 // line-height eats the ascenders and descenders.
                 masks.forEach((m) => {
                   m.style.overflow = 'visible';
                 });
+                words.forEach(release);
                 lines.forEach(release);
               },
             }),
@@ -156,6 +169,89 @@ export default function ScrollMotion() {
             scrub: true,
           },
         });
+      });
+
+      // --- hand-authored line masks ---------------------------------------
+      // The diagram marquees and the people labels ship their masks in the
+      // markup rather than getting them from SplitText, because their line
+      // breaks are authored rather than found. They still have to move: on
+      // the reference these slide up exactly like a split heading does, and
+      // without this they sat still and were released by the safety sweep.
+      gsap.utils.toArray<HTMLElement>('[data-lines]').forEach((el) => {
+        const lines = gsap.utils.toArray<HTMLElement>('.ln', el);
+        if (!lines.length) return;
+
+        gsap.set(lines, { yPercent: 101 });
+        lines.forEach((l) => hidden.add(l));
+
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 95%',
+          once: true,
+          onEnter: () =>
+            gsap.to(lines, {
+              yPercent: 0,
+              duration: DURATION.roll,
+              ease: EASE_NAME,
+              stagger: 0.06,
+              onComplete: () => {
+                el.querySelectorAll<HTMLElement>('.ln-mask').forEach((m) => {
+                  m.style.overflow = 'visible';
+                });
+                lines.forEach(release);
+              },
+            }),
+        });
+      });
+
+      // --- the dark run ----------------------------------------------------
+      // The reference flips its diagram section from transparent to black
+      // about 530px into its own scroll, and everything from there to the
+      // footer is black outright. Sampling the reference at 60px intervals
+      // put the entire change between +500 and +560, so it is a threshold
+      // rather than a scrub — a class toggle, with the fade carried by a CSS
+      // transition on background-color and color.
+      // The class goes on the document element rather than on the section:
+      // the gaps between the dark sections are body margins, and painting the
+      // sections individually leaves those gaps white.
+      const diagram = document.querySelector<HTMLElement>('.sec-diagram');
+      if (diagram) {
+        const root = document.documentElement;
+        ScrollTrigger.create({
+          trigger: diagram,
+          start: 'top -530px',
+          // No end: once the run starts it holds all the way to the footer,
+          // which is black on its own account.
+          onEnter: () => root.classList.add('is--dark'),
+          onLeaveBack: () => root.classList.remove('is--dark'),
+        });
+      }
+
+      // --- plates: the image drifts against its frame ----------------------
+      // Measured off the reference: the hero plate translates at ~0.20 of the
+      // scroll rate and the statement plate at ~0.188. Over a trigger span of
+      // one viewport plus one frame, +/-14.4% of a 140%-tall image is that
+      // rate. The 140% lives in page.css next to a comment saying so — the
+      // two numbers are a pair and cannot be changed independently.
+      gsap.utils.toArray<HTMLElement>('[data-parallax]').forEach((frame) => {
+        const image = frame.querySelector('img');
+        if (!image) return;
+
+        gsap.fromTo(
+          image,
+          { yPercent: -14.4 },
+          {
+            yPercent: 14.4,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: frame,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          },
+        );
       });
 
       // --- blocks: a short lift -------------------------------------------
@@ -291,22 +387,49 @@ export default function ScrollMotion() {
     });
     splashWatcher.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
-    // Safety net. If a trigger is still holding something invisible well after
-    // load, show it. A missing animation is a blemish; a permanently blank
-    // section is a broken page, and this file is the only thing that hid it.
-    const sweep = window.setTimeout(() => {
-      // Masks are released unconditionally, including the ones authored in the
-      // markup rather than created here — a mask nothing ever opens spends the
-      // page clipping the glyphs it was meant to reveal.
+    // Safety net. If a trigger is still holding something invisible when it
+    // should be on screen, show it. A missing animation is a blemish; a
+    // permanently blank section is a broken page, and this file is the only
+    // thing that hid it.
+    //
+    // Scope matters here, and getting it wrong is why the page felt lifeless.
+    // This used to release *everything* hidden, two and a half seconds after
+    // load, no matter where it was. Since almost every heading on a 26,000px
+    // page is below the fold at that moment, almost every heading was quietly
+    // un-hidden before its own trigger could ever fire — so it never
+    // animated, it simply existed. The reveals were all written and none of
+    // them ran. A rescue is only a rescue for something that should already
+    // be visible, so the sweep now only touches what has reached the
+    // viewport, and leaves everything below it to its own ScrollTrigger.
+    const rescueVisible = () => {
+      const vh = window.innerHeight;
       document.querySelectorAll<HTMLElement>('.ln-mask').forEach((m) => {
-        m.style.overflow = 'visible';
+        if (m.getBoundingClientRect().top < vh) m.style.overflow = 'visible';
       });
-      if (!hidden.size) return;
-      [...hidden].forEach(release);
+      [...hidden].forEach((el) => {
+        if (el.getBoundingClientRect().top < vh) release(el);
+      });
+    };
+
+    const sweep = window.setTimeout(() => {
+      rescueVisible();
       ScrollTrigger.refresh();
     }, 2500);
 
+    // And a standing guard for the rest of the page: anything still hidden
+    // once the reader has scrolled it into view had a trigger that did not
+    // fire. Checks once a second, and stops as soon as there is nothing left
+    // hidden — which on a healthy page is shortly after the last reveal.
+    const guard = window.setInterval(() => {
+      if (!hidden.size) {
+        window.clearInterval(guard);
+        return;
+      }
+      rescueVisible();
+    }, 1000);
+
     return () => {
+      window.clearInterval(guard);
       window.clearTimeout(sweep);
       splashWatcher.disconnect();
       window.removeEventListener('load', onLoad);

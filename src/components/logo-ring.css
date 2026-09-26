@@ -1,0 +1,71 @@
+/**
+ * The tools ring.
+ *
+ * The heading sits in normal flow and sets the section's height; the ring is
+ * an absolutely positioned overlay centred on the section, so the tiles pass
+ * behind and in front of the type exactly as they do on the reference.
+ */
+
+/* The section is sized to the ring rather than to the type: the ellipse is
+   453.6rem of semi-minor axis plus half a 170rem tile, so it needs 1077rem
+   of height before any padding. The reference gives its equivalent 1203rem,
+   and centring the heading in that leaves the type clear of both poles. */
+.sec-ring {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 1203rem;
+  overflow: hidden;
+  padding: 60rem 0;
+  position: relative;
+}
+
+.sec-ring__heading {
+  margin: 0 auto;
+  max-width: 1107rem;
+  position: relative;
+  text-align: center;
+  /* Above the ring: the type is the subject, the marks are the field. */
+  z-index: 1;
+}
+
+.sec-ring__stage {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+/* Each tile is anchored at the stage centre and moved out to its place on
+   the ellipse by the transform, so x/y read as offsets from the centre. The
+   half-size pull-back is xPercent/yPercent in LogoRing, not a margin, so the
+   tile can be resized here without the two falling out of step. */
+.sec-ring__tile {
+  height: 170rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 170rem;
+  will-change: transform, opacity;
+}
+
+.sec-ring__tile img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .sec-ring {
+    min-height: 760rem;
+    padding: 80rem 0;
+  }
+
+  /* LogoRing shrinks the radii to fit the viewport; the marks only need to
+     come down to a size that reads at this width. */
+  .sec-ring__tile {
+    height: 76rem;
+    width: 76rem;
+  }
+}

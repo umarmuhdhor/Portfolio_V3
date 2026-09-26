@@ -36,6 +36,8 @@ export const FRAGMENT_SHADER = /* glsl */ `
   uniform float uClip;         // discard below this uv.y — scroll reveal
   uniform float uFeather;      // edge falloff width, in uv units
   uniform float uNoise;        // 0 = resolved, 1 = fully dissolved
+  uniform float uZoom;         // >1 shrinks the sampled window, making room for uShift
+  uniform float uShift;        // scroll-driven vertical drift, in texture uv
   uniform float uTime;
   uniform vec3  uBgColor;
 
@@ -72,12 +74,18 @@ export const FRAGMENT_SHADER = /* glsl */ `
   // -- object-fit: cover, in UV space --------------------------------------
   // Compare the two aspect ratios and scale the axis that would otherwise
   // letterbox, then re-centre on the focal offset.
-  vec2 coverUv(vec2 uv, vec2 planeSize, vec2 imageSize, vec2 offset) {
+  //
+  // uZoom shrinks the sampled window, which is what leaves slack for uShift
+  // to drift through — the plate parallax. A 16:9 image in a 16:9 frame has
+  // no slack at all at zoom 1.0, so the zoom is what makes the drift possible
+  // rather than a stylistic choice. uShift is in texture uv and must stay
+  // inside (1 - ratio) / 2 or the window walks off the edge of the texture.
+  vec2 coverUv(vec2 uv, vec2 planeSize, vec2 imageSize, vec2 offset, float zoom, float shift) {
     vec2 ratio = vec2(
       min((planeSize.x / planeSize.y) / (imageSize.x / imageSize.y), 1.0),
       min((planeSize.y / planeSize.x) / (imageSize.y / imageSize.x), 1.0)
-    );
-    return uv * ratio + (1.0 - ratio) * offset;
+    ) / max(zoom, 0.001);
+    return uv * ratio + (1.0 - ratio) * offset + vec2(0.0, shift);
   }
 
   // -- signed distance to a rounded box ------------------------------------
@@ -103,7 +111,7 @@ export const FRAGMENT_SHADER = /* glsl */ `
     // enters, so everything below the threshold is simply not drawn.
     if (vUv.y < uClip) discard;
 
-    vec2 uv = coverUv(vUv, uResolution, uImageSize, uOffset);
+    vec2 uv = coverUv(vUv, uResolution, uImageSize, uOffset, uZoom, uShift);
     vec4 tex = texture2D(uTexture, uv);
 
     // Rounded corner mask, antialiased over one pixel of screen-space

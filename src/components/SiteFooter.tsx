@@ -62,6 +62,20 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
+
+        {/* The closing wordmark. The reference ends its footer with a
+            full-bleed 1860x556 SVG of its initials — a graphic, not a link,
+            which is why the small brand link above it stays where it is.
+            Ours is set in the page's own serif rather than traced into
+            paths, so it stays inside the type system instead of becoming a
+            second asset to keep in step. Letters spread edge to edge, which
+            fills the measure whatever the font metrics turn out to be.
+            aria-hidden: the accessible name is already on the link above. */}
+        <div aria-hidden="true" className="footer__mark">
+          {FOOTER.brand.split('').map((ch, i) => (
+            <span key={`${ch}-${i}`}>{ch}</span>
+          ))}
+        </div>
       </div>
     </footer>
   );

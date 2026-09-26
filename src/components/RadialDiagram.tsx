@@ -101,7 +101,7 @@ export default function RadialDiagram() {
       <svg aria-hidden="true" className="radial__svg" viewBox={`0 0 ${SIZE} ${SIZE}`}>
         <g>
           {Array.from({ length: PETALS }, (_, i) => (
-            <path d={petalPath(i)} fill="none" key={i} stroke="#000" strokeWidth="1" />
+            <path d={petalPath(i)} fill="none" key={i} stroke="currentColor" strokeWidth="1" />
           ))}
         </g>
       </svg>

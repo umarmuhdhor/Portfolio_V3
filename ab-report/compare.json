@@ -85,7 +85,7 @@
       "group": "grid",
       "name": "grid-template-columns: repeat(15, 1fr)",
       "expected": "repeat(15, 1fr)",
-      "actual": "repeat(15, 1fr)",
+      "actual": "repeat(15, 1fr) | 230rem 230rem 1fr 10rem | 1fr 10rem",
       "ok": true
     },
     {
@@ -1529,7 +1529,7 @@
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.4409 ±2.0%",
-      "actual": "0.4374 (Δ0.35%)",
+      "actual": "0.4416 (Δ0.06%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1539,7 +1539,7 @@
       "group": "geometry",
       "name": "work-caption[0].w",
       "expected": "0.0212 ±2.0%",
-      "actual": "0.0248 (Δ0.35%)",
+      "actual": "0.0206 (Δ0.06%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1549,7 +1549,7 @@
       "group": "geometry",
       "name": "work-caption[1].x",
       "expected": "0.9554 ±2.0%",
-      "actual": "0.9567 (Δ0.13%)",
+      "actual": "0.9566 (Δ0.12%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1559,7 +1559,7 @@
       "group": "geometry",
       "name": "work-caption[1].w",
       "expected": "0.0290 ±2.0%",
-      "actual": "0.0277 (Δ0.13%)",
+      "actual": "0.0278 (Δ0.12%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1569,7 +1569,7 @@
       "group": "geometry",
       "name": "work-caption[2].x",
       "expected": "0.2353 ±2.0%",
-      "actual": "0.2353 (Δ0.00%)",
+      "actual": "0.2355 (Δ0.02%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1579,7 +1579,7 @@
       "group": "geometry",
       "name": "work-caption[2].w",
       "expected": "0.0310 ±2.0%",
-      "actual": "0.0311 (Δ0.00%)",
+      "actual": "0.0308 (Δ0.02%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1589,7 +1589,7 @@
       "group": "geometry",
       "name": "work-caption[3].x",
       "expected": "0.6937 ±2.0%",
-      "actual": "0.6926 (Δ0.11%)",
+      "actual": "0.6905 (Δ0.32%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1599,7 +1599,7 @@
       "group": "geometry",
       "name": "work-caption[3].w",
       "expected": "0.0295 ±2.0%",
-      "actual": "0.0307 (Δ0.11%)",
+      "actual": "0.0327 (Δ0.32%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1609,7 +1609,7 @@
       "group": "geometry",
       "name": "work-caption[4].x",
       "expected": "0.8859 ±2.0%",
-      "actual": "0.8898 (Δ0.39%)",
+      "actual": "0.8844 (Δ0.15%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1619,7 +1619,7 @@
       "group": "geometry",
       "name": "work-caption[4].w",
       "expected": "0.0332 ±2.0%",
-      "actual": "0.0294 (Δ0.39%)",
+      "actual": "0.0347 (Δ0.15%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1629,7 +1629,7 @@
       "group": "geometry",
       "name": "work-caption[5].x",
       "expected": "0.5047 ±2.0%",
-      "actual": "0.5035 (Δ0.11%)",
+      "actual": "0.5069 (Δ0.22%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1639,7 +1639,7 @@
       "group": "geometry",
       "name": "work-caption[5].w",
       "expected": "0.0228 ±2.0%",
-      "actual": "0.0239 (Δ0.11%)",
+      "actual": "0.0206 (Δ0.22%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1649,7 +1649,7 @@
       "group": "geometry",
       "name": "work-caption[6].x",
       "expected": "0.4278 ±2.0%",
-      "actual": "0.4312 (Δ0.34%)",
+      "actual": "0.4360 (Δ0.81%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1659,7 +1659,7 @@
       "group": "geometry",
       "name": "work-caption[6].w",
       "expected": "0.0343 ±2.0%",
-      "actual": "0.0310 (Δ0.34%)",
+      "actual": "0.0262 (Δ0.81%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1669,7 +1669,7 @@
       "group": "geometry",
       "name": "work-caption[7].x",
       "expected": "0.9606 ±2.0%",
-      "actual": "0.9568 (Δ0.38%)",
+      "actual": "0.9493 (Δ1.13%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -1679,7 +1679,7 @@
       "group": "geometry",
       "name": "work-caption[7].w",
       "expected": "0.0238 ±2.0%",
-      "actual": "0.0276 (Δ0.38%)",
+      "actual": "0.0351 (Δ1.13%)",
       "ok": true,
       "viewport": "1920x1080"
     },
@@ -2869,7 +2869,7 @@
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.4409 ±2.0%",
-      "actual": "0.4374 (Δ0.35%)",
+      "actual": "0.4416 (Δ0.06%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2879,7 +2879,7 @@
       "group": "geometry",
       "name": "work-caption[0].w",
       "expected": "0.0212 ±2.0%",
-      "actual": "0.0248 (Δ0.35%)",
+      "actual": "0.0206 (Δ0.06%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2889,7 +2889,7 @@
       "group": "geometry",
       "name": "work-caption[1].x",
       "expected": "0.9554 ±2.0%",
-      "actual": "0.9567 (Δ0.13%)",
+      "actual": "0.9566 (Δ0.12%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2899,7 +2899,7 @@
       "group": "geometry",
       "name": "work-caption[1].w",
       "expected": "0.0290 ±2.0%",
-      "actual": "0.0277 (Δ0.13%)",
+      "actual": "0.0278 (Δ0.12%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2909,7 +2909,7 @@
       "group": "geometry",
       "name": "work-caption[2].x",
       "expected": "0.2353 ±2.0%",
-      "actual": "0.2353 (Δ0.00%)",
+      "actual": "0.2355 (Δ0.02%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2919,7 +2919,7 @@
       "group": "geometry",
       "name": "work-caption[2].w",
       "expected": "0.0310 ±2.0%",
-      "actual": "0.0311 (Δ0.00%)",
+      "actual": "0.0308 (Δ0.02%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2929,7 +2929,7 @@
       "group": "geometry",
       "name": "work-caption[3].x",
       "expected": "0.6937 ±2.0%",
-      "actual": "0.6926 (Δ0.11%)",
+      "actual": "0.6905 (Δ0.32%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2939,7 +2939,7 @@
       "group": "geometry",
       "name": "work-caption[3].w",
       "expected": "0.0295 ±2.0%",
-      "actual": "0.0307 (Δ0.11%)",
+      "actual": "0.0327 (Δ0.32%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2949,7 +2949,7 @@
       "group": "geometry",
       "name": "work-caption[4].x",
       "expected": "0.8859 ±2.0%",
-      "actual": "0.8898 (Δ0.39%)",
+      "actual": "0.8844 (Δ0.15%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2959,7 +2959,7 @@
       "group": "geometry",
       "name": "work-caption[4].w",
       "expected": "0.0332 ±2.0%",
-      "actual": "0.0294 (Δ0.39%)",
+      "actual": "0.0347 (Δ0.15%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2969,7 +2969,7 @@
       "group": "geometry",
       "name": "work-caption[5].x",
       "expected": "0.5047 ±2.0%",
-      "actual": "0.5035 (Δ0.11%)",
+      "actual": "0.5069 (Δ0.22%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2979,7 +2979,7 @@
       "group": "geometry",
       "name": "work-caption[5].w",
       "expected": "0.0228 ±2.0%",
-      "actual": "0.0239 (Δ0.11%)",
+      "actual": "0.0206 (Δ0.22%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2989,7 +2989,7 @@
       "group": "geometry",
       "name": "work-caption[6].x",
       "expected": "0.4278 ±2.0%",
-      "actual": "0.4312 (Δ0.34%)",
+      "actual": "0.4360 (Δ0.81%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -2999,7 +2999,7 @@
       "group": "geometry",
       "name": "work-caption[6].w",
       "expected": "0.0343 ±2.0%",
-      "actual": "0.0310 (Δ0.34%)",
+      "actual": "0.0262 (Δ0.81%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3009,7 +3009,7 @@
       "group": "geometry",
       "name": "work-caption[7].x",
       "expected": "0.9606 ±2.0%",
-      "actual": "0.9568 (Δ0.38%)",
+      "actual": "0.9493 (Δ1.13%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -3019,7 +3019,7 @@
       "group": "geometry",
       "name": "work-caption[7].w",
       "expected": "0.0238 ±2.0%",
-      "actual": "0.0276 (Δ0.38%)",
+      "actual": "0.0351 (Δ1.13%)",
       "ok": true,
       "viewport": "1440x900"
     },
@@ -4209,7 +4209,7 @@
       "group": "geometry",
       "name": "work-caption[0].x",
       "expected": "0.8649 ±2.0%",
-      "actual": "0.8491 (Δ1.58%)",
+      "actual": "0.8678 (Δ0.29%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4219,7 +4219,7 @@
       "group": "geometry",
       "name": "work-caption[0].w",
       "expected": "0.0951 ±2.0%",
-      "actual": "0.1109 (Δ1.58%)",
+      "actual": "0.0922 (Δ0.29%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4229,7 +4229,7 @@
       "group": "geometry",
       "name": "work-caption[1].x",
       "expected": "0.8300 ±2.0%",
-      "actual": "0.8359 (Δ0.59%)",
+      "actual": "0.8356 (Δ0.56%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4239,7 +4239,7 @@
       "group": "geometry",
       "name": "work-caption[1].w",
       "expected": "0.1300 ±2.0%",
-      "actual": "0.1241 (Δ0.59%)",
+      "actual": "0.1244 (Δ0.56%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4249,7 +4249,7 @@
       "group": "geometry",
       "name": "work-caption[2].x",
       "expected": "0.8211 ±2.0%",
-      "actual": "0.8209 (Δ0.02%)",
+      "actual": "0.8221 (Δ0.11%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4259,7 +4259,7 @@
       "group": "geometry",
       "name": "work-caption[2].w",
       "expected": "0.1389 ±2.0%",
-      "actual": "0.1391 (Δ0.02%)",
+      "actual": "0.1379 (Δ0.11%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4269,7 +4269,7 @@
       "group": "geometry",
       "name": "work-caption[3].x",
       "expected": "0.8277 ±2.0%",
-      "actual": "0.8226 (Δ0.51%)",
+      "actual": "0.8135 (Δ1.42%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4279,7 +4279,7 @@
       "group": "geometry",
       "name": "work-caption[3].w",
       "expected": "0.1323 ±2.0%",
-      "actual": "0.1374 (Δ0.51%)",
+      "actual": "0.1465 (Δ1.42%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4289,7 +4289,7 @@
       "group": "geometry",
       "name": "work-caption[4].x",
       "expected": "0.8112 ±2.0%",
-      "actual": "0.8285 (Δ1.74%)",
+      "actual": "0.8046 (Δ0.66%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4299,7 +4299,7 @@
       "group": "geometry",
       "name": "work-caption[4].w",
       "expected": "0.1488 ±2.0%",
-      "actual": "0.1315 (Δ1.74%)",
+      "actual": "0.1554 (Δ0.66%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4309,7 +4309,7 @@
       "group": "geometry",
       "name": "work-caption[5].x",
       "expected": "0.8580 ±2.0%",
-      "actual": "0.8530 (Δ0.50%)",
+      "actual": "0.8678 (Δ0.99%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4319,7 +4319,7 @@
       "group": "geometry",
       "name": "work-caption[5].w",
       "expected": "0.1020 ±2.0%",
-      "actual": "0.1070 (Δ0.50%)",
+      "actual": "0.0922 (Δ0.99%)",
       "ok": true,
       "viewport": "375x812"
     },
@@ -4606,20 +4606,19 @@
   ],
   "reported": [
     {
+      "group": "grid",
+      "name": "grid templates not present on the reference",
+      "detail": "230rem230rem1fr10rem | 1fr10rem"
+    },
+    {
       "group": "palette",
       "name": "reference colours our content has no component for",
       "detail": "rgba(0, 0, 0, 0.4)"
     },
     {
       "group": "geometry",
-      "name": "container[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 1.745",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.710 · build 1.753",
+      "detail": "ref 1.710 · build 1.580",
       "viewport": "1920x1080"
     },
     {
@@ -4631,79 +4630,43 @@
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 1.512 · build 1.753",
+      "detail": "ref 1.512 · build 1.580",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 2.011 · build 2.661",
+      "detail": "ref 2.011 · build 2.981",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 2.733 · build 3.175",
+      "detail": "ref 2.733 · build 3.879",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 5.272 · build 5.201",
+      "detail": "ref 5.272 · build 5.955",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[7].y differs (content-driven)",
-      "detail": "ref 7.699 · build 7.630",
+      "detail": "ref 7.699 · build 8.384",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 8.824 · build 8.870",
+      "detail": "ref 8.824 · build 9.624",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 11.768 · build 11.349",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "header[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 1.734",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 1.745",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[1].y differs (content-driven)",
-      "detail": "ref 0.010 · build 1.745",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[2].y differs (content-driven)",
-      "detail": "ref 0.010 · build 1.745",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[3].y differs (content-driven)",
-      "detail": "ref 0.010 · build 1.745",
-      "viewport": "1920x1080"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-counter[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 1.745",
+      "detail": "ref 11.768 · build 12.171",
       "viewport": "1920x1080"
     },
     {
@@ -4715,271 +4678,265 @@
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 1.996 · build 2.661",
+      "detail": "ref 1.996 · build 2.467",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
-      "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 1.745",
+      "name": "h4[0].y differs (content-driven)",
+      "detail": "ref 0.476 · build 0.384",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 5.387 · build 5.314",
+      "detail": "ref 5.387 · build 6.068",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 5.538 · build 5.314",
+      "detail": "ref 5.538 · build 6.099",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 5.626 · build 5.402",
+      "detail": "ref 5.626 · build 6.187",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 6.196 · build 5.921",
+      "detail": "ref 6.196 · build 6.706",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 6.035 · build 5.802",
+      "detail": "ref 6.035 · build 6.587",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 6.437 · build 6.194",
+      "detail": "ref 6.437 · build 6.979",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 6.882 · build 6.588",
+      "detail": "ref 6.882 · build 7.374",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[6].y differs (content-driven)",
-      "detail": "ref 7.403 · build 7.142",
+      "detail": "ref 7.403 · build 7.927",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-card[7].y differs (content-driven)",
-      "detail": "ref 7.315 · build 7.054",
+      "detail": "ref 7.315 · build 7.839",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 5.538 · build 5.314",
+      "detail": "ref 5.538 · build 6.099",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 5.626 · build 5.402",
+      "detail": "ref 5.626 · build 6.187",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 6.196 · build 5.921",
+      "detail": "ref 6.196 · build 6.706",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 6.035 · build 5.802",
+      "detail": "ref 6.035 · build 6.587",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 6.437 · build 6.194",
+      "detail": "ref 6.437 · build 6.979",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 6.882 · build 6.588",
+      "detail": "ref 6.882 · build 7.374",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[6].y differs (content-driven)",
-      "detail": "ref 7.403 · build 7.142",
+      "detail": "ref 7.403 · build 7.927",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-frame[7].y differs (content-driven)",
-      "detail": "ref 7.315 · build 7.054",
+      "detail": "ref 7.315 · build 7.839",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 5.828 · build 5.595",
+      "detail": "ref 5.828 · build 6.380",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 5.917 · build 5.683",
+      "detail": "ref 5.917 · build 6.469",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 6.570 · build 6.285",
+      "detail": "ref 6.570 · build 7.070",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 6.326 · build 6.083",
+      "detail": "ref 6.326 · build 6.868",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 6.727 · build 6.475",
+      "detail": "ref 6.727 · build 7.260",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 7.256 · build 6.953",
+      "detail": "ref 7.256 · build 7.738",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[6].y differs (content-driven)",
-      "detail": "ref 7.694 · build 7.423",
+      "detail": "ref 7.694 · build 8.208",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[7].y differs (content-driven)",
-      "detail": "ref 7.606 · build 7.335",
+      "detail": "ref 7.606 · build 8.120",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 5.828 · build 5.595",
+      "detail": "ref 5.828 · build 6.380",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 5.917 · build 5.683",
+      "detail": "ref 5.917 · build 6.469",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 6.570 · build 6.285",
+      "detail": "ref 6.570 · build 7.070",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 6.326 · build 6.083",
+      "detail": "ref 6.326 · build 6.868",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 6.727 · build 6.475",
+      "detail": "ref 6.727 · build 7.260",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 7.256 · build 6.953",
+      "detail": "ref 7.256 · build 7.738",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[6].y differs (content-driven)",
-      "detail": "ref 7.694 · build 7.423",
+      "detail": "ref 7.694 · build 8.208",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "work-caption[7].y differs (content-driven)",
-      "detail": "ref 7.606 · build 7.335",
+      "detail": "ref 7.606 · build 8.120",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 12.395 · build 11.675",
+      "detail": "ref 12.395 · build 13.238",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 12.478 · build 11.758",
+      "detail": "ref 12.478 · build 13.322",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 12.488 · build 11.778",
+      "detail": "ref 12.488 · build 13.341",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 12.498 · build 11.801",
+      "detail": "ref 12.498 · build 13.365",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 12.508 · build 11.865",
+      "detail": "ref 12.508 · build 13.428",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 12.518 · build 11.888",
+      "detail": "ref 12.518 · build 13.452",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 12.538 · build 11.952",
+      "detail": "ref 12.538 · build 13.515",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 12.548 · build 11.975",
+      "detail": "ref 12.548 · build 13.539",
       "viewport": "1920x1080"
     },
     {
       "group": "geometry",
-      "name": "container[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.187",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 1.773 · build 1.753",
+      "detail": "ref 1.773 · build 1.580",
       "viewport": "1440x900"
     },
     {
@@ -4991,79 +4948,43 @@
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 1.575 · build 1.753",
+      "detail": "ref 1.575 · build 1.580",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 2.073 · build 2.662",
+      "detail": "ref 2.073 · build 2.983",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 2.795 · build 3.177",
+      "detail": "ref 2.795 · build 3.881",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 5.335 · build 5.203",
+      "detail": "ref 5.335 · build 5.957",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[7].y differs (content-driven)",
-      "detail": "ref 7.762 · build 7.633",
+      "detail": "ref 7.762 · build 8.386",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 9.012 · build 8.872",
+      "detail": "ref 9.012 · build 9.626",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 11.956 · build 11.351",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "header[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.176",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[0].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.187",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[1].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.187",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[2].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.187",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-link[3].y differs (content-driven)",
-      "detail": "ref 0.010 · build 0.187",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-counter[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 0.187",
+      "detail": "ref 11.956 · build 12.173",
       "viewport": "1440x900"
     },
     {
@@ -5075,277 +4996,265 @@
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 2.058 · build 2.662",
+      "detail": "ref 2.058 · build 2.468",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "h4[0].y differs (content-driven)",
-      "detail": "ref 0.538 · build 0.464",
-      "viewport": "1440x900"
-    },
-    {
-      "group": "geometry",
-      "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.008 · build 0.187",
+      "detail": "ref 0.538 · build 0.384",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 5.450 · build 5.316",
+      "detail": "ref 5.450 · build 6.070",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 5.600 · build 5.316",
+      "detail": "ref 5.600 · build 6.111",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 5.689 · build 5.404",
+      "detail": "ref 5.689 · build 6.200",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 6.258 · build 5.923",
+      "detail": "ref 6.258 · build 6.718",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 6.098 · build 5.804",
+      "detail": "ref 6.098 · build 6.599",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 6.500 · build 6.196",
+      "detail": "ref 6.500 · build 6.992",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 6.945 · build 6.591",
+      "detail": "ref 6.945 · build 7.386",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[6].y differs (content-driven)",
-      "detail": "ref 7.466 · build 7.144",
+      "detail": "ref 7.466 · build 7.939",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-card[7].y differs (content-driven)",
-      "detail": "ref 7.378 · build 7.056",
+      "detail": "ref 7.378 · build 7.851",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 5.600 · build 5.316",
+      "detail": "ref 5.600 · build 6.111",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 5.689 · build 5.404",
+      "detail": "ref 5.689 · build 6.200",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 6.258 · build 5.923",
+      "detail": "ref 6.258 · build 6.718",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 6.098 · build 5.804",
+      "detail": "ref 6.098 · build 6.599",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 6.500 · build 6.196",
+      "detail": "ref 6.500 · build 6.992",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 6.945 · build 6.591",
+      "detail": "ref 6.945 · build 7.386",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[6].y differs (content-driven)",
-      "detail": "ref 7.466 · build 7.144",
+      "detail": "ref 7.466 · build 7.939",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-frame[7].y differs (content-driven)",
-      "detail": "ref 7.378 · build 7.056",
+      "detail": "ref 7.378 · build 7.851",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 5.891 · build 5.597",
+      "detail": "ref 5.891 · build 6.393",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 5.980 · build 5.686",
+      "detail": "ref 5.980 · build 6.481",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 6.632 · build 6.287",
+      "detail": "ref 6.632 · build 7.083",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 6.389 · build 6.085",
+      "detail": "ref 6.389 · build 6.881",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 6.790 · build 6.477",
+      "detail": "ref 6.790 · build 7.273",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 7.319 · build 6.955",
+      "detail": "ref 7.319 · build 7.751",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[6].y differs (content-driven)",
-      "detail": "ref 7.757 · build 7.425",
+      "detail": "ref 7.757 · build 8.221",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[7].y differs (content-driven)",
-      "detail": "ref 7.669 · build 7.337",
+      "detail": "ref 7.669 · build 8.133",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 5.891 · build 5.597",
+      "detail": "ref 5.891 · build 6.393",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 5.980 · build 5.686",
+      "detail": "ref 5.980 · build 6.481",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 6.632 · build 6.287",
+      "detail": "ref 6.632 · build 7.083",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 6.389 · build 6.085",
+      "detail": "ref 6.389 · build 6.881",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 6.790 · build 6.477",
+      "detail": "ref 6.790 · build 7.273",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 7.319 · build 6.955",
+      "detail": "ref 7.319 · build 7.751",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[6].y differs (content-driven)",
-      "detail": "ref 7.757 · build 7.425",
+      "detail": "ref 7.757 · build 8.221",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "work-caption[7].y differs (content-driven)",
-      "detail": "ref 7.669 · build 7.337",
+      "detail": "ref 7.669 · build 8.133",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 12.582 · build 11.677",
+      "detail": "ref 12.582 · build 13.241",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 12.666 · build 11.761",
+      "detail": "ref 12.666 · build 13.324",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 12.675 · build 11.780",
+      "detail": "ref 12.675 · build 13.343",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 12.685 · build 11.803",
+      "detail": "ref 12.685 · build 13.367",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 12.695 · build 11.867",
+      "detail": "ref 12.695 · build 13.430",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 12.705 · build 11.890",
+      "detail": "ref 12.705 · build 13.454",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 12.726 · build 11.954",
+      "detail": "ref 12.726 · build 13.517",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 12.736 · build 11.977",
+      "detail": "ref 12.736 · build 13.541",
       "viewport": "1440x900"
     },
     {
       "group": "geometry",
-      "name": "container[0].y differs (content-driven)",
-      "detail": "ref 0.027 · build 0.039",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
       "name": "grid-root[0].y differs (content-driven)",
-      "detail": "ref 5.265 · build 3.410",
+      "detail": "ref 5.265 · build 3.309",
       "viewport": "375x812"
     },
     {
@@ -5357,55 +5266,37 @@
     {
       "group": "geometry",
       "name": "section-root[3].y differs (content-driven)",
-      "detail": "ref 3.784 · build 3.410",
+      "detail": "ref 3.784 · build 3.309",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[4].y differs (content-driven)",
-      "detail": "ref 7.159 · build 8.255",
+      "detail": "ref 7.159 · build 10.425",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[5].y differs (content-driven)",
-      "detail": "ref 10.628 · build 10.053",
+      "detail": "ref 10.628 · build 14.794",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[6].y differs (content-driven)",
-      "detail": "ref 16.507 · build 13.799",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "section-root[7].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
+      "detail": "ref 16.507 · build 18.782",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[8].y differs (content-driven)",
-      "detail": "ref 21.125 · build 18.922",
+      "detail": "ref 21.125 · build 23.905",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "section-root[9].y differs (content-driven)",
-      "detail": "ref 25.087 · build 23.211",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "header[0].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "nav-counter[0].y differs (content-driven)",
-      "detail": "ref 0.017 · build 0.039",
+      "detail": "ref 25.087 · build 28.238",
       "viewport": "375x812"
     },
     {
@@ -5417,241 +5308,211 @@
     {
       "group": "geometry",
       "name": "h3[0].y differs (content-driven)",
-      "detail": "ref 7.135 · build 8.255",
+      "detail": "ref 7.135 · build 8.474",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "h4[0].y differs (content-driven)",
-      "detail": "ref 1.962 · build 1.347",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "body-1[0].y differs (content-driven)",
-      "detail": "ref 0.017 · build 0.039",
+      "detail": "ref 1.962 · build 1.271",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-grid[0].y differs (content-driven)",
-      "detail": "ref 16.678 · build 14.049",
+      "detail": "ref 16.678 · build 19.031",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[0].y differs (content-driven)",
-      "detail": "ref 17.001 · build 14.049",
+      "detail": "ref 17.001 · build 19.191",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[1].y differs (content-driven)",
-      "detail": "ref 17.688 · build 14.827",
+      "detail": "ref 17.688 · build 19.969",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[2].y differs (content-driven)",
-      "detail": "ref 18.376 · build 15.605",
+      "detail": "ref 18.376 · build 20.747",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[3].y differs (content-driven)",
-      "detail": "ref 19.063 · build 16.383",
+      "detail": "ref 19.063 · build 21.526",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[4].y differs (content-driven)",
-      "detail": "ref 19.751 · build 17.161",
+      "detail": "ref 19.751 · build 22.304",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-card[5].y differs (content-driven)",
-      "detail": "ref 20.438 · build 17.939",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "work-card[6].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "work-card[7].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
+      "detail": "ref 20.438 · build 23.082",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[0].y differs (content-driven)",
-      "detail": "ref 17.001 · build 14.049",
+      "detail": "ref 17.001 · build 19.191",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[1].y differs (content-driven)",
-      "detail": "ref 17.688 · build 14.827",
+      "detail": "ref 17.688 · build 19.969",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[2].y differs (content-driven)",
-      "detail": "ref 18.376 · build 15.605",
+      "detail": "ref 18.376 · build 20.747",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[3].y differs (content-driven)",
-      "detail": "ref 19.063 · build 16.383",
+      "detail": "ref 19.063 · build 21.526",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[4].y differs (content-driven)",
-      "detail": "ref 19.751 · build 17.161",
+      "detail": "ref 19.751 · build 22.304",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-frame[5].y differs (content-driven)",
-      "detail": "ref 20.438 · build 17.939",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "work-frame[6].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
-      "viewport": "375x812"
-    },
-    {
-      "group": "geometry",
-      "name": "work-frame[7].y differs (content-driven)",
-      "detail": "ref 0.000 · build 0.012",
+      "detail": "ref 20.438 · build 23.082",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[0].y differs (content-driven)",
-      "detail": "ref 17.601 · build 14.622",
+      "detail": "ref 17.601 · build 19.764",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[1].y differs (content-driven)",
-      "detail": "ref 18.288 · build 15.400",
+      "detail": "ref 18.288 · build 20.543",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[2].y differs (content-driven)",
-      "detail": "ref 18.976 · build 16.178",
+      "detail": "ref 18.976 · build 21.321",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[3].y differs (content-driven)",
-      "detail": "ref 19.663 · build 16.956",
+      "detail": "ref 19.663 · build 22.099",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[4].y differs (content-driven)",
-      "detail": "ref 20.351 · build 17.734",
+      "detail": "ref 20.351 · build 22.877",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-meta-row[5].y differs (content-driven)",
-      "detail": "ref 21.038 · build 18.513",
+      "detail": "ref 21.038 · build 23.655",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[0].y differs (content-driven)",
-      "detail": "ref 17.601 · build 14.622",
+      "detail": "ref 17.601 · build 19.764",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[1].y differs (content-driven)",
-      "detail": "ref 18.288 · build 15.400",
+      "detail": "ref 18.288 · build 20.543",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[2].y differs (content-driven)",
-      "detail": "ref 18.976 · build 16.178",
+      "detail": "ref 18.976 · build 21.321",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[3].y differs (content-driven)",
-      "detail": "ref 19.663 · build 16.956",
+      "detail": "ref 19.663 · build 22.099",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[4].y differs (content-driven)",
-      "detail": "ref 20.351 · build 17.734",
+      "detail": "ref 20.351 · build 22.877",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "work-caption[5].y differs (content-driven)",
-      "detail": "ref 21.038 · build 18.513",
+      "detail": "ref 21.038 · build 23.655",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer[0].y differs (content-driven)",
-      "detail": "ref 26.056 · build 24.157",
+      "detail": "ref 26.056 · build 31.370",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[0].y differs (content-driven)",
-      "detail": "ref 26.323 · build 24.423",
+      "detail": "ref 26.323 · build 31.637",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[1].y differs (content-driven)",
-      "detail": "ref 26.641 · build 24.629",
+      "detail": "ref 26.641 · build 31.827",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[2].y differs (content-driven)",
-      "detail": "ref 26.686 · build 24.743",
+      "detail": "ref 26.686 · build 31.941",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[3].y differs (content-driven)",
-      "detail": "ref 26.730 · build 25.056",
+      "detail": "ref 26.730 · build 32.254",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[4].y differs (content-driven)",
-      "detail": "ref 26.775 · build 25.170",
+      "detail": "ref 26.775 · build 32.368",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[5].y differs (content-driven)",
-      "detail": "ref 26.873 · build 25.482",
+      "detail": "ref 26.873 · build 32.680",
       "viewport": "375x812"
     },
     {
       "group": "geometry",
       "name": "footer-link[6].y differs (content-driven)",
-      "detail": "ref 26.918 · build 25.596",
+      "detail": "ref 26.918 · build 32.794",
       "viewport": "375x812"
     },
     {
@@ -5667,7 +5528,7 @@
     {
       "group": "roles",
       "name": "container instance count differs (content-driven)",
-      "detail": "ref 8 · build 10"
+      "detail": "ref 8 · build 11"
     },
     {
       "group": "roles",
@@ -5683,6 +5544,11 @@
       "group": "roles",
       "name": "section-root font-family string differs (expected — Switzer substitution)",
       "detail": "ref \"n, sans-serif\" · build \"Switzer, sans-serif\""
+    },
+    {
+      "group": "roles",
+      "name": "section-root instance count differs (content-driven)",
+      "detail": "ref 10 · build 11"
     },
     {
       "group": "roles",
@@ -5712,7 +5578,7 @@
     {
       "group": "roles",
       "name": "h2 instance count differs (content-driven)",
-      "detail": "ref 7 · build 1"
+      "detail": "ref 7 · build 2"
     },
     {
       "group": "roles",
@@ -5722,7 +5588,7 @@
     {
       "group": "roles",
       "name": "h3 instance count differs (content-driven)",
-      "detail": "ref 7 · build 1"
+      "detail": "ref 7 · build 2"
     },
     {
       "group": "roles",

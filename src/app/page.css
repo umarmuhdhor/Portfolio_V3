@@ -218,8 +218,12 @@
 /* --------------------------------------------------------------------------
    4 — capabilities
    -------------------------------------------------------------------------- */
+/* Capabilities sit at the foot of the introduction rather than in a section
+   of their own — see the note in page.tsx. The top margin is the gap that
+   the removed section root used to provide. */
 .sec-caps__heading {
   grid-column: 1 / -1;
+  margin-top: 160rem;
 }
 
 .sec-caps__label {
@@ -630,6 +634,33 @@
   width: 103rem;
 }
 
+/* The closing wordmark. Full measure, letters spread edge to edge — the
+   reference's is a 1860x556 SVG; this is the same gesture in live type.
+   400rem because that is the top of the type scale, and the scale is
+   asserted: an off-scale size fails the build even when it looks right. */
+.footer__mark {
+  display: flex;
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 400rem;
+  font-weight: 400;
+  justify-content: space-between;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  margin-top: 120rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Below the breakpoint the root size stops tracking the viewport, so 400rem
+   is 400 real pixels and five of them are five times the screen. 80rem is
+   the largest step on the scale that still fits. */
+@media (max-width: 767.98px) {
+  .footer__mark {
+    font-size: 80rem;
+    margin-top: 60rem;
+  }
+}
+
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -667,9 +698,10 @@
   margin-top: 0;
 }
 
+/* The wordmark is excluded: it is a flex row, and block display would
+   collapse the letter spread. */
 .footer__col a,
-.footer__links a,
-.footer__brand {
+.footer__links a {
   display: block;
   /* Lifts the tap target to 24px without touching the box width. */
   padding-top: 6rem;
@@ -815,4 +847,92 @@
   .sec-intro__exp-title {
     width: 100%;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Parallax plates
+
+   The reference drifts its plate images against the page at roughly 0.19–0.20
+   of the scroll rate — 0.2 on the hero, 0.188 on the statement plate. Over a
+   trigger span of one viewport plus one frame height, hitting that rate needs
+   a travel of about 0.4 frame heights, so the image is sized at 140% and
+   offset by -20% to centre the excess. ScrollMotion then drifts it between
+   -14.4% and +14.4% of its own height, which is that 0.4.
+
+   Sizing and travel have to stay in step: shrink one without the other and
+   the drift exposes a strip of background at the top or the bottom. The
+   frames themselves are already overflow:hidden.
+   -------------------------------------------------------------------------- */
+[data-parallax] img {
+  height: 140%;
+  position: relative;
+  top: -20%;
+}
+
+/* No drift, no overscale — a still image should sit where the frame is. */
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] img {
+    height: 100%;
+    top: 0;
+  }
+}
+
+/* ==========================================================================
+   The dark run — diagram, people, ring, contact, footer
+
+   Measured off the reference: its `nmc` section flips its own background from
+   transparent to black about 530px into its scroll, and `nwv`, `uod` and the
+   footer are black outright. Body stays white, so the page reads as a white
+   top and a black tail with the diagram as the hinge.
+
+   The flip is a class toggle rather than a scrub — sampling at 60px intervals
+   put the whole change between +500 and +560, which is a threshold, not a
+   ramp. ScrollMotion adds `.is--dark` at that point and takes it away again
+   on the way back up.
+
+   The flip lives on the document element, not on the sections. Painting each
+   dark section black individually left the `.sec` margins between them
+   showing as white bands, because those gaps belong to the body and not to
+   either neighbour. One background behind the whole run has no seams to
+   leak through.
+   ========================================================================== */
+body {
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+html.is--dark body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* The sections themselves stay transparent so the body carries the colour. */
+.sec-people,
+.sec-ring,
+.sec-contact {
+  background-color: transparent;
+}
+
+/* Muted greys sit at #929292, which still reads on black — those stay. What
+   does not survive is anything explicitly set to #000. */
+html.is--dark .sec-people__stat-label,
+html.is--dark .sec-ring__heading,
+html.is--dark .sec-contact__body,
+html.is--dark .site-header,
+html.is--dark .site-header a {
+  color: #fff;
+}
+
+/* The technology marks are solid #000 SVGs — invisible on a black field.
+   Inverting is one rule; a second white asset set would be two files per
+   mark to keep in step. Scoped to the dark state rather than applied
+   outright, so the marks stay black if the ring is ever seen on white. */
+html.is--dark .sec-ring__tile img {
+  filter: invert(1);
+}
+
+/* Links in the dark run inherit currentColor, which the body now sets. */
+html.is--dark .sec-contact a,
+html.is--dark .sec-people a,
+html.is--dark .sec-ring a {
+  color: #fff;
 }

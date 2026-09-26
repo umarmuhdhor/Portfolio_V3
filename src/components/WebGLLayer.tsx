@@ -9,6 +9,21 @@ import { FRAGMENT_SHADER, VERTEX_SHADER } from '@/lib/shaders';
 
 const BREAKPOINT = 767.99;
 
+/* --------------------------------------------------------------------------
+   Plate parallax
+
+   The canvas takes the frame over from the DOM image, which means the CSS
+   parallax in ScrollMotion is invisible wherever this layer is running — it
+   animates an element at opacity 0. The same drift therefore has to happen
+   again here, in texture space.
+
+   RATE is the reference's: its hero plate translates at 0.20 of the scroll
+   rate and its statement plate at 0.188. ZOOM is what buys the room to do it
+   — a 16:9 photograph in a 16:9 frame has no slack at cover fit.
+   -------------------------------------------------------------------------- */
+const PARALLAX_ZOOM = 1.5;
+const PARALLAX_RATE = 0.2;
+
 /** Is there a usable WebGL context on this machine? */
 function hasWebGL(): boolean {
   try {
@@ -111,6 +126,10 @@ export default function WebGLLayer() {
           uClip: { value: 0 },
           uFeather: { value: 0.004 },
           uNoise: { value: 1 },
+          // Only parallax frames zoom; everything else samples its texture at
+          // the plain cover fit, as before.
+          uZoom: { value: el.hasAttribute('data-parallax') ? PARALLAX_ZOOM : 1 },
+          uShift: { value: 0 },
           uTime: { value: 0 },
           uBgColor: { value: new THREE.Color('#f8f8f8') },
         },
@@ -162,6 +181,24 @@ export default function WebGLLayer() {
         // Reveal from the bottom as the frame enters the viewport.
         const entering = gsap.utils.clamp(0, 1, (vh - r.top) / (vh * 0.35));
         item.material.uniforms.uClip.value = 1 - entering;
+
+        // Plate drift. `progress` runs 0 to 1 as the frame crosses the
+        // viewport, matching ScrollTrigger's top-bottom to bottom-top span,
+        // so the canvas and the DOM fallback move through the same phase.
+        if (item.material.uniforms.uZoom.value > 1) {
+          const progress = gsap.utils.clamp(0, 1, (vh - r.top) / (vh + r.height));
+          // Screen-space travel wanted, converted back into texture uv: the
+          // plane shows `window` of the texture's height across r.height px.
+          const window =
+            Math.min(r.height / r.width / (item.material.uniforms.uImageSize.value.y / item.material.uniforms.uImageSize.value.x), 1) /
+            PARALLAX_ZOOM;
+          const travelPx = PARALLAX_RATE * (vh + r.height);
+          const amplitude = (travelPx * window) / (2 * r.height);
+          // Never let the sampled window walk off the texture.
+          const limit = (1 - window) / 2;
+          const a = Math.min(amplitude, limit);
+          item.material.uniforms.uShift.value = (progress - 0.5) * 2 * a;
+        }
       }
     };
 

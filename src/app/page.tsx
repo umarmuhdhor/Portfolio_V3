@@ -1,29 +1,42 @@
+import LogoRing from '@/components/LogoRing';
 import RadialDiagram from '@/components/RadialDiagram';
 import ScrollMotion from '@/components/ScrollMotion';
+import ServiceIndex from '@/components/ServiceIndex';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import WebGLLayer from '@/components/WebGLLayer';
 import WorkGrid from '@/components/WorkGrid';
 import {
+  BAND,
   INTRO,
   CAPABILITIES,
   CONTACT,
   DIAGRAM,
-  FOOTER,
   HERO,
   PEOPLE,
+  PLATES,
   PROCESS,
+  RING,
   STATEMENT,
   WORK,
-  img,
 } from '@/lib/dummy';
 import './page.css';
 
 /** A full-bleed image frame that the WebGL layer can take over. */
-function Frame({ className, src, alt = '' }: { className: string; src: string; alt?: string }) {
+function Frame({
+  className,
+  src,
+  alt = '',
+  eager = false,
+}: {
+  className: string;
+  src: string;
+  alt?: string;
+  eager?: boolean;
+}) {
   return (
-    <div className={className} data-gl>
-      <img alt={alt} loading="lazy" src={src} />
+    <div className={className} data-gl data-parallax>
+      <img alt={alt} loading={eager ? 'eager' : 'lazy'} src={src} />
     </div>
   );
 }
@@ -49,7 +62,12 @@ export default function Home() {
         <div className="page" data-role="section">
           {/* 1 — hero: full-bleed plate, name set low ---------------------- */}
           <section className="sec-hero" data-role="section" id="index">
-            <Frame className="sec-hero__plate" src={img(0)} />
+            <Frame
+              alt="Concrete facade, photographed from below"
+              className="sec-hero__plate"
+              eager
+              src={PLATES.hero}
+            />
             <div className="sec-hero__title">
               <div className="ctr" data-role="container">
                 {/* The measured 0.8 leading stays on the heading; the wrap
@@ -82,7 +100,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Frame className="sec-statement__plate" src={img(1)} />
+            <Frame
+              alt="Patch panel in a server rack"
+              className="sec-statement__plate"
+              src={PLATES.statement}
+            />
           </section>
 
           {/* 3 — introduction: who this is, and what they have done.
@@ -138,14 +160,13 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-          </section>
 
-          {/* 4 — capabilities ----------------------------------------------- */}
-          <section className="sec" data-role="section">
-            <div className="ctr" data-role="container">
-              <div className="grd" data-role="grid">
+                {/* Capabilities live inside the introduction rather than in a
+                    section of their own. The reference carries its service
+                    list in the same block as its about copy, and splitting
+                    them into two sections put an extra section root ahead of
+                    the desktop-only diagram, which shifted every section
+                    index after it out of alignment with the reference. */}
                 <h2 className="fn-h3 sec-caps__heading" data-role="h3" data-split>
                   {CAPABILITIES.heading}
                 </h2>
@@ -161,7 +182,10 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 5 — process, two editorial blocks ------------------------------- */}
+          {/* 5 — the service index: a directory of what gets built ----------- */}
+          <ServiceIndex />
+
+          {/* 6 — process, two editorial blocks ------------------------------- */}
           <section className="sec-process" data-role="section">
             <div className="ctr" data-role="container">
               {PROCESS.map((b, i) => (
@@ -169,7 +193,7 @@ export default function Home() {
                   <h2 className="lh-open fn-h4 f-mn sec-process__heading" data-split>
                     {b.heading.join(' ')}
                   </h2>
-                  <Frame className="sec-process__plate" src={img(i + 2)} />
+                  <Frame className="sec-process__plate" src={PLATES.process[i] ?? PLATES.process[0]} />
                   <div className="grd sec-process__spread" data-role="grid">
                     <p className="fn-h5 lh-open sec-process__lead" data-split-scrub>
                       {b.lead}
@@ -202,7 +226,11 @@ export default function Home() {
             <div className="sec-diagram__stage">
               <div className="sec-diagram__marquees">
                 {DIAGRAM.headings.map((h, i) => (
-                  <h2 className={`fn-h4 f-mn lh-open sec-diagram__marquee sec-diagram__marquee--${i === 0 ? 'a' : 'b'}`} key={h[0]}>
+                  <h2
+                    className={`fn-h4 f-mn lh-open sec-diagram__marquee sec-diagram__marquee--${i === 0 ? 'a' : 'b'}`}
+                    data-lines
+                    key={h[0]}
+                  >
                     <span className="ln-mask">
                       <span className="ln">{h[0]}</span>
                     </span>
@@ -220,7 +248,7 @@ export default function Home() {
           <section className="sec-people" data-role="section">
             <div className="ctr" data-role="container">
               <div className="sec-people__intro">
-                <h2 className="fn-b1 f-sf sec-people__label">
+                <h2 className="fn-b1 f-sf sec-people__label" data-lines>
                   {PEOPLE.label.map((l) => (
                     <span className="ln-mask" key={l}>
                       <span className="ln">{l}</span>
@@ -235,13 +263,13 @@ export default function Home() {
               <div className="sec-people__band">
                 <div className="sec-people__marquee">
                   <div className="sec-people__track">
-                    {Array.from({ length: 17 }, (_, i) => (
-                      <div className="sec-people__tile" key={i}>
-                        <img alt="" loading="lazy" src={img(i)} />
+                    {BAND.map((src) => (
+                      <div className="sec-people__tile" key={src}>
+                        <img alt="" loading="lazy" src={src} />
                       </div>
                     ))}
                   </div>
-                  <h2 className="fn-h2 f-mn lh-open sec-people__over">
+                  <h2 className="fn-h2 f-mn lh-open sec-people__over" data-lines>
                     {PEOPLE.marqueeHeading.map((l) => (
                       <span className="ln-mask" key={l}>
                         <span className="ln">{l}</span>
@@ -271,7 +299,19 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 9 — contact ------------------------------------------------------ */}
+          {/* 10 — the tools ring --------------------------------------------- */}
+          <section className="sec-ring" data-role="section">
+            <div className="ctr" data-role="container">
+              <h2 className="fn-h2 f-mn sec-ring__heading" data-role="h2">
+                <span className="lh-open" data-split>
+                  {RING.heading}
+                </span>
+              </h2>
+            </div>
+            <LogoRing />
+          </section>
+
+          {/* 11 — contact ----------------------------------------------------- */}
           <section className="sec-contact" data-role="section" id="contact">
             <div className="ctr" data-role="container">
               <div className="grd" data-role="grid">
