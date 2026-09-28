@@ -1,0 +1,152 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "colab",
+  "title": {
+    "en": "COLAB",
+    "id": "COLAB"
+  },
+  "subtitle": {
+    "en": "Online attendance app for PT Columbus, replacing fingerprint scanners.",
+    "id": "Aplikasi absensi online untuk PT Columbus, menggantikan mesin sidik jari."
+  },
+  "category": "mobile",
+  "type": "client",
+  "status": "completed",
+  "featured": false,
+  "order": 9,
+  "startDate": "2024",
+  "endDate": null,
+  "summary": {
+    "en": "An online attendance app built in Flutter for PT Columbus, replacing fingerprint-based check-in with real-time, role-based attendance.",
+    "id": "Aplikasi absensi online berbasis Flutter untuk PT Columbus, menggantikan absensi sidik jari dengan absensi real-time berbasis peran."
+  },
+  "description": {
+    "en": "COLAB is a mobile attendance system built for PT Columbus to replace its fingerprint-based check-in machines. Employees check in and out from their phones, with attendance records synced in real time and access split by role between employees and admins.",
+    "id": "COLAB adalah sistem absensi mobile yang dibuat untuk PT Columbus untuk menggantikan mesin absensi sidik jari. Karyawan melakukan check-in dan check-out lewat ponsel, dengan data absensi tersinkron secara real-time dan akses dibedakan berdasarkan peran antara karyawan dan admin."
+  },
+  "problem": {
+    "en": "PT Columbus relied on fingerprint scanners for daily attendance, which were slow, prone to hardware issues, and inconvenient for employees to use consistently.",
+    "id": "PT Columbus mengandalkan mesin sidik jari untuk absensi harian, yang lambat, rawan masalah perangkat, dan merepotkan karyawan untuk dipakai secara konsisten."
+  },
+  "solution": {
+    "en": "Built a Flutter mobile app backed by Firebase that lets employees check in and out online, with role-based access separating employee and admin views.",
+    "id": "Membangun aplikasi mobile Flutter dengan backend Firebase yang memungkinkan karyawan check-in dan check-out secara online, dengan akses berbasis peran yang memisahkan tampilan karyawan dan admin."
+  },
+  "role": {
+    "en": "Fullstack Developer",
+    "id": "Fullstack Developer"
+  },
+  "responsibilities": {
+    "en": [
+      "Designed and built the Flutter mobile app end to end",
+      "Built the Firebase backend, including Firestore data model, Authentication, and Storage",
+      "Implemented role-based access control for employees and admins",
+      "Implemented real-time attendance sync across devices"
+    ],
+    "id": [
+      "Merancang dan membangun aplikasi mobile Flutter dari awal hingga akhir",
+      "Membangun backend Firebase, termasuk model data Firestore, Authentication, dan Storage",
+      "Mengimplementasikan kontrol akses berbasis peran untuk karyawan dan admin",
+      "Mengimplementasikan sinkronisasi absensi real-time antar perangkat"
+    ]
+  },
+  "teamSize": 3,
+  "client": {
+    "name": {
+      "en": "PT Columbus",
+      "id": "PT Columbus"
+    },
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Real-time online attendance check-in/check-out",
+      "Role-based access for employees and admins"
+    ],
+    "id": [
+      "Absensi online real-time (check-in/check-out)",
+      "Akses berbasis peran untuk karyawan dan admin"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Keeping attendance data synced in real time across devices without conflicts or delays.",
+        "id": "Menjaga data absensi tetap tersinkron secara real-time di banyak perangkat tanpa konflik atau delay."
+      },
+      "solution": {
+        "en": "Used Firebase Firestore's real-time listeners to push attendance updates instantly to all connected devices.",
+        "id": "Menggunakan real-time listener Firestore untuk mendorong update absensi secara instan ke semua perangkat yang terhubung."
+      }
+    }
+  ],
+  "impact": [
+    {
+      "metric": {
+        "en": "Employee feedback",
+        "id": "Feedback karyawan"
+      },
+      "value": "Positive",
+      "delta": null,
+      "note": {
+        "en": "No exact figures tracked, but employees reported the app made daily attendance easier than the previous fingerprint scanner.",
+        "id": "Tidak ada angka pasti yang tercatat, tapi karyawan melaporkan aplikasi ini membuat absensi harian lebih mudah dibanding mesin sidik jari sebelumnya."
+      }
+    }
+  ],
+  "lessons": {
+    "en": [
+      "Gained hands-on experience integrating Firebase (Firestore, Authentication, Storage) into a production mobile app."
+    ],
+    "id": [
+      "Mendapat pengalaman langsung mengintegrasikan Firebase (Firestore, Authentication, Storage) ke aplikasi mobile production."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Flutter",
+      "Dart"
+    ],
+    "backend": [
+      "Firebase Authentication",
+      "Firebase Storage"
+    ],
+    "database": [
+      "Cloud Firestore"
+    ],
+    "infra": [],
+    "tools": []
+  },
+  "architecture": null,
+  "integrations": [],
+  "media": {
+    "thumbnail": null,
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "flutter",
+    "dart",
+    "firebase",
+    "attendance"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2024",
+  "updatedAt": "2026-09-25"
+}

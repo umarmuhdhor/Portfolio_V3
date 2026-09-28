@@ -66,7 +66,7 @@ export default function Styleguide() {
                 {t.px}rem · {t.mobile}rem · {t.family}
               </span>
               <span className={`sg__row-value ${t.cls}`} data-role={t.role === 'meta' || t.role === 'note' ? undefined : t.role}>
-                Andi Muhammad Alief Fauzan
+                Umar Muhdhor
               </span>
             </div>
           ))}

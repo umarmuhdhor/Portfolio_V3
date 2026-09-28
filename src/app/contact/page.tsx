@@ -30,7 +30,7 @@ export default function Contact() {
                 <dd className="fn-b1">{FOOTER.address.join(', ')}</dd>
               </div>
               <div>
-                <dt className="fn-b2">Hours</dt>
+                <dt className="fn-b2">Timezone</dt>
                 <dd className="fn-b1">{FOOTER.hours.join(', ')}</dd>
               </div>
             </dl>

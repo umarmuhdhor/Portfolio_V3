@@ -1,14 +1,60 @@
 /**
- * Every string and every picture on the site, in one place.
+ * Every string and every picture on the site, shaped section by section.
  *
- * This file used to hold placeholder copy for the structural build. It no
- * longer does: the words below are Andi Muhammad Alief Fauzan's, the projects
- * are the nine real ones from PortfolioV3, and the photographs are credited in
- * public/images/photo/_credits.json.
+ * The facts come from DATA-PORTO (vendored into src/data by `npm run
+ * sync-data`, read through src/lib/porto.ts): the profile, the fifteen
+ * projects, experience, education, awards, the publication, and the skills.
+ * What is authored here is only the connective copy the data has no field for
+ * — section headings and the two process blocks — and each of those restates
+ * something the data already says rather than adding a claim of its own.
  *
- * The module is still named `dummy` because eight route files import from it;
+ * The module is still named `dummy` because the route files import from it;
  * the name is a leftover, the contents are not.
  */
+import {
+  asset,
+  awards,
+  contact,
+  education,
+  experience,
+  period,
+  primaryStack,
+  profile,
+  projectLink,
+  projects,
+  publications,
+  siteConfig,
+  skillCategories,
+  skills,
+  social,
+  t,
+  tl,
+  type Project,
+} from './porto';
+
+/* --------------------------------------------------------------------------
+   Shared
+   -------------------------------------------------------------------------- */
+
+const NAME = profile.fullName;
+const ROLE = t(profile.role);
+const PLACE = `${profile.location.city}, ${profile.location.country}`;
+const EMAIL = contact.email;
+const STATUS = profile.availability.status === 'open-to-work' ? 'Open to work' : 'Not available';
+const CV = asset(contact.resume.src);
+
+const upper = (s: string) => (s === 'ai' ? 'AI' : s.charAt(0).toUpperCase() + s.slice(1));
+const pad = (n: number) => String(n).padStart(2, '0');
+
+export const SITE = {
+  /** Empty until the site has a domain; metadataBase is skipped until then. */
+  url: siteConfig.site.url,
+  title: t(siteConfig.site.title),
+  description: t(siteConfig.site.description),
+  keywords: siteConfig.site.keywords.en,
+  favicon: asset(siteConfig.site.favicon),
+  ogImage: asset(siteConfig.site.defaultOgImage),
+};
 
 /* --------------------------------------------------------------------------
    Images
@@ -27,15 +73,7 @@ export const BAND = Array.from({ length: 17 }, (_, i) => `/images/photo/band-${S
 
 /** Project screenshots. These stay screenshots — they belong on the work
  *  cards, where the reader is meant to read them, and nowhere else. */
-export const IMAGES = [
-  '/images/work/arcadeCalc.webp',
-  '/images/work/grooth.webp',
-  '/images/work/peduliPasal.webp',
-  '/images/work/keretaxpress-web.webp',
-  '/images/work/keretaxpress-mobile.webp',
-  '/images/work/ytSum.webp',
-  '/images/work/iot.webp',
-];
+export const IMAGES = projects.map((p) => asset(p.media.thumbnail?.src)).filter(Boolean) as string[];
 
 /** Cycle the pool so every frame gets something. */
 export const img = (i: number) => IMAGES[i % IMAGES.length];
@@ -45,76 +83,84 @@ export const img = (i: number) => IMAGES[i % IMAGES.length];
    -------------------------------------------------------------------------- */
 
 export const HERO = {
-  lines: ['Andi Muhammad Alief Fauzan', 'Backend & Cloud Engineering'],
+  lines: [NAME, ROLE],
 };
 
 /* --------------------------------------------------------------------------
    2 — statement
    -------------------------------------------------------------------------- */
 
+/** The current programme, if one is still running. */
+const studying = education.find((e) => !e.endDate || e.endDate >= new Date().toISOString().slice(0, 10));
+
 export const STATEMENT = {
-  heading: 'Systems that answer quickly, and fail quietly.',
-  meta: ['Backend & Cloud', 'Indonesia', 'Open to work'],
+  heading: t(profile.tagline),
+  /** The hero already carries the role, so the meta row does not repeat it. */
+  meta: [PLACE, studying?.institution, STATUS].filter(Boolean) as string[],
 };
 
 /* --------------------------------------------------------------------------
    3 — introduction (the about slot)
    -------------------------------------------------------------------------- */
 
+const featuredSkills = skills.filter((s) => s.featured);
+
 export const INTRO = {
   label: 'Introduction',
-  name: 'Andi Muhammad Alief Fauzan',
-  role: 'Backend Developer & Cloud Computing Specialist',
-  portrait: '/images/profile/foto_alief_hitam.webp',
-  body: [
-    'I build the parts of a product people never see and always feel — the API that answers quickly, the pipeline that does not drop a record, the deploy that goes out without anyone holding their breath.',
-    'Most of my work sits on Google Cloud. I like problems where the constraint is real: a budget, a latency target, a dataset that will not fit in memory. Those are the ones that make you choose properly instead of reaching for the default.',
-  ],
+  name: NAME,
+  role: ROLE,
+  portrait: asset(profile.avatar.src),
+  body: t(profile.bioLong).split(/\n\n+/),
   meta: [
-    { key: 'Based', value: 'Indonesia' },
-    { key: 'Focus', value: 'Backend & Cloud' },
-    { key: 'Studying', value: 'Informatics' },
-    { key: 'Status', value: 'Open to work' },
+    { key: 'Based', value: PLACE },
+    { key: 'Focus', value: ROLE },
+    { key: 'Studying', value: studying ? studying.institution : t(education[0]?.fieldOfStudy) },
+    { key: 'Status', value: STATUS },
   ],
-  /** Experience, most recent first. */
-  experience: [
-    {
-      no: '01',
-      period: '2025',
-      title: 'Google Cloud Arcade Facilitator',
-      body: 'Ran the programme for a cohort of students, and built the leaderboard tooling that scored it.',
-    },
-    {
-      no: '02',
-      period: '2024 — 2025',
-      title: 'Bangkit Academy — Cloud Computing',
-      body: 'Google, GoTo and Traveloka programme. Backend and cloud track, ending in a capstone deployed on Cloud Run.',
-    },
-    {
-      no: '03',
-      period: '2024 — now',
-      title: 'Informatics undergraduate',
-      body: 'Coursework in systems, networks and data, alongside the projects listed under Work.',
-    },
-    {
-      no: '04',
-      period: '2022 — now',
-      title: 'Freelance and personal projects',
-      body: 'Nine shipped projects across web, mobile, IoT and ML deployment. Every one of them is listed.',
-    },
-  ],
-  stack: ['TypeScript', 'Go', 'Node.js', 'Flutter', 'Google Cloud', 'Cloud Run', 'Docker', 'Vertex AI'],
+  /** Paid work, most recent first. Organisational roles are on /about. */
+  experience: experience
+    .filter((e) => e.category === 'work')
+    .map((e, i) => ({
+      no: pad(i + 1),
+      period: period(e.startDate, e.endDate, e.current),
+      title: t(e.position),
+      body: `${t(e.company.name)}. ${t(e.summary)}`,
+    })),
+  stack: featuredSkills.map((s) => s.name),
 };
+
+/** Every experience record, work and otherwise — the /about list. */
+export const EXPERIENCE = experience.map((e, i) => ({
+  no: pad(i + 1),
+  title: t(e.position),
+  company: t(e.company.name),
+  period: period(e.startDate, e.endDate, e.current),
+}));
+
+/* --------------------------------------------------------------------------
+   Skills, grouped
+   -------------------------------------------------------------------------- */
+
+/** Skills in one category, strongest first: featured, then level, then order. */
+const skillsIn = (category: string) =>
+  skills
+    .filter((s) => s.category === category)
+    .sort((a, b) => Number(b.featured) - Number(a.featured) || b.level - a.level || a.order - b.order);
+
+/** Every category that describes technical work — soft skills excluded. */
+const techCategories = skillCategories.filter((c) => c.id !== 'soft');
 
 /** The /about route's opening block. */
 export const ABOUT = {
   label: 'About',
-  body:
-    'One developer, working across backend services and the cloud they run on. I take the parts of a product that have to be correct rather than merely present — the contract, the data model, the deploy — and I leave them documented enough that somebody else can own them.',
-  columns: [
-    { no: '01', heading: 'Backend', items: ['REST API design', 'Go and Node.js services', 'Data modelling', 'Auth and access control'] },
-    { no: '02', heading: 'Cloud', items: ['Google Cloud', 'Cloud Run and containers', 'CI/CD pipelines', 'ML model deployment'] },
-  ],
+  body: t(profile.bioShort),
+  columns: ['framework', 'ai'].map((id, i) => ({
+    no: pad(i + 1),
+    heading: t(skillCategories.find((c) => c.id === id)?.label),
+    items: skillsIn(id)
+      .slice(0, 5)
+      .map((s) => s.name),
+  })),
 };
 
 /* --------------------------------------------------------------------------
@@ -123,83 +169,81 @@ export const ABOUT = {
 
 export const CAPABILITIES = {
   heading: 'Capabilities',
-  label: 'Services',
-  items: [
-    'REST API design and implementation',
-    'Services in Go and Node.js',
-    'Google Cloud architecture',
-    'Containers and CI/CD',
-    'Data modelling and migrations',
-    'ML model deployment',
-  ],
+  label: 'Skills',
+  items: techCategories.map(
+    (c) =>
+      `${t(c.label)} — ${skillsIn(c.id)
+        .slice(0, 3)
+        .map((s) => s.name)
+        .join(', ')}`,
+  ),
 };
 
 /* --------------------------------------------------------------------------
-   5 — the service index (the reference's offices directory)
+   5 — the skill index (the reference's offices directory)
 
-   A flat, scannable list of what I actually build, each row inverting on
-   hover. Every entry is something in the nine shipped projects, not a wish.
+   A flat, scannable list of the tools behind the projects, each row inverting
+   on hover. Featured skills and every skill with a note on where it was used.
    -------------------------------------------------------------------------- */
 
+const LEVEL = ['', 'Familiar', 'Working', 'Proficient', 'Advanced', 'Expert'];
+
 export const INDEX = {
-  heading: 'API design, service implementation, container builds, cloud deployment, and the pipelines that keep them honest.',
-  label: 'Services',
-  rows: [
-    { title: 'REST API design', stack: 'Go · Node.js', detail: 'Contract first, versioned, documented' },
-    { title: 'Service implementation', stack: 'Go · TypeScript', detail: 'Concurrency where it earns its keep' },
-    { title: 'Cloud Run deployment', stack: 'Google Cloud', detail: 'Scale to zero, cold start budgeted' },
-    { title: 'Container builds', stack: 'Docker', detail: 'One image, local and production alike' },
-    { title: 'CI/CD pipelines', stack: 'Cloud Build · Actions', detail: 'Green before merge, deployed on tag' },
-    { title: 'Data modelling', stack: 'PostgreSQL · Firestore', detail: 'Schema before surface, migrations reversible' },
-    { title: 'Auth and access control', stack: 'Firebase Auth · IAM', detail: 'Least privilege, checked at the edge' },
-    { title: 'Observability', stack: 'Cloud Logging · Monitoring', detail: 'Logs you can query, alerts you trust' },
-    { title: 'ML model serving', stack: 'Vertex AI', detail: 'Inference without owning the infrastructure' },
-    { title: 'Cross-platform mobile', stack: 'Flutter', detail: 'Both stores when the budget is one developer' },
-    { title: 'Front ends for back ends', stack: 'Next.js · React', detail: 'Fast on a bad connection, or it does not ship' },
-    { title: 'IoT ingest pipelines', stack: 'Go · Pub/Sub', detail: 'Ordered, buffered, and never silently dropped' },
-  ],
+  heading: 'Swift and Flutter on the device, Python and Claude behind it, and the tools that carry both into production.',
+  label: 'Skills',
+  rows: skills
+    .filter((s) => s.category !== 'soft' && (s.featured || s.note))
+    .map((s) => ({
+      title: s.name,
+      stack: t(skillCategories.find((c) => c.id === s.category)?.label),
+      detail:
+        t(s.note) ||
+        (s.yearsOfExperience ? `${s.yearsOfExperience} years · ${LEVEL[s.level]}` : LEVEL[s.level]),
+    })),
 };
 
 /* --------------------------------------------------------------------------
    6 — process, two editorial blocks
    -------------------------------------------------------------------------- */
 
+const shopify = experience.find((e) => e.id === 'md-fashionwear-ai-automation');
+
 export const PROCESS = [
   {
-    heading: ['From Constraint', 'to Contract'],
+    heading: ['From Flutter', 'to Swift'],
     lead:
-      'Every build starts with the same question: what actually breaks today, for whom, and what is the smallest thing that fixes it.',
-    note: 'Approach',
+      'Two years of Flutter and Dart — including ABSATA, the attendance system built for staff at Indonesia’s House of Representatives — and now building depth in Swift at the Apple Developer Academy.',
+    note: 'Mobile',
     body:
-      'The data model comes before the surface, and the API contract comes before either. Most of the value is in refusing to build the thing that was asked for when a smaller thing solves it.',
+      'Secure login, an informative dashboard, realtime attendance monitoring. At the academy the same care went into ARKit gaze tracking and a watchOS heart-rate companion.',
   },
   {
-    heading: ['From Contract', 'to Production'],
-    lead:
-      'A service that only runs on my machine is a draft. The same image goes out locally and in production, or the environment is a lie.',
-    note: 'Delivery',
+    heading: ['From Prompt', 'to Pipeline'],
+    lead: shopify
+      ? t(shopify.summary)
+      : 'One supplier link in, one review-ready Shopify draft out.',
+    note: 'AI Automation',
     body:
-      'Deployed, measured, and left in a state someone else can pick up. A feature only I can operate is not finished.',
+      'The model makes only four judgment calls per product; deterministic Python handles every mechanical step, and a verification gate checks ten rule groups against the real product before a run reports success.',
   },
 ];
 
 /* --------------------------------------------------------------------------
-   7 — selected work, the nine real projects
+   7 — selected work, the featured projects
    -------------------------------------------------------------------------- */
+
+const card = (p: Project) => ({
+  title: t(p.title),
+  subtitle: t(p.subtitle),
+  metric: primaryStack(p),
+  image: asset(p.media.thumbnail?.src),
+  href: `/work/${p.id}`,
+});
 
 export const WORK = {
   heading: ['Selected', 'Work'],
   cta: 'See All',
-  cards: [
-    { title: 'Arcade Team Calculator', metric: 'React', image: '/images/work/arcadeCalc.webp' },
-    { title: 'Grooth', metric: 'Node.js', image: '/images/work/grooth.webp' },
-    { title: 'PeduliPasal', metric: 'Firebase', image: '/images/work/peduliPasal.webp' },
-    { title: 'KeretaXpress Web', metric: 'Tailwind', image: '/images/work/keretaxpress-web.webp' },
-    { title: 'KeretaXpress Mobile', metric: 'Supabase', image: '/images/work/keretaxpress-mobile.webp' },
-    { title: 'YouTube Summarizer', metric: 'React', image: '/images/work/ytSum.webp' },
-    { title: 'IoT Sensor Platform', metric: 'Golang', image: '/images/work/iot.webp' },
-    { title: 'ML Cloud Deployment', metric: 'Vertex AI', image: null },
-  ],
+  cards: projects.filter((p) => p.featured).map(card),
 };
 
 /* --------------------------------------------------------------------------
@@ -208,31 +252,87 @@ export const WORK = {
 
 export const DIAGRAM = {
   headings: [
-    ['Measured, Not', 'Guessed'],
-    ['Simple Surfaces,', 'Strict Interiors'],
+    ['Native on', 'the Device'],
+    ['Deterministic', 'Behind the Model'],
   ],
   nodes: ['01', '02', '03', '04', '05', '06', '07', '08'],
 };
 
 /* --------------------------------------------------------------------------
-   9 — practice and process
+   9 — practice and record
    -------------------------------------------------------------------------- */
 
+const degree = education.find((e) => e.gpa);
+const paper = publications[0];
+/** The headline accuracy figure, read out of the paper's own highlights. */
+const paperAccuracy = tl(paper?.highlights, 'en')
+  .map((h) => h.match(/(\d+(?:\.\d+)?)%/)?.[1])
+  .find(Boolean);
+const firstAward = awards.map((a) => a.date).sort()[0];
+
 export const PEOPLE = {
-  label: ['Practice &', 'Process'],
-  heading: ['A practice shaped by', 'real constraints, honest', 'measurement, and code', 'somebody else can own.'],
-  marqueeHeading: ['2022', 'First Deploy'],
+  label: ['Practice &', 'Record'],
+  heading: [
+    'A practice built on',
+    `${awards.length} competition awards,`,
+    `a ${degree?.gpa?.value.toFixed(2)} GPA, and a thesis`,
+    'published as first author.',
+  ],
+  marqueeHeading: [firstAward, 'First Medal'],
   columns: [
-    'I work in the open, in short cycles, against a target I can measure. Nothing gets called finished because it looks finished.',
-    'One developer, nine shipped projects, and a standing rule: if I cannot hand it over with the runbook, it is not done.',
+    'Teaching runs alongside the engineering: assistant lecturer for three classes of 30+ students, and a mathematics YouTube channel past 5,000 subscribers.',
+    'An online mathematics competition organised single-handed for more than 1,500 participants, with 100+ questions written and a certificate made for every one of them.',
   ],
   stats: [
-    { value: '09', label: 'Projects shipped across web, mobile, IoT and ML deployment.' },
-    { value: '15', label: 'Certifications, most of them on Google Cloud.' },
-    { value: '04', label: 'Years writing code, two of them against production traffic.' },
-    { value: '02', label: 'Cloud platforms, one of which I would defend in a review.' },
-  ],
+    {
+      value: pad(projects.length),
+      label: 'Projects across iOS, Flutter, the web and AI automation.',
+    },
+    {
+      value: pad(awards.length),
+      label: 'National and regional awards in mathematics and programming.',
+    },
+    {
+      value: degree?.gpa ? degree.gpa.value.toFixed(2) : '',
+      label: degree ? `GPA, ${t(degree.degree)} in ${t(degree.fieldOfStudy)}, ${degree.institution}.` : '',
+    },
+    {
+      value: paperAccuracy ? `${Math.floor(Number(paperAccuracy))}%` : '',
+      label: 'Weighted accuracy classifying Yogyakarta batik motifs, in a first-author journal paper.',
+    },
+  ].filter((s) => s.value),
 };
+
+/* --------------------------------------------------------------------------
+   Education, awards, publication — the /about record
+   -------------------------------------------------------------------------- */
+
+export const EDUCATION = education.map((e, i) => ({
+  no: pad(i + 1),
+  title: e.institution,
+  detail: [t(e.degree), t(e.fieldOfStudy), e.gpa ? `GPA ${e.gpa.value.toFixed(2)}/${e.gpa.scale.toFixed(2)}` : null]
+    .filter(Boolean)
+    .join(' · '),
+  period: period(e.startDate, e.endDate, false),
+}));
+
+export const AWARDS = awards.map((a, i) => ({
+  no: pad(i + 1),
+  title: t(a.title),
+  detail: [a.issuer, a.date].filter(Boolean).join(' · '),
+  href: a.url,
+}));
+
+export const PUBLICATION = paper
+  ? {
+      title: paper.title,
+      venue: `${paper.venue}, Vol. ${paper.volume} No. ${paper.issue}, pp. ${paper.pages}`,
+      authors: paper.authors.join(', '),
+      year: paper.publishedAt.slice(0, 4),
+      summary: t(paper.summary),
+      href: paper.url,
+    }
+  : null;
 
 /* --------------------------------------------------------------------------
    10 — the tools ring (the reference's client logo cloud)
@@ -241,25 +341,25 @@ export const PEOPLE = {
 export const RING = {
   /** One string; it wraps into five lines at the measure the section sets,
    *  and the line reveal splits it the same way every other heading is split. */
-  heading: 'The Tools I Reach For When the Constraint Is Real',
+  heading: 'The Tools Behind Every App, Agent and Pipeline',
   logos: [
-    { src: '/images/stack/typescript.svg', label: 'TypeScript' },
-    { src: '/images/stack/go.svg', label: 'Go' },
-    { src: '/images/stack/nodedotjs.svg', label: 'Node.js' },
-    { src: '/images/stack/googlecloud.svg', label: 'Google Cloud' },
-    { src: '/images/stack/docker.svg', label: 'Docker' },
-    { src: '/images/stack/kubernetes.svg', label: 'Kubernetes' },
-    { src: '/images/stack/postgresql.svg', label: 'PostgreSQL' },
-    { src: '/images/stack/firebase.svg', label: 'Firebase' },
-    { src: '/images/stack/nextdotjs.svg', label: 'Next.js' },
-    { src: '/images/stack/react.svg', label: 'React' },
+    { src: '/images/stack/swift.svg', label: 'Swift' },
+    { src: '/images/stack/xcode.svg', label: 'Xcode' },
     { src: '/images/stack/flutter.svg', label: 'Flutter' },
     { src: '/images/stack/dart.svg', label: 'Dart' },
-    { src: '/images/stack/javascript.svg', label: 'JavaScript' },
-    { src: '/images/stack/cplusplus.svg', label: 'C++' },
+    { src: '/images/stack/python.svg', label: 'Python' },
+    { src: '/images/stack/claude.svg', label: 'Claude' },
+    { src: '/images/stack/n8n.svg', label: 'n8n' },
+    { src: '/images/stack/tensorflow.svg', label: 'TensorFlow' },
+    { src: '/images/stack/laravel.svg', label: 'Laravel' },
+    { src: '/images/stack/php.svg', label: 'PHP' },
+    { src: '/images/stack/react.svg', label: 'React' },
+    { src: '/images/stack/firebase.svg', label: 'Firebase' },
+    { src: '/images/stack/supabase.svg', label: 'Supabase' },
+    { src: '/images/stack/mysql.svg', label: 'MySQL' },
+    { src: '/images/stack/figma.svg', label: 'Figma' },
     { src: '/images/stack/git.svg', label: 'Git' },
     { src: '/images/stack/github.svg', label: 'GitHub' },
-    { src: '/images/stack/linux.svg', label: 'Linux' },
   ],
 };
 
@@ -270,136 +370,90 @@ export const RING = {
 export const CONTACT = {
   label: 'Contact',
   heading: ['Start a', 'Conversation'],
-  body: 'Tell me what you are building and where it hurts. I reply to everything within two working days.',
-  cta: 'afindo.mi01@gmail.com',
+  body: `${t(profile.availability.note)} Tell me what you are building — email is the fastest way to reach me.`,
+  cta: EMAIL,
 };
 
 /* --------------------------------------------------------------------------
    12 — footer
    -------------------------------------------------------------------------- */
 
+const link = (id: string) => {
+  const s = social(id);
+  return s ? { label: t(s.label), href: s.url } : null;
+};
+
 export const FOOTER = {
-  brand: 'ALIEF',
+  brand: profile.displayName.split(' ')[0].toUpperCase(),
   columns: [
     {
       heading: 'Contact',
-      links: [
-        { label: 'Email', href: 'mailto:afindo.mi01@gmail.com' },
-        { label: 'GitHub', href: 'https://github.com/aliefauzan' },
-      ],
+      links: [{ label: 'Email', href: `mailto:${EMAIL}` }, link('linkedin'), link('github')].filter(Boolean) as {
+        label: string;
+        href: string;
+      }[],
     },
-    { heading: 'Site', links: [{ label: 'Work', href: '#work' }, { label: 'About', href: '#about' }] },
     {
-      heading: 'Elsewhere',
+      heading: 'Site',
       links: [
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/andi-muhammad-alief-fauzan' },
+        { label: 'Work', href: '/work' },
+        { label: 'About', href: '/about' },
         { label: 'Design guide', href: '/styleguide' },
       ],
     },
+    {
+      heading: 'Elsewhere',
+      links: [link('youtube'), link('instagram'), CV ? { label: 'CV', href: CV } : null].filter(Boolean) as {
+        label: string;
+        href: string;
+      }[],
+    },
   ],
-  address: ['Indonesia', 'Remote friendly'],
-  hours: ['Mon — Fri', '09:00 — 18:00 WIB'],
-  meta: ['© 2026', 'Andi Muhammad Alief Fauzan', 'Indonesia'],
+  address: [profile.location.city, profile.location.country],
+  /** No office hours in the data — the timezone is what a reader needs. */
+  hours: [profile.location.timezone, 'WITA · UTC+8'],
+  meta: [`© ${new Date().getFullYear()}`, NAME, PLACE],
 };
 
 /* --------------------------------------------------------------------------
    Routes
    -------------------------------------------------------------------------- */
 
+const STATUS_LABEL: Record<string, string> = { completed: 'Completed', ongoing: 'Ongoing' };
+
 /** Slugged project records — the source for /work and /work/[slug]. */
-export const PROJECT_PAGES = [
-  {
-    title: 'Arcade Team Calculator',
-    subtitle: 'Intelligent leaderboard management',
-    metric: 'React',
-    image: '/images/work/arcadeCalc.webp',
-    year: '2025',
-    discipline: 'Web',
-    summary:
-      'Scoring and leaderboard tooling for the Google Cloud Arcade cohort I facilitated. It reads the programme’s badge data, resolves it per participant, and ranks a team without anyone maintaining a spreadsheet.',
-  },
-  {
-    title: 'Grooth',
-    subtitle: 'Air-quality route planner',
-    metric: 'Node.js',
-    image: '/images/work/grooth.webp',
-    year: '2024',
-    discipline: 'Web',
-    summary:
-      'Routes scored on air quality rather than distance. The interesting half is the backend: fetching, caching and interpolating sensor readings so a route can be scored without a request per segment.',
-  },
-  {
-    title: 'PeduliPasal',
-    subtitle: 'AI-assisted legal information',
-    metric: 'Firebase',
-    image: '/images/work/peduliPasal.webp',
-    year: '2024',
-    discipline: 'Product',
-    summary:
-      'Plain-language answers over Indonesian legal text, with citations back to the article they came from. Retrieval first, generation second — an answer with no source is a liability, not a feature.',
-  },
-  {
-    title: 'KeretaXpress Web',
-    subtitle: 'Train ticket booking',
-    metric: 'Tailwind',
-    image: '/images/work/keretaxpress-web.webp',
-    year: '2024',
-    discipline: 'Web',
-    summary:
-      'Search, seat selection and booking for rail travel. Seat inventory is the hard part: two people picking the same seat at the same moment has to resolve to exactly one booking.',
-  },
-  {
-    title: 'KeretaXpress Mobile',
-    subtitle: 'Cross-platform booking app',
-    metric: 'Supabase',
-    image: '/images/work/keretaxpress-mobile.webp',
-    year: '2024',
-    discipline: 'Mobile',
-    summary:
-      'The same booking flow on both stores from one Flutter codebase, against the same backend. Offline-tolerant: a ticket already issued stays readable with no connection.',
-  },
-  {
-    title: 'YouTube Summarizer',
-    subtitle: 'Video content analysis and Q&A',
-    metric: 'React',
-    image: '/images/work/ytSum.webp',
-    year: '2024',
-    discipline: 'Product',
-    summary:
-      'Transcript in, summary and answerable questions out. Long transcripts are chunked and cached, so a second question about the same video costs nothing.',
-  },
-  {
-    title: 'IoT Sensor Platform',
-    subtitle: 'Cloud-native ingest backend',
-    metric: 'Golang',
-    image: '/images/work/iot.webp',
-    year: '2023',
-    discipline: 'Infrastructure',
-    summary:
-      'Device telemetry into a queue, out to storage, with ordering and back-pressure that hold when a fleet reconnects at once. Written in Go because the concurrency story mattered more than the ecosystem.',
-  },
-  {
-    title: 'ML Cloud Deployment',
-    subtitle: 'Production model serving',
-    metric: 'Vertex AI',
-    image: null,
-    year: '2025',
-    discipline: 'Infrastructure',
-    summary:
-      'Bangkit capstone work: taking a trained model off a notebook and putting it behind a versioned endpoint with a rollback path, on Vertex AI and Cloud Run.',
-  },
-].map((p) => ({
-  ...p,
-  slug: p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-  facts: [
-    { key: 'Year', value: p.year },
-    { key: 'Scope', value: p.discipline },
-    { key: 'Stack', value: p.metric },
-    { key: 'Status', value: 'Shipped' },
-  ],
-  gallery: [p.image, PLATES.process[0], PLATES.process[1]].filter(Boolean) as string[],
-  href: 'https://github.com/aliefauzan',
-}));
+export const PROJECT_PAGES = projects.map((p) => {
+  const images = [p.media.thumbnail, ...p.media.gallery].filter(Boolean) as NonNullable<
+    Project['media']['thumbnail']
+  >[];
+  const stack = Object.values(p.stack).flat();
+  return {
+    slug: p.id,
+    title: t(p.title),
+    subtitle: t(p.subtitle),
+    metric: primaryStack(p),
+    image: asset(p.media.thumbnail?.src),
+    year: p.startDate.slice(0, 4),
+    discipline: upper(p.category),
+    summary: t(p.summary),
+    description: t(p.description).split(/\n\n+/).filter(Boolean),
+    privateNote: p.private ? t(p.privateNote) : null,
+    facts: [
+      { key: 'Year', value: period(p.startDate, p.endDate, p.status === 'ongoing' && !p.endDate) },
+      { key: 'Scope', value: `${upper(p.category)} · ${upper(p.type)}` },
+      { key: 'Role', value: t(p.role) },
+      p.teamSize ? { key: 'Team', value: p.teamSize === 1 ? 'Solo' : `Team of ${p.teamSize}` } : null,
+      { key: 'Stack', value: stack.slice(0, 4).join(', ') },
+      { key: 'Status', value: STATUS_LABEL[p.status] ?? upper(p.status) },
+    ].filter(Boolean) as { key: string; value: string }[],
+    gallery: images.map((m) => ({
+      src: asset(m.src) as string,
+      alt: t(m.alt),
+      portrait: !!m.width && !!m.height && m.height > m.width,
+    })),
+    href: projectLink(p),
+  };
+});
 
 export const LEGAL = {
   label: 'Legal',
@@ -408,7 +462,7 @@ export const LEGAL = {
     {
       title: 'This site',
       body:
-        'A personal portfolio. It collects nothing: no analytics, no cookies, no forms. The only outbound links are to GitHub, LinkedIn and a mailto: address.',
+        'A personal portfolio. It collects nothing: no analytics, no cookies, no forms. The only outbound links are to project demos, GitHub, LinkedIn, YouTube, Instagram and a mailto: address.',
     },
     {
       title: 'Design',
@@ -418,7 +472,7 @@ export const LEGAL = {
     {
       title: 'Photography',
       body:
-        'The full-bleed photographs are Unsplash-licensed and credited in public/images/photo/_credits.json. Technology marks are from Simple Icons. Project screenshots and the portrait are my own.',
+        'The full-bleed photographs are Unsplash-licensed and credited in CREDITS.md. Technology marks are from Simple Icons. Project screenshots and the portrait are my own.',
     },
   ],
 };

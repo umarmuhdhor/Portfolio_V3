@@ -1,0 +1,532 @@
+{
+  "$schema": "../schema/experience.schema.json",
+  "items": [
+    {
+      "id": "md-fashionwear-ai-automation",
+      "category": "work",
+      "company": {
+        "name": {
+          "en": "MD Fashionwear",
+          "id": "MD Fashionwear"
+        },
+        "logo": null,
+        "url": "https://mdfashionwear.com",
+        "industry": {
+          "en": "Fashion E-commerce",
+          "id": "E-commerce Fashion"
+        }
+      },
+      "position": {
+        "en": "AI Automation Engineer",
+        "id": "AI Automation Engineer"
+      },
+      "employmentType": "freelance",
+      "startDate": "2026-07-01",
+      "endDate": null,
+      "current": true,
+      "location": {
+        "city": "Bali",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "remote"
+      },
+      "summary": {
+        "en": "Built an agent pipeline that turns a single supplier product link into a review-ready Shopify draft, now used in production by the store's operators.",
+        "id": "Membangun pipeline agent yang mengubah satu link produk supplier menjadi draft Shopify siap tinjau, kini dipakai di produksi oleh operator toko."
+      },
+      "achievements": {
+        "en": [
+          "Designed the architecture around a strict split — the model makes only four judgment calls per product while deterministic Python handles every mechanical step — keeping output consistent even at low reasoning effort",
+          "Cut Shopify API traffic to two MCP calls per product by folding collections, both option links, and verification into a single aliased GraphQL mutation",
+          "Built a rule-by-rule verification gate that checks ten rule groups against the real product in Shopify before any run reports success",
+          "Normalised two supplier sources, Alibaba and 1688, into one extraction schema, working around client-side translation and anti-bot systems that fail with HTTP 200"
+        ],
+        "id": [
+          "Merancang arsitektur di atas pemisahan ketat — model hanya mengambil empat keputusan penilaian per produk sementara Python deterministik menangani setiap langkah mekanis — sehingga keluaran tetap konsisten walau usaha penalaran rendah",
+          "Memangkas lalu lintas API Shopify menjadi dua panggilan MCP per produk dengan melipat collection, kedua penautan opsi, dan verifikasi ke satu mutation GraphQL ber-alias",
+          "Membangun gerbang verifikasi aturan demi aturan yang memeriksa sepuluh kelompok aturan terhadap produk sungguhan di Shopify sebelum run mana pun melaporkan sukses",
+          "Menormalkan dua sumber supplier, Alibaba dan 1688, ke satu skema ekstraksi, menyiasati terjemahan sisi klien dan sistem anti-bot yang gagal dengan status HTTP 200"
+        ]
+      },
+      "stack": [
+        "Python",
+        "Claude Code",
+        "MCP",
+        "Shopify Admin GraphQL API",
+        "Scrapling"
+      ],
+      "projectIds": [
+        "shopify-automation"
+      ],
+      "order": 1
+    },
+    {
+      "id": "dpr-ri-mobile-developer-intern",
+      "category": "work",
+      "company": {
+        "name": {
+          "en": "The House of Representatives, Republic of Indonesia (DPR RI)",
+          "id": "Dewan Perwakilan Rakyat Republik Indonesia (DPR RI)"
+        },
+        "logo": null,
+        "url": "https://www.dpr.go.id",
+        "industry": {
+          "en": "Government",
+          "id": "Pemerintahan"
+        }
+      },
+      "position": {
+        "en": "Mobile Application Developer Intern",
+        "id": "Magang Mobile Application Developer"
+      },
+      "employmentType": "internship",
+      "startDate": "2024-09-01",
+      "endDate": "2024-12-31",
+      "current": false,
+      "location": {
+        "city": "Jakarta",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "onsite"
+      },
+      "summary": {
+        "en": "Built ABSATA, a mobile attendance system for Member Administration Staff (SAA) and Expert Staff (TA).",
+        "id": "Membangun ABSATA, sistem absensi mobile untuk Staf Administrasi Anggota (SAA) dan Tenaga Ahli (TA)."
+      },
+      "achievements": {
+        "en": [
+          "Spearheaded the development of ABSATA, a mobile attendance system for Member Administration Staff (SAA) and Expert Staff (TA), improving operational efficiency through digital transformation",
+          "Built and integrated comprehensive features using Flutter framework, including secure login system, informative dashboard, and realtime attendance monitoring",
+          "Collaborated in UI/UX design implementation to enhance user experience for both ABSATA and LMS applications, resulting in more intuitive interface",
+          "Implemented REST API integration and utilized Git for version control, ensuring smooth development workflow; actively participated in team discussions and feedback sessions, contributing to continuous application functionality improvement"
+        ],
+        "id": [
+          "Memimpin pengembangan ABSATA, sistem absensi mobile untuk Staf Administrasi Anggota (SAA) dan Tenaga Ahli (TA), meningkatkan efisiensi operasional lewat transformasi digital",
+          "Membangun dan mengintegrasikan fitur lengkap dengan framework Flutter, mencakup sistem login yang aman, dashboard informatif, dan pemantauan absensi realtime",
+          "Berkolaborasi dalam implementasi desain UI/UX untuk meningkatkan pengalaman pengguna aplikasi ABSATA dan LMS, menghasilkan antarmuka yang lebih intuitif",
+          "Mengimplementasikan integrasi REST API dan menggunakan Git untuk version control demi alur kerja pengembangan yang lancar; aktif dalam diskusi tim dan sesi umpan balik untuk perbaikan fungsionalitas aplikasi secara berkelanjutan"
+        ]
+      },
+      "stack": [
+        "Flutter",
+        "Dart",
+        "REST API",
+        "Git",
+        "UI/UX Design"
+      ],
+      "projectIds": [
+        "absata"
+      ],
+      "order": 2
+    },
+    {
+      "id": "mdp-assistant-lecturer",
+      "category": "work",
+      "company": {
+        "name": {
+          "en": "Multi Data University Palembang",
+          "id": "Universitas Multi Data Palembang"
+        },
+        "logo": null,
+        "url": "https://mdp.ac.id",
+        "industry": {
+          "en": "Higher Education",
+          "id": "Pendidikan Tinggi"
+        }
+      },
+      "position": {
+        "en": "Assistant Lecturer",
+        "id": "Asisten Dosen"
+      },
+      "employmentType": "part-time",
+      "startDate": "2023-09-01",
+      "endDate": "2024-01-31",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "onsite"
+      },
+      "summary": {
+        "en": "Assistant lecturer for four programming courses: Introduction to Programming, Object-Oriented Programming, Web Programming, and Mobile Application Programming.",
+        "id": "Asisten dosen untuk empat mata kuliah pemrograman: Pemrograman Dasar, Pemrograman Berorientasi Objek, Pemrograman Web, dan Pemrograman Aplikasi Bergerak."
+      },
+      "achievements": {
+        "en": [
+          "Provided personalized guidance to over 50 students, significantly boosting their grasp of the material by 25%",
+          "Developed and distributed lecture materials, increasing class participation by 20%",
+          "Led grading efforts for three classes across two courses, each with 30+ students, ensuring thorough evaluation standards were maintained"
+        ],
+        "id": [
+          "Memberikan bimbingan personal kepada lebih dari 50 mahasiswa, meningkatkan pemahaman materi sebesar 25%",
+          "Menyusun dan mendistribusikan materi kuliah, meningkatkan partisipasi kelas sebesar 20%",
+          "Memimpin proses penilaian tiga kelas pada dua mata kuliah, masing-masing 30+ mahasiswa, dengan standar evaluasi yang terjaga"
+        ]
+      },
+      "stack": [
+        "Python",
+        "Java",
+        "PHP",
+        "Laravel",
+        "Flutter",
+        "Dart"
+      ],
+      "projectIds": [],
+      "order": 3
+    },
+    {
+      "id": "higgz-academia-freelance",
+      "category": "work",
+      "company": {
+        "name": {
+          "en": "Higgz Academia Technology PTE. LTD",
+          "id": "Higgz Academia Technology PTE. LTD"
+        },
+        "logo": null,
+        "url": null,
+        "industry": {
+          "en": "Education Technology",
+          "id": "Teknologi Pendidikan"
+        }
+      },
+      "position": {
+        "en": "Freelance",
+        "id": "Freelance"
+      },
+      "employmentType": "freelance",
+      "startDate": "2023-02-01",
+      "endDate": "2024-02-29",
+      "current": false,
+      "location": {
+        "city": "Singapore",
+        "country": "Singapore",
+        "countryCode": "SG",
+        "timezone": null,
+        "arrangement": "remote"
+      },
+      "summary": {
+        "en": "Solved and explained mathematics problems for an education technology platform.",
+        "id": "Menyelesaikan dan menjelaskan soal matematika untuk platform teknologi pendidikan."
+      },
+      "achievements": {
+        "en": [
+          "Acquired 90%+ daily accuracy in solving diverse math problems, showcasing precision and strong analytical abilities",
+          "Enhanced understanding levels by 20% by implementing video tutorials alongside each problem",
+          "Consistently applied critical and creative thinking to deliver effective solutions with an accuracy rate above 90%"
+        ],
+        "id": [
+          "Mencapai akurasi harian di atas 90% dalam menyelesaikan beragam soal matematika, menunjukkan ketelitian dan kemampuan analisis yang kuat",
+          "Meningkatkan tingkat pemahaman sebesar 20% dengan menyertakan video tutorial pada setiap soal",
+          "Konsisten menerapkan pemikiran kritis dan kreatif untuk memberikan solusi efektif dengan tingkat akurasi di atas 90%"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 4
+    },
+    {
+      "id": "mdp-campus-representative",
+      "category": "organisational",
+      "company": {
+        "name": {
+          "en": "Campus Representative Organisation — Multi Data University Palembang",
+          "id": "Organisasi Representative Kampus — Universitas Multi Data Palembang"
+        },
+        "logo": null,
+        "url": "https://mdp.ac.id",
+        "industry": {
+          "en": "Student Organisation",
+          "id": "Organisasi Mahasiswa"
+        }
+      },
+      "position": {
+        "en": "Leader",
+        "id": "Ketua"
+      },
+      "employmentType": "volunteer",
+      "startDate": "2023-10-01",
+      "endDate": "2024-09-30",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "onsite"
+      },
+      "summary": {
+        "en": "Chaired the campus representative organisation and led outreach initiatives.",
+        "id": "Memimpin organisasi representative kampus dan menjalankan inisiatif outreach."
+      },
+      "achievements": {
+        "en": [
+          "Led strategic outreach initiatives as Chair of the campus representative organization, increasing university visibility by 30% locally and regionally, and boosting prospective student inquiries by 20%",
+          "Strengthened community engagement by 25% and boosted brand visibility by 15% through organizing off-campus events, demonstrating dedication to extending Multi Data University Palembang's reach"
+        ],
+        "id": [
+          "Memimpin inisiatif outreach strategis sebagai Ketua organisasi representative kampus, meningkatkan visibilitas universitas 30% di tingkat lokal dan regional serta menaikkan jumlah pertanyaan calon mahasiswa 20%",
+          "Memperkuat keterlibatan komunitas 25% dan visibilitas brand 15% melalui penyelenggaraan acara di luar kampus, memperluas jangkauan Universitas Multi Data Palembang"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 5
+    },
+    {
+      "id": "informatics-student-association",
+      "category": "organisational",
+      "company": {
+        "name": {
+          "en": "Informatics Student Association — Multi Data University Palembang",
+          "id": "Himpunan Mahasiswa Informatika — Universitas Multi Data Palembang"
+        },
+        "logo": null,
+        "url": "https://mdp.ac.id",
+        "industry": {
+          "en": "Student Organisation",
+          "id": "Organisasi Mahasiswa"
+        }
+      },
+      "position": {
+        "en": "Technology and Education",
+        "id": "Divisi Teknologi dan Pendidikan"
+      },
+      "employmentType": "volunteer",
+      "startDate": "2023-09-01",
+      "endDate": "2024-08-31",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "onsite"
+      },
+      "summary": {
+        "en": "Ran technology and education programmes for the informatics student body.",
+        "id": "Menjalankan program teknologi dan pendidikan untuk mahasiswa informatika."
+      },
+      "achievements": {
+        "en": [
+          "Increased participant satisfaction by 20% and improved team productivity by 15% during the organization's outbound event by effectively managing diverse team dynamics and swiftly responding to unexpected challenges",
+          "Coordinated the anniversary event, increasing audience involvement by 25% and satisfaction ratings by 10%, honing public speaking and facilitation skills within formal settings"
+        ],
+        "id": [
+          "Meningkatkan kepuasan peserta 20% dan produktivitas tim 15% pada acara outbound organisasi melalui pengelolaan dinamika tim yang efektif dan respons cepat terhadap kendala tak terduga",
+          "Mengoordinasi acara ulang tahun organisasi, meningkatkan keterlibatan audiens 25% dan tingkat kepuasan 10%, sekaligus mengasah kemampuan public speaking dan fasilitasi di forum formal"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 6
+    },
+    {
+      "id": "mipa-intensif-tunas-bangsa",
+      "category": "organisational",
+      "company": {
+        "name": {
+          "en": "MIPA Intensif — Tunas Bangsa High School Palembang",
+          "id": "MIPA Intensif — SMA Tunas Bangsa Palembang"
+        },
+        "logo": null,
+        "url": null,
+        "industry": {
+          "en": "Secondary Education",
+          "id": "Pendidikan Menengah"
+        }
+      },
+      "position": {
+        "en": "Head of Learning Sector",
+        "id": "Kepala Bidang Pembelajaran"
+      },
+      "employmentType": "volunteer",
+      "startDate": "2020-10-01",
+      "endDate": "2021-03-31",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "onsite"
+      },
+      "summary": {
+        "en": "Led the learning division of a science and mathematics extracurricular programme.",
+        "id": "Memimpin divisi pembelajaran pada ekstrakurikuler sains dan matematika."
+      },
+      "achievements": {
+        "en": [
+          "Orchestrated and optimized weekly schedules for 50+ team members, ensuring flawless execution of extracurricular activities; streamlined operations, resulting in a 25% reduction in execution time and boosting team productivity by 30%",
+          "Crafted weekly instructional materials tailored to the curriculum, ensuring comprehensive coverage of topics and engaging learning experiences"
+        ],
+        "id": [
+          "Menyusun dan mengoptimalkan jadwal mingguan untuk 50+ anggota tim sehingga kegiatan ekstrakurikuler berjalan lancar; merampingkan operasional dan memangkas waktu pelaksanaan 25% serta menaikkan produktivitas tim 30%",
+          "Menyusun materi ajar mingguan yang selaras dengan kurikulum, memastikan cakupan topik menyeluruh dan pengalaman belajar yang menarik"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 7
+    },
+    {
+      "id": "timedoor-academy-bootcamp",
+      "category": "other",
+      "company": {
+        "name": {
+          "en": "Timedoor Academy",
+          "id": "Timedoor Academy"
+        },
+        "logo": null,
+        "url": "https://timedooracademy.com",
+        "industry": {
+          "en": "Coding Bootcamp",
+          "id": "Bootcamp Pemrograman"
+        }
+      },
+      "position": {
+        "en": "Android Developer",
+        "id": "Android Developer"
+      },
+      "employmentType": "bootcamp",
+      "startDate": "2022-11-01",
+      "endDate": "2023-03-31",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "remote"
+      },
+      "summary": {
+        "en": "Android development bootcamp; built and presented the Filmu application.",
+        "id": "Bootcamp pengembangan Android; membangun dan mempresentasikan aplikasi Filmu."
+      },
+      "achievements": {
+        "en": [
+          "Engineered the Filmu application using 100% of the knowledge taught at the bootcamp",
+          "Presented the Filmu app to mentors, resulting in a 90% satisfaction rate based on post-presentation surveys",
+          "Collaborated with peers on coding challenges, achieving a 95% completion rate of assigned tasks ahead of deadlines"
+        ],
+        "id": [
+          "Membangun aplikasi Filmu dengan menerapkan 100% materi yang diajarkan di bootcamp",
+          "Mempresentasikan aplikasi Filmu kepada mentor dan memperoleh tingkat kepuasan 90% berdasarkan survei pasca-presentasi",
+          "Berkolaborasi dengan rekan pada coding challenge, menyelesaikan 95% tugas sebelum tenggat"
+        ]
+      },
+      "stack": [
+        "React Native",
+        "REST API",
+        "TMDb API"
+      ],
+      "projectIds": [
+        "filmu"
+      ],
+      "order": 8
+    },
+    {
+      "id": "online-math-competition-organizer",
+      "category": "other",
+      "company": {
+        "name": {
+          "en": "Online Math Competition",
+          "id": "Online Math Competition"
+        },
+        "logo": null,
+        "url": null,
+        "industry": {
+          "en": "Education Event",
+          "id": "Acara Edukasi"
+        }
+      },
+      "position": {
+        "en": "Organizer",
+        "id": "Penyelenggara"
+      },
+      "employmentType": "volunteer",
+      "startDate": "2021-03-01",
+      "endDate": "2021-04-30",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "remote"
+      },
+      "summary": {
+        "en": "Independently organised a national online mathematics competition for 1,500+ participants.",
+        "id": "Menyelenggarakan sendiri kompetisi matematika daring tingkat nasional untuk 1.500+ peserta."
+      },
+      "achievements": {
+        "en": [
+          "Independently conceptualized, planned, and executed the Online Math Competition for middle and high school students, attracting over 1,500 participants",
+          "Created and curated competition materials, including question sets and answer keys, comprising 100+ questions to ensure the quality and integrity of the event",
+          "Designed and produced personalized certificates for all 1,500+ participants, managing all aspects of event logistics, scheduling, and communication"
+        ],
+        "id": [
+          "Merancang, merencanakan, dan menjalankan sendiri Online Math Competition untuk pelajar SMP dan SMA, menarik lebih dari 1.500 peserta",
+          "Menyusun dan mengurasi materi kompetisi termasuk paket soal dan kunci jawaban berisi 100+ soal demi menjaga kualitas dan integritas acara",
+          "Merancang dan memproduksi sertifikat personal untuk seluruh 1.500+ peserta sekaligus mengelola logistik, penjadwalan, dan komunikasi acara"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 9
+    },
+    {
+      "id": "tidak-sulit-youtube",
+      "category": "other",
+      "company": {
+        "name": {
+          "en": "Tidak Sulit",
+          "id": "Tidak Sulit"
+        },
+        "logo": null,
+        "url": null,
+        "industry": {
+          "en": "Education Content",
+          "id": "Konten Edukasi"
+        }
+      },
+      "position": {
+        "en": "YouTube Content Creator",
+        "id": "Kreator Konten YouTube"
+      },
+      "employmentType": "freelance",
+      "startDate": "2020-12-01",
+      "endDate": "2021-02-28",
+      "current": false,
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null,
+        "arrangement": "remote"
+      },
+      "summary": {
+        "en": "Founded and ran a mathematics tutorial channel.",
+        "id": "Merintis dan mengelola kanal tutorial matematika."
+      },
+      "achievements": {
+        "en": [
+          "Established and grew a subscriber base exceeding 5,000 individuals through engaging mathematics tutorials",
+          "Produced over 15 educational videos with more than 5,000 hours of airtime",
+          "Accomplished an average viewer retention rate of 95%, indicating high-quality and captivating content"
+        ],
+        "id": [
+          "Merintis dan menumbuhkan basis pelanggan lebih dari 5.000 orang lewat tutorial matematika yang menarik",
+          "Memproduksi lebih dari 15 video edukasi dengan total tayang lebih dari 5.000 jam",
+          "Mencapai rata-rata retensi penonton 95%, menandakan konten berkualitas dan menarik"
+        ]
+      },
+      "stack": [],
+      "projectIds": [],
+      "order": 10
+    }
+  ]
+}

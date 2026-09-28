@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "collections": {
+    "profile": {
+      "file": "data/profile.json",
+      "shape": "object"
+    },
+    "contact": {
+      "file": "data/contact.json",
+      "shape": "object"
+    },
+    "siteConfig": {
+      "file": "data/site-config.json",
+      "shape": "object"
+    },
+    "skills": {
+      "file": "data/skills.json",
+      "shape": "object"
+    },
+    "experience": {
+      "file": "data/experience.json",
+      "shape": "list"
+    },
+    "education": {
+      "file": "data/education.json",
+      "shape": "list"
+    },
+    "certifications": {
+      "file": "data/certifications.json",
+      "shape": "list"
+    },
+    "testimonials": {
+      "file": "data/testimonials.json",
+      "shape": "list"
+    },
+    "articles": {
+      "file": "data/articles.json",
+      "shape": "list"
+    },
+    "speaking": {
+      "file": "data/speaking.json",
+      "shape": "list"
+    },
+    "awards": {
+      "file": "data/awards.json",
+      "shape": "list"
+    },
+    "openSource": {
+      "file": "data/open-source.json",
+      "shape": "list"
+    },
+    "projects": {
+      "dir": "data/projects",
+      "shape": "one-file-per-record",
+      "schema": "schema/project.schema.json"
+    },
+    "publications": {
+      "file": "data/publications.json",
+      "shape": "list"
+    }
+  }
+}

@@ -106,3 +106,53 @@
   color: #929292;
   max-width: 1110rem;
 }
+
+/* --- detail body --------------------------------------------------------- */
+.detail__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+  grid-column: 6 / 13;
+  margin-top: 80rem;
+}
+
+.detail__body p {
+  color: #929292;
+  max-width: 1110rem;
+}
+
+@media (max-width: 767.98px) {
+  .detail__body {
+    gap: 16rem;
+    margin-top: 40rem;
+  }
+}
+
+/* Portrait screenshots sit whole inside the plate instead of being cropped. */
+.detail__plate--portrait {
+  background: #f8f8f8;
+}
+
+.detail__plate--portrait img {
+  object-fit: contain;
+}
+
+/* The /about record reuses the legal row: the date or issuer sits where the
+   legal heading does, and the title stays black while its detail greys out. */
+.legal__block h3 {
+  color: #929292;
+  flex-shrink: 0;
+  width: 355rem;
+}
+
+.legal__block .fn-h5 {
+  color: inherit;
+  display: block;
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 767.98px) {
+  .legal__block h3 {
+    width: 100%;
+  }
+}

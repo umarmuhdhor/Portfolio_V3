@@ -39,7 +39,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="footer__col footer__col--b">
-            <p className="fn-b2 footer__col-heading">Hours</p>
+            <p className="fn-b2 footer__col-heading">Timezone</p>
             <ul>
               {FOOTER.hours.map((h) => (
                 <li className="fn-b1" key={h}>

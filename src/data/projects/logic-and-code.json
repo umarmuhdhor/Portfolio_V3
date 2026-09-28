@@ -1,0 +1,321 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "logic-and-code",
+  "title": {
+    "en": "Logic & Code",
+    "id": "Logic & Code"
+  },
+  "subtitle": {
+    "en": "A try-out platform at gerbangdev.com for people preparing for the Apple Developer Academy Indonesia selection.",
+    "id": "Platform try out di gerbangdev.com untuk yang sedang menyiapkan seleksi Apple Developer Academy Indonesia."
+  },
+  "category": "web",
+  "type": "personal",
+  "status": "ongoing",
+  "featured": true,
+  "order": 13,
+  "startDate": "2026-06-30",
+  "endDate": null,
+  "summary": {
+    "en": "An independent web platform — not an official Apple product — where candidates read up on the Apple Developer Academy Indonesia selection, practise logic and code questions under a server-authoritative timer, and prepare their CV and portfolio. Freemium: practice runs on a rolling token balance, the AI-assisted document builder sits behind payment.",
+    "id": "Platform web independen — bukan produk resmi Apple — tempat kandidat membaca info seleksi Apple Developer Academy Indonesia, berlatih soal logika dan code di bawah timer yang otoritatif di server, lalu menyiapkan CV dan portofolionya. Freemium: latihan berjalan dengan saldo token bergulir, builder dokumen berbantuan AI ada di balik pembayaran."
+  },
+  "description": {
+    "en": "The product follows one arc: understand the selection, practise and measure yourself, then prepare the documents. Three surfaces carry it — admin-editable info pages, a scored try-out engine, and a CV and portfolio builder where an AI pass tidies the writing and a PDF comes out the other end.\n\nEverything that decides an outcome lives on the server. The client never selects from the questions or options tables at all; a question reaches the browser through a SECURITY DEFINER RPC that strips the answer key, and scoring happens in the database. The deadline of an attempt is written by the server when the attempt starts, so a tampered clock changes nothing, and a background function closes attempts that ran past it.\n\nThe same rule holds for money. Tokens only ever increase through an HMAC-SHA256-signed webhook; the browser redirect after payment credits nothing. Prices and token counts are mapped server-side from a pack id, so the browser sends an id and never an amount. A user's role and account status are immutable from the client, enforced by a database trigger rather than by a form that hides the field.\n\nThe token economy runs without a scheduler. A signup starts at 50 tokens and tops back up to 50 every 72 hours, computed lazily when the balance is read or an attempt starts — and a top-up never lowers a balance, so purchased tokens above 50 are safe. Starting an attempt costs the package's token price; resuming one is free.\n\nSchema changes are file-based across 20 migrations, never made through the Supabase dashboard, so development and production do not drift apart. The quality gate is a single command covering typecheck, lint, unit tests, and a scan for secrets leaking into the client bundle.",
+    "id": "Produknya mengikuti satu alur: pahami seleksinya, latih dan ukur diri, lalu siapkan dokumen. Tiga permukaan yang membawanya — halaman info yang bisa disunting admin, mesin try out berskor, dan builder CV serta portofolio tempat satu tahap AI merapikan tulisan dan sebuah PDF keluar di ujungnya.\n\nSemua yang menentukan hasil hidup di server. Client sama sekali tidak pernah melakukan select ke tabel questions maupun options; sebuah soal sampai ke browser lewat RPC SECURITY DEFINER yang membuang kunci jawaban, dan skoring terjadi di dalam database. Deadline sebuah attempt ditulis server saat attempt dimulai, sehingga jam yang diutak-atik tak mengubah apa pun, dan sebuah fungsi latar menutup attempt yang lewat batas.\n\nAturan yang sama berlaku untuk uang. Token hanya bertambah lewat webhook bertanda tangan HMAC-SHA256; redirect browser setelah pembayaran tidak mengkredit apa pun. Harga dan jumlah token dipetakan di server dari id pack, jadi browser mengirim id dan tak pernah nominal. Role dan status akun pengguna tak bisa diubah dari client, ditegakkan trigger database alih-alih form yang menyembunyikan field.\n\nEkonomi tokennya berjalan tanpa scheduler. Pendaftaran mulai dari 50 token dan terisi ulang ke 50 tiap 72 jam, dihitung lazy saat saldo dibaca atau attempt dimulai — dan pengisian ulang tak pernah menurunkan saldo, sehingga token hasil pembelian di atas 50 aman. Memulai attempt memotong harga token paketnya; melanjutkan attempt gratis.\n\nPerubahan skema berbasis file lewat 20 migrasi, tak pernah lewat dashboard Supabase, agar development dan production tidak melenceng satu sama lain. Gerbang kualitasnya satu perintah yang mencakup typecheck, lint, unit test, dan pemindaian secret yang bocor ke bundle client."
+  },
+  "problem": {
+    "en": "Candidates preparing for the Apple Developer Academy Indonesia selection have no measured way to practise the logic and code section, and the information about the process itself is scattered. A practice platform that scores in the browser is worthless the moment someone opens developer tools — the answer key, the timer, and the balance all have to be out of reach.",
+    "id": "Kandidat yang menyiapkan seleksi Apple Developer Academy Indonesia tidak punya cara terukur untuk berlatih bagian logika dan code, dan informasi soal prosesnya sendiri tersebar. Platform latihan yang menilai di browser jadi tak berharga begitu ada yang membuka developer tools — kunci jawaban, timer, dan saldo semuanya harus berada di luar jangkauan."
+  },
+  "solution": {
+    "en": "Put every decision on the server: questions served through a SECURITY DEFINER RPC without the answer key, scoring inside the database, deadlines written by the server, and tokens credited only by a signature-verified webhook. On top of that sits a freemium loop — a rolling token balance for practice, payment for the AI document builder.",
+    "id": "Menaruh setiap keputusan di server: soal disajikan lewat RPC SECURITY DEFINER tanpa kunci jawaban, skoring di dalam database, deadline ditulis server, dan token hanya dikreditkan webhook yang tanda tangannya diverifikasi. Di atasnya ada loop freemium — saldo token bergulir untuk latihan, pembayaran untuk builder dokumen AI."
+  },
+  "role": {
+    "en": "Full-stack Engineer",
+    "id": "Full-stack Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Built the whole platform solo — Next.js App Router frontend, Postgres schema, RPCs, and Deno edge functions",
+      "Designed the security boundary so the answer key, the attempt deadline, prices, and token balances are all server-owned and unreachable from the client",
+      "Wrote the token economy as a lazy 72-hour rolling top-up that needs no cron job and never lowers a purchased balance",
+      "Integrated SayaBayar as a hosted invoice flow with HMAC-SHA256 webhook verification and an idempotent settlement function",
+      "Built the admin side: users, packages and questions, editable info content, results, payments, templates, traffic, and settings",
+      "Kept schema changes to 20 file-based migrations so development and production never drift",
+      "Set up the quality gate — Vitest units, Playwright end-to-end suites, pgTAP database tests, and a scan for secrets reaching the client bundle"
+    ],
+    "id": [
+      "Membangun seluruh platform sendirian — frontend Next.js App Router, skema Postgres, RPC, dan edge function Deno",
+      "Merancang batas keamanannya agar kunci jawaban, deadline attempt, harga, dan saldo token semuanya milik server dan tak terjangkau dari client",
+      "Menulis ekonomi tokennya sebagai pengisian ulang bergulir 72 jam yang lazy, tanpa perlu cron job dan tak pernah menurunkan saldo hasil pembelian",
+      "Mengintegrasikan SayaBayar sebagai alur hosted invoice dengan verifikasi webhook HMAC-SHA256 dan fungsi settlement yang idempotent",
+      "Membangun sisi admin: pengguna, paket dan soal, konten info yang bisa disunting, hasil, pembayaran, template, traffic, dan pengaturan",
+      "Menjaga perubahan skema tetap di 20 migrasi berbasis file agar development dan production tak pernah melenceng",
+      "Menyiapkan gerbang kualitasnya — unit Vitest, suite end-to-end Playwright, test database pgTAP, dan pemindaian secret yang sampai ke bundle client"
+    ]
+  },
+  "teamSize": 1,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Admin-editable selection info pages served from the database at /info/[slug]",
+      "Logic and code try-outs with autosaved answers, a server-set deadline, and automatic scoring",
+      "Questions delivered without their answer key — the client never reads the questions or options tables",
+      "One ongoing attempt per user per package, held by a partial unique index",
+      "Rolling token balance: 50 at signup, topped back up to 50 every 72 hours, computed without a scheduler",
+      "Token packs of 50, 100, and 500 at Rp10,000, Rp20,000, and Rp80,000",
+      "CV and portfolio builder with an AI pass that tidies wording without adding content, and a private PDF export",
+      "Admin panel covering users, packages, questions, content, results, payments, templates, traffic, and settings",
+      "Built-in traffic analytics — page views and login events with admin summaries",
+      "Environment-driven feature flags that gate premium, signup, AI refinement, and PDF generation as UX valves rather than security boundaries"
+    ],
+    "id": [
+      "Halaman info seleksi yang bisa disunting admin, disajikan dari database di /info/[slug]",
+      "Try out logika dan code dengan jawaban tersimpan otomatis, deadline yang diset server, dan skoring otomatis",
+      "Soal dikirim tanpa kunci jawabannya — client tak pernah membaca tabel questions maupun options",
+      "Satu attempt berjalan per pengguna per paket, dijaga partial unique index",
+      "Saldo token bergulir: 50 saat daftar, terisi ulang ke 50 tiap 72 jam, dihitung tanpa scheduler",
+      "Pack token 50, 100, dan 500 seharga Rp10.000, Rp20.000, dan Rp80.000",
+      "Builder CV dan portofolio dengan tahap AI yang merapikan kalimat tanpa menambah isi, plus ekspor PDF privat",
+      "Panel admin yang mencakup pengguna, paket, soal, konten, hasil, pembayaran, template, traffic, dan pengaturan",
+      "Analitik traffic bawaan — page view dan event login dengan ringkasan untuk admin",
+      "Feature flag berbasis environment yang mengatur premium, pendaftaran, perapian AI, dan pembuatan PDF sebagai katup UX, bukan batas keamanan"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "A practice platform is worthless if the answer key is reachable from the browser, and row-level security alone still means the client holds a handle on the options table.",
+        "id": "Platform latihan tak berharga kalau kunci jawaban bisa dijangkau dari browser, dan row-level security saja tetap berarti client memegang pegangan ke tabel options."
+      },
+      "solution": {
+        "en": "The client never selects from questions or options at all. A SECURITY DEFINER RPC assembles the questions for an attempt with the correctness flag stripped, and scoring runs in a database function, so the key never leaves the server.",
+        "id": "Client sama sekali tidak pernah melakukan select ke questions atau options. Sebuah RPC SECURITY DEFINER menyusun soal untuk satu attempt dengan penanda jawaban benar dibuang, dan skoring berjalan di fungsi database, sehingga kuncinya tak pernah meninggalkan server."
+      }
+    },
+    {
+      "problem": {
+        "en": "A timer that lives in the browser can be paused, rewound, or reloaded away, and a scored try-out has to mean something.",
+        "id": "Timer yang hidup di browser bisa dijeda, dimundurkan, atau dihilangkan dengan reload, sementara try out berskor harus punya arti."
+      },
+      "solution": {
+        "en": "The deadline is written by the server when an attempt starts, the browser only renders a countdown against it, and a separate function closes attempts that ran past their deadline.",
+        "id": "Deadline ditulis server saat attempt dimulai, browser hanya menggambar hitung mundur terhadapnya, dan sebuah fungsi terpisah menutup attempt yang lewat deadline-nya."
+      }
+    },
+    {
+      "problem": {
+        "en": "Crediting tokens on the post-payment redirect is the easiest way to hand out free tokens — anyone can visit a success URL, and a gateway will happily retry a webhook.",
+        "id": "Mengkredit token pada redirect setelah pembayaran adalah cara termudah membagikan token gratis — siapa pun bisa membuka URL sukses, dan gateway dengan senang hati mengirim ulang webhook."
+      },
+      "solution": {
+        "en": "The webhook verifies its HMAC-SHA256 signature before doing anything else, finds the row by gateway reference, and calls a service-role-only settlement function that is idempotent, so a replay is a no-op. The redirect credits nothing.",
+        "id": "Webhook memverifikasi tanda tangan HMAC-SHA256-nya sebelum melakukan apa pun, mencari baris lewat gateway reference, lalu memanggil fungsi settlement khusus service role yang idempotent, sehingga pengiriman ulang tak berefek. Redirect-nya tidak mengkredit apa pun."
+      }
+    },
+    {
+      "problem": {
+        "en": "If the browser sends an amount, the browser decides the price; if it can write its own profile row, it decides its own role and premium status.",
+        "id": "Kalau browser mengirim nominal, browser yang menentukan harga; kalau ia bisa menulis baris profilnya sendiri, ia menentukan role dan status premiumnya sendiri."
+      },
+      "solution": {
+        "en": "Prices and token counts are mapped server-side from a pack id, so the browser only ever sends an id. Role and account status are held immutable for the client by a database trigger, not by hiding a field in a form.",
+        "id": "Harga dan jumlah token dipetakan di server dari id pack, jadi browser hanya pernah mengirim id. Role dan status akun dibuat tak bisa diubah client oleh trigger database, bukan dengan menyembunyikan field di form."
+      }
+    },
+    {
+      "problem": {
+        "en": "A rolling free-token grant usually means a scheduled job, and a naive top-up would wipe out tokens a user had actually paid for.",
+        "id": "Pemberian token gratis yang bergulir biasanya berarti job terjadwal, dan pengisian ulang yang naif akan menghapus token yang sebenarnya sudah dibayar pengguna."
+      },
+      "solution": {
+        "en": "The top-up is computed lazily whenever the balance is read or an attempt starts, so no cron is needed, and it only ever raises a balance toward 50 — a purchased balance above that is left alone.",
+        "id": "Pengisian ulangnya dihitung lazy setiap saldo dibaca atau attempt dimulai, sehingga tak butuh cron, dan ia hanya pernah menaikkan saldo menuju 50 — saldo hasil pembelian di atas itu dibiarkan."
+      }
+    },
+    {
+      "problem": {
+        "en": "An AI writing pass on a CV can quietly invent experience the candidate never had, and the model key has to live somewhere.",
+        "id": "Tahap penulisan AI pada CV bisa diam-diam mengarang pengalaman yang tak pernah dimiliki kandidat, dan kunci modelnya harus tinggal di suatu tempat."
+      },
+      "solution": {
+        "en": "The key lives only inside an edge function, which authenticates the caller, gates on premium, caps the payload, and passes the result through a guard that permits tidying but not added content.",
+        "id": "Kuncinya hanya hidup di dalam sebuah edge function, yang mengautentikasi pemanggil, menyaring premium, membatasi payload, dan melewatkan hasilnya ke guard yang mengizinkan perapian tapi bukan penambahan isi."
+      }
+    }
+  ],
+  "impact": [
+    {
+      "metric": {
+        "en": "File-based migrations",
+        "id": "Migrasi berbasis file"
+      },
+      "value": "20",
+      "delta": null,
+      "note": {
+        "en": "No schema change is made through the Supabase dashboard, so development and production do not drift",
+        "id": "Tak ada perubahan skema lewat dashboard Supabase, sehingga development dan production tidak melenceng"
+      }
+    },
+    {
+      "metric": {
+        "en": "Edge functions",
+        "id": "Edge function"
+      },
+      "value": "4",
+      "delta": null,
+      "note": {
+        "en": "AI refinement, payment creation, signed payment webhook, and PDF generation",
+        "id": "Perapian AI, pembuatan pembayaran, webhook pembayaran bertanda tangan, dan pembuatan PDF"
+      }
+    },
+    {
+      "metric": {
+        "en": "Test suites",
+        "id": "Suite test"
+      },
+      "value": "9 + 6 + 5",
+      "delta": null,
+      "note": {
+        "en": "Nine Vitest unit files, six Playwright end-to-end suites, and five pgTAP database suites",
+        "id": "Sembilan file unit Vitest, enam suite end-to-end Playwright, dan lima suite database pgTAP"
+      }
+    },
+    {
+      "metric": {
+        "en": "Token packs",
+        "id": "Pack token"
+      },
+      "value": "50 / 100 / 500",
+      "delta": null,
+      "note": {
+        "en": "Priced at Rp10,000, Rp20,000, and Rp80,000",
+        "id": "Dihargai Rp10.000, Rp20.000, dan Rp80.000"
+      }
+    },
+    {
+      "metric": {
+        "en": "Free token refresh",
+        "id": "Penyegaran token gratis"
+      },
+      "value": "72h",
+      "delta": null,
+      "note": {
+        "en": "Balance rolls back up to 50, computed lazily with no scheduled job",
+        "id": "Saldo bergulir naik kembali ke 50, dihitung lazy tanpa job terjadwal"
+      }
+    }
+  ],
+  "lessons": {
+    "en": [
+      "Anything that decides an outcome — the answer key, the deadline, the price, the balance — has to be owned by the server, not hidden by the client.",
+      "Feature flags are a UX and capacity valve, never a security boundary; the boundary has to hold with every flag switched on.",
+      "A lazy computation at read time replaced a scheduled job entirely, and removed a whole class of drift between what a cron ran and what a user sees.",
+      "Idempotency is cheaper to design in than to retrofit — a payment gateway will replay a webhook, and the settlement path has to treat that as normal."
+    ],
+    "id": [
+      "Apa pun yang menentukan hasil — kunci jawaban, deadline, harga, saldo — harus dimiliki server, bukan sekadar disembunyikan client.",
+      "Feature flag adalah katup UX dan kapasitas, tak pernah batas keamanan; batasnya harus tetap kuat dengan semua flag menyala.",
+      "Sebuah perhitungan lazy saat pembacaan sepenuhnya menggantikan job terjadwal, dan menghapus satu kelas penyimpangan antara apa yang dijalankan cron dan apa yang dilihat pengguna.",
+      "Idempotensi lebih murah dirancang sejak awal ketimbang ditambal belakangan — gateway pembayaran akan mengirim ulang webhook, dan jalur settlement harus menganggapnya normal."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod"
+    ],
+    "backend": [
+      "Supabase Edge Functions",
+      "Deno",
+      "PL/pgSQL"
+    ],
+    "database": [
+      "PostgreSQL",
+      "Supabase Auth",
+      "Supabase Storage"
+    ],
+    "infra": [
+      "Vercel",
+      "Supabase",
+      "GitHub Actions"
+    ],
+    "tools": [
+      "ESLint",
+      "Prettier",
+      "Husky",
+      "lint-staged",
+      "Vitest",
+      "Playwright",
+      "pgTAP"
+    ]
+  },
+  "architecture": {
+    "en": "A Next.js App Router frontend split into four route groups — the signed-in app, auth, admin, and public pages — against a Supabase backend where the security actually lives. Reads and writes that matter go through SECURITY DEFINER RPCs rather than table access: starting an attempt, fetching its questions, autosaving an answer, submitting and scoring, refreshing the token balance, creating and settling a payment. Row-level security covers the rest, with admin authorisation and an audit trail as their own functions. Four Deno edge functions hold everything that needs a secret or an external call — the AI proxy, payment creation, the signed payment webhook, and PDF generation into a private bucket. Code is organised by feature rather than by layer, and schema lives in 20 ordered migrations deployed by GitHub Actions alongside the Vercel frontend.",
+    "id": "Frontend Next.js App Router yang dibagi ke empat route group — aplikasi untuk yang sudah masuk, auth, admin, dan halaman publik — di atas backend Supabase tempat keamanannya benar-benar tinggal. Baca dan tulis yang penting lewat RPC SECURITY DEFINER alih-alih akses tabel: memulai attempt, mengambil soalnya, menyimpan jawaban otomatis, mengirim dan menilai, menyegarkan saldo token, membuat dan menyelesaikan pembayaran. Row-level security menutup sisanya, dengan otorisasi admin dan audit trail sebagai fungsinya sendiri. Empat edge function Deno memegang semua yang butuh secret atau panggilan eksternal — proxy AI, pembuatan pembayaran, webhook pembayaran bertanda tangan, dan pembuatan PDF ke bucket privat. Kode ditata per fitur alih-alih per lapisan, dan skemanya hidup di 20 migrasi berurutan yang dideploy GitHub Actions bersama frontend Vercel."
+  },
+  "integrations": [
+    "SayaBayar",
+    "Google OAuth",
+    "Supabase"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/logic-and-code/thumb.webp",
+      "width": 2400,
+      "height": 1260,
+      "alt": {
+        "en": "Logic & Code title card on a grid, with side panels reading Materi, a 90:00 timer, and server-side scoring",
+        "id": "Kartu judul Logic & Code di atas grid, dengan panel samping bertuliskan Materi, timer 90:00, dan penilaian server"
+      },
+      "caption": {
+        "en": "An independent try-out platform at gerbangdev.com — structured material, a server-set timer, and scoring the browser cannot reach.",
+        "id": "Platform try out independen di gerbangdev.com — materi terstruktur, timer yang diset server, dan skor yang tak terjangkau browser."
+      }
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    },
+    "accentColor": "#E61919"
+  },
+  "links": {
+    "demo": "https://gerbangdev.com",
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "nextjs",
+    "typescript",
+    "supabase",
+    "postgres",
+    "row-level-security",
+    "edge-functions",
+    "payments",
+    "edtech",
+    "freemium"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-06-30",
+  "updatedAt": "2026-09-11"
+}

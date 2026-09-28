@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "balive",
+  "title": {
+    "en": "Balive",
+    "id": "Balive"
+  },
+  "subtitle": {
+    "en": "Boarding house search in Bali with a swipe-card interaction.",
+    "id": "Pencarian kos di Bali dengan interaksi kartu geser."
+  },
+  "category": "mobile",
+  "type": "academic",
+  "status": "concept",
+  "featured": true,
+  "order": 1,
+  "startDate": "2026-03-01",
+  "endDate": null,
+  "summary": {
+    "en": "A boarding house finder for Bali that borrows the swipe-card interaction from dating apps. Built for Challenge Zero at the Apple Developer Academy, then extended beyond the two screens the brief required.",
+    "id": "Aplikasi pencari kos di Bali yang meminjam interaksi kartu geser dari aplikasi kencan. Dibuat untuk Challenge Zero di Apple Developer Academy, lalu dikembangkan melampaui dua layar yang diminta tugas."
+  },
+  "description": {
+    "en": "Balive started as Challenge Zero at the Apple Developer Academy, where the brief was to build an app around a problem you had personally run into. The required scope was two screens. After meeting that, the app was extended into a fuller browsing experience.\n\nThe interaction model is deliberately borrowed from dating apps: listings arrive one card at a time and are dismissed with a swipe, which makes scanning a long list of boarding houses far faster than reading a vertical feed. Tapping a card opens a detail view for that place.\n\nThe listings were gathered by hand rather than pulled from a service — no usable dataset covers boarding houses around the academy, so the places in the app came from surveying the area in person. Of the build itself, the swipe-card mechanic took the most work.",
+    "id": "Balive bermula sebagai Challenge Zero di Apple Developer Academy, dengan tugas membangun aplikasi dari masalah yang benar-benar pernah dialami sendiri. Cakupan yang diminta hanya dua layar. Setelah itu terpenuhi, aplikasinya dikembangkan menjadi pengalaman penelusuran yang lebih utuh.\n\nModel interaksinya sengaja meminjam aplikasi kencan: daftar kos muncul satu kartu dalam satu waktu dan disingkirkan dengan geseran, sehingga menyisir banyak pilihan jauh lebih cepat dibanding membaca feed vertikal. Mengetuk kartu membuka halaman detail kos tersebut.\n\nData kosnya dikumpulkan sendiri alih-alih ditarik dari sebuah layanan — tidak ada kumpulan data yang mencakup kos di sekitar academy, jadi tempat-tempat di aplikasinya berasal dari survei langsung ke lapangan. Dari sisi pembangunannya, mekanik swipe card yang paling menyita usaha."
+  },
+  "problem": {
+    "en": "Finding a decent boarding house in Bali is difficult, especially for someone arriving for the first time. Searching before the academy started mostly surfaced places that were expensive, far from campus, or both.",
+    "id": "Mencari kos yang layak di Bali itu sulit, apalagi bagi pendatang baru. Pencarian menjelang masuk academy kebanyakan hanya memunculkan kos yang mahal, jauh dari kampus, atau keduanya."
+  },
+  "solution": {
+    "en": "A swipe-card browsing flow that makes scanning many listings quick, backed by a detail view for each place. The intended audience is the next Apple Developer Academy cohort, who will face the same search.",
+    "id": "Alur penelusuran kartu geser yang membuat penyisiran banyak pilihan jadi cepat, ditopang halaman detail untuk tiap kos. Sasarannya adalah cohort Apple Developer Academy berikutnya, yang akan menghadapi pencarian yang sama."
+  },
+  "role": {
+    "en": "Solo iOS Developer",
+    "id": "iOS Developer, dikerjakan sendiri"
+  },
+  "responsibilities": {
+    "en": [
+      "Designed and built the entire app end to end",
+      "Defined the swipe-card browsing model as the core interaction"
+    ],
+    "id": [
+      "Merancang dan membangun seluruh aplikasi dari awal sampai akhir",
+      "Menetapkan model penelusuran kartu geser sebagai interaksi inti"
+    ]
+  },
+  "teamSize": 1,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Swipe-card browsing of boarding house listings",
+      "Home screen listing available places",
+      "Detail screen for each boarding house"
+    ],
+    "id": [
+      "Penelusuran kos dengan kartu geser",
+      "Layar utama berisi daftar kos yang tersedia",
+      "Layar detail untuk tiap kos"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "A boarding-house finder needs listings, and no usable dataset existed for the area around the academy in Bali.",
+        "id": "Aplikasi pencari kos butuh data kos, dan tidak ada kumpulan data yang bisa dipakai untuk kawasan sekitar academy di Bali."
+      },
+      "solution": {
+        "en": "Collected the listings by hand — surveying boarding houses around the academy in person and entering them into the app.",
+        "id": "Mengumpulkan datanya sendiri — menyurvei kos-kosan di sekitar academy secara langsung lalu memasukkannya ke aplikasi."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "Building for a problem you have yourself gives you the dataset: the listings came from walking the area around the academy rather than from an API.",
+      "The brief only asked for two screens. Carrying it past that was a choice, and the swipe-card mechanic was where most of the effort went."
+    ],
+    "id": [
+      "Membangun untuk masalah yang kamu alami sendiri sekaligus memberimu datanya: data kosnya berasal dari menyusuri kawasan sekitar academy, bukan dari sebuah API.",
+      "Tugasnya hanya meminta dua layar. Melanjutkannya melewati itu adalah pilihan, dan mekanik swipe card-lah yang menyerap paling banyak usaha."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "backend": [],
+    "database": [
+      "Supabase"
+    ],
+    "infra": [
+      "Supabase"
+    ],
+    "tools": []
+  },
+  "architecture": null,
+  "integrations": [],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/balive/thumb.webp",
+      "alt": {
+        "en": "Balive swipe-card screen",
+        "id": "Layar kartu geser Balive"
+      },
+      "width": 1280,
+      "height": 720
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": "https://github.com/umarmuhdhor/Balive",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ios",
+    "swiftui",
+    "supabase",
+    "apple-developer-academy"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-03-01",
+  "updatedAt": "2026-09-06"
+}

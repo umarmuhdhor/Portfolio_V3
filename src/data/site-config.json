@@ -1,0 +1,286 @@
+{
+  "$schema": "../schema/site-config.schema.json",
+  "site": {
+    "title": {
+      "en": "Umar Muhdhor — iOS Developer & AI Automation",
+      "id": "Umar Muhdhor — iOS Developer & AI Automation"
+    },
+    "description": {
+      "en": "Portfolio of Umar Muhdhor, a mobile developer working with iOS, Flutter, and Dart.",
+      "id": "Portofolio Umar Muhdhor, mobile developer yang bekerja dengan iOS, Flutter, dan Dart."
+    },
+    "keywords": {
+      "en": [
+        "mobile developer",
+        "ios developer",
+        "ai automation",
+        "flutter",
+        "dart",
+        "swift",
+        "umar muhdhor"
+      ],
+      "id": [
+        "mobile developer",
+        "developer ios",
+        "ai automation",
+        "otomasi ai",
+        "flutter",
+        "dart",
+        "swift",
+        "umar muhdhor"
+      ]
+    },
+    "url": "",
+    "defaultLocale": "en",
+    "favicon": "assets/images/icons/favicon.svg",
+    "defaultOgImage": "assets/images/profile/og.webp"
+  },
+  "theme": {
+    "colorScheme": "system",
+    "accent": "#0a84ff",
+    "background": {
+      "light": "#ffffff",
+      "dark": "#0a0a0a"
+    },
+    "foreground": {
+      "light": "#0a0a0a",
+      "dark": "#fafafa"
+    },
+    "fonts": {
+      "heading": "",
+      "body": "",
+      "mono": ""
+    },
+    "radius": "0.5rem"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "enabled": true,
+      "order": 1,
+      "heading": {
+        "en": "",
+        "id": ""
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": {
+        "label": {
+          "en": "Get in touch",
+          "id": "Hubungi saya"
+        },
+        "href": "mailto:muhdhorcs@gmail.com"
+      }
+    },
+    {
+      "id": "about",
+      "enabled": true,
+      "order": 2,
+      "heading": {
+        "en": "About",
+        "id": "Tentang"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "skills",
+      "enabled": true,
+      "order": 3,
+      "heading": {
+        "en": "Skills",
+        "id": "Keahlian"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "projects",
+      "enabled": true,
+      "order": 4,
+      "heading": {
+        "en": "Projects",
+        "id": "Project"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": {
+        "label": {
+          "en": "View all",
+          "id": "Lihat semua"
+        },
+        "href": "/projects"
+      }
+    },
+    {
+      "id": "experience",
+      "enabled": true,
+      "order": 5,
+      "heading": {
+        "en": "Experience",
+        "id": "Pengalaman"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "education",
+      "enabled": true,
+      "order": 6,
+      "heading": {
+        "en": "Education",
+        "id": "Pendidikan"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "certifications",
+      "enabled": false,
+      "order": 7,
+      "heading": {
+        "en": "Certifications",
+        "id": "Sertifikasi"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "testimonials",
+      "enabled": false,
+      "order": 8,
+      "heading": {
+        "en": "Testimonials",
+        "id": "Testimoni"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "articles",
+      "enabled": false,
+      "order": 9,
+      "heading": {
+        "en": "Writing",
+        "id": "Tulisan"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "speaking",
+      "enabled": false,
+      "order": 10,
+      "heading": {
+        "en": "Speaking",
+        "id": "Speaking"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "publications",
+      "enabled": true,
+      "order": 11,
+      "heading": {
+        "en": "Publications",
+        "id": "Publikasi"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "awards",
+      "enabled": true,
+      "order": 12,
+      "heading": {
+        "en": "Awards",
+        "id": "Penghargaan"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "openSource",
+      "enabled": false,
+      "order": 13,
+      "heading": {
+        "en": "Open Source",
+        "id": "Open Source"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": null
+    },
+    {
+      "id": "contact",
+      "enabled": true,
+      "order": 14,
+      "heading": {
+        "en": "Contact",
+        "id": "Kontak"
+      },
+      "subheading": {
+        "en": "",
+        "id": ""
+      },
+      "cta": {
+        "label": {
+          "en": "Email me",
+          "id": "Kirim email"
+        },
+        "href": "mailto:muhdhorcs@gmail.com"
+      }
+    }
+  ],
+  "analytics": {
+    "provider": null,
+    "id": null
+  },
+  "features": {
+    "darkModeToggle": true,
+    "projectFilter": true,
+    "resumeDownload": true,
+    "i18n": true
+  },
+  "locales": [
+    "en",
+    "id"
+  ]
+}

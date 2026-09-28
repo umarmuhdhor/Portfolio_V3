@@ -1,0 +1,459 @@
+{
+  "$schema": "../schema/skills.schema.json",
+  "categories": [
+    {
+      "id": "language",
+      "label": {
+        "en": "Languages",
+        "id": "Bahasa Pemrograman"
+      },
+      "order": 1
+    },
+    {
+      "id": "framework",
+      "label": {
+        "en": "Frameworks",
+        "id": "Framework"
+      },
+      "order": 2
+    },
+    {
+      "id": "database",
+      "label": {
+        "en": "Databases",
+        "id": "Database"
+      },
+      "order": 3
+    },
+    {
+      "id": "tool",
+      "label": {
+        "en": "Tools & Platforms",
+        "id": "Tools & Platform"
+      },
+      "order": 4
+    },
+    {
+      "id": "ai",
+      "label": {
+        "en": "AI & Automation",
+        "id": "AI & Otomasi"
+      },
+      "order": 5
+    },
+    {
+      "id": "design",
+      "label": {
+        "en": "Design",
+        "id": "Desain"
+      },
+      "order": 6
+    },
+    {
+      "id": "soft",
+      "label": {
+        "en": "Soft Skills",
+        "id": "Soft Skill"
+      },
+      "order": 7
+    }
+  ],
+  "items": [
+    {
+      "id": "dart",
+      "name": "Dart",
+      "category": "language",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 1,
+      "note": null,
+      "yearsOfExperience": 2
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "language",
+      "level": 3,
+      "yearsOfExperience": 3,
+      "icon": null,
+      "featured": false,
+      "order": 2,
+      "note": {
+        "en": "Taught OOP as assistant lecturer",
+        "id": "Mengajar PBO sebagai asisten dosen"
+      }
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "category": "language",
+      "level": 3,
+      "yearsOfExperience": 3,
+      "icon": null,
+      "featured": false,
+      "order": 3,
+      "note": null
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "language",
+      "level": 3,
+      "icon": null,
+      "featured": true,
+      "order": 4,
+      "note": {
+        "en": "Taught introductory programming; scripting and automation",
+        "id": "Mengajar pemrograman dasar; scripting dan otomasi"
+      },
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "category": "language",
+      "level": 3,
+      "icon": null,
+      "featured": true,
+      "order": 5,
+      "note": {
+        "en": "Apple Developer Academy, 2026",
+        "id": "Apple Developer Academy, 2026"
+      },
+      "yearsOfExperience": 0.5
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "category": "framework",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 6,
+      "note": null,
+      "yearsOfExperience": 2
+    },
+    {
+      "id": "arkit",
+      "name": "ARKit",
+      "category": "framework",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 7,
+      "note": {
+        "en": "Gaze pipeline in Load Away",
+        "id": "Pipeline arah pandang di Load Away"
+      }
+    },
+    {
+      "id": "healthkit",
+      "name": "HealthKit",
+      "category": "framework",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 8,
+      "note": {
+        "en": "Live heart rate via workout session",
+        "id": "Detak jantung langsung lewat sesi workout"
+      }
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "category": "framework",
+      "level": 3,
+      "icon": null,
+      "featured": true,
+      "order": 9,
+      "note": null,
+      "yearsOfExperience": 2
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "framework",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 10,
+      "note": null,
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "react-native",
+      "name": "React Native",
+      "category": "framework",
+      "level": 3,
+      "yearsOfExperience": 3,
+      "icon": null,
+      "featured": false,
+      "order": 11,
+      "note": {
+        "en": "Timedoor Academy bootcamp, 2022-2023",
+        "id": "Bootcamp Timedoor Academy, 2022-2023"
+      }
+    },
+    {
+      "id": "watchos",
+      "name": "watchOS",
+      "category": "framework",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 12,
+      "note": {
+        "en": "Companion app with WatchConnectivity",
+        "id": "Aplikasi pendamping dengan WatchConnectivity"
+      }
+    },
+    {
+      "id": "flutterflow",
+      "name": "FlutterFlow",
+      "category": "framework",
+      "level": 2,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 13,
+      "note": {
+        "en": "PELICAN, first freelance project",
+        "id": "PELICAN, project freelance pertama"
+      }
+    },
+    {
+      "id": "strapi",
+      "name": "Strapi",
+      "category": "framework",
+      "level": 2,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 14,
+      "note": {
+        "en": "Backend for Suwotify, 2023",
+        "id": "Backend untuk Suwotify, 2023"
+      }
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "category": "database",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 15,
+      "note": null
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "category": "database",
+      "level": 3,
+      "yearsOfExperience": 2,
+      "icon": null,
+      "featured": false,
+      "order": 16,
+      "note": {
+        "en": "Laravel projects, 2024",
+        "id": "Project Laravel, 2024"
+      }
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "database",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 17,
+      "note": {
+        "en": "Balive, 2026",
+        "id": "Balive, 2026"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "tool",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 18,
+      "note": null,
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "rest-api",
+      "name": "REST API",
+      "category": "tool",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 19,
+      "note": null,
+      "yearsOfExperience": 3
+    },
+    {
+      "id": "websocket",
+      "name": "WebSocket",
+      "category": "tool",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 20,
+      "note": {
+        "en": "Real-time client in PopShot!!",
+        "id": "Klien real-time di PopShot!!"
+      }
+    },
+    {
+      "id": "claude-api",
+      "name": "Claude API",
+      "category": "ai",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 21,
+      "note": null
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "ai",
+      "level": 4,
+      "icon": null,
+      "featured": true,
+      "order": 22,
+      "note": null
+    },
+    {
+      "id": "keras",
+      "name": "Keras",
+      "category": "ai",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 23,
+      "note": null
+    },
+    {
+      "id": "mcp",
+      "name": "MCP (Model Context Protocol)",
+      "category": "ai",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 24,
+      "note": null
+    },
+    {
+      "id": "scikit-learn",
+      "name": "scikit-learn",
+      "category": "ai",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 25,
+      "note": {
+        "en": "SVM, SMOTE, cross validation",
+        "id": "SVM, SMOTE, cross validation"
+      }
+    },
+    {
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "category": "ai",
+      "level": 3,
+      "yearsOfExperience": 1,
+      "icon": null,
+      "featured": false,
+      "order": 26,
+      "note": {
+        "en": "Undergraduate thesis, MobileNet feature extraction",
+        "id": "Skripsi, ekstraksi fitur MobileNet"
+      }
+    },
+    {
+      "id": "ui-ux-design",
+      "name": "UI/UX Design",
+      "category": "design",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 27,
+      "note": null,
+      "yearsOfExperience": 2
+    },
+    {
+      "id": "event-management",
+      "name": "Event Management",
+      "category": "soft",
+      "level": 4,
+      "icon": null,
+      "featured": false,
+      "order": 28,
+      "note": {
+        "en": "Online competition for 1,500+ participants",
+        "id": "Kompetisi daring untuk 1.500+ peserta"
+      }
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "category": "soft",
+      "level": 4,
+      "icon": null,
+      "featured": false,
+      "order": 29,
+      "note": {
+        "en": "Chaired the campus representative organisation",
+        "id": "Ketua organisasi representative kampus"
+      }
+    },
+    {
+      "id": "public-speaking",
+      "name": "Public Speaking",
+      "category": "soft",
+      "level": 4,
+      "icon": null,
+      "featured": false,
+      "order": 30,
+      "note": {
+        "en": "Anniversary event and formal facilitation",
+        "id": "Acara ulang tahun organisasi dan fasilitasi formal"
+      }
+    },
+    {
+      "id": "teaching-mentoring",
+      "name": "Teaching & Mentoring",
+      "category": "soft",
+      "level": 4,
+      "icon": null,
+      "featured": false,
+      "order": 31,
+      "note": {
+        "en": "Assistant lecturer for 50+ students",
+        "id": "Asisten dosen untuk 50+ mahasiswa"
+      }
+    },
+    {
+      "id": "team-collaboration",
+      "name": "Team Collaboration",
+      "category": "soft",
+      "level": 3,
+      "icon": null,
+      "featured": false,
+      "order": 32,
+      "note": null
+    }
+  ]
+}

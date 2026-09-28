@@ -1,14 +1,52 @@
 import RouteShell from '@/components/RouteShell';
-import { ABOUT, CAPABILITIES, INTRO, PEOPLE, img } from '@/lib/dummy';
+import { ABOUT, AWARDS, CAPABILITIES, EDUCATION, EXPERIENCE, PEOPLE, PUBLICATION, img } from '@/lib/dummy';
 import '../page.css';
 import '../work/work.css';
 
 export const metadata = { title: 'About' };
 
-/** /about — the studio, the practice, and the people behind it. */
+/** A labelled list of dated rows — experience, education, awards. */
+function Record({
+  id,
+  label,
+  rows,
+}: {
+  id: string;
+  label: string;
+  rows: { key: string; aside: string; title: string; detail?: string; href?: string | null }[];
+}) {
+  return (
+    <section className="sec" data-role="section" id={id}>
+      <div className="ctr" data-role="container">
+        <div className="grd" data-role="grid">
+          <h2 className="fn-h3 sec-caps__heading" data-role="h3" data-split>
+            {label}
+          </h2>
+          {rows.map((r) => (
+            <div className="legal__block" data-reveal key={r.key}>
+              <h3 className="fn-b1">{r.aside}</h3>
+              <div>
+                {r.href ? (
+                  <a className="link fn-h5" href={r.href} rel="noreferrer noopener" target="_blank">
+                    {r.title}
+                  </a>
+                ) : (
+                  <p className="fn-h5">{r.title}</p>
+                )}
+                {r.detail ? <p className="fn-b1">{r.detail}</p> : null}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** /about — the person, the skills, and the record behind the work. */
 export default function About() {
   return (
-    <RouteShell heading="A studio shaped by clarity" label="About">
+    <RouteShell heading="Apps on the device, agents behind them" label="About">
       <section className="sec" data-role="section">
         <div className="ctr" data-role="container">
           <div className="sec-about__lead">
@@ -58,25 +96,47 @@ export default function About() {
         </div>
       </section>
 
+      <Record
+        id="experience"
+        label="Experience"
+        rows={EXPERIENCE.map((e) => ({ key: e.no, aside: e.period, title: e.title, detail: e.company }))}
+      />
+
+      <Record
+        id="education"
+        label="Education"
+        rows={EDUCATION.map((e) => ({ key: e.no, aside: e.period, title: e.title, detail: e.detail }))}
+      />
+
+      {PUBLICATION ? (
+        <Record
+          id="publication"
+          label="Publication"
+          rows={[
+            {
+              key: 'paper',
+              aside: PUBLICATION.year,
+              title: PUBLICATION.title,
+              detail: `${PUBLICATION.authors} — ${PUBLICATION.venue}. ${PUBLICATION.summary}`,
+              href: PUBLICATION.href,
+            },
+          ]}
+        />
+      ) : null}
+
+      <Record
+        id="awards"
+        label="Awards"
+        rows={AWARDS.map((a) => ({ key: a.no, aside: a.detail, title: a.title, href: a.href }))}
+      />
+
       <section className="sec" data-role="section" id="team">
         <div className="ctr" data-role="container">
           <div className="sec-people__intro">
-            <h2 className="fn-b1 f-sf sec-people__label">Team</h2>
+            <h2 className="fn-b1 f-sf sec-people__label">Record</h2>
             <h3 className="fn-h3 lh-open sec-people__heading" data-split>
               {PEOPLE.heading.join(' ')}
             </h3>
-          </div>
-
-          <div className="grd sec-about__cols" data-role="grid">
-            {INTRO.experience.map((e, i) => (
-              <div className={`sec-about__col sec-about__col--${i % 2 === 0 ? 'a' : 'b'}`} data-reveal key={e.no}>
-                <h3 className="fn-b1 f-sf sec-about__col-no">{e.no}</h3>
-                <div className="sec-about__col-body">
-                  <p className="fn-b1">{e.title}</p>
-                  <p className="fn-b2">{e.period}</p>
-                </div>
-              </div>
-            ))}
           </div>
 
           <div className="sec-people__band">

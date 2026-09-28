@@ -1,0 +1,261 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "hisplora",
+  "title": {
+    "en": "Hisplora",
+    "id": "Hisplora"
+  },
+  "subtitle": {
+    "en": "Location-based cultural heritage quests for first-time travellers.",
+    "id": "Quest cagar budaya berbasis lokasi untuk pelancong yang baru pertama datang."
+  },
+  "category": "mobile",
+  "type": "academic",
+  "status": "completed",
+  "featured": true,
+  "order": 4,
+  "startDate": "2026-07-20",
+  "endDate": "2026-08-28",
+  "summary": {
+    "en": "A story-led cultural companion that turns a heritage visit into a walking quest. Travellers follow physical checkpoints, unlock lore at each stop, and finish with a shareable recap of the route.",
+    "id": "Companion budaya berbasis cerita yang mengubah kunjungan cagar budaya menjadi quest jalan kaki. Pelancong menyusuri checkpoint fisik, membuka lore di tiap titik, dan menutupnya dengan rekap perjalanan yang bisa dibagikan."
+  },
+  "description": {
+    "en": "Hisplora is a location-based cultural companion for travellers — not a tourist map and not a history encyclopedia, but a story-led experience. A quest strings together physical checkpoints such as a puri, a pura, a market, or a monument. At each stop the app unlocks lore, asks for a light task as proof of visit, and at the end produces a recap the traveller can keep or share.\n\nThe design came out of design-thinking research: interviews with domestic and international tourists plus a storyteller from Kultara. Two problems came up consistently. Heritage sites feel flat — travellers know a place is historic but not why, so the visit becomes a photo checklist. And the information that does exist is scattered and hard to trust: thin plaques, generic search results, and human guides who are not always available or suited to travellers who prefer to explore on their own.\n\nThe distinguishing mechanic is what the team called the history connector. Each site has a complete story that stands on its own, but visiting several sites along one quest route makes those stories link into a single narrative that moves through layers of time toward a historical climax. Because that ordering is the story logic — distant past, recent past, present, climax — checkpoints in a quest are strictly linear rather than an on-demand guide.\n\nThe worked example is \"Jejak Terakhir Badung\" in Denpasar: five checkpoints from Puri Pemecutan through Pura Maospahit, Pasar Badung, and Pasar Kumbasari to Catur Muka, roughly 2.2 km on foot. The narrative runs from the birth of the Pemecutan kingdom through Majapahit-era ancestry and everyday market life to the 1906 puputan, closing symbolically at Catur Muka. The route is not imaginary — a local cultural tour community walked it in 2025.",
+    "id": "Hisplora adalah companion budaya berbasis lokasi untuk pelancong — bukan peta wisata, bukan pula ensiklopedia sejarah, melainkan pengalaman yang dipimpin cerita. Satu quest merangkai checkpoint fisik seperti puri, pura, pasar, atau monumen. Di tiap titik aplikasi membuka lore, meminta task ringan sebagai bukti kunjungan, dan di akhir menghasilkan rekap yang bisa disimpan atau dibagikan pelancong.\n\nDesainnya lahir dari riset design thinking: wawancara dengan turis domestik dan mancanegara ditambah seorang storyteller dari Kultara. Dua masalah muncul konsisten. Situs cagar budaya terasa datar — pelancong tahu suatu tempat bersejarah tapi tidak tahu kenapa, sehingga kunjungannya berubah jadi checklist foto. Lalu informasi yang tersedia tercerai-berai dan sulit dipercaya: plakat seadanya, hasil pencarian generik, dan pemandu manusia yang tak selalu ada atau cocok bagi pelancong yang ingin menjelajah mandiri.\n\nMekanik pembedanya disebut tim sebagai penghubung sejarah. Tiap situs punya cerita utuh yang berdiri sendiri, tapi mengunjungi beberapa situs dalam satu rute quest membuat cerita-cerita itu menyambung jadi satu narasi yang bergerak melintasi lapisan waktu menuju satu klimaks historis. Karena urutan itulah logika ceritanya — masa lalu jauh, masa lalu dekat, masa kini, klimaks — checkpoint dalam satu quest bersifat linear, bukan pemandu on-demand.\n\nContoh garapannya adalah \"Jejak Terakhir Badung\" di Denpasar: lima checkpoint dari Puri Pemecutan melewati Pura Maospahit, Pasar Badung, dan Pasar Kumbasari hingga Catur Muka, sekitar 2,2 km berjalan kaki. Narasinya bergerak dari kelahiran kerajaan Pemecutan, akar leluhur era Majapahit, dan kehidupan pasar sehari-hari, menuju puputan 1906, lalu ditutup secara simbolis di Catur Muka. Rutenya bukan rekaan — komunitas tur budaya lokal pernah menempuhnya pada 2025."
+  },
+  "problem": {
+    "en": "Cultural heritage often feels flat to first-time visitors: they know a place is historic but not its story, so the visit becomes a photo checklist. Existing information is fragmented and hard to trust, while human guides are not always available or suited to independent explorers.",
+    "id": "Cagar budaya sering terasa datar bagi pengunjung pertama kali: mereka tahu suatu tempat bersejarah tapi tidak tahu ceritanya, sehingga kunjungan berubah jadi checklist foto. Informasi yang ada tercerai-berai dan sulit dipercaya, sementara pemandu manusia tak selalu tersedia atau cocok bagi penjelajah mandiri."
+  },
+  "solution": {
+    "en": "Connect tangible sites to their intangible context — stories, traditions, historical events — through a linear walking quest where each checkpoint unlocks a layer of one larger narrative, with badges and a shareable recap as the payoff.",
+    "id": "Menyambungkan situs yang berwujud dengan konteks tak berwujudnya — cerita, tradisi, peristiwa sejarah — lewat quest jalan kaki linear yang tiap checkpoint-nya membuka satu lapis dari narasi besar, dengan badge dan rekap yang bisa dibagikan sebagai imbalannya."
+  },
+  "role": {
+    "en": "iOS Developer, Product, and Content Research",
+    "id": "iOS Developer, Product, dan Riset Konten"
+  },
+  "responsibilities": {
+    "en": [
+      "Wrote the product overview: research synthesis, personas, user flows, feature specification, and technical direction",
+      "Researched and wrote the quest lore, including the \"Jejak Terakhir Badung\" route across five Denpasar checkpoints",
+      "Worked on the iOS application as part of a five-person team"
+    ],
+    "id": [
+      "Menyusun dokumen product overview: sintesis riset, persona, user flow, spesifikasi fitur, dan arah teknis",
+      "Meriset dan menulis lore quest, termasuk rute \"Jejak Terakhir Badung\" yang melintasi lima checkpoint di Denpasar",
+      "Mengerjakan aplikasi iOS sebagai bagian dari tim lima orang"
+    ]
+  },
+  "teamSize": 5,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Map Area showing the quest region, recommended stops along the route, and collected badges",
+      "Three-phase quest system: opening lore and route preview, then clues and checkpoint tasks, then badges and a recap",
+      "Photo tasks as proof of visit at each checkpoint, plus optional side quests",
+      "Auto-composed \"Wrapped\"-style summary card ready to share to social media",
+      "Journal of the Place listing visited sites, per-quest trip summaries, and share history",
+      "History Alert: geofenced ambient notifications when passing a historic site outside an active quest",
+      "Draft saving so an unfinished quest can be resumed later",
+      "Checkpoint mechanics tuned to the character of each place"
+    ],
+    "id": [
+      "Map Area yang menampilkan kawasan quest, tempat rekomendasi di sepanjang rute, dan badge yang sudah dikumpulkan",
+      "Sistem quest tiga fase: lore pembuka dan pratinjau rute, lalu clue dan task checkpoint, lalu badge dan rekap",
+      "Task foto sebagai bukti kunjungan di tiap checkpoint, plus side quest opsional",
+      "Kartu rekap ala \"Wrapped\" yang tersusun otomatis dan siap dibagikan ke media sosial",
+      "Journal of the Place berisi daftar tempat yang dikunjungi, rekap tiap quest, dan riwayat berbagi",
+      "History Alert: notifikasi ambient berbasis geofence saat melewati situs bersejarah di luar quest aktif",
+      "Penyimpanan draft agar quest yang belum selesai bisa dilanjutkan nanti",
+      "Mekanik checkpoint yang disesuaikan dengan karakter tiap tempat"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Several checkpoints sit in active places of worship, where a loud, playful game mechanic would be inappropriate.",
+        "id": "Sebagian checkpoint berada di ruang ibadah aktif, di mana mekanik permainan yang ramai dan jenaka tidak pantas."
+      },
+      "solution": {
+        "en": "Split the mechanics by the character of the place: quiet and respectful at a puri or pura — photo, read the lore, one light question — and more interactive in public space such as markets and squares, with puzzles and scavenger tasks.",
+        "id": "Memisahkan mekanik berdasarkan karakter tempatnya: tenang dan sopan di puri atau pura — foto, baca lore, satu pertanyaan ringan — dan lebih interaktif di ruang publik seperti pasar dan alun-alun, dengan puzzle dan scavenger."
+      }
+    },
+    {
+      "problem": {
+        "en": "Every site needed a story that works alone for a casual visitor, yet the product's whole premise was that the stories connect.",
+        "id": "Tiap situs butuh cerita yang utuh bagi pengunjung sekilas, padahal seluruh premis produknya justru terletak pada cerita yang saling menyambung."
+      },
+      "solution": {
+        "en": "Made each site standalone by default and treated the interconnection as an optional bonus layer that appears when several sites are visited on one route, with checkpoint order fixed because the order is itself the story logic.",
+        "id": "Membuat tiap situs berdiri sendiri secara bawaan dan memperlakukan keterhubungannya sebagai lapisan bonus opsional yang muncul saat beberapa situs disinggahi dalam satu rute, dengan urutan checkpoint dikunci karena urutan itu sendiri adalah logika ceritanya."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "Lore drawn from public sources — official sites, local media, Wikipedia, interviews with caretakers — cannot ship as final fact. Specifics on the ground such as carvings, plaques, real opening hours, and prayer rules have to be validated in person first.",
+      "Walking distance has to be measured with real walking directions rather than a straight-line calculation with a buffer, or the route progress will not match what a visitor actually experiences."
+    ],
+    "id": [
+      "Lore yang diambil dari sumber publik — situs resmi, media lokal, Wikipedia, wawancara juru kunci — tidak bisa langsung dirilis sebagai fakta final. Detail di lapangan seperti ukiran, plakat, jam buka riil, dan aturan sembahyang harus divalidasi langsung lebih dulu.",
+      "Jarak jalan kaki harus diukur dengan rute pejalan kaki sungguhan, bukan perhitungan garis lurus ditambah buffer, kalau tidak progres rutenya tidak akan cocok dengan yang benar-benar dialami pengunjung."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "backend": [],
+    "database": [
+      "SwiftData"
+    ],
+    "infra": [],
+    "tools": [
+      "Figma"
+    ]
+  },
+  "architecture": {
+    "en": "Native iOS in SwiftUI with an MVVM structure. CoreLocation serves two different needs — a radius check that arms the start button inside an active quest, and background geofencing for the ambient History Alert. MapKit renders the map area, UserNotifications delivers the geofenced alerts, and SwiftData persists quest progress, drafts, and the journal.",
+    "id": "iOS native dengan SwiftUI dan struktur MVVM. CoreLocation melayani dua kebutuhan berbeda — pemeriksaan radius yang mengaktifkan tombol mulai di dalam quest aktif, dan geofencing latar belakang untuk History Alert yang ambient. MapKit menggambar area peta, UserNotifications mengirim peringatan berbasis geofence, dan SwiftData menyimpan progres quest, draft, serta jurnal."
+  },
+  "integrations": [
+    "CoreLocation",
+    "MapKit",
+    "UserNotifications",
+    "PhotosUI",
+    "ShareLink"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/hisplora/thumb.webp",
+      "width": 726,
+      "height": 1494,
+      "alt": {
+        "en": "Hisplora trip brief screen showing route distance and duration on a typewriter card",
+        "id": "Layar ringkasan trip Hisplora yang menampilkan jarak dan durasi rute pada kartu mesin tik"
+      },
+      "caption": {
+        "en": "Trip brief for the walking route \"The Last Traces of Badung\".",
+        "id": "Ringkasan trip untuk rute jalan kaki \"The Last Traces of Badung\"."
+      }
+    },
+    "gallery": [
+      {
+        "src": "assets/images/projects/hisplora/gallery-01-prologue.webp",
+        "width": 764,
+        "height": 1556,
+        "alt": {
+          "en": "Illustrated prologue with a line drawing of a horse carriage in front of a Balinese gate",
+          "id": "Prolog berilustrasi dengan gambar garis dokar di depan gerbang Bali"
+        },
+        "caption": {
+          "en": "The prologue narrates the history of the route before the first quest opens.",
+          "id": "Prolog menceritakan sejarah rute sebelum quest pertama terbuka."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-02-trip-brief.webp",
+        "width": 760,
+        "height": 1546,
+        "alt": {
+          "en": "Trip brief with a historical portrait and a summary of the route",
+          "id": "Ringkasan trip dengan potret sejarah dan rangkuman rute"
+        },
+        "caption": {
+          "en": "Each route opens with its historical context, distance, and estimated walking time.",
+          "id": "Tiap rute dibuka dengan konteks sejarah, jarak, dan perkiraan waktu jalan kaki."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-03-quest-list.webp",
+        "width": 814,
+        "height": 1592,
+        "alt": {
+          "en": "Quest list at Puri Agung Pemecutan, each card describing a photo task",
+          "id": "Daftar quest di Puri Agung Pemecutan, tiap kartu menjelaskan satu tugas foto"
+        },
+        "caption": {
+          "en": "One location holds several quests; the bar at the bottom points to the next place.",
+          "id": "Satu lokasi memuat beberapa quest; bar di bawah menunjuk tempat berikutnya."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-04-quest-detail.webp",
+        "width": 776,
+        "height": 1578,
+        "alt": {
+          "en": "Quest detail on a scroll card with a skip option when no camera is available",
+          "id": "Detail quest pada kartu gulungan dengan opsi lewati saat kamera tidak tersedia"
+        },
+        "caption": {
+          "en": "Quest detail on a scroll card, with a fallback when the device has no camera.",
+          "id": "Detail quest pada kartu gulungan, dengan jalan keluar saat perangkat tidak punya kamera."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-05-photo-task.webp",
+        "width": 698,
+        "height": 1482,
+        "alt": {
+          "en": "Photo quest asking the visitor to find an iron statue, with the camera trigger",
+          "id": "Quest foto yang meminta pengunjung menemukan patung besi, dengan pemicu kamera"
+        },
+        "caption": {
+          "en": "The clue describes the object; the visitor proves the find with a photo.",
+          "id": "Petunjuk menjelaskan objeknya; pengunjung membuktikan temuan lewat foto."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-06-geofence.webp",
+        "width": 586,
+        "height": 1218,
+        "alt": {
+          "en": "Geofence guard screen with a map, shown while the visitor is outside the quest radius",
+          "id": "Layar penjaga geofence dengan peta, muncul saat pengunjung di luar radius quest"
+        },
+        "caption": {
+          "en": "The quest stays locked until the visitor is physically at the site.",
+          "id": "Quest tetap terkunci sampai pengunjung benar-benar berada di lokasi."
+        }
+      }
+    ],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    },
+    "accentColor": "#54453E"
+  },
+  "links": {
+    "demo": null,
+    "repo": "https://github.com/imeldamayanti/challenge5",
+    "caseStudy": "https://www.figma.com/design/yH6t41zBdPN0rNgxi8mlZd/New-Hisplora",
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ios",
+    "swiftui",
+    "corelocation",
+    "mapkit",
+    "cultural-heritage",
+    "apple-developer-academy"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-07-20",
+  "updatedAt": "2026-09-08"
+}

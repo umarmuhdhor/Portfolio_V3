@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "absata",
+  "title": {
+    "en": "ABSATA",
+    "id": "ABSATA"
+  },
+  "subtitle": {
+    "en": "Mobile attendance system for parliamentary support staff.",
+    "id": "Sistem absensi mobile untuk staf pendukung parlemen."
+  },
+  "category": "mobile",
+  "type": "work",
+  "status": "completed",
+  "featured": true,
+  "order": 8,
+  "startDate": "2024-09-01",
+  "endDate": "2024-12-31",
+  "summary": {
+    "en": "A Flutter attendance system built during an internship at the House of Representatives of the Republic of Indonesia, serving Member Administration Staff and Expert Staff.",
+    "id": "Sistem absensi berbasis Flutter yang dibangun selama magang di Dewan Perwakilan Rakyat Republik Indonesia, melayani Staf Administrasi Anggota dan Tenaga Ahli."
+  },
+  "description": {
+    "en": "ABSATA replaced a manual attendance process for two groups of parliamentary support staff — Member Administration Staff and Expert Staff — with a mobile application, as part of a wider digital transformation effort inside the institution.\n\nThe application was built in Flutter with a secure login flow, a dashboard surfacing attendance information, and realtime attendance monitoring, backed by REST API integration against the institution's services. Alongside the attendance work, the internship also covered UI/UX design implementation for both ABSATA and the institution's LMS application.\n\nThe work was carried out by a team of interns over a four-month placement. Development continued with another team after the internship ended in December 2024.",
+    "id": "ABSATA menggantikan proses absensi manual bagi dua kelompok staf pendukung parlemen — Staf Administrasi Anggota dan Tenaga Ahli — dengan sebuah aplikasi mobile, sebagai bagian dari upaya transformasi digital yang lebih luas di dalam lembaga tersebut.\n\nAplikasinya dibangun dengan Flutter, dilengkapi alur login yang aman, dashboard yang menampilkan informasi kehadiran, dan pemantauan absensi secara realtime, ditopang integrasi REST API ke layanan milik lembaga. Selain pekerjaan absensi, magang ini juga mencakup implementasi desain UI/UX untuk ABSATA dan aplikasi LMS lembaga tersebut.\n\nPekerjaan ini dikerjakan sebuah tim magang selama penempatan empat bulan. Pengembangannya dilanjutkan tim lain setelah magang berakhir pada Desember 2024."
+  },
+  "problem": {
+    "en": "Attendance for Member Administration Staff and Expert Staff was handled manually, which cost administrative time and left the institution without a live view of who was present.",
+    "id": "Absensi Staf Administrasi Anggota dan Tenaga Ahli ditangani secara manual, yang menghabiskan waktu administratif dan membuat lembaga tidak punya gambaran langsung tentang siapa yang hadir."
+  },
+  "solution": {
+    "en": "A mobile attendance application with secure login, a dashboard, and realtime monitoring, integrated with the institution's services over a REST API.",
+    "id": "Aplikasi absensi mobile dengan login yang aman, dashboard, dan pemantauan realtime, terintegrasi dengan layanan lembaga lewat REST API."
+  },
+  "role": {
+    "en": "Mobile Application Developer Intern",
+    "id": "Magang Mobile Application Developer"
+  },
+  "responsibilities": {
+    "en": [
+      "Led development of the attendance application as part of the internship team",
+      "Built the secure login flow, the dashboard, and realtime attendance monitoring in Flutter",
+      "Integrated the application with the institution's services over a REST API and used Git for version control",
+      "Implemented UI/UX designs for both ABSATA and the institution's LMS application"
+    ],
+    "id": [
+      "Memimpin pengembangan aplikasi absensi sebagai bagian dari tim magang",
+      "Membangun alur login yang aman, dashboard, dan pemantauan absensi realtime dengan Flutter",
+      "Mengintegrasikan aplikasi dengan layanan lembaga lewat REST API dan memakai Git untuk version control",
+      "Mengimplementasikan desain UI/UX untuk ABSATA dan aplikasi LMS lembaga tersebut"
+    ]
+  },
+  "teamSize": null,
+  "client": {
+    "name": {
+      "en": "The House of Representatives, Republic of Indonesia (DPR RI)",
+      "id": "Dewan Perwakilan Rakyat Republik Indonesia (DPR RI)"
+    },
+    "logo": null,
+    "url": "https://www.dpr.go.id"
+  },
+  "features": {
+    "en": [
+      "Secure login for Member Administration Staff and Expert Staff",
+      "Dashboard surfacing attendance information",
+      "Realtime attendance monitoring"
+    ],
+    "id": [
+      "Login aman untuk Staf Administrasi Anggota dan Tenaga Ahli",
+      "Dashboard yang menampilkan informasi kehadiran",
+      "Pemantauan absensi secara realtime"
+    ]
+  },
+  "challenges": [],
+  "impact": [],
+  "lessons": {
+    "en": [],
+    "id": []
+  },
+  "stack": {
+    "frontend": [
+      "Flutter",
+      "Dart"
+    ],
+    "backend": [],
+    "database": [],
+    "infra": [],
+    "tools": [
+      "Git",
+      "REST API",
+      "UI/UX Design"
+    ]
+  },
+  "architecture": null,
+  "integrations": [],
+  "media": {
+    "thumbnail": null,
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null
+  },
+  "private": true,
+  "privateNote": {
+    "en": "Internal government system. No public link, repository, or screenshots can be shared; the description covers scope and technology only.",
+    "id": "Sistem internal pemerintah. Tidak ada tautan publik, repositori, maupun tangkapan layar yang bisa dibagikan; deskripsinya hanya mencakup lingkup dan teknologi."
+  },
+  "tags": [
+    "flutter",
+    "dart",
+    "rest-api",
+    "attendance",
+    "government",
+    "internship"
+  ],
+  "relatedExperienceId": "dpr-ri-mobile-developer-intern",
+  "testimonialIds": [],
+  "createdAt": "2024-09-01",
+  "updatedAt": "2026-09-06"
+}

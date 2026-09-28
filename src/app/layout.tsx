@@ -1,12 +1,20 @@
 import type { Metadata } from 'next';
 import EaseProvider from '@/components/EaseProvider';
 import Splash from '@/components/Splash';
+import { SITE } from '@/lib/dummy';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Andi Muhammad Alief Fauzan — Backend Developer & Cloud Computing Specialist',
-  description:
-    'Backend developer and cloud computing specialist. Informatics student building APIs, data platforms, and cloud infrastructure.',
+  metadataBase: SITE.url ? new URL(SITE.url) : undefined,
+  title: { default: SITE.title, template: `%s — ${SITE.title.split(' — ')[0]}` },
+  description: SITE.description,
+  keywords: SITE.keywords,
+  icons: SITE.favicon ? { icon: SITE.favicon } : undefined,
+  openGraph: {
+    title: SITE.title,
+    description: SITE.description,
+    images: SITE.ogImage ? [{ url: SITE.ogImage, width: 1200, height: 630 }] : undefined,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

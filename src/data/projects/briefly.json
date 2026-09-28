@@ -1,0 +1,206 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "briefly",
+  "title": {
+    "en": "Briefly",
+    "id": "Briefly"
+  },
+  "subtitle": {
+    "en": "A content workspace where the agent works on the same surface as the human.",
+    "id": "Workspace konten tempat agent bekerja di permukaan yang sama dengan manusia."
+  },
+  "category": "ai",
+  "type": "hackathon",
+  "status": "completed",
+  "featured": true,
+  "order": 7,
+  "startDate": "2026-09-03",
+  "endDate": "2026-09-04",
+  "summary": {
+    "en": "A content marketing workspace where trend research, business context, and brief writing live in one place, and a connected agent reads what the human is looking at and writes results back into the app rather than into a chat transcript.",
+    "id": "Workspace content marketing tempat riset tren, konteks bisnis, dan penulisan brief berada di satu tempat, dan sebuah agent terhubung membaca apa yang sedang dilihat manusia lalu menulis hasilnya kembali ke aplikasi alih-alih ke transkrip chat."
+  },
+  "description": {
+    "en": "A content team runs the same loop every week: someone watches what is trending, someone decides which trend is credible for the brand, someone writes a brief connecting that trend to a real product, someone schedules it, someone checks whether it worked. The third step is where the loop breaks. Connecting a trend to a product is not a lookup — it needs the shape of the trend, the product's positioning and price, and the list of things the brand has decided it will not say. That knowledge sits across a Notion page, a Slack thread, and one person's head, so briefs get written from the trend alone and the product angle comes out generic.\n\nUsing a normal AI assistant does not close the gap. The assistant cannot see which trend the human has open, cannot read the product knowledge base, and cannot put its output anywhere useful, so every hand-off is a copy-paste and the context is rebuilt from scratch each time. Human review arrives after the context that mattered is already gone.\n\nBriefly hands the dashboard's own capabilities to the agent through WebMCP. The core sentence is that the brief lands in the application's library, not in a chat transcript — with a status, a link to the trend, and a link to the product. The division of labour is deliberate: the human picks the trend because they understand the brand, the agent drafts because it is faster, and the human approves because they are accountable.\n\nEvery number and video in the app is invented, and that line is drawn in the interface rather than hidden. Seeded analytics carry a demo data badge; values a committed script derives from files in the repository carry a measured badge. The processing is not invented — a real workflow operating on a fictional dataset.",
+    "id": "Tim konten menjalankan loop yang sama tiap minggu: seseorang memantau apa yang sedang tren, seseorang memutuskan tren mana yang kredibel untuk brand, seseorang menulis brief yang menghubungkan tren itu ke produk nyata, seseorang menjadwalkannya, seseorang mengecek apakah berhasil. Langkah ketiga adalah titik putusnya. Menghubungkan tren ke produk bukan sekadar pencarian — ia butuh bentuk tren itu, positioning dan harga produknya, serta daftar hal yang sudah diputuskan brand untuk tidak dikatakan. Pengetahuan itu tersebar di satu halaman Notion, satu thread Slack, dan kepala satu orang, sehingga brief ditulis hanya dari trennya dan angle produknya keluar generik.\n\nMemakai AI assistant biasa tidak menutup jurang itu. Assistant tidak bisa melihat tren mana yang sedang dibuka manusia, tidak bisa membaca knowledge base produk, dan tidak bisa menaruh keluarannya di tempat yang berguna, sehingga tiap serah terima berarti copy-paste dan konteksnya dibangun ulang dari nol setiap kali. Tinjauan manusia datang setelah konteks yang penting sudah hilang.\n\nBriefly menyerahkan kapabilitas dashboard itu sendiri kepada agent lewat WebMCP. Kalimat intinya: brief mendarat di library aplikasi, bukan di transkrip chat — lengkap dengan status, tautan ke tren, dan tautan ke produk. Pembagian kerjanya disengaja: manusia memilih tren karena ia memahami brand, agent menulis draft karena lebih cepat, dan manusia menyetujui karena dialah yang akuntabel.\n\nSetiap angka dan video di aplikasi ini adalah rekaan, dan garis itu ditarik di antarmuka alih-alih disembunyikan. Analitik hasil seed membawa badge demo data; nilai yang diturunkan script ter-commit dari file di repositori membawa badge measured. Pemrosesannya bukan rekaan — alur kerja nyata yang beroperasi di atas dataset fiksi."
+  },
+  "problem": {
+    "en": "Context for a content brief is scattered across tabs, and an AI assistant is blind to the view the human is working in. Its output stops in the chat, so results are never linked back to the trend or the product, and brand claim limits are applied inconsistently.",
+    "id": "Konteks untuk sebuah brief konten tercecer antar tab, dan AI assistant buta terhadap tampilan yang sedang dikerjakan manusia. Keluarannya berhenti di chat, sehingga hasilnya tak pernah tertaut kembali ke tren atau produknya, dan batas klaim brand diterapkan secara tidak konsisten."
+  },
+  "solution": {
+    "en": "Expose the dashboard's own view state and knowledge base to the agent as tools, and let it write the finished brief back into the application's library where it gains a status and links to its source trend and product.",
+    "id": "Memaparkan view state dan knowledge base milik dashboard itu sendiri kepada agent sebagai tool, dan membiarkannya menulis brief jadi kembali ke library aplikasi tempat brief itu memperoleh status serta tautan ke tren dan produk asalnya."
+  },
+  "role": {
+    "en": "Frontend Engineer",
+    "id": "Frontend Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Built Phase 2 — the trend table, the trend detail drawer, and ten of the WebMCP tools registered from them",
+      "Built Phase 5 — the calendar and performance views and the final two tools",
+      "Worked on the briefs and schedule stores, their persistence layer, and the Briefs and Pending routes",
+      "Contributed as one of three people over a two-day hackathon build"
+    ],
+    "id": [
+      "Membangun Phase 2 — tabel tren, drawer detail tren, dan sepuluh tool WebMCP yang terdaftar dari keduanya",
+      "Membangun Phase 5 — tampilan kalender dan performa serta dua tool terakhir",
+      "Mengerjakan store brief dan jadwal, lapisan persistensinya, serta route Briefs dan Pending",
+      "Berkontribusi sebagai satu dari tiga orang dalam build hackathon dua hari"
+    ]
+  },
+  "teamSize": 3,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Tool surface derived from application state, so tools register and disappear as the human navigates",
+      "Live panel rendering the current tool surface, driven by the specification's toolchange event",
+      "Reading the business profile — audience, brand voice, offerings, and claim limits — as agent context",
+      "Trend detail exposing spike shape, related keywords, and the transcript of the clip on screen",
+      "Playing the clip the human is currently looking at, from the agent side",
+      "Writing a trend summary onto the page rather than into the chat",
+      "Brief composer tools that register only when a trend and a product are both selected",
+      "Briefs saved into the app library with a draft status and links to their trend and offering",
+      "Human approval moving a brief from draft to approved",
+      "Demo data and measured badges separating seeded numbers from script-derived values",
+      "A local bridge exposing the same tool names, schemas, and executors for agents without native support"
+    ],
+    "id": [
+      "Tool surface yang diturunkan dari state aplikasi, sehingga tool terdaftar dan menghilang seiring manusia berpindah halaman",
+      "Panel langsung yang merender tool surface saat itu, digerakkan event toolchange dari spesifikasinya",
+      "Membaca profil bisnis — audiens, brand voice, penawaran, dan batas klaim — sebagai konteks agent",
+      "Detail tren yang memaparkan bentuk lonjakan, kata kunci terkait, dan transkrip clip yang ada di layar",
+      "Memutar clip yang sedang dilihat manusia, dari sisi agent",
+      "Menulis ringkasan tren ke halaman alih-alih ke chat",
+      "Tool brief composer yang baru terdaftar saat tren dan produk sama-sama dipilih",
+      "Brief tersimpan ke library aplikasi dengan status draft dan tautan ke tren serta penawarannya",
+      "Persetujuan manusia yang memindahkan brief dari draft ke approved",
+      "Badge demo data dan measured yang memisahkan angka hasil seed dari nilai turunan script",
+      "Bridge lokal yang memaparkan nama tool, schema, dan executor yang sama untuk agent tanpa dukungan native"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Most WebMCP demos register a fixed tool set at page load, which produces wrong behaviour: the agent is offered save_brief while the human sits on a settings page, calls it, and fails.",
+        "id": "Kebanyakan demo WebMCP mendaftarkan set tool tetap saat halaman dimuat, yang menghasilkan perilaku salah: agent ditawari save_brief saat manusia sedang di halaman settings, memanggilnya, lalu gagal."
+      },
+      "solution": {
+        "en": "Derived the tool surface from application state instead. Six tools on the trends route, four more when a trend is opened, and the brief composer tools registering only once a trend and a product are both selected — so the set the agent can see is always exactly the set that can succeed.",
+        "id": "Menurunkan tool surface dari state aplikasi. Enam tool di route trends, empat lagi saat sebuah trend dibuka, dan tool brief composer baru terdaftar setelah trend dan produk sama-sama dipilih — sehingga set yang bisa dilihat agent selalu persis set yang bisa berhasil."
+      }
+    },
+    {
+      "problem": {
+        "en": "The project's central claim is that the tool surface moves with the human, but a surface that is not rendered is invisible — the audience cannot see the thing being claimed.",
+        "id": "Klaim utama project ini adalah tool surface yang bergerak mengikuti manusia, tapi surface yang tidak dirender berarti tak terlihat — penonton tidak bisa melihat hal yang sedang diklaim."
+      },
+      "solution": {
+        "en": "Rendered the live surface in a panel driven by the specification's toolchange event, written in present tense: a tool appears when it registers and disappears when it does not. The footer count is what the audience follows as the human makes choices.",
+        "id": "Merender surface langsung dalam sebuah panel yang digerakkan event toolchange dari spesifikasinya, ditulis dalam kala kini: sebuah tool muncul saat terdaftar dan hilang saat tidak. Hitungan di footer itulah yang diikuti penonton saat manusia membuat pilihan."
+      }
+    },
+    {
+      "problem": {
+        "en": "Not every agent runs in a browser with native WebMCP support, so the demo could fail for reasons that have nothing to do with the product.",
+        "id": "Tidak setiap agent berjalan di browser dengan dukungan WebMCP native, sehingga demonya bisa gagal karena alasan yang tak ada hubungannya dengan produk."
+      },
+      "solution": {
+        "en": "Shipped a local bridge exposing the same names, schemas, and executors, so an agent without native support drives the identical surface.",
+        "id": "Menyediakan bridge lokal yang memaparkan nama, schema, dan executor yang sama, sehingga agent tanpa dukungan native menjalankan surface yang identik."
+      }
+    },
+    {
+      "problem": {
+        "en": "Every metric and video in the app is invented, which risks the whole thing reading as a fabricated analytics product.",
+        "id": "Setiap metrik dan video di aplikasi ini adalah rekaan, yang berisiko membuat keseluruhannya terbaca sebagai produk analitik palsu."
+      },
+      "solution": {
+        "en": "Separated invented inputs from real processing and made the line visible in the interface: seeded numbers carry a demo data badge, while values a committed script derives from files in the repo — clip duration, word count, speaking rate — carry a measured badge.",
+        "id": "Memisahkan input rekaan dari pemrosesan nyata dan membuat garisnya terlihat di antarmuka: angka hasil seed membawa badge demo data, sementara nilai yang diturunkan script ter-commit dari file di repo — durasi clip, jumlah kata, laju bicara — membawa badge measured."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "An agent surface bolted onto something that does not work on its own is not a product — the same loop had to be completable manually in the browser with no agent involved.",
+      "Tool calls return structured data rather than prose, and user-written fields are marked as untrusted content for the agent.",
+      "Guardrails read as agent context are not an automatic block, and saying so plainly is better than implying a guarantee the system does not make."
+    ],
+    "id": [
+      "Agent surface yang ditempelkan pada sesuatu yang tidak berjalan sendiri bukanlah produk — loop yang sama harus bisa diselesaikan manual di browser tanpa melibatkan agent sama sekali.",
+      "Panggilan tool mengembalikan data terstruktur alih-alih prosa, dan field yang ditulis pengguna ditandai sebagai konten tak tepercaya bagi agent.",
+      "Guardrail yang dibaca sebagai konteks agent bukanlah pemblokiran otomatis, dan menyatakannya terus terang lebih baik daripada menyiratkan jaminan yang tidak diberikan sistem."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "WebMCP"
+    ],
+    "backend": [],
+    "database": [],
+    "infra": [
+      "Vercel"
+    ],
+    "tools": [
+      "Stitch Design System"
+    ]
+  },
+  "architecture": {
+    "en": "A single-page React application with no database — state lives in a React-compatible store persisted to localStorage. WebMCP tools are registered through document.modelContext with an AbortSignal lifecycle so registration follows application state, alongside a local bridge exposing identical names, schemas, and executors. The only server-side piece is a same-origin serverless endpoint that calls Gemini for trend analysis, with a cached summary as fallback when no key is present.",
+    "id": "Aplikasi React satu halaman tanpa database — state-nya tinggal di store yang kompatibel React dan dipertahankan di localStorage. Tool WebMCP didaftarkan lewat document.modelContext dengan daur hidup AbortSignal agar pendaftarannya mengikuti state aplikasi, berdampingan dengan bridge lokal yang memaparkan nama, schema, dan executor identik. Satu-satunya bagian sisi server adalah endpoint serverless same-origin yang memanggil Gemini untuk analisis tren, dengan ringkasan ter-cache sebagai cadangan bila tidak ada key."
+  },
+  "integrations": [
+    "Gemini"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/briefly/thumb.webp",
+      "alt": {
+        "en": "Briefly tool surface panel",
+        "id": "Panel tool surface Briefly"
+      },
+      "width": 1600,
+      "height": 1000
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": "https://briefly-1.vercel.app",
+    "repo": "https://github.com/codeby-dani/TrendDashboard",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "webmcp",
+    "ai-agents",
+    "react",
+    "typescript",
+    "vite",
+    "gemini",
+    "hackathon"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-09-03",
+  "updatedAt": "2026-09-06"
+}

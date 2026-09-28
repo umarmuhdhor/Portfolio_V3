@@ -1,0 +1,221 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "catalyst",
+  "title": {
+    "en": "Catalyst",
+    "id": "Catalyst"
+  },
+  "subtitle": {
+    "en": "A watchlist change investigator for IDX investors: track the change, check the evidence.",
+    "id": "Pemeriksa perubahan daftar pantau untuk investor IDX: lacak perubahannya, periksa buktinya."
+  },
+  "category": "ai",
+  "type": "hackathon",
+  "status": "ongoing",
+  "featured": true,
+  "order": 15,
+  "startDate": "2026-09-12",
+  "endDate": null,
+  "summary": {
+    "en": "A research agent for event-driven IDX investors that traces a material change on a watched stock from its source, through the mechanism, to the business indicator that should move, and ends every case in one research action.",
+    "id": "Agent riset untuk investor IDX event-driven yang menelusuri perubahan material pada saham pantauan dari sumbernya, lewat mekanismenya, sampai indikator bisnis yang seharusnya bergerak, dan mengakhiri setiap kasus dengan satu tindakan riset."
+  },
+  "description": {
+    "en": "A discretionary, event-driven investor checks the same 10 to 30 stocks every time something material happens. The questions are always the same: what changed, which explanation is strongest, what business impact should become visible, and what evidence would prove the explanation wrong. Answering them means jumping between price charts, broker summaries, filings, news, and commodity prices, and the reasoning that links them lives only in the investor's head.\n\nCatalyst puts that ritual in one place. The Dashboard draws a causal map across every watched issuer — source, mechanism, issuer, business impact — and Research & Analysis turns one change into a Research Case with market confirmation, business impact, and review kept in separate sections. Every link carries its exposure, the indicator to look for, alternative explanations, the expected lag, and the condition that would invalidate it. A case ends in one research action: keep researching, monitor an indicator, or dismiss the trigger. An assistant answers questions in the context of the case on screen.\n\nEvery figure comes from recorded Sectors API feeds — price, volume, IHSG, foreign flow, broker summary, free float, quarterly financials, news, and filings — and derived values such as beta, sector return, participant concentration, and robust z-scores are computed from those recordings, never typed in by hand. The model writes the interpreting sentences, and each one is verified before it ships: numerals limited to the material it was given, no invented columns, and no trading advice. A rejected draft renders nothing.\n\nUser corrections are stored as open hypotheses rather than silently changing the analysis, and lessons from closed cases become proposed rules that take effect only after the user approves them. The AI Learning page shows everything the agent remembers about the user. The app runs on Google Cloud Run, and a scheduled job re-records the Sectors feeds each trading day, rebuilds the bundle, runs the test gate, and deploys only if it passes.\n\nBuilt by a team of four for Sectors Hackathon 2026, Track 01.",
+    "id": "Investor discretionary event-driven memeriksa 10 sampai 30 saham yang sama setiap kali terjadi sesuatu yang material. Pertanyaannya selalu sama: apa yang berubah, penjelasan mana yang paling kuat, dampak bisnis apa yang seharusnya terlihat, dan bukti apa yang akan membuktikan penjelasan itu salah. Menjawabnya berarti berpindah-pindah antara grafik harga, broker summary, keterbukaan informasi, berita, dan harga komoditas, sementara penalaran yang menghubungkan semuanya hanya ada di kepala investor.\n\nCatalyst menaruh ritual itu di satu tempat. Dashboard menggambar peta sebab akibat untuk semua emiten pantauan — sumber, mekanisme, emiten, dampak bisnis — dan Riset & Analisis mengubah satu perubahan menjadi Research Case dengan konfirmasi pasar, dampak bisnis, dan tinjauan di bagian terpisah. Setiap hubungan membawa eksposur, indikator yang dicari, penjelasan alternatif, jeda yang diharapkan, dan kondisi pembatalnya. Setiap kasus berakhir pada satu tindakan riset: lanjutkan riset, pantau indikator, atau abaikan pemicu. Asisten menjawab pertanyaan dalam konteks kasus yang sedang dibuka.\n\nSetiap angka berasal dari rekaman feed Sectors API — harga, volume, IHSG, foreign flow, broker summary, free float, laporan keuangan kuartalan, berita, dan keterbukaan informasi — dan nilai turunan seperti beta, return sektor, konsentrasi partisipan, dan robust z dihitung dari rekaman itu, tidak pernah diketik manual. Model menulis kalimat interpretasinya, dan setiap kalimat diverifikasi sebelum tampil: angka dibatasi pada materi yang diberikan, tanpa kolom rekaan, dan tanpa saran transaksi. Draft yang ditolak tidak menampilkan apa pun.\n\nKoreksi pengguna disimpan sebagai hipotesis terbuka alih-alih diam-diam mengubah analisis, dan pelajaran dari kasus yang ditutup menjadi usulan aturan yang baru berlaku setelah disetujui pengguna. Halaman AI Learning menampilkan semua yang diingat agent tentang pengguna. Aplikasi berjalan di Google Cloud Run, dan job terjadwal merekam ulang feed Sectors setiap hari bursa, membangun ulang bundle, menjalankan gate pengujian, dan hanya deploy jika lolos.\n\nDibangun oleh tim empat orang untuk Sectors Hackathon 2026, Track 01."
+  },
+  "problem": {
+    "en": "When a watched IDX stock moves, the evidence needed to explain it is spread across price data, broker summaries, filings, news, and commodity prices, and the reasoning that connects a trigger to a business indicator is never written down or tested.",
+    "id": "Saat saham IDX pantauan bergerak, bukti untuk menjelaskannya tersebar di data harga, broker summary, keterbukaan informasi, berita, dan harga komoditas, dan penalaran yang menghubungkan pemicu ke indikator bisnis tidak pernah dituliskan atau diuji."
+  },
+  "solution": {
+    "en": "A research workspace that maps each change from source to mechanism to business impact, gives every link an indicator and an invalidating condition, computes every figure from recorded Sectors data, and verifies every model-written sentence before it is shown.",
+    "id": "Workspace riset yang memetakan setiap perubahan dari sumber ke mekanisme hingga dampak bisnis, memberi setiap hubungan indikator dan kondisi pembatal, menghitung setiap angka dari rekaman data Sectors, dan memverifikasi setiap kalimat tulisan model sebelum ditampilkan."
+  },
+  "role": {
+    "en": "Frontend Engineer",
+    "id": "Frontend Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Built the AI Learning page that shows the user everything the agent remembers about them, including the teach-the-agent flow",
+      "Changed user corrections to be accepted on save instead of waiting in a review queue",
+      "Built the Pantau web-watch review, with accepted findings above the queue and manual mapping behind an Edit action",
+      "Reworked the prediction panel and added its charts",
+      "Stabilised the causal-chain view: steady edges, toggleable selection, and a simpler layout",
+      "Collapsed onboarding into a single step with issuer search and updated the guided tour",
+      "Fixed the P0 and P1 findings from a QA pass across the agent engine, chat follow-ups, typo tolerance, and web-watch checks"
+    ],
+    "id": [
+      "Membangun halaman AI Learning yang menampilkan semua yang diingat agent tentang pengguna, termasuk alur mengajari agent",
+      "Mengubah koreksi pengguna agar langsung diterima saat disimpan alih-alih menunggu di antrean tinjauan",
+      "Membangun tinjauan web-watch di Pantau, dengan temuan yang diterima di atas antrean dan pemetaan manual di balik aksi Edit",
+      "Merombak panel prediksi dan menambahkan grafiknya",
+      "Menstabilkan tampilan rantai sebab akibat: garis yang stabil, seleksi yang bisa di-toggle, dan tata letak yang lebih sederhana",
+      "Meringkas onboarding menjadi satu langkah dengan pencarian emiten dan memperbarui tur terpandu",
+      "Memperbaiki temuan P0 dan P1 dari QA pass di agent engine, follow-up chat, toleransi typo, dan pengecekan web-watch"
+    ]
+  },
+  "teamSize": 4,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Causal map across every watched issuer: source, mechanism, issuer, and business impact",
+      "Research Cases that separate summary, market confirmation, business impact, and review",
+      "Every causal link carries exposure, the indicator to watch, alternative explanations, lag, and an invalidating condition",
+      "Cause comparison that ranks candidate explanations by relevance against a user-set threshold",
+      "Each case ends in one research action: keep researching, monitor an indicator, or dismiss the trigger",
+      "Context-aware assistant that answers about the case and the panel on screen",
+      "Model-written sentences verified before display — no invented figures and no trading advice",
+      "User corrections kept as open hypotheses, and lessons proposed as rules that apply only after approval",
+      "AI Learning page showing everything the agent remembers about the user",
+      "Web-watch review for macro, commodity, policy, and weather findings before they reach the evidence",
+      "Formula transparency for every derived metric, computed from recorded Sectors data"
+    ],
+    "id": [
+      "Peta sebab akibat untuk semua emiten pantauan: sumber, mekanisme, emiten, dan dampak bisnis",
+      "Research Case yang memisahkan ringkasan, konfirmasi pasar, dampak bisnis, dan tinjauan",
+      "Setiap hubungan sebab akibat membawa eksposur, indikator yang dipantau, penjelasan alternatif, jeda, dan kondisi pembatal",
+      "Perbandingan penyebab yang mengurutkan penjelasan kandidat berdasarkan relevansi terhadap ambang yang diatur pengguna",
+      "Setiap kasus berakhir pada satu tindakan riset: lanjutkan riset, pantau indikator, atau abaikan pemicu",
+      "Asisten yang sadar konteks dan menjawab tentang kasus dan panel yang sedang tampil",
+      "Kalimat tulisan model diverifikasi sebelum tampil — tanpa angka rekaan dan tanpa saran transaksi",
+      "Koreksi pengguna disimpan sebagai hipotesis terbuka, dan pelajaran diusulkan sebagai aturan yang baru berlaku setelah disetujui",
+      "Halaman AI Learning yang menampilkan semua yang diingat agent tentang pengguna",
+      "Tinjauan web-watch untuk temuan makro, komoditas, kebijakan, dan cuaca sebelum masuk ke bukti",
+      "Transparansi rumus untuk setiap metrik turunan, dihitung dari rekaman data Sectors"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Any number or interpretation typed into the source survives a data refresh and silently contradicts the recordings, while tests keep passing.",
+        "id": "Angka atau interpretasi apa pun yang diketik di source bertahan melewati refresh data dan diam-diam bertentangan dengan rekaman, sementara pengujian tetap lolos."
+      },
+      "solution": {
+        "en": "Made the recordings the only source of figures, kept every threshold in one table with its provenance, and had the model write interpreting sentences at request time, with a test that fails on fabricated figures.",
+        "id": "Menjadikan rekaman satu-satunya sumber angka, menyimpan setiap ambang di satu tabel beserta asal-usulnya, dan membiarkan model menulis kalimat interpretasi saat request, dengan pengujian yang gagal bila ada angka rekaan."
+      }
+    },
+    {
+      "problem": {
+        "en": "A language model can invent numbers or slip into buy and sell advice, which a research tool for investors cannot show.",
+        "id": "Model bahasa bisa mengarang angka atau tergelincir memberi saran beli dan jual, yang tidak boleh ditampilkan oleh alat riset untuk investor."
+      },
+      "solution": {
+        "en": "Verified every model-written sentence before display — numerals limited to the given material, no invented columns, no advisory language — and rendered nothing when a draft was rejected rather than filling the gap with unsupported prose.",
+        "id": "Memverifikasi setiap kalimat tulisan model sebelum tampil — angka dibatasi pada materi yang diberikan, tanpa kolom rekaan, tanpa bahasa saran — dan tidak menampilkan apa pun saat draft ditolak alih-alih mengisi kekosongan dengan prosa yang tidak didukung."
+      }
+    },
+    {
+      "problem": {
+        "en": "Letting user corrections rewrite the analysis directly would mix opinion into measured data and make the agent's memory opaque.",
+        "id": "Membiarkan koreksi pengguna langsung menulis ulang analisis akan mencampur opini ke data terukur dan membuat memori agent tidak transparan."
+      },
+      "solution": {
+        "en": "Stored corrections as open hypotheses, turned lessons into rules that apply only after approval, and built the AI Learning page so the user can see and manage what the agent remembers.",
+        "id": "Menyimpan koreksi sebagai hipotesis terbuka, mengubah pelajaran menjadi aturan yang baru berlaku setelah disetujui, dan membangun halaman AI Learning agar pengguna bisa melihat dan mengelola apa yang diingat agent."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "A literal in the source is a claim nobody re-checks; computing every figure from the data keeps the screen honest after each refresh.",
+      "When a model's sentence cannot be verified, showing nothing is better than showing something plausible.",
+      "Memory an agent keeps about a user should be visible to that user and change only with their approval."
+    ],
+    "id": [
+      "Literal di source adalah klaim yang tak pernah dicek ulang; menghitung setiap angka dari data menjaga layar tetap jujur setelah setiap refresh.",
+      "Saat kalimat model tidak bisa diverifikasi, tidak menampilkan apa pun lebih baik daripada menampilkan sesuatu yang terdengar masuk akal.",
+      "Memori yang disimpan agent tentang pengguna harus bisa dilihat pengguna itu dan hanya berubah dengan persetujuannya."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "React Flow",
+      "Recharts",
+      "Zustand"
+    ],
+    "backend": [
+      "Next.js Route Handlers",
+      "Zod",
+      "Python"
+    ],
+    "database": [
+      "Google Cloud Storage"
+    ],
+    "infra": [
+      "Google Cloud Run",
+      "Google Cloud Build",
+      "Google Secret Manager",
+      "Docker"
+    ],
+    "tools": [
+      "Vitest",
+      "Playwright",
+      "axe-core",
+      "pnpm"
+    ]
+  },
+  "architecture": {
+    "en": "A Next.js application on Google Cloud Run. Sectors API feeds are recorded into a data bundle by a Python build script, and every figure, threshold, and citation is derived from that bundle and a single registry. An agent engine exposes analyze, impact, causal-graph, and chat routes; the model layer talks to one provider at a time — Gemini or an OpenAI-compatible endpoint — and every sentence it writes passes a verifier before rendering. A scheduled Cloud Build job re-records the feeds each trading day, rebuilds the bundle, runs the test gate, and deploys only if it passes.",
+    "id": "Aplikasi Next.js di Google Cloud Run. Feed Sectors API direkam menjadi bundle data oleh script build Python, dan setiap angka, ambang, dan kutipan diturunkan dari bundle itu serta satu registry. Agent engine menyediakan route analyze, impact, causal-graph, dan chat; lapisan model berbicara ke satu provider pada satu waktu — Gemini atau endpoint yang kompatibel dengan OpenAI — dan setiap kalimat yang ditulisnya melewati verifier sebelum dirender. Job Cloud Build terjadwal merekam ulang feed setiap hari bursa, membangun ulang bundle, menjalankan gate pengujian, dan hanya deploy jika lolos."
+  },
+  "integrations": [
+    "Sectors API",
+    "Gemini",
+    "DeepSeek"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/catalyst/thumb.webp",
+      "alt": {
+        "en": "Catalyst dashboard with a causal map linking sources and mechanisms to the watched issuers ADRO, ANTM, PGAS, INCO, and TINS and their business impact",
+        "id": "Dashboard Catalyst dengan peta sebab akibat yang menghubungkan sumber dan mekanisme ke emiten pantauan ADRO, ANTM, PGAS, INCO, dan TINS serta dampak bisnisnya"
+      },
+      "width": 1600,
+      "height": 900
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": "https://catalyst-web-ibyebnreqa-uc.a.run.app",
+    "repo": "https://github.com/RichardCen05/catalyst",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ai-agents",
+    "llm",
+    "finance",
+    "idx",
+    "nextjs",
+    "typescript",
+    "google-cloud",
+    "hackathon"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-09-12",
+  "updatedAt": "2026-09-28"
+}

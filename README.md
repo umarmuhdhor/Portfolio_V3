@@ -1,3 +1,12 @@
+## Content
+
+Every word and picture comes from the separate DATA-PORTO repository. It is
+vendored, not linked: `npm run sync-data` copies `DATA-PORTO/data` into
+`src/data` and `DATA-PORTO/assets` into `public/assets` (override the source
+with `DATA_PORTO_DIR=/path/to/DATA-PORTO`). Edit the data there, re-run the
+sync, and commit the result. `src/lib/porto.ts` types the records;
+`src/lib/dummy.ts` shapes them into the page's sections.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

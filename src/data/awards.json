@@ -1,0 +1,161 @@
+{
+  "$schema": "../schema/awards.schema.json",
+  "items": [
+    {
+      "id": "city-programming-competition-2023",
+      "title": {
+        "en": "3rd Place, City-Level Programming Competition",
+        "id": "Juara 3 Kompetisi Pemrograman Tingkat Kota"
+      },
+      "issuer": null,
+      "date": "2023",
+      "rank": {
+        "en": "3rd Place",
+        "id": "Juara 3"
+      },
+      "description": {
+        "en": "Designed and implemented an efficient algorithm to solve a complex coding challenge.",
+        "id": "Merancang dan mengimplementasikan algoritma efisien untuk menyelesaikan tantangan pemrograman kompleks."
+      },
+      "url": "https://drive.google.com/file/d/1ZJKPHW1_RKFVz7vS7d0ZmKNIzrUYbr9Z/view?usp=drive_link",
+      "image": null,
+      "projectId": null,
+      "order": 1
+    },
+    {
+      "id": "alfest-mathematics-olympiad-2021",
+      "title": {
+        "en": "1st Prize, Alfest Mathematics — Albinaa Festival Science Olympiad",
+        "id": "Juara 1 Alfest Mathematics — Olimpiade Sains Albinaa Festival"
+      },
+      "issuer": "Albinaa Festival Science Olympiad",
+      "date": "2021",
+      "rank": {
+        "en": "1st Place",
+        "id": "Juara 1"
+      },
+      "description": {
+        "en": "National-level mathematics olympiad.",
+        "id": "Olimpiade matematika tingkat nasional."
+      },
+      "url": "https://drive.google.com/file/d/12UdrEEEvr2VQNgqcWges9TzMVbDn3VCN/view?usp=sharing",
+      "image": null,
+      "projectId": null,
+      "order": 2
+    },
+    {
+      "id": "lust-mathematical-competition-2021",
+      "title": {
+        "en": "Honorable Mention, Lust Mathematical Competition",
+        "id": "Honorable Mention, Lust Mathematical Competition"
+      },
+      "issuer": "Lust Mathematical Competition",
+      "date": "2021",
+      "rank": {
+        "en": "Honorable Mention",
+        "id": "Honorable Mention"
+      },
+      "description": null,
+      "url": "https://drive.google.com/file/d/15479NQNb8MC2RDfSAZL1addy1eKTS4c8/view?usp=sharing",
+      "image": null,
+      "projectId": null,
+      "order": 3
+    },
+    {
+      "id": "avicup-mathematics-competition-2021",
+      "title": {
+        "en": "1st Runner-Up, AVICUP National Mathematics Competition",
+        "id": "Juara 2 Kompetisi Matematika Nasional AVICUP"
+      },
+      "issuer": "AVICUP",
+      "date": "2021",
+      "rank": {
+        "en": "1st Runner-Up",
+        "id": "Juara 2"
+      },
+      "description": {
+        "en": "National-level mathematics competition.",
+        "id": "Kompetisi matematika tingkat nasional."
+      },
+      "url": "https://drive.google.com/file/d/1x4vLXrpsPPoulgk48tGyoi6Q0QSGPpBE/view?usp=sharing",
+      "image": null,
+      "projectId": null,
+      "order": 4
+    },
+    {
+      "id": "science-go-olympiad-2020",
+      "title": {
+        "en": "Silver Medal, Science Go Olympiad Mathematics Competition",
+        "id": "Medali Perak Kompetisi Matematika Science Go Olympiad"
+      },
+      "issuer": "Science Go Olympiad",
+      "date": "2020",
+      "rank": {
+        "en": "Silver Medal",
+        "id": "Medali Perak"
+      },
+      "description": null,
+      "url": "https://drive.google.com/file/d/1uvT7PL82Rc0RnBqBnYwi2r91gvbwJXJH/view?usp=sharing",
+      "image": null,
+      "projectId": null,
+      "order": 5
+    },
+    {
+      "id": "national-numeracy-olympiad-2020",
+      "title": {
+        "en": "Gold Medal, National Numeracy Olympiad",
+        "id": "Medali Emas Olimpiade Numerasi Nasional"
+      },
+      "issuer": "National Numeracy Olympiad",
+      "date": "2020",
+      "rank": {
+        "en": "Gold Medal",
+        "id": "Medali Emas"
+      },
+      "description": null,
+      "url": "https://drive.google.com/file/d/1JvmqgPj_E9mqOnETsb5ZQ2gb9DE_9YFt/view?usp=sharing",
+      "image": null,
+      "projectId": null,
+      "order": 6
+    },
+    {
+      "id": "lampung-university-math-quiz-2020",
+      "title": {
+        "en": "3rd Place, Mathematics Quiz Competition",
+        "id": "Juara 3 Kompetisi Kuis Matematika"
+      },
+      "issuer": "Lampung University",
+      "date": "2020",
+      "rank": {
+        "en": "3rd Place",
+        "id": "Juara 3"
+      },
+      "description": null,
+      "url": null,
+      "image": null,
+      "projectId": null,
+      "order": 7
+    },
+    {
+      "id": "unesa-mathematics-competition-revolution-2020",
+      "title": {
+        "en": "Bronze Medal, Mathematics Competition Revolution",
+        "id": "Medali Perunggu Mathematics Competition Revolution"
+      },
+      "issuer": "Mathematics Student Association, UNESA",
+      "date": "2020",
+      "rank": {
+        "en": "Bronze Medal",
+        "id": "Medali Perunggu"
+      },
+      "description": {
+        "en": "National-level mathematics competition.",
+        "id": "Kompetisi matematika tingkat nasional."
+      },
+      "url": null,
+      "image": null,
+      "projectId": null,
+      "order": 8
+    }
+  ]
+}

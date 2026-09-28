@@ -1,0 +1,375 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "regulens",
+  "title": {
+    "en": "ReguLens",
+    "id": "ReguLens"
+  },
+  "subtitle": {
+    "en": "Autonomous regulatory monitoring for small food and beverage exporters.",
+    "id": "Pemantauan regulasi otonom untuk eksportir makanan dan minuman skala kecil."
+  },
+  "category": "ai",
+  "type": "hackathon",
+  "status": "ongoing",
+  "featured": true,
+  "order": 6,
+  "startDate": "2026-08-19",
+  "endDate": null,
+  "summary": {
+    "en": "Instead of a regulation chatbot, ReguLens builds a compliance twin of a product and continuously reconciles it against incoming regulatory clauses. When a rule changes it flips the product's status on its own, names the regulation responsible, and quotes the clause.",
+    "id": "Alih-alih chatbot regulasi, ReguLens membangun compliance twin dari sebuah produk dan terus merekonsiliasinya terhadap klausa regulasi yang masuk. Saat sebuah aturan berubah, sistem membalik status produk itu sendiri, menyebut regulasi penyebabnya, dan mengutip klausanya."
+  },
+  "description": {
+    "en": "A small exporter has to satisfy several jurisdictions at once for a single product, and the binding requirements are scattered across government PDFs, industry association announcements, screenshots, and forwarded chat messages — all of which change without notice. The real question is never what a document says. It is which requirements bind this product in this destination country right now, and whether anything has just changed or contradicts what the exporter already believes.\n\nGetting that wrong is expensive: a rejected shipment, a destroyed batch, or blocked customs clearance. The divergence is concrete and checkable — the EU caps benzoates at 150 mg/kg for food category 14.1.4, while Indonesia's BPOM allows 400 to 900 mg/kg depending on category. A product formulated between the two is compliant at home and non-compliant at its destination, and nothing in an exporter's workflow says so.\n\nReguLens answers that without being asked. The production stack found Commission Regulation (EU) 2023/2108 on its own in the EU's CELLAR catalogue, read it into 88 verbatim limits, and failed a curing sausage on a nitrite line of 30 mg/kg that took effect in October 2025. Nobody uploaded it.\n\nThe system runs four agents, and the document is deliberate about which are genuinely agentic. Extraction is a pipeline with one LLM step. Reconciliation lets code decide while the agent only advises on genuinely ambiguous pairs. Query is the one that truly chooses its own retrieval tools. Impact makes no model calls at all — it is pure arithmetic turning limits and measured quantities into pass or fail.\n\nBuilt for the All Things Agentic Hackathon on the Collaborative Partner track, which required Google ADK, Gemini 3.5 or newer, and operation outside the standard chat loop.",
+    "id": "Eksportir kecil harus memenuhi beberapa yurisdiksi sekaligus untuk satu produk yang sama, dan persyaratan yang mengikat tersebar di PDF pemerintah, pengumuman asosiasi industri, screenshot, dan pesan chat yang diteruskan — semuanya berubah tanpa pemberitahuan. Pertanyaan sebenarnya tak pernah tentang isi sebuah dokumen. Melainkan persyaratan mana yang mengikat produk ini di negara tujuan ini saat ini, dan apakah ada yang baru saja berubah atau bertentangan dengan yang sudah diyakini eksportir.\n\nSalah menjawabnya mahal: pengiriman ditolak, satu batch dimusnahkan, atau clearance bea cukai diblokir. Divergensinya konkret dan bisa dicek — Uni Eropa membatasi benzoat pada 150 mg/kg untuk kategori pangan 14.1.4, sementara BPOM mengizinkan 400 sampai 900 mg/kg tergantung kategori. Produk yang diformulasikan di antara keduanya patuh di dalam negeri dan tidak patuh di negara tujuan, dan tak ada apa pun di alur kerja eksportir yang memberitahukannya.\n\nReguLens menjawabnya tanpa ditanya. Stack produksinya menemukan sendiri Commission Regulation (EU) 2023/2108 di katalog CELLAR milik Uni Eropa, membacanya menjadi 88 batas verbatim, dan menggagalkan sebuah sosis curing pada baris nitrit 30 mg/kg yang berlaku sejak Oktober 2025. Tidak ada yang mengunggahnya.\n\nSistemnya menjalankan empat agent, dan dokumennya sengaja jujur soal mana yang benar-benar agentic. Extraction adalah pipeline dengan satu langkah LLM. Reconciliation membiarkan kode yang memutuskan sementara agent hanya menasihati pada pasangan yang benar-benar ambigu. Query adalah satu-satunya yang sungguh memilih tool retrieval-nya sendiri. Impact tidak memanggil model sama sekali — ia aritmetika murni yang mengubah limit dan jumlah terukur menjadi lulus atau gagal.\n\nDibangun untuk All Things Agentic Hackathon pada track Collaborative Partner, yang mewajibkan Google ADK, Gemini 3.5 atau lebih baru, dan operasi di luar loop chat standar."
+  },
+  "problem": {
+    "en": "Requirements binding a single exported product live across several jurisdictions and several kinds of source, all changing without notice. Small exporters have no compliance officer to track them, and the cost of missing a change is a rejected shipment or a destroyed batch.",
+    "id": "Persyaratan yang mengikat satu produk ekspor tersebar di beberapa yurisdiksi dan beberapa jenis sumber, semuanya berubah tanpa pemberitahuan. Eksportir kecil tak punya compliance officer untuk melacaknya, dan biaya kelewatan satu perubahan adalah pengiriman ditolak atau satu batch dimusnahkan."
+  },
+  "solution": {
+    "en": "Maintain a structured model of the product and reconcile it continuously against incoming clauses, so a change in a rule flips the product's status on its own, names the regulation that caused it, and quotes the source clause — with no user query involved.",
+    "id": "Memelihara model terstruktur dari produk itu dan merekonsiliasinya terus-menerus terhadap klausa yang masuk, sehingga perubahan sebuah aturan membalik status produk dengan sendirinya, menyebut regulasi penyebabnya, dan mengutip klausa sumbernya — tanpa perlu query dari pengguna."
+  },
+  "role": {
+    "en": "Full-stack Engineer",
+    "id": "Full-stack Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Worked across both sides of the stack — the FastAPI backend and the Next.js operations console — as one of two contributors, authoring 39 of 83 commits",
+      "Built and corrected the impact engine so a verdict names the rule it actually rests on and a requirement never outlives the clause it came from",
+      "Made alerts name and link the regulation that moved a verdict",
+      "Extended the guardrail to read food category, letting the review queue answer more cases without a human",
+      "Fixed query retrieval to target the market a question names rather than only its wording, and to stop treating a country as a jurisdiction",
+      "Reworked extraction to flush each PDF page instead of holding an entire document in memory",
+      "Laid out the web app as an operations console rather than a set of pages"
+    ],
+    "id": [
+      "Bekerja di kedua sisi stack — backend FastAPI dan console operasi Next.js — sebagai satu dari dua kontributor, menulis 39 dari 83 commit",
+      "Membangun dan membenahi impact engine agar sebuah verdict menyebut aturan yang benar-benar menjadi tumpuannya dan sebuah requirement tak pernah hidup lebih lama dari klausa asalnya",
+      "Membuat alert menyebut sekaligus menautkan regulasi yang menggeser sebuah verdict",
+      "Memperluas guardrail agar membaca kategori pangan, sehingga antrean review bisa menjawab lebih banyak kasus tanpa manusia",
+      "Memperbaiki retrieval query agar menyasar pasar yang disebut sebuah pertanyaan, bukan hanya kata-katanya, dan berhenti memperlakukan negara sebagai yurisdiksi",
+      "Menata ulang ekstraksi agar membuang tiap halaman PDF setelah diproses alih-alih menahan satu dokumen utuh di memori",
+      "Menyusun aplikasi web sebagai console operasi, bukan sekadar kumpulan halaman"
+    ]
+  },
+  "teamSize": 2,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Compliance twin: a product with ingredients and quantities, targeted at one to three destination markets",
+      "Ingestion by PDF upload, pasted text, or a daily scheduled re-read of every watched address — no third path",
+      "Verbatim clause extraction with a composite confidence score, never a summary",
+      "Deterministic guardrail deciding whether two clauses may be compared at all",
+      "Reconciliation verdicts of created, superseded, conflict opened, or flagged for review — exactly one event per clause",
+      "Impact engine as pure arithmetic, with no agent and no model call",
+      "Immutable audit event written in the same batch as every state change",
+      "Alerts naming the regulation that moved a verdict and whether anyone uploaded it",
+      "Four kinds of watched source — document, feed, listing, and SPARQL catalogue — because a change means four different things",
+      "Country discovery that produces an index address to watch, then stops",
+      "Query agent that picks its own retrieval tools and refuses to answer without citing a stored clause",
+      "Readiness reported as a count of issues rather than a percentage"
+    ],
+    "id": [
+      "Compliance twin: sebuah produk dengan bahan dan kuantitasnya, disasarkan ke satu hingga tiga pasar tujuan",
+      "Masukan lewat unggah PDF, teks tempel, atau pembacaan ulang terjadwal harian atas tiap alamat yang dipantau — tanpa jalur ketiga",
+      "Ekstraksi klausa verbatim dengan skor confidence komposit, tak pernah berupa ringkasan",
+      "Guardrail deterministik yang memutuskan apakah dua klausa boleh dibandingkan sama sekali",
+      "Verdict rekonsiliasi berupa dibuat, disupersede, konflik dibuka, atau ditandai untuk ditinjau — tepat satu event per klausa",
+      "Impact engine sebagai aritmetika murni, tanpa agent dan tanpa panggilan model",
+      "Audit event immutable yang ditulis dalam batch yang sama dengan setiap perubahan state",
+      "Alert yang menyebut regulasi penggeser verdict dan apakah ada yang mengunggahnya",
+      "Empat jenis sumber yang dipantau — dokumen, feed, listing, dan katalog SPARQL — karena \"berubah\" berarti empat hal berbeda",
+      "Country discovery yang menghasilkan alamat indeks untuk dipantau, lalu berhenti",
+      "Query agent yang memilih sendiri tool retrieval-nya dan menolak menjawab tanpa mengutip klausa tersimpan",
+      "Kesiapan dilaporkan sebagai jumlah isu, bukan persentase"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "A system that confidently declares a false conflict destroys the trust the whole product rests on, and an LLM judge asked to compare two clauses will always produce an answer.",
+        "id": "Sistem yang percaya diri menyatakan konflik palsu merusak kepercayaan yang menjadi tumpuan seluruh produk, dan judge LLM yang diminta membandingkan dua klausa akan selalu menghasilkan jawaban."
+      },
+      "solution": {
+        "en": "A deterministic guardrail decides whether two clauses may be compared at all — substance family, product type, unit, jurisdiction — before any model is consulted. Different jurisdictions with different limits resolve to a conflict in code. The LLM judge runs only on same-jurisdiction pairs whose effective dates leave the supersede question open.",
+        "id": "Guardrail deterministik memutuskan apakah dua klausa boleh dibandingkan sama sekali — substance family, tipe produk, satuan, yurisdiksi — sebelum model mana pun dilibatkan. Yurisdiksi berbeda dengan limit berbeda diselesaikan sebagai konflik di dalam kode. Judge LLM hanya berjalan pada pasangan seyurisdiksi yang tanggal berlakunya tidak menyelesaikan pertanyaan supersede."
+      }
+    },
+    {
+      "problem": {
+        "en": "Country discovery needed regulator URLs, but the model's URL paths were wrong every single time — measured at six regulator names correct out of six and six domain roots correct out of six, while every path it wrote was wrong.",
+        "id": "Country discovery membutuhkan URL regulator, tapi path URL tulisan model salah setiap kali — terukur enam dari enam nama regulator benar dan enam dari enam domain root benar, sementara setiap path yang ditulisnya salah."
+      },
+      "solution": {
+        "en": "Asked the model only what it can actually do — name the regulator and its domain root — then read paths from pages actually fetched. The model picks an index from a supplied link inventory, and any choice outside that list is discarded.",
+        "id": "Menanyai model hanya hal yang benar-benar bisa dilakukannya — menyebut nama regulator dan domain root-nya — lalu membaca path dari halaman yang benar-benar diambil. Model memilih indeks dari inventaris link yang disediakan, dan pilihan di luar daftar itu dibuang."
+      }
+    },
+    {
+      "problem": {
+        "en": "Content hashing on raw bytes never matched, because EUR-Lex stamps a fresh session id into every response — the same document looked new on every fetch.",
+        "id": "Hash konten berbasis byte mentah tak pernah cocok, karena EUR-Lex menstempel session id baru ke setiap respons — dokumen yang sama tampak baru di tiap pengambilan."
+      },
+      "solution": {
+        "en": "Hashed the extracted text rather than the bytes, so the cache short-circuits genuinely identical documents that have already reached a terminal state.",
+        "id": "Menghitung hash atas teks yang diekstrak alih-alih byte-nya, sehingga cache memotong dokumen yang benar-benar identik dan sudah mencapai state terminal."
+      }
+    },
+    {
+      "problem": {
+        "en": "The hackathon required Gemini 3.5 or newer, but the asia-southeast1 region only offered gemini-2.5-flash — using the nearest region would have broken a hard entry rule.",
+        "id": "Hackathon mensyaratkan Gemini 3.5 atau lebih baru, tapi region asia-southeast1 hanya menawarkan gemini-2.5-flash — memakai region terdekat berarti melanggar aturan masuk yang mutlak."
+      },
+      "solution": {
+        "en": "Split the topology: infrastructure stays in asia-southeast1 while Gemini is reached through the global endpoint, with multilingual embeddings alongside it.",
+        "id": "Memisah topologinya: infrastruktur tetap di asia-southeast1 sementara Gemini dijangkau lewat endpoint global, dengan embedding multibahasa di sampingnya."
+      }
+    },
+    {
+      "problem": {
+        "en": "Pub/Sub delivers at least once and will redeliver, so a naive pipeline produces duplicate clauses and duplicate alerts for a single document.",
+        "id": "Pub/Sub mengirim setidaknya sekali dan akan mengirim ulang, sehingga pipeline naif menghasilkan klausa dan alert ganda untuk satu dokumen."
+      },
+      "solution": {
+        "en": "Made every handler idempotent through a state check, with redelivery tested explicitly rather than assumed, and Firestore transactions around each clause mutation so parallel reconciliation cannot race on a shared clause.",
+        "id": "Membuat setiap handler idempotent lewat pemeriksaan state, dengan pengiriman ulang diuji secara eksplisit alih-alih diasumsikan, dan transaksi Firestore di sekeliling tiap mutasi klausa agar rekonsiliasi paralel tak berebut klausa yang sama."
+      }
+    },
+    {
+      "problem": {
+        "en": "A requirement generated from a clause kept applying after that clause had been superseded, so a product could fail against a rule that no longer existed.",
+        "id": "Requirement yang lahir dari sebuah klausa tetap berlaku setelah klausa itu disupersede, sehingga sebuah produk bisa dinyatakan gagal terhadap aturan yang sudah tidak ada."
+      },
+      "solution": {
+        "en": "Retired requirements whose source clause was superseded at every materialization, and made each alert name the rule its verdict actually rests on rather than the one that started the run.",
+        "id": "Memensiunkan requirement yang klausa sumbernya sudah disupersede pada setiap materialisasi, dan membuat tiap alert menyebut aturan yang benar-benar menjadi tumpuan verdict-nya, bukan aturan yang memulai proses."
+      }
+    }
+  ],
+  "impact": [
+    {
+      "metric": {
+        "en": "Automated tests",
+        "id": "Test otomatis"
+      },
+      "value": "618",
+      "delta": null,
+      "note": {
+        "en": "Green from a clean checkout with no GCP account and no cost",
+        "id": "Hijau dari checkout bersih tanpa akun GCP dan tanpa biaya"
+      }
+    },
+    {
+      "metric": {
+        "en": "Upload to alert, single pasted rule",
+        "id": "Unggah sampai alert, satu aturan ditempel"
+      },
+      "value": "25.5s",
+      "delta": null,
+      "note": {
+        "en": "Measured on the deployed stack",
+        "id": "Diukur pada stack yang terdeploy"
+      }
+    },
+    {
+      "metric": {
+        "en": "Upload to alert, 55-clause EU annex extract",
+        "id": "Unggah sampai alert, kutipan annex EU berisi 55 klausa"
+      },
+      "value": "174.3s",
+      "delta": null,
+      "note": {
+        "en": "Extraction accounts for roughly 72% of it, bound by output tokens",
+        "id": "Ekstraksi menyumbang sekitar 72% dari angka itu, terikat token keluaran"
+      }
+    },
+    {
+      "metric": {
+        "en": "Country discovery accuracy",
+        "id": "Akurasi country discovery"
+      },
+      "value": "6/6",
+      "delta": null,
+      "note": {
+        "en": "Regulator names and domain roots both correct six out of six; every model-written path was wrong, which is why paths are read from fetched pages",
+        "id": "Nama regulator dan domain root sama-sama benar enam dari enam; setiap path tulisan model salah, itulah sebabnya path dibaca dari halaman yang di-fetch"
+      }
+    },
+    {
+      "metric": {
+        "en": "Self-discovered regulation",
+        "id": "Regulasi yang ditemukan sendiri"
+      },
+      "value": "88",
+      "delta": null,
+      "note": {
+        "en": "Verbatim limits read out of Commission Regulation (EU) 2023/2108, which the system found in CELLAR unprompted",
+        "id": "Batas verbatim yang dibaca dari Commission Regulation (EU) 2023/2108, yang ditemukan sistem di CELLAR tanpa diminta"
+      }
+    }
+  ],
+  "lessons": {
+    "en": [
+      "An honest needs_review beats a confident wrong answer. Low confidence or low authority queues a rule for a human and never quietly shifts a limit.",
+      "Readiness is shown as a count of issues rather than a percentage, because a percentage needs a denominator nobody actually has.",
+      "Being precise about which parts are genuinely agentic mattered more than the number of agents — one of the four makes no model calls at all.",
+      "A flag that runs the entire pipeline with no model calls kept the local stack and most of the test suite free to run."
+    ],
+    "id": [
+      "Sebuah needs_review yang jujur mengalahkan jawaban salah yang percaya diri. Confidence rendah atau otoritas rendah mengantrekan aturan untuk manusia dan tak pernah diam-diam menggeser limit.",
+      "Kesiapan ditampilkan sebagai jumlah isu alih-alih persentase, karena persentase butuh denominator yang sebenarnya tak dimiliki siapa pun.",
+      "Ketepatan menyebut bagian mana yang benar-benar agentic lebih penting daripada jumlah agent — satu dari empatnya tidak memanggil model sama sekali.",
+      "Sebuah flag yang menjalankan seluruh pipeline tanpa panggilan model membuat stack lokal dan sebagian besar test suite tetap gratis dijalankan."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Python",
+      "FastAPI",
+      "Google ADK",
+      "Pydantic"
+    ],
+    "database": [
+      "Firestore",
+      "Cloud Storage"
+    ],
+    "infra": [
+      "Google Cloud Run",
+      "Pub/Sub",
+      "Cloud Scheduler",
+      "Cloud Build",
+      "Artifact Registry",
+      "Secret Manager"
+    ],
+    "tools": [
+      "Docker",
+      "Make"
+    ]
+  },
+  "architecture": {
+    "en": "One container image across four Cloud Run services, with everything slow placed behind Pub/Sub — the API hashes, stores, publishes, and returns 202. Three topics carry the pipeline: document uploaded triggers extraction, clause extracted triggers reconciliation, graph changed triggers impact, and any topic dead-letters after maximum retries. Deterministic code owns every mutation; a model response never reaches clauses, requirements, or conflicts without passing a Pydantic validator and the guardrail. The core package imports neither FastAPI nor ADK, so every tool body is an ordinary function testable without a framework.",
+    "id": "Satu image container di empat service Cloud Run, dengan semua yang lambat ditaruh di belakang Pub/Sub — API melakukan hash, menyimpan, mempublikasikan, lalu mengembalikan 202. Tiga topik membawa pipeline-nya: dokumen terunggah memicu ekstraksi, klausa terekstrak memicu rekonsiliasi, graph berubah memicu impact, dan topik mana pun masuk dead-letter setelah percobaan ulang maksimum. Kode deterministik memiliki setiap mutasi; respons model tak pernah mencapai klausa, requirement, atau konflik tanpa melewati validator Pydantic dan guardrail. Paket inti tidak meng-import FastAPI maupun ADK, sehingga setiap body tool adalah fungsi biasa yang bisa diuji tanpa framework."
+  },
+  "integrations": [
+    "Gemini 3.5 Flash",
+    "Gemma",
+    "Vertex AI",
+    "EUR-Lex CELLAR",
+    "BPOM"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/regulens/thumb.webp",
+      "width": 2148,
+      "height": 1230,
+      "alt": {
+        "en": "ReguLens question-and-answer view, with the answer citing the exact clauses it came from",
+        "id": "Tampilan tanya-jawab ReguLens, dengan jawaban yang mengutip klausul asalnya"
+      },
+      "caption": {
+        "en": "A plain-English question answered from the regulations, every claim traced to a clause.",
+        "id": "Pertanyaan bahasa sehari-hari dijawab dari regulasi, tiap klaim ditelusuri ke klausulnya."
+      }
+    },
+    "gallery": [
+      {
+        "src": "assets/images/projects/regulens/gallery-01-architecture.webp",
+        "width": 2112,
+        "height": 1182,
+        "alt": {
+          "en": "ReguLens architecture diagram covering Cloud Run services, ADK agents, Pub/Sub, and Firestore",
+          "id": "Diagram arsitektur ReguLens yang mencakup layanan Cloud Run, agen ADK, Pub/Sub, dan Firestore"
+        },
+        "caption": {
+          "en": "System architecture: watched sources feed an async Pub/Sub pipeline into in-process ADK agents.",
+          "id": "Arsitektur sistem: sumber yang dipantau mengalir lewat pipeline Pub/Sub asinkron ke agen ADK in-process."
+        }
+      },
+      {
+        "src": "assets/images/projects/regulens/gallery-02-add-rules.webp",
+        "width": 2148,
+        "height": 1230,
+        "alt": {
+          "en": "Add rules screen offering a starter rule set or a document upload",
+          "id": "Layar tambah aturan yang menawarkan set aturan awal atau unggah dokumen"
+        },
+        "caption": {
+          "en": "Rules enter the system either from the bundled set or from a regulation the user uploads.",
+          "id": "Aturan masuk ke sistem lewat set bawaan atau regulasi yang diunggah pengguna."
+        }
+      },
+      {
+        "src": "assets/images/projects/regulens/gallery-03-clause-extraction.webp",
+        "width": 2148,
+        "height": 1230,
+        "alt": {
+          "en": "Clauses extracted from an uploaded document, each shown with its limits and source passage",
+          "id": "Klausul yang diekstrak dari dokumen unggahan, tiap klausul disertai batasan dan kutipan sumbernya"
+        },
+        "caption": {
+          "en": "Extracted clauses stay linked to the passage they were read from.",
+          "id": "Klausul hasil ekstraksi tetap tertaut ke bagian teks asalnya."
+        }
+      },
+      {
+        "src": "assets/images/projects/regulens/gallery-04-watchtower.webp",
+        "width": 2148,
+        "height": 1230,
+        "alt": {
+          "en": "Watch screen with counters for regulations read, rules extracted, and verdicts changed, plus a form to add a country",
+          "id": "Layar pemantauan berisi hitungan regulasi terbaca, aturan terekstrak, dan putusan berubah, plus formulir tambah negara"
+        },
+        "caption": {
+          "en": "The watcher reports what it did unattended, and a new country can be added to the queue.",
+          "id": "Pemantau melaporkan apa yang dikerjakannya tanpa diawasi, dan negara baru bisa ditambahkan ke antrean."
+        }
+      }
+    ],
+    "video": {
+      "src": null,
+      "poster": "assets/images/projects/regulens/video-poster.webp",
+      "url": null
+    },
+    "accentColor": "#111111"
+  },
+  "links": {
+    "demo": "https://regulens-web-babuvy7w3a-as.a.run.app",
+    "repo": "https://github.com/aliefauzan/ReguLens",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ai-agents",
+    "google-adk",
+    "gemini",
+    "fastapi",
+    "nextjs",
+    "firestore",
+    "google-cloud",
+    "regtech",
+    "hackathon"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-08-19",
+  "updatedAt": "2026-09-08"
+}

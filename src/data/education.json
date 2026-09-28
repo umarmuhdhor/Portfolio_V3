@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/education.schema.json",
+  "items": [
+    {
+      "id": "apple-developer-academy",
+      "institution": "Apple Developer Academy",
+      "logo": null,
+      "url": "https://developer.apple.com/academies/",
+      "degree": {
+        "en": "Academy Program",
+        "id": "Program Akademi"
+      },
+      "fieldOfStudy": {
+        "en": "Junior iOS Developer",
+        "id": "Junior iOS Developer"
+      },
+      "startDate": "2026-03-01",
+      "endDate": "2026-12-31",
+      "gpa": null,
+      "location": {
+        "city": "Bali",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null
+      },
+      "activities": {
+        "en": [],
+        "id": []
+      },
+      "achievements": {
+        "en": [],
+        "id": []
+      },
+      "thesis": null,
+      "order": 1
+    },
+    {
+      "id": "multi-data-palembang-university",
+      "institution": "Multi Data Palembang University",
+      "logo": null,
+      "url": "https://mdp.ac.id",
+      "degree": {
+        "en": "Bachelor Degree",
+        "id": "Sarjana (S1)"
+      },
+      "fieldOfStudy": {
+        "en": "Informatics",
+        "id": "Informatika"
+      },
+      "startDate": "2022-09-01",
+      "endDate": "2026-02-28",
+      "gpa": {
+        "value": 3.99,
+        "scale": 4.0
+      },
+      "location": {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null
+      },
+      "activities": {
+        "en": [
+          "Informatics Student Association — Technology and Education division",
+          "Campus Representative Organisation — Leader"
+        ],
+        "id": [
+          "Himpunan Mahasiswa Informatika — Divisi Teknologi dan Pendidikan",
+          "Organisasi Representative Kampus — Ketua"
+        ]
+      },
+      "achievements": {
+        "en": [],
+        "id": []
+      },
+      "thesis": {
+        "title": {
+          "en": "Evaluation of MobileNet-Based Deep Features for Yogyakarta Traditional Batik Motif Classification",
+          "id": "Evaluation of MobileNet-Based Deep Features for Yogyakarta Traditional Batik Motif Classification"
+        },
+        "url": "https://jurnal.polgan.ac.id/index.php/sinkron/article/view/15668"
+      },
+      "order": 2
+    },
+    {
+      "id": "dian-nuswantoro-university",
+      "institution": "Dian Nuswantoro University",
+      "logo": null,
+      "url": "https://dinus.ac.id",
+      "degree": {
+        "en": "Student Exchange Program",
+        "id": "Program Pertukaran Mahasiswa"
+      },
+      "fieldOfStudy": {
+        "en": "Informatics",
+        "id": "Informatika"
+      },
+      "startDate": "2024-03-01",
+      "endDate": "2024-07-31",
+      "gpa": null,
+      "location": {
+        "city": "Semarang",
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "timezone": null
+      },
+      "activities": {
+        "en": [],
+        "id": []
+      },
+      "achievements": {
+        "en": [],
+        "id": []
+      },
+      "thesis": null,
+      "order": 3
+    }
+  ]
+}

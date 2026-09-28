@@ -215,7 +215,7 @@ export default function Home() {
                 {WORK.heading.join(' ')}
               </p>
               <WorkGrid projects={WORK.cards} />
-              <a className="link fn-b1 is--a sec-work__cta" href="#work">
+              <a className="link fn-b1 is--a sec-work__cta" href="/work">
                 {WORK.cta}
               </a>
             </div>

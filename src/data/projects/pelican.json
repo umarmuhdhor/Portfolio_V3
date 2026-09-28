@@ -1,0 +1,132 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "pelican",
+  "title": {
+    "en": "PELICAN",
+    "id": "PELICAN"
+  },
+  "subtitle": {
+    "en": "Attendance app built in FlutterFlow — a first freelance project.",
+    "id": "Aplikasi absensi berbasis FlutterFlow — project freelance pertama."
+  },
+  "category": "mobile",
+  "type": "client",
+  "status": "completed",
+  "featured": false,
+  "order": 10,
+  "startDate": "2025-01",
+  "endDate": null,
+  "summary": {
+    "en": "An attendance application built in FlutterFlow by a three-person freelance team, taken on immediately after the DPR RI internship ended. It was the first paid project and the first time working in FlutterFlow.",
+    "id": "Aplikasi absensi berbasis FlutterFlow yang dikerjakan tim freelance bertiga, diambil tepat setelah magang DPR RI berakhir. Ini project berbayar pertama sekaligus pengalaman pertama memakai FlutterFlow."
+  },
+  "description": {
+    "en": "PELICAN is an attendance application, taken on as a freelance job immediately after the DPR RI internship ended in December 2024. It was the first paid project, built by a team of three — a designer, a backend developer, and a frontend developer.\n\nThe team built it in FlutterFlow rather than writing Flutter by hand. That was also a first: coming in with Flutter experience but none in FlutterFlow, the tool had to be learned in two days before the build could start.\n\nWorking in a visual builder turned out to be a different discipline from writing Flutter directly. FlutterFlow is more rigid, and some designs could not be reproduced exactly as intended — the constraint had to be worked around rather than argued with.",
+    "id": "PELICAN adalah aplikasi absensi yang diambil sebagai pekerjaan freelance tepat setelah magang DPR RI berakhir pada Desember 2024. Ini project berbayar pertama, dikerjakan tim bertiga — seorang desainer, seorang backend developer, dan seorang frontend developer.\n\nTim membangunnya dengan FlutterFlow alih-alih menulis Flutter secara manual. Itu juga pengalaman pertama: datang dengan bekal Flutter tapi belum pernah menyentuh FlutterFlow, alatnya harus dipelajari dalam dua hari sebelum pembangunan bisa dimulai.\n\nBekerja di dalam visual builder ternyata disiplin yang berbeda dari menulis Flutter langsung. FlutterFlow lebih kaku, dan sebagian desain tidak bisa direproduksi persis seperti yang diinginkan — batasannya harus disiasati, bukan dilawan."
+  },
+  "problem": {
+    "en": "The client needed an attendance application, and the team had to deliver it on a low-code platform none of them had used before.",
+    "id": "Klien membutuhkan aplikasi absensi, dan tim harus mengirimkannya di atas platform low-code yang belum pernah dipakai siapa pun di tim."
+  },
+  "solution": {
+    "en": "Learn FlutterFlow in two days on existing Flutter knowledge, then build the frontend inside the tool's constraints rather than fighting them.",
+    "id": "Mempelajari FlutterFlow dalam dua hari berbekal pengetahuan Flutter yang sudah ada, lalu membangun frontend di dalam batasan alatnya alih-alih melawannya."
+  },
+  "role": {
+    "en": "Frontend Developer",
+    "id": "Frontend Developer"
+  },
+  "responsibilities": {
+    "en": [
+      "Built the application frontend in FlutterFlow as one of three people, alongside a designer and a backend developer"
+    ],
+    "id": [
+      "Membangun frontend aplikasi dengan FlutterFlow sebagai satu dari tiga orang, bersama seorang desainer dan seorang backend developer"
+    ]
+  },
+  "teamSize": 3,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [],
+    "id": []
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "The build had to happen in FlutterFlow, a tool nobody on the team had used, with no time budgeted for learning it.",
+        "id": "Pembangunan harus dilakukan di FlutterFlow, alat yang belum pernah dipakai siapa pun di tim, tanpa waktu yang dialokasikan untuk mempelajarinya."
+      },
+      "solution": {
+        "en": "Self-taught the platform in two days, leaning on existing Flutter knowledge to shorten the ramp.",
+        "id": "Mempelajari platformnya sendiri dalam dua hari, bersandar pada pengetahuan Flutter yang sudah ada untuk memperpendek waktu adaptasi."
+      }
+    },
+    {
+      "problem": {
+        "en": "A visual builder is more rigid than hand-written Flutter, and some intended designs could not be reproduced exactly.",
+        "id": "Visual builder lebih kaku dibanding Flutter yang ditulis tangan, dan sebagian desain yang diinginkan tidak bisa direproduksi persis."
+      },
+      "solution": {
+        "en": "Worked within what the platform allowed and adjusted the implementation rather than forcing the tool past its limits.",
+        "id": "Bekerja di dalam apa yang diizinkan platform dan menyesuaikan implementasinya alih-alih memaksa alat itu melewati batasnya."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "Low-code platforms trade flexibility for speed. Knowing Flutter shortened the learning curve, but it did not remove the ceiling the visual builder imposes on design."
+    ],
+    "id": [
+      "Platform low-code menukar keleluasaan dengan kecepatan. Menguasai Flutter memperpendek kurva belajarnya, tapi tidak menghapus langit-langit yang dipasang visual builder pada desain."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "FlutterFlow",
+      "Flutter",
+      "Dart"
+    ],
+    "backend": [],
+    "database": [],
+    "infra": [],
+    "tools": []
+  },
+  "architecture": null,
+  "integrations": [],
+  "media": {
+    "thumbnail": null,
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "flutterflow",
+    "flutter",
+    "dart",
+    "attendance",
+    "freelance",
+    "client-work"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2025-01",
+  "updatedAt": "2026-09-06"
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "suwotify",
+  "title": {
+    "en": "Suwotify",
+    "id": "Suwotify"
+  },
+  "subtitle": {
+    "en": "A Spotify-style music player built for a mobile programming course.",
+    "id": "Pemutar musik bergaya Spotify untuk mata kuliah pemrograman aplikasi bergerak."
+  },
+  "category": "mobile",
+  "type": "academic",
+  "status": "completed",
+  "featured": false,
+  "order": 11,
+  "startDate": "2023-10",
+  "endDate": "2023-12",
+  "summary": {
+    "en": "A Flutter music streaming app modelled on Spotify, built as coursework for Mobile Application Programming, with playback, local persistence, and its own Strapi backend.",
+    "id": "Aplikasi streaming musik berbasis Flutter yang meniru Spotify, dibuat sebagai tugas mata kuliah Pemrograman Aplikasi Bergerak, dengan pemutaran, penyimpanan lokal, dan backend Strapi sendiri."
+  },
+  "description": {
+    "en": "Suwotify is a music streaming application built in Flutter for the Mobile Application Programming course at Multi Data Palembang University. It reproduces the core shape of a streaming app — browsing a catalogue, opening a track, and playing it — rather than stopping at static screens.\n\nThe app is laid out in separate layers for screens, components, models, services, and data, with playback handled through an audio player and a YouTube player for tracks served that way. Session state persists locally between launches, and the catalogue is fetched over HTTP from a separate Strapi backend built alongside it in two companion repositories.\n\nA noticeable share of the dependency list is animation work — staggered list animations, animated text, page transitions, and an animated splash screen — reflecting an emphasis on making the interface feel closer to a real product than a course submission.",
+    "id": "Suwotify adalah aplikasi streaming musik berbasis Flutter yang dibuat untuk mata kuliah Pemrograman Aplikasi Bergerak di Universitas Multi Data Palembang. Aplikasinya mereproduksi bentuk inti sebuah aplikasi streaming — menelusuri katalog, membuka sebuah lagu, dan memutarnya — alih-alih berhenti di layar statis.\n\nAplikasinya disusun dalam lapisan terpisah untuk screens, components, models, services, dan data, dengan pemutaran ditangani lewat audio player serta YouTube player untuk lagu yang disajikan dengan cara itu. State sesi bertahan secara lokal antar peluncuran, dan katalognya diambil lewat HTTP dari backend Strapi terpisah yang dibangun berdampingan di dua repositori pendamping.\n\nSebagian besar daftar dependensinya adalah pekerjaan animasi — animasi daftar bertingkat, teks beranimasi, transisi halaman, dan splash screen beranimasi — mencerminkan penekanan agar antarmukanya terasa lebih dekat ke produk sungguhan ketimbang tugas kuliah."
+  },
+  "problem": {
+    "en": "The coursework asked for a mobile application; the harder target was building something with the working parts of a real streaming app rather than a mockup of one.",
+    "id": "Tugas kuliahnya meminta sebuah aplikasi mobile; sasaran yang lebih sulit adalah membangun sesuatu dengan bagian-bagian yang benar-benar bekerja seperti aplikasi streaming sungguhan, bukan tiruan tampilannya saja."
+  },
+  "solution": {
+    "en": "Build the full path — a Strapi backend serving the catalogue, an HTTP layer consuming it, real audio playback, and local persistence — inside a layered Flutter project.",
+    "id": "Membangun jalur penuhnya — backend Strapi yang menyajikan katalog, lapisan HTTP yang mengonsumsinya, pemutaran audio sungguhan, dan penyimpanan lokal — di dalam project Flutter yang berlapis."
+  },
+  "role": {
+    "en": "Mobile Developer",
+    "id": "Mobile Developer"
+  },
+  "responsibilities": {
+    "en": [
+      "Wrote 18 of the repository's 19 commits, covering the application end to end",
+      "Structured the project into screens, components, models, services, and data layers",
+      "Built the Strapi backend serving the catalogue in two companion repositories"
+    ],
+    "id": [
+      "Menulis 18 dari 19 commit di repositorinya, mencakup keseluruhan aplikasi",
+      "Menyusun project ke dalam lapisan screens, components, models, services, dan data",
+      "Membangun backend Strapi yang menyajikan katalognya di dua repositori pendamping"
+    ]
+  },
+  "teamSize": 2,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Music catalogue fetched over HTTP from a Strapi backend",
+      "Audio playback, with a YouTube player for tracks served that way",
+      "Local persistence of session state between launches",
+      "Animated interface — staggered lists, animated text, page transitions, and an animated splash screen"
+    ],
+    "id": [
+      "Katalog musik yang diambil lewat HTTP dari backend Strapi",
+      "Pemutaran audio, dengan YouTube player untuk lagu yang disajikan dengan cara itu",
+      "Penyimpanan state sesi secara lokal antar peluncuran",
+      "Antarmuka beranimasi — daftar bertingkat, teks beranimasi, transisi halaman, dan splash screen beranimasi"
+    ]
+  },
+  "challenges": [],
+  "impact": [],
+  "lessons": {
+    "en": [],
+    "id": []
+  },
+  "stack": {
+    "frontend": [
+      "Flutter",
+      "Dart"
+    ],
+    "backend": [
+      "Strapi",
+      "JavaScript"
+    ],
+    "database": [],
+    "infra": [],
+    "tools": [
+      "REST API"
+    ]
+  },
+  "architecture": {
+    "en": "A layered Flutter client — screens, components, models, services, and data — talking over HTTP to a separate Strapi backend maintained in its own repositories. Audio is handled by an audio player package alongside a YouTube player, and session state is kept in local shared preferences.",
+    "id": "Klien Flutter berlapis — screens, components, models, services, dan data — yang berkomunikasi lewat HTTP dengan backend Strapi terpisah yang dipelihara di repositorinya sendiri. Audio ditangani paket audio player berdampingan dengan YouTube player, dan state sesi disimpan di shared preferences lokal."
+  },
+  "integrations": [
+    "YouTube"
+  ],
+  "media": {
+    "thumbnail": null,
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": "https://github.com/umarmuhdhor/spotifysuwo",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": true
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "flutter",
+    "dart",
+    "strapi",
+    "music",
+    "coursework"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2023-10",
+  "updatedAt": "2026-09-06"
+}

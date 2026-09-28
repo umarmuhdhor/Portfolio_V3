@@ -15,6 +15,7 @@ export default function WorkIndex() {
           <WorkGrid
             projects={PROJECT_PAGES.map((p) => ({
               title: p.title,
+              subtitle: p.subtitle,
               metric: p.metric,
               image: p.image,
               href: `/work/${p.slug}`,

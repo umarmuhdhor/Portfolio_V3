@@ -1,0 +1,78 @@
+{
+  "$schema": "../schema/contact.schema.json",
+  "email": "muhdhorcs@gmail.com",
+  "phone": "0895807069922",
+  "preferredChannel": "email",
+  "responseTime": null,
+  "bookingUrl": null,
+  "resume": {
+    "src": "assets/docs/cv.pdf",
+    "label": {
+      "en": "Curriculum Vitae",
+      "id": "Daftar Riwayat Hidup"
+    },
+    "updatedAt": "2026-07-23"
+  },
+  "socials": [
+    {
+      "id": "linkedin",
+      "label": {
+        "en": "LinkedIn",
+        "id": "LinkedIn"
+      },
+      "handle": "umarMuhdhor",
+      "url": "https://www.linkedin.com/in/umarMuhdhor/",
+      "icon": null,
+      "primary": true,
+      "order": 1
+    },
+    {
+      "id": "github",
+      "label": {
+        "en": "GitHub",
+        "id": "GitHub"
+      },
+      "handle": "umarmuhdhor",
+      "url": "https://github.com/umarmuhdhor",
+      "icon": null,
+      "primary": true,
+      "order": 2
+    },
+    {
+      "id": "youtube",
+      "label": {
+        "en": "YouTube",
+        "id": "YouTube"
+      },
+      "handle": "@tidaksulit6688",
+      "url": "https://www.youtube.com/@tidaksulit6688",
+      "icon": null,
+      "primary": false,
+      "order": 3
+    },
+    {
+      "id": "instagram",
+      "label": {
+        "en": "Instagram",
+        "id": "Instagram"
+      },
+      "handle": "umarmuhd._",
+      "url": "https://www.instagram.com/umarmuhd._/",
+      "icon": null,
+      "primary": false,
+      "order": 4
+    },
+    {
+      "id": "portfolio-drive",
+      "label": {
+        "en": "Portfolio & Certificates",
+        "id": "Portofolio & Sertifikat"
+      },
+      "handle": null,
+      "url": "https://drive.google.com/drive/folders/1P4XR-HlpxFsVx1F833jAvMEiRv9PChPf",
+      "icon": null,
+      "primary": false,
+      "order": 5
+    }
+  ]
+}

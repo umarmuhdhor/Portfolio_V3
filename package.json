@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sync-data": "node scripts/sync-data.mjs",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "crosscheck": "node scripts/crosscheck.mjs",
     "compare": "node scripts/compare.mjs",

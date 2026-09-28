@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "shopify-automation",
+  "title": {
+    "en": "Shopify Automation",
+    "id": "Shopify Automation"
+  },
+  "subtitle": {
+    "en": "One supplier link becomes a review-ready Shopify draft product.",
+    "id": "Satu link supplier menjadi draft produk Shopify yang siap ditinjau."
+  },
+  "category": "ai",
+  "type": "client",
+  "status": "completed",
+  "featured": true,
+  "order": 5,
+  "startDate": "2026-07-01",
+  "endDate": null,
+  "summary": {
+    "en": "An agent pipeline that turns a single Alibaba or 1688 product link into a complete Shopify draft product — brand name, locked-format description, linked variants, cost, size chart, metafields, and supplier photos — with every rule enforced after creation.",
+    "id": "Pipeline agent yang mengubah satu link produk Alibaba atau 1688 menjadi draft produk Shopify yang lengkap — nama brand, deskripsi berformat terkunci, varian tertaut, cost, size chart, metafield, dan foto supplier — dengan setiap aturan ditegakkan setelah produk dibuat."
+  },
+  "description": {
+    "en": "Paste one Alibaba or 1688 product link and a review-ready draft appears in the client's Shopify store, carrying a distilled brand name, a description in a locked format, Color × Size variants linked to Shopify metaobjects, supplier cost in USD, weight, a size chart in centimetres, category metafields, tags, collections, SKUs, and the supplier's own photography. Nothing is ever published automatically — every product stays a draft until a human releases it.\n\nThe governing decision is a split: the model is allowed to judge, and code does the mechanics. The model decides only four things per product — the product type, a distilled brand name with supplier codes and keyword stuffing stripped out, the plain text of the description, and two vision calls that pick which description tiles actually show the garment and transcribe the size chart out of an image. Everything else is deterministic Python: colour matching, attribute-to-metaobject mapping, tags, collections, category, SKUs, variants, weight, size chart to HTML, description assembly, metafields, the text of every GraphQL mutation, and a final rule-by-rule verification.\n\nThe payoff is that output stays consistent even when the model reasons at a low setting, and bugs move out of \"the model misremembered the API\" and into scripts that carry unit tests. A derived rule follows from it: the model never writes GraphQL. Generator scripts emit each mutation, the model pastes the output verbatim, and the MCP response is dumped to a fixed filename for the next generator to read.\n\nA batch mode exists for multiple links at once. Since a session is a single agent thread, only extraction genuinely parallelises, so extraction fans out as background subprocesses while draft and Shopify work stays serial. One blocked product does not bring down its batch, and re-running the same links preserves what already succeeded — a refreshed cookie resumes a half-finished run.",
+    "id": "Tempel satu link produk Alibaba atau 1688 dan sebuah draft siap tinjau muncul di toko Shopify klien, lengkap dengan nama brand hasil distilasi, deskripsi berformat terkunci, varian Color × Size yang tertaut ke metaobject Shopify, cost supplier dalam USD, berat, size chart dalam sentimeter, metafield kategori, tag, collection, SKU, dan fotografi milik supplier sendiri. Tidak ada yang diterbitkan otomatis — setiap produk tetap draft sampai manusia melepasnya.\n\nKeputusan yang mengatur semuanya adalah pemisahan: model boleh menilai, kode mengerjakan mekaniknya. Model hanya memutuskan empat hal per produk — tipe produk, nama brand hasil distilasi dengan kode supplier dan penjejalan kata kunci dibuang, teks polos deskripsi, dan dua panggilan vision yang memilih tile deskripsi mana yang benar-benar menampilkan busana serta mentranskripsi size chart dari gambar. Selebihnya Python deterministik: pencocokan warna, pemetaan atribut ke metaobject, tag, collection, kategori, SKU, varian, berat, size chart ke HTML, perakitan deskripsi, metafield, teks setiap mutation GraphQL, dan verifikasi akhir aturan demi aturan.\n\nHasilnya, keluaran tetap konsisten walau model bernalar pada setelan rendah, dan bug berpindah dari \"model salah mengingat API\" menjadi script yang punya unit test. Satu aturan turunan mengikuti: model tidak pernah menulis GraphQL. Script generator memancarkan tiap mutation, model menempel keluarannya apa adanya, dan response MCP dibuang ke nama file tetap untuk dibaca generator berikutnya.\n\nAda mode batch untuk banyak link sekaligus. Karena satu sesi berarti satu thread agent, hanya ekstraksi yang benar-benar paralel, sehingga ekstraksi disebar sebagai subprocess latar sementara pekerjaan draft dan Shopify tetap serial. Satu produk yang terblokir tidak menjatuhkan batch-nya, dan menjalankan ulang link yang sama mempertahankan yang sudah berhasil — cookie yang di-refresh melanjutkan run yang setengah jalan."
+  },
+  "problem": {
+    "en": "Listing a supplier garment on Shopify by hand means retyping the title into a brand name, rewriting the description into house format, matching every colour to a swatch metaobject, mapping attributes, transcribing a size chart out of an image into centimetres, building variants and SKUs, and attaching photos — repeated for every product, with a mistake anywhere producing a listing that looks wrong or breaks a smart collection.",
+    "id": "Mendaftarkan busana supplier ke Shopify secara manual berarti mengetik ulang judul menjadi nama brand, menulis ulang deskripsi ke format toko, mencocokkan tiap warna ke metaobject swatch, memetakan atribut, mentranskripsi size chart dari gambar ke sentimeter, menyusun varian dan SKU, serta melampirkan foto — diulang untuk setiap produk, dan satu kesalahan di mana pun menghasilkan listing yang salah atau merusak smart collection."
+  },
+  "solution": {
+    "en": "Give the model only the judgment calls and let deterministic scripts handle every mechanical step, then verify the finished product against every business rule on Shopify itself before reporting success.",
+    "id": "Memberi model hanya keputusan yang butuh penilaian dan menyerahkan setiap langkah mekanis ke script deterministik, lalu memverifikasi produk jadi terhadap setiap aturan bisnis langsung di Shopify sebelum melaporkan keberhasilan."
+  },
+  "role": {
+    "en": "AI Automation Engineer",
+    "id": "AI Automation Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Built the extraction, build, and verification pipeline as one of two people on the project"
+    ],
+    "id": [
+      "Membangun pipeline ekstraksi, build, dan verifikasi sebagai satu dari dua orang di project ini"
+    ]
+  },
+  "teamSize": 2,
+  "client": {
+    "name": {
+      "en": "MD Fashionwear",
+      "id": "MD Fashionwear"
+    },
+    "logo": null,
+    "url": "https://mdfashionwear.com"
+  },
+  "features": {
+    "en": [
+      "Pasting a supplier link auto-triggers the upload flow; several links at once switch to batch mode",
+      "Two sources, Alibaba and 1688, normalised into one shared extraction schema",
+      "Preflight hard gate covering virtualenv, stealth browser, cookie locale, config, and a live CNY to USD rate with cache and config fallback",
+      "Vision pass over a labelled contact sheet to pick product-showing tiles and transcribe the size chart",
+      "Deterministic build of description HTML, colour matching, attribute mapping, tags, collections, category, SKUs, variants, and weight",
+      "Automatic creation of swatch metaobjects for colours the store has never seen",
+      "Two MCP calls per product by folding collections, option links, and verification into one aliased mutation",
+      "Post-create verification of ten rule groups against the real product in Shopify",
+      "Batch mode with parallel extraction, per-product failure isolation, and resume from a manifest",
+      "Behaviour driven by config files rather than code — rules, GIDs, and thresholds are all data"
+    ],
+    "id": [
+      "Menempel link supplier langsung memicu alur unggah; beberapa link sekaligus beralih ke mode batch",
+      "Dua sumber, Alibaba dan 1688, dinormalkan ke satu skema ekstraksi bersama",
+      "Gerbang preflight keras yang mencakup virtualenv, browser stealth, locale cookie, config, dan kurs CNY ke USD langsung dengan cache serta cadangan dari config",
+      "Tahap vision atas contact sheet berlabel untuk memilih tile yang menampilkan produk dan mentranskripsi size chart",
+      "Build deterministik untuk HTML deskripsi, pencocokan warna, pemetaan atribut, tag, collection, kategori, SKU, varian, dan berat",
+      "Pembuatan otomatis metaobject swatch untuk warna yang belum pernah ada di toko",
+      "Dua panggilan MCP per produk dengan melipat collection, penautan opsi, dan verifikasi ke satu mutation ber-alias",
+      "Verifikasi pasca-pembuatan atas sepuluh kelompok aturan terhadap produk sungguhan di Shopify",
+      "Mode batch dengan ekstraksi paralel, isolasi kegagalan per produk, dan pelanjutan dari manifest",
+      "Perilaku dikendalikan file config alih-alih kode — aturan, GID, dan ambang batas semuanya berupa data"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "The model wrote Shopify GraphQL mutations from memory and drifted repeatedly — confusing optionValues with optionValuesToUpdate, misplacing name fields into \"cannot have both metafield linked and nonlinked option values\", and getting reorder positions wrong. Inline documentation contracts were not enough to stop it.",
+        "id": "Model menulis mutation GraphQL Shopify dari ingatan dan berulang kali melenceng — tertukar antara optionValues dan optionValuesToUpdate, salah menaruh field name hingga muncul \"cannot have both metafield linked and nonlinked option values\", dan keliru posisi reorder. Kontrak dokumentasi inline saja tidak cukup menahannya."
+      },
+      "solution": {
+        "en": "Moved every hot-path mutation into generator scripts. The model runs the script and pastes stdout verbatim, then dumps the MCP response to a fixed filename for the next generator. The model never authors GraphQL.",
+        "id": "Memindahkan setiap mutation di hot path ke script generator. Model menjalankan script lalu menempel stdout apa adanya, kemudian membuang response MCP ke nama file tetap untuk generator berikutnya. Model tidak pernah menulis GraphQL."
+      }
+    },
+    {
+      "problem": {
+        "en": "1688 exposes raw data only in Chinese; the English text comes from 1688's own client-side translator, which only runs in Global / EN / USD mode. Translating with an LLM would have added cost, latency, and new failure modes.",
+        "id": "1688 hanya menyediakan data mentah dalam bahasa Mandarin; teks Inggrisnya berasal dari translator client-side milik 1688 sendiri, yang hanya jalan di mode Global / EN / USD. Menerjemahkan dengan LLM akan menambah biaya, latensi, dan mode gagal baru."
+      },
+      "solution": {
+        "en": "Read English strings from the rendered DOM after waiting for the translator, while keeping structural fields — image URLs, SKU ids, weight, MOQ, gallery, video — from the SSR blob, since translation does not change those. LLM translation was rejected outright.",
+        "id": "Membaca teks Inggris dari DOM yang sudah dirender setelah menunggu translator, sambil tetap mengambil field struktural — URL gambar, id SKU, berat, MOQ, gallery, video — dari blob SSR, karena terjemahan tidak mengubahnya. Terjemahan lewat LLM ditolak sejak awal."
+      }
+    },
+    {
+      "problem": {
+        "en": "Running five extractions at once tripped 1688's anti-bot, which answers with a Captcha Interception page returning HTTP 200 and no SSR blob — so the failure looked like a successful fetch of an empty product.",
+        "id": "Menjalankan lima ekstraksi sekaligus memicu anti-bot 1688, yang membalas dengan halaman Captcha Interception berstatus HTTP 200 tanpa blob SSR — sehingga kegagalannya tampak seperti fetch sukses atas produk kosong."
+      },
+      "solution": {
+        "en": "Capped concurrent extraction at two with a 15 to 20 second cooldown between fan-outs, measured from the end of the previous extraction batch so agent work counts toward it and a slow batch sleeps for zero seconds.",
+        "id": "Membatasi ekstraksi bersamaan menjadi dua dengan cooldown 15 sampai 20 detik antar fan-out, dihitung dari akhir batch ekstraksi sebelumnya sehingga kerja agent ikut terhitung dan batch yang lambat tidur nol detik."
+      }
+    },
+    {
+      "problem": {
+        "en": "Size chart numbers printed at 8 to 12 points turn to mush in the 420-pixel contact sheet used for vision, so a conclusion of \"this product has no size chart\" drawn from the montage alone could not be trusted.",
+        "id": "Angka size chart yang tercetak pada ukuran 8 sampai 12 poin menjadi buyar di contact sheet 420 piksel yang dipakai untuk vision, sehingga kesimpulan \"produk ini tidak punya size chart\" yang hanya berdasar montage tidak bisa dipercaya."
+      },
+      "solution": {
+        "en": "Made the absent-chart claim earn its place: the agent must fetch full-resolution tiles and read each one, and the verifiedAbsent marker is only accepted when the reason names every tile label and the full-resolution directory exists as proof. Both build and verify hard-fail a 1688 draft without one of the three chart sources.",
+        "id": "Membuat klaim ketiadaan chart harus dibuktikan: agent wajib mengambil tile resolusi penuh dan membaca satu per satu, dan penanda verifiedAbsent baru diterima bila alasannya menyebut setiap label tile dan direktori resolusi penuh ada sebagai bukti. Build dan verify sama-sama menggagalkan draft 1688 yang tidak punya satu pun dari tiga sumber chart."
+      }
+    },
+    {
+      "problem": {
+        "en": "Cookies from either site localise the response, and a non-English cookie silently corrupts colour names and attributes rather than failing loudly.",
+        "id": "Cookie dari kedua situs melokalkan responsnya, dan cookie non-Inggris diam-diam merusak nama warna dan atribut alih-alih gagal secara terbuka."
+      },
+      "solution": {
+        "en": "Made cookie locale a hard preflight gate. The run stops and asks the operator to switch the site language, and cookies are never translated or hand-edited.",
+        "id": "Menjadikan locale cookie sebagai gerbang preflight yang keras. Run berhenti dan meminta operator mengganti bahasa situs, dan cookie tidak pernah diterjemahkan atau disunting tangan."
+      }
+    },
+    {
+      "problem": {
+        "en": "Every MCP round trip to Shopify dominated wall-clock time, and a naive implementation would spend one call each on collections, colour linking, size linking, and verification.",
+        "id": "Tiap perjalanan bolak-balik MCP ke Shopify mendominasi waktu nyata, dan implementasi naif akan menghabiskan satu panggilan masing-masing untuk collection, penautan warna, penautan ukuran, dan verifikasi."
+      },
+      "solution": {
+        "en": "Folded collections, both option links, and the verification fetch into a single aliased mutation, bringing the cost to two MCP calls per product — plus two more only when a new colour needs a swatch.",
+        "id": "Melipat collection, kedua penautan opsi, dan fetch verifikasi menjadi satu mutation ber-alias, sehingga biayanya menjadi dua panggilan MCP per produk — ditambah dua lagi hanya saat warna baru butuh swatch."
+      }
+    }
+  ],
+  "impact": [
+    {
+      "metric": {
+        "en": "MCP calls per product",
+        "id": "Panggilan MCP per produk"
+      },
+      "value": "2",
+      "delta": null,
+      "note": {
+        "en": "Plus two more only when a new colour swatch has to be created",
+        "id": "Ditambah dua lagi hanya saat swatch warna baru harus dibuat"
+      }
+    },
+    {
+      "metric": {
+        "en": "Batch extraction cost",
+        "id": "Biaya ekstraksi batch"
+      },
+      "value": "~1x",
+      "delta": null,
+      "note": {
+        "en": "Extraction fans out as background subprocesses instead of running once per product in sequence",
+        "id": "Ekstraksi disebar sebagai subprocess latar alih-alih berjalan satu per satu secara berurutan"
+      }
+    }
+  ],
+  "lessons": {
+    "en": [
+      "Splitting the work so the model only judges and code does the mechanics kept output consistent even at low reasoning effort, and moved bugs into scripts that can be unit tested.",
+      "Documentation contracts alone did not stop the model from drifting on API shape. Removing its ability to author the mutation did.",
+      "Anti-bot systems fail in ways that look like success — a captcha page returning HTTP 200 reads as a fetched product until you check for the data blob."
+    ],
+    "id": [
+      "Memisahkan pekerjaan sehingga model hanya menilai dan kode mengerjakan mekaniknya membuat keluaran tetap konsisten bahkan pada usaha penalaran rendah, dan memindahkan bug ke script yang bisa diuji unit.",
+      "Kontrak dokumentasi saja tidak menghentikan model melenceng soal bentuk API. Mencabut kemampuannya menulis mutation-lah yang berhasil.",
+      "Sistem anti-bot gagal dengan cara yang tampak seperti sukses — halaman captcha berstatus HTTP 200 terbaca sebagai produk yang berhasil diambil sampai kamu memeriksa keberadaan blob datanya."
+    ]
+  },
+  "stack": {
+    "frontend": [],
+    "backend": [
+      "Python"
+    ],
+    "database": [],
+    "infra": [],
+    "tools": [
+      "Claude Code",
+      "MCP",
+      "Scrapling",
+      "Chromium",
+      "GraphQL"
+    ]
+  },
+  "architecture": {
+    "en": "A command-driven agent pipeline: preflight gate, extraction per source into a shared schema, a vision pass, four model decisions, a deterministic build step that emits the payload and the mutation text, creation over the Shopify Admin GraphQL API through MCP, an aliased finalize mutation, and a verification gate. Behaviour lives in two config files holding rules and Shopify GIDs, so changing what the system does rarely means changing code.",
+    "id": "Pipeline agent berbasis perintah: gerbang preflight, ekstraksi per sumber ke skema bersama, tahap vision, empat keputusan model, langkah build deterministik yang memancarkan payload dan teks mutation, pembuatan lewat Shopify Admin GraphQL API melalui MCP, mutation finalize ber-alias, dan gerbang verifikasi. Perilakunya tinggal di dua file config berisi aturan dan GID Shopify, sehingga mengubah apa yang dilakukan sistem jarang berarti mengubah kode."
+  },
+  "integrations": [
+    "Shopify Admin GraphQL API",
+    "Alibaba",
+    "1688",
+    "Frankfurter FX API"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/shopify-automation/thumb.webp",
+      "alt": {
+        "en": "Title card for the Alibaba to Shopify pipeline, showing the four stages Extract, Classify, Build, and Draft",
+        "id": "Kartu judul pipeline Alibaba ke Shopify, menampilkan empat tahap Extract, Classify, Build, dan Draft"
+      },
+      "width": 2048,
+      "height": 1024
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": null,
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ai-automation",
+    "python",
+    "shopify",
+    "graphql",
+    "mcp",
+    "web-scraping",
+    "claude"
+  ],
+  "relatedExperienceId": "md-fashionwear-ai-automation",
+  "testimonialIds": [],
+  "createdAt": "2026-07-01",
+  "updatedAt": "2026-09-11"
+}

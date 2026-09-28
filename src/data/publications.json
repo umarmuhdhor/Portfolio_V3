@@ -1,0 +1,63 @@
+{
+  "$schema": "../schema/publications.schema.json",
+  "items": [
+    {
+      "id": "mobilenet-batik-motif-classification-2026",
+      "title": "Evaluation of MobileNet-Based Deep Features for Yogyakarta Traditional Batik Motif Classification",
+      "authors": [
+        "Umar Muhdhor",
+        "Yohannes"
+      ],
+      "authorPosition": 1,
+      "venue": "Sinkron: Jurnal dan Penelitian Teknik Informatika",
+      "venueType": "journal",
+      "volume": "10",
+      "issue": "1",
+      "pages": "389-395",
+      "publishedAt": "2026-01-04",
+      "doi": "10.33395/sinkron.v10i1.15668",
+      "url": "https://jurnal.polgan.ac.id/index.php/sinkron/article/view/15668",
+      "pdfUrl": "https://jurnal.polgan.ac.id/index.php/sinkron/article/download/15668/3756",
+      "summary": {
+        "en": "Evaluates successive MobileNet generations as feature extractors for classifying three Yogyakarta batik motifs — Parang, Kawung, and Truntum — with an SVM (RBF) classifier on a small, imbalanced dataset.",
+        "id": "Menguji beberapa generasi MobileNet sebagai feature extractor untuk mengklasifikasikan tiga motif batik Yogyakarta — Parang, Kawung, dan Truntum — dengan classifier SVM (RBF) pada dataset kecil yang tidak seimbang."
+      },
+      "highlights": {
+        "en": [
+          "Dataset of 685 images across three motif classes with significant class imbalance",
+          "Class imbalance handled with SMOTE applied at the feature level",
+          "Evaluated with weighted accuracy, precision, recall, and F1 under 5-fold cross validation",
+          "MobileNetV3Large + SVM reached 98.36% ± 0.68 weighted accuracy, best across all metrics",
+          "Differences between MobileNet variants confirmed significant by Friedman test (p = 0.001522) and Wilcoxon"
+        ],
+        "id": [
+          "Dataset 685 citra pada tiga kelas motif dengan ketidakseimbangan kelas yang signifikan",
+          "Ketidakseimbangan kelas ditangani dengan SMOTE di level fitur",
+          "Dievaluasi dengan weighted accuracy, precision, recall, dan F1 memakai 5-fold cross validation",
+          "MobileNetV3Large + SVM mencapai weighted accuracy 98,36% ± 0,68, terbaik di seluruh metrik",
+          "Perbedaan antar varian MobileNet terbukti signifikan lewat uji Friedman (p = 0,001522) dan Wilcoxon"
+        ]
+      },
+      "stack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "scikit-learn",
+        "MobileNet",
+        "SVM",
+        "SMOTE"
+      ],
+      "tags": [
+        "deep-learning",
+        "computer-vision",
+        "mobilenet",
+        "image-classification",
+        "batik"
+      ],
+      "relatedEducationId": "multi-data-palembang-university",
+      "relatedProjectId": null,
+      "featured": true,
+      "order": 1
+    }
+  ]
+}

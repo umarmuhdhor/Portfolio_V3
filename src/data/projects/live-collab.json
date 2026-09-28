@@ -1,0 +1,250 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "live-collab",
+  "title": {
+    "en": "Live Collab",
+    "id": "Live Collab"
+  },
+  "subtitle": {
+    "en": "One live workspace for every teammate's IBM Bob, with shared locks, a queue, and a human PM who approves.",
+    "id": "Satu workspace langsung untuk IBM Bob milik setiap anggota tim, dengan lock bersama, antrean, dan PM manusia yang menyetujui."
+  },
+  "category": "ai",
+  "type": "hackathon",
+  "status": "completed",
+  "featured": true,
+  "order": 14,
+  "startDate": "2026-09-25",
+  "endDate": "2026-09-27",
+  "summary": {
+    "en": "A collaboration layer for teams where every developer runs their own IBM Bob agent on one repo: hooks lock code blocks before a write, blocked agents queue and explain why, and a PM agent proposes while a human approves.",
+    "id": "Lapisan kolaborasi untuk tim yang setiap developernya menjalankan agent IBM Bob sendiri di satu repo: hook mengunci blok kode sebelum ditulis, agent yang terblokir mengantre dan menjelaskan alasannya, dan agent PM mengusulkan sementara manusia menyetujui."
+  },
+  "description": {
+    "en": "IBM Bob works well for one developer. Put three developers on the same repo, each with their own Bob, and it breaks: two agents edit the same file and one silently overwrites the other, nobody can see what a teammate's agent is doing, and nobody decides who owns which file before the edits start. Git branches only surface these problems after the fact.\n\nLive Collab adds a shared layer between the agents, like Google Docs for a team of Bobs. Every teammate keeps their own Bob account, IDE, and context. A PreToolUse hook checks a shared lock table before every write, so one block of lines has one holder and everyone else is blocked and queued. The blocked Bob calls why_blocked and tells its human, in one sentence, who holds the file and what to do next, then moves on to other work. A PM Bob in a read-only mode splits the goal into tasks, arbitrates file conflicts, and reviews diffs, but every proposal lands in a Needs you queue where a person clicks Approve or Deny.\n\nThe server is one Cloudflare Durable Object per workspace, which handles messages one at a time, so two agents reaching for the same file in the same millisecond cannot both win. A sync agent streams saved files to teammates in under a second, a desktop app forked from Orca shows who holds what and lets teammates watch each other's Bob live, and approved tasks land as one commit each. The server never calls an LLM — all AI work happens in each teammate's Bob IDE.\n\nBuilt in three days by a team of four for the IBM Bob 2.0 Hackathon on lablab.ai. It is a community project, not an official IBM product.",
+    "id": "IBM Bob bekerja baik untuk satu developer. Taruh tiga developer di repo yang sama, masing-masing dengan Bob sendiri, dan semuanya rusak: dua agent mengedit file yang sama dan satu diam-diam menimpa yang lain, tak ada yang bisa melihat apa yang sedang dikerjakan agent rekan setim, dan tak ada yang memutuskan siapa pemilik file mana sebelum edit dimulai. Branch Git baru menemukan masalah ini setelah terjadi.\n\nLive Collab menambahkan lapisan bersama di antara para agent, seperti Google Docs untuk tim berisi Bob. Setiap anggota tetap memakai akun Bob, IDE, dan konteksnya sendiri. Hook PreToolUse mengecek tabel lock bersama sebelum setiap penulisan, sehingga satu blok baris hanya punya satu pemegang dan yang lain diblokir lalu diantrekan. Bob yang terblokir memanggil why_blocked dan memberi tahu manusianya, dalam satu kalimat, siapa yang memegang file dan apa langkah selanjutnya, lalu beralih ke pekerjaan lain. Bob PM dalam mode read-only memecah tujuan menjadi task, menengahi konflik file, dan meninjau diff, tetapi setiap usulan masuk ke antrean Needs you tempat seseorang menekan Approve atau Deny.\n\nServernya adalah satu Cloudflare Durable Object per workspace yang memproses pesan satu per satu, sehingga dua agent yang meraih file yang sama di milidetik yang sama tidak bisa sama-sama menang. Sync agent mengalirkan file yang disimpan ke rekan setim dalam waktu kurang dari satu detik, aplikasi desktop hasil fork Orca menampilkan siapa memegang apa dan memungkinkan anggota menonton Bob rekannya secara langsung, dan task yang disetujui masuk sebagai satu commit per task. Server tidak pernah memanggil LLM — semua pekerjaan AI terjadi di Bob IDE milik setiap anggota.\n\nDibangun dalam tiga hari oleh tim empat orang untuk IBM Bob 2.0 Hackathon di lablab.ai. Ini project komunitas, bukan produk resmi IBM."
+  },
+  "problem": {
+    "en": "When several developers each run their own AI coding agent on one repo, agents overwrite each other's edits, nobody can see what a teammate's agent is doing, and file ownership is never decided before writes start. Git only surfaces the damage afterwards.",
+    "id": "Saat beberapa developer masing-masing menjalankan AI coding agent sendiri di satu repo, para agent saling menimpa edit, tak ada yang bisa melihat apa yang dikerjakan agent rekan setim, dan kepemilikan file tidak pernah diputuskan sebelum penulisan dimulai. Git baru menampakkan kerusakannya setelah terjadi."
+  },
+  "solution": {
+    "en": "Stop conflicts before the write: a Bob hook checks a server-side lock table on every edit, blocked agents queue and explain themselves, a read-only PM agent proposes plans and reviews, and a human approves every decision in a desktop app.",
+    "id": "Menghentikan konflik sebelum penulisan: hook Bob mengecek tabel lock di server pada setiap edit, agent yang terblokir mengantre dan menjelaskan dirinya, agent PM read-only mengusulkan rencana dan review, dan manusia menyetujui setiap keputusan di aplikasi desktop."
+  },
+  "role": {
+    "en": "Agent Integration Engineer",
+    "id": "Agent Integration Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Ran the day-one spike on Bob IDE 2.2 to find the real hook payload shape, how to block a write, and hook timeout behaviour",
+      "Built the coder and pm-lead custom modes with their rules, so the PM agent can only read and propose",
+      "Built the Bob hooks — lock_guard, the team brief, activity streaming, and AI-edit marking — bundled with esbuild",
+      "Built radar-mcp, the 14-tool MCP server the coder and PM agents call",
+      "Ran Bob behaviour sessions against the real Worker to check that agents never give one file to two tasks and never work around a lock",
+      "Added PM features to the desktop app: one PM per room, task steps with coder check-off, plan approval, PM documents, and review prompts",
+      "Collected and documented the IBM Bob usage evidence for the submission"
+    ],
+    "id": [
+      "Menjalankan spike hari pertama di Bob IDE 2.2 untuk menemukan bentuk payload hook yang sebenarnya, cara memblokir penulisan, dan perilaku timeout hook",
+      "Membangun custom mode coder dan pm-lead beserta aturannya, sehingga agent PM hanya bisa membaca dan mengusulkan",
+      "Membangun hook Bob — lock_guard, brief tim, streaming aktivitas, dan penanda edit AI — yang di-bundle dengan esbuild",
+      "Membangun radar-mcp, server MCP berisi 14 tool yang dipanggil agent coder dan PM",
+      "Menjalankan sesi uji perilaku Bob terhadap Worker asli untuk memastikan agent tidak pernah memberi satu file ke dua task dan tidak pernah mengakali lock",
+      "Menambahkan fitur PM ke aplikasi desktop: satu PM per room, langkah task dengan centang dari coder, persetujuan rencana, dokumen PM, dan prompt review",
+      "Mengumpulkan dan mendokumentasikan bukti penggunaan IBM Bob untuk submission"
+    ]
+  },
+  "teamSize": 4,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Block-level write locks checked by a PreToolUse hook before every edit, with a queue for everyone else",
+      "Blocked agents call why_blocked and explain the block to their human in one sentence",
+      "A read-only PM agent that plans tasks, arbitrates file conflicts, and reviews diffs, but cannot approve its own proposals",
+      "Needs you queue in the desktop app where a human approves or denies every plan, conflict, and review",
+      "Live file sync to every teammate in under a second",
+      "Watch a teammate's Bob activity live, with prompt text shared only on opt-in",
+      "Tasks split into steps that coders check off, with the PM board updating live",
+      "One commit per approved task, co-authored by IBM Bob",
+      "A browser replay of a recorded session, with no login or API key"
+    ],
+    "id": [
+      "Lock penulisan per blok yang dicek hook PreToolUse sebelum setiap edit, dengan antrean untuk yang lain",
+      "Agent yang terblokir memanggil why_blocked dan menjelaskan pemblokirannya ke manusianya dalam satu kalimat",
+      "Agent PM read-only yang merencanakan task, menengahi konflik file, dan meninjau diff, tetapi tidak bisa menyetujui usulannya sendiri",
+      "Antrean Needs you di aplikasi desktop tempat manusia menyetujui atau menolak setiap rencana, konflik, dan review",
+      "Sinkronisasi file langsung ke setiap anggota tim dalam waktu kurang dari satu detik",
+      "Menonton aktivitas Bob rekan setim secara langsung, dengan teks prompt dibagikan hanya jika diizinkan",
+      "Task dipecah menjadi langkah yang dicentang coder, dengan papan PM yang ter-update langsung",
+      "Satu commit per task yang disetujui, co-authored oleh IBM Bob",
+      "Replay sesi rekaman di browser, tanpa login atau API key"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Bob IDE's real hook payload did not match the example shape in its documentation, so hooks built from the docs would silently misread which file a tool was about to write.",
+        "id": "Payload hook Bob IDE yang sebenarnya tidak cocok dengan contoh di dokumentasinya, sehingga hook yang dibangun dari dokumentasi akan diam-diam salah membaca file mana yang akan ditulis sebuah tool."
+      },
+      "solution": {
+        "en": "Logged real payloads in a spike on day one and wrote a normalizer that accepts both the snake_case shape Bob actually sends and the documented one.",
+        "id": "Mencatat payload asli lewat spike di hari pertama dan menulis normalizer yang menerima bentuk snake_case yang benar-benar dikirim Bob maupun bentuk yang terdokumentasi."
+      }
+    },
+    {
+      "problem": {
+        "en": "A hook that times out is killed and the tool runs anyway, so a slow network would let a blocked write through.",
+        "id": "Hook yang timeout dimatikan dan tool-nya tetap berjalan, sehingga jaringan yang lambat bisa meloloskan penulisan yang seharusnya diblokir."
+      },
+      "solution": {
+        "en": "Gave lock_guard its own 1.6-second budget and made the server the hard guarantee: it rejects any file update from a member who does not hold the lock, and the sync agent restores the file. The same layer also catches manual edits and sed.",
+        "id": "Memberi lock_guard anggaran waktu sendiri 1,6 detik dan menjadikan server sebagai jaminan utama: server menolak setiap update file dari anggota yang tidak memegang lock, dan sync agent memulihkan filenya. Lapisan yang sama juga menangkap edit manual dan sed."
+      }
+    },
+    {
+      "problem": {
+        "en": "A blocked agent tends to retry or route around the block through the shell, which defeats the lock.",
+        "id": "Agent yang terblokir cenderung mencoba ulang atau mengakali blokir lewat shell, yang membuat lock tidak berguna."
+      },
+      "solution": {
+        "en": "Exited the hook with code 2 so the server's reason reaches Bob as the tool error, wrote mode rules that forbid retries and shell workarounds, and verified the behaviour in Bob sessions against the real server.",
+        "id": "Mengakhiri hook dengan kode 2 agar alasan dari server sampai ke Bob sebagai error tool, menulis aturan mode yang melarang percobaan ulang dan jalan pintas lewat shell, lalu memverifikasi perilakunya dalam sesi Bob terhadap server asli."
+      }
+    },
+    {
+      "problem": {
+        "en": "Bob starts stdio MCP servers with the working directory set to the filesystem root, and bundled CommonJS hooks broke in projects using ES modules.",
+        "id": "Bob menjalankan server MCP stdio dengan working directory di root filesystem, dan hook CommonJS hasil bundle rusak di project yang memakai ES module."
+      },
+      "solution": {
+        "en": "Made the kit use workspace-relative paths and ship its own package.json declaring CommonJS, so hooks and radar-mcp run in any project.",
+        "id": "Membuat kit memakai path relatif terhadap workspace dan menyertakan package.json sendiri yang mendeklarasikan CommonJS, sehingga hook dan radar-mcp berjalan di project apa pun."
+      }
+    }
+  ],
+  "impact": [
+    {
+      "metric": {
+        "en": "Merge conflicts in the recorded demo session",
+        "id": "Merge conflict dalam sesi demo rekaman"
+      },
+      "value": "0",
+      "delta": null,
+      "note": {
+        "en": "Three people and three Bobs on one demo repo; one near-miss was caught by the hook and two decisions went to a human.",
+        "id": "Tiga orang dan tiga Bob di satu repo demo; satu near-miss ditangkap hook dan dua keputusan diserahkan ke manusia."
+      }
+    },
+    {
+      "metric": {
+        "en": "Median time to a human decision",
+        "id": "Median waktu hingga keputusan manusia"
+      },
+      "value": "2.9 s",
+      "delta": null,
+      "note": {
+        "en": "Measured in the same recorded demo session.",
+        "id": "Diukur pada sesi demo rekaman yang sama."
+      }
+    }
+  ],
+  "lessons": {
+    "en": [
+      "Spike the host tool before designing around it — the real hook payload, timeout, and workspace-trust behaviour all differed from what the docs implied.",
+      "A client-side hook is a courtesy, not a guarantee; the server has to be the final authority on every write.",
+      "Agents should propose and humans should approve — giving the PM agent no tool to approve its own proposals made the governance easy to trust."
+    ],
+    "id": [
+      "Lakukan spike pada tool host sebelum merancang di atasnya — payload hook, timeout, dan perilaku workspace trust yang sebenarnya semuanya berbeda dari yang tersirat di dokumentasi.",
+      "Hook di sisi klien hanyalah kesopanan, bukan jaminan; server harus menjadi otoritas terakhir atas setiap penulisan.",
+      "Agent mengusulkan dan manusia menyetujui — tidak memberi agent PM tool untuk menyetujui usulannya sendiri membuat tata kelolanya mudah dipercaya."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Electron",
+      "React",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Next.js"
+    ],
+    "backend": [
+      "Cloudflare Workers",
+      "Cloudflare Durable Objects",
+      "Hono",
+      "Zod",
+      "Node.js",
+      "MCP TypeScript SDK"
+    ],
+    "database": [
+      "SQLite"
+    ],
+    "infra": [
+      "Cloudflare Pages",
+      "GitHub Releases"
+    ],
+    "tools": [
+      "IBM Bob IDE",
+      "esbuild",
+      "pnpm",
+      "Vitest"
+    ]
+  },
+  "architecture": {
+    "en": "Each teammate's Mac runs IBM Bob IDE with a .bob kit (custom modes, hooks, and the radar-mcp stdio server), a sync agent, and an Electron desktop app forked from Orca. Hooks and radar-mcp talk REST to a Hono Worker on Cloudflare; the sync agent and the app hold WebSockets to one Durable Object per workspace, which stores files, locks, tasks, and events in SQLite and processes messages one at a time. Approved tasks are committed through the GitHub Git Data API, and recorded events feed a static replay on Cloudflare Pages.",
+    "id": "Mac setiap anggota menjalankan IBM Bob IDE dengan kit .bob (custom mode, hook, dan server stdio radar-mcp), sebuah sync agent, dan aplikasi desktop Electron hasil fork Orca. Hook dan radar-mcp berkomunikasi lewat REST ke Worker Hono di Cloudflare; sync agent dan aplikasi memegang WebSocket ke satu Durable Object per workspace, yang menyimpan file, lock, task, dan event di SQLite serta memproses pesan satu per satu. Task yang disetujui di-commit lewat GitHub Git Data API, dan event rekaman menjadi replay statis di Cloudflare Pages."
+  },
+  "integrations": [
+    "IBM Bob IDE",
+    "Model Context Protocol",
+    "GitHub Git Data API"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/live-collab/thumb.webp",
+      "alt": {
+        "en": "Live Collab banner: the session replay, the desktop app's Tasks board, and a locked code block where one teammate's Bob is blocked and queued",
+        "id": "Banner Live Collab: replay sesi, papan Tasks di aplikasi desktop, dan blok kode terkunci tempat Bob milik seorang anggota diblokir dan diantrekan"
+      },
+      "width": 1600,
+      "height": 900
+    },
+    "gallery": [],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    }
+  },
+  "links": {
+    "demo": "https://ibm-bob-live-collab.pages.dev/demo/",
+    "repo": "https://github.com/umarmuhdhor/IBM",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "ibm-bob",
+    "ai-agents",
+    "mcp",
+    "cloudflare",
+    "durable-objects",
+    "electron",
+    "typescript",
+    "hackathon"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-09-25",
+  "updatedAt": "2026-09-28"
+}
