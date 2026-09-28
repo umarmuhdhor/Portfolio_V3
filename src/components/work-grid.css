@@ -95,20 +95,45 @@
    Frame + image
    -------------------------------------------------------------------------- */
 .work-frame {
+  align-items: center;
+  background: #f2f2f2;
+  display: flex;
   height: 540rem;
+  justify-content: center;
   overflow: hidden;
+  padding: 40rem;
   width: 100%;
 }
 
+/* Screenshots come in every shape — phone portraits, square icons, wide
+   dashboards — so each sits whole on a neutral plate instead of being
+   cover-cropped. max-* rather than 100%: an image smaller than the plate stays
+   at its own size and is never scaled up into blur. */
 .work-frame img {
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1.109s var(--ease), opacity 0.3s var(--ease);
-  width: 100%;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 1.109s var(--ease), opacity 0.3s var(--ease), filter 0.6s var(--ease);
+  width: auto;
 }
 
 .work-card:hover .work-frame img {
   transform: scale(1.035);
+}
+
+/* The page is monochrome; the screenshots are not. On a pointer device they
+   sit in greyscale and take their colour back on hover or keyboard focus.
+   Touch devices have no hover to reveal it, so they get colour from the start. */
+@media (hover: hover) {
+  .work-frame img {
+    filter: grayscale(1);
+  }
+
+  .work-card:hover .work-frame img,
+  .work-card a:focus-visible .work-frame img {
+    filter: grayscale(0);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -224,5 +249,6 @@
 
   .work-card .work-frame {
     height: 215rem !important;
+    padding: 16rem;
   }
 }

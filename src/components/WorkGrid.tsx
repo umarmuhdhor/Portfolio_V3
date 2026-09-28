@@ -17,17 +17,20 @@ export default function WorkGrid({ projects }: { projects: Card[] }) {
         // No screenshot for this one — render the outlined empty plate rather
         // than substituting an image from another project.
         const empty = p.image === null;
+        const external = !!p.href && /^https?:/.test(p.href);
         return (
           <article className={`work-card${empty ? ' is--b' : ''}`} data-role="work-card" key={p.title}>
             <a
               aria-label={p.subtitle ? `${p.title} — ${p.subtitle}` : p.title}
               href={p.href ?? '#work'}
-              rel="noreferrer noopener"
-              target="_blank"
+              rel={external ? 'noreferrer noopener' : undefined}
+              target={external ? '_blank' : undefined}
             >
-              <div className="work-frame" data-gl data-role="work-frame">
-                {/* Nothing is substituted when there is no screenshot — the
-                    frame is left genuinely empty and is--b outlines it. */}
+              {/* No data-gl: the WebGL layer only knows cover fit, and these
+                  are screenshots of mixed shapes that have to be shown whole.
+                  Nothing is substituted when there is no screenshot — the
+                  frame is left genuinely empty and is--b outlines it. */}
+              <div className="work-frame" data-role="work-frame">
                 {p.image ? <img alt={p.subtitle ? `${p.title} — ${p.subtitle}` : p.title} loading="lazy" src={p.image} /> : null}
               </div>
 
