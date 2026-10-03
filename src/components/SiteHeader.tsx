@@ -10,6 +10,7 @@
 import Link from 'next/link';
 import { HEADER } from '@/lib/dummy';
 import HeaderOverHero from './HeaderOverHero';
+import LogoMark from './LogoMark';
 import './site-header.css';
 
 const NAV = [
@@ -28,7 +29,8 @@ export default function SiteHeader({ active = '/', overHero = false }: { active?
             className="site-header__brand fn-b1"
             href="/"
           >
-            {HEADER.name}
+            <LogoMark className="site-header__mark" />
+            <span>{HEADER.name}</span>
           </Link>
 
           <nav aria-label="Primary">

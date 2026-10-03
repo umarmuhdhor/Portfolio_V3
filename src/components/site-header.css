@@ -66,10 +66,16 @@ html.is--dark .site-header:not(.is--over-hero) {
   align-items: center;
   color: inherit;
   display: flex;
+  gap: max(12rem, 10px);
   font-weight: 500;
   letter-spacing: -0.01em;
   min-height: 44px;
   text-decoration: none;
+}
+
+.site-header__mark {
+  flex: 0 0 auto;
+  width: max(28rem, 24px);
 }
 
 .site-header__nav {

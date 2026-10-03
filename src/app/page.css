@@ -222,7 +222,7 @@
      hard cut across the jacket. */
   -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
   mask-image: linear-gradient(to bottom, #000 82%, transparent);
-  max-height: 720rem;
+  max-height: 520rem;
   max-width: 100%;
   width: auto;
 }

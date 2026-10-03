@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="UM">
-  <rect width="512" height="512" rx="112" fill="#0A84FF"/>
-  <g fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M124 166 V298 A48 48 0 0 0 220 298 V166"/>
-    <path d="M276 346 V166 L332 268 L388 166 V346"/>
+  <rect width="512" height="512" rx="112" fill="#0A0A0A"/>
+  <g
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="7"
+    stroke-linecap="butt"
+    stroke-linejoin="round"
+    transform="translate(64 64) scale(6)"
+  >
+    <path d="M10 8v30c0 12.15 8.76 18 22 18s22-5.85 22-18V8"/>
+    <path d="M10 13l22 19 22-19"/>
   </g>
 </svg>

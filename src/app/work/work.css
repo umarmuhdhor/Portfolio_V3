@@ -34,6 +34,15 @@
   grid-column: 6 / 13;
 }
 
+/* Facts follow the summary in the DOM; without a shared row the grid wraps
+   them underneath instead of beside it. */
+@media (min-width: 768px) {
+  .detail__facts,
+  .detail__summary {
+    grid-row: 1;
+  }
+}
+
 @media (max-width: 767.98px) {
   .detail__facts,
   .detail__summary {
