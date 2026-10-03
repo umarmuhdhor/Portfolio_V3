@@ -47,17 +47,16 @@
 /* --------------------------------------------------------------------------
    Fluid rem — implement first, everything depends on it
 
-   Root font-size is viewport-derived so that 1rem === one design pixel:
-   1920 design width on desktop, 375 on mobile. Every dimension in this project
-   is then authored as the design pixel value in rem, and the whole layout
-   scales with the viewport without a single media query for size.
+   Root font-size is viewport-derived so that 1rem === one design pixel at a
+   1920 design width. Mobile holds 1rem at 1px so type does not inflate on
+   small tablets approaching the breakpoint. Every dimension remains authored
+   as its design-pixel value in rem.
 
    px is used only for borders and outlines.
    -------------------------------------------------------------------------- */
 /* The root font-size lives in an inline <style> in the document head, not
-   here — see layout.tsx. The CSS minifier truncates the literal to
-   0.0520833vw, and that rounding is enough to make 1rem compute to 0.999999px
-   instead of 1px, which then shows up on every rem-derived measurement. */
+   here — see layout.tsx. The CSS minifier truncates the desktop ratio, and
+   that rounding propagates into every rem-derived measurement. */
 
 /* --------------------------------------------------------------------------
    Motion — one curve, five durations
@@ -69,6 +68,11 @@
    -------------------------------------------------------------------------- */
 :root {
   --ease: cubic-bezier(0.17, 0.84, 0.44, 1);
+  --z-webgl: 1;
+  --z-scrollbar: 20;
+  --z-header: 30;
+  --z-overlay: 40;
+  --z-skip-link: 50;
 }
 
 /* --------------------------------------------------------------------------
@@ -94,6 +98,7 @@ html {
   font-feature-settings: 'kern' off;
   font-kerning: none;
   scroll-behavior: auto;
+  scroll-padding-top: 72px;
   text-rendering: optimizespeed;
   text-size-adjust: none;
   -moz-osx-font-smoothing: grayscale;
@@ -104,15 +109,16 @@ body {
   background-color: #fff;
   color: #000;
   font-family: 'Switzer', sans-serif;
-  font-size: 16rem;
+  font-size: max(16rem, 15px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  overflow-x: clip;
 }
 
 @media (max-width: 767.98px) {
   body {
-    font-size: 14rem;
+    font-size: 15rem;
   }
 }
 
@@ -136,6 +142,14 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:target {
+  scroll-margin-top: 72px;
 }
 
 a {
@@ -235,9 +249,12 @@ h6 {
   line-height: 1.1;
 }
 
+/* 1rem is 1/1920 of the viewport, so body sizes carry a px floor: on a
+   laptop-width window they would otherwise drop to 8px. Mobile sizes below
+   replace these outright. */
 .fn-b1 {
   font-family: 'Switzer', sans-serif;
-  font-size: 16rem;
+  font-size: max(16rem, 15px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -245,7 +262,7 @@ h6 {
 
 .fn-b2 {
   font-family: 'Switzer', sans-serif;
-  font-size: 14rem;
+  font-size: max(14rem, 14px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -253,7 +270,7 @@ h6 {
 
 .fn-btn {
   font-family: 'Switzer', sans-serif;
-  font-size: 14rem;
+  font-size: max(14rem, 13px);
   font-weight: 200;
   letter-spacing: -0.02em;
   line-height: normal;
@@ -261,13 +278,13 @@ h6 {
 
 /* The running counter in the header and the footer meta column. */
 .fn-meta {
-  font-size: 19rem;
+  font-size: max(19rem, 14px);
   letter-spacing: -0.02em;
   line-height: 1;
 }
 
 .fn-note {
-  font-size: 9rem;
+  font-size: max(9rem, 11px);
 }
 
 @media (max-width: 767.98px) {
@@ -292,18 +309,18 @@ h6 {
   }
 
   .fn-b1 {
-    font-size: 14rem;
+    font-size: 15rem;
   }
 
   .fn-b2,
   .fn-meta {
-    font-size: 12rem;
+    font-size: 13rem;
   }
 }
 
 sup {
   font-family: 'Hedvig Letters Serif', serif;
-  font-size: 14rem;
+  font-size: max(14rem, 12px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -365,11 +382,11 @@ sup {
 }
 
 .cl-gr3 {
-  color: #929292;
+  color: #6e6e6e;
 }
 
 .bg-gr3 {
-  background-color: #929292;
+  background-color: #6e6e6e;
 }
 
 .bg-gr4 {
@@ -544,7 +561,7 @@ sup {
   color: #000;
   cursor: pointer;
   display: inline-flex;
-  font-size: 18rem;
+  font-size: max(18rem, 15px);
   gap: 12rem;
   justify-content: center;
   overflow: hidden;
@@ -582,11 +599,11 @@ sup {
   transition: transform 0.5s var(--ease);
 }
 
-/* The header rides on mix-blend-mode so it inverts over dark sections rather
-   than needing a colour swap. */
+/* The header changes colour by state (over the hero, over dark sections),
+   so those properties ease along with the slide. */
 .t-header {
   transition-duration: 0.6s;
-  transition-property: transform, mix-blend-mode;
+  transition-property: transform, background-color, color, border-color;
   transition-timing-function: var(--ease);
   will-change: transform;
 }
@@ -601,11 +618,12 @@ sup {
 .scrollbar {
   bottom: 0;
   padding: 24px 0;
+  pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
   user-select: none;
-  z-index: 9998;
+  z-index: var(--z-scrollbar);
 }
 
 @media (max-width: 767.98px) {
@@ -621,20 +639,16 @@ sup {
 
 .scrollbar-thumb {
   background-color: #000;
-  border: 1px solid #000;
   border-radius: 50px;
-  cursor: grab;
   min-height: 80px;
-  opacity: 0.5;
+  opacity: 0.38;
   position: absolute;
-  right: 4px;
-  transition: width 0.4s ease, opacity 0.4s ease;
-  width: 8px;
+  right: 3px;
+  width: 4px;
 }
 
-.scrollbar-thumb:hover {
-  opacity: 0.7;
-  width: 10px;
+html.is--dark .scrollbar-thumb {
+  background-color: #fff;
 }
 
 /* --------------------------------------------------------------------------
@@ -826,7 +840,7 @@ sup {
   left: -9999rem;
   position: absolute;
   top: 0;
-  z-index: 10000;
+  z-index: var(--z-skip-link);
 }
 
 .skip-link:focus {
@@ -837,8 +851,8 @@ sup {
 }
 
 :focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  outline: 2px solid currentcolor;
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -876,7 +890,7 @@ sup {
   inset: 0;
   pointer-events: none;
   position: fixed;
-  z-index: 1;
+  z-index: var(--z-webgl);
 }
 
 .wgl-canvas {
@@ -921,6 +935,7 @@ sup {
 .lh-open {
   display: block;
   line-height: 0.95;
+  text-wrap: balance;
 }
 
 /* --------------------------------------------------------------------------
@@ -932,11 +947,11 @@ sup {
 .splash {
   background-color: #fff;
   color: #000;
-  height: 100vh;
+  height: 100dvh;
   inset: 0;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: var(--z-overlay);
 }
 
 @media (max-width: 767.98px) {
@@ -976,7 +991,7 @@ sup {
   transform-origin: left;
   width: 100%;
   will-change: transform;
-  z-index: 10000;
+  z-index: calc(var(--z-overlay) + 1);
 }
 
 html.is--loading,

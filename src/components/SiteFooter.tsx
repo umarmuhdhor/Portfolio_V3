@@ -1,4 +1,7 @@
+import Link from 'next/link';
 import { FOOTER } from '@/lib/dummy';
+
+const isInternal = (href: string) => href.startsWith('/');
 
 /** The footer, shared by every route. */
 export default function SiteFooter() {
@@ -6,9 +9,9 @@ export default function SiteFooter() {
     <footer className="footer" data-role="footer" id="contact">
       <div className="ctr" data-role="container">
         <div className="grd" data-role="grid">
-          <a className="fn-b1 footer__brand" data-role="footer-link" href="/">
+          <Link className="fn-b1 footer__brand" data-role="footer-link" href="/">
             {FOOTER.brand}
-          </a>
+          </Link>
 
           <div className="footer__links">
             {FOOTER.columns.map((c) => (
@@ -17,9 +20,21 @@ export default function SiteFooter() {
                 <ul>
                   {c.links.map((l) => (
                     <li key={l.label}>
-                      <a className="link fn-b1" data-role="footer-link" href={l.href}>
-                        {l.label}
-                      </a>
+                      {isInternal(l.href) ? (
+                        <Link className="link fn-b1" data-role="footer-link" href={l.href}>
+                          {l.label}
+                        </Link>
+                      ) : (
+                        <a
+                          className="link fn-b1"
+                          data-role="footer-link"
+                          href={l.href}
+                          rel={l.href.startsWith('http') ? 'noreferrer noopener' : undefined}
+                          target={l.href.startsWith('http') ? '_blank' : undefined}
+                        >
+                          {l.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -56,9 +71,9 @@ export default function SiteFooter() {
                   {m}
                 </span>
               ))}
-              <a className="link fn-b2" href="/legal">
+              <Link className="link fn-b2" href="/legal">
                 Legal
-              </a>
+              </Link>
             </div>
           </div>
         </div>

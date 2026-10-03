@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './styleguide.css';
 
 /**
@@ -29,7 +30,7 @@ const PALETTE = [
   { hex: '#f0f0f0', use: 'subtle fills' },
   { hex: '#f8f8f8', use: 'subtle fills, lighter' },
   { hex: '#ccc', use: 'rules, dividers' },
-  { hex: '#929292', use: 'muted / secondary text' },
+  { hex: '#6e6e6e', use: 'muted / secondary text' },
 ] as const;
 
 const MOTION = [
@@ -112,12 +113,12 @@ export default function Styleguide() {
 
         <Section title="Link underline — scaled ::before, active route inverts">
           <div className="sg__links">
-            <a className="link fn-b1" data-role="link" href="/styleguide">
+            <Link className="link fn-b1" data-role="link" href="/styleguide">
               Default — wipes in on hover
-            </a>
-            <a className="link fn-b1 is--a" href="/styleguide">
+            </Link>
+            <Link className="link fn-b1 is--a" href="/styleguide">
               Active — rests underlined, collapses on hover
-            </a>
+            </Link>
             <button className="btn fn-btn" data-role="btn" type="button">
               Button
             </button>

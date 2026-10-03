@@ -32,21 +32,19 @@ import { DURATION, EASE_NAME, prefersReducedMotion, registerEase } from '@/lib/e
  */
 export default function ScrollMotion() {
   useEffect(() => {
+    const documentRoot = document.documentElement;
+    documentRoot.classList.remove('is--dark');
     if (prefersReducedMotion()) return;
 
     registerEase();
     gsap.registerPlugin(ScrollTrigger, Observer, SplitText);
 
-    // The browser restores the previous scroll offset before Lenis exists, and
-    // Lenis then adopts it — so a reload lands mid-page with every reveal above
-    // already spent. Start from the top and let the anchor links do the moving.
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
-
     const lenis = new Lenis({
+      anchors: true,
       duration: 1.109,
       easing: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
       smoothWheel: true,
+      stopInertiaOnNavigate: true,
     });
 
     lenis.on('scroll', ScrollTrigger.update);
@@ -119,16 +117,15 @@ export default function ScrollMotion() {
       });
 
       // --- word-level reveal ----------------------------------------------
-      // A timeline rather than a bare tween, per the GSAP guidance: the words
-      // stagger up while the whole run fades, so the two stay locked together
-      // instead of drifting apart as separate tweens. autoAlpha over opacity
-      // so the element leaves the hit-testing tree while it is invisible.
+      // A timeline rather than a bare tween: words stagger up while the whole
+      // run fades, so the two stay locked together. Opacity keeps the content
+      // in the accessibility tree before its visual reveal.
       gsap.utils.toArray<HTMLElement>('[data-split-words]').forEach((el) => {
         const split = new SplitText(el, { type: 'words,lines', wordsClass: 'wd', linesClass: 'ln' });
         splits.push(split);
         const words = split.words as HTMLElement[];
 
-        gsap.set(words, { yPercent: 60, autoAlpha: 0 });
+        gsap.set(words, { yPercent: 60, opacity: 0 });
         words.forEach((w) => hidden.add(w));
 
         ScrollTrigger.create({
@@ -140,7 +137,7 @@ export default function ScrollMotion() {
               .timeline({ onComplete: () => words.forEach(release) })
               .to(words, {
                 yPercent: 0,
-                autoAlpha: 1,
+                opacity: 1,
                 duration: DURATION.roll,
                 ease: EASE_NAME,
                 stagger: { each: 0.02, from: 'start' },
@@ -216,14 +213,13 @@ export default function ScrollMotion() {
       // sections individually leaves those gaps white.
       const diagram = document.querySelector<HTMLElement>('.sec-diagram');
       if (diagram) {
-        const root = document.documentElement;
         ScrollTrigger.create({
           trigger: diagram,
           start: 'top -530px',
           // No end: once the run starts it holds all the way to the footer,
           // which is black on its own account.
-          onEnter: () => root.classList.add('is--dark'),
-          onLeaveBack: () => root.classList.remove('is--dark'),
+          onEnter: () => documentRoot.classList.add('is--dark'),
+          onLeaveBack: () => documentRoot.classList.remove('is--dark'),
         });
       }
 
@@ -256,7 +252,7 @@ export default function ScrollMotion() {
 
       // --- blocks: a short lift -------------------------------------------
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
-        gsap.set(el, { autoAlpha: 0, y: 40 });
+        gsap.set(el, { opacity: 0, y: 40 });
         hidden.add(el);
         ScrollTrigger.create({
           trigger: el,
@@ -264,7 +260,7 @@ export default function ScrollMotion() {
           once: true,
           onEnter: () =>
             gsap.to(el, {
-              autoAlpha: 1,
+              opacity: 1,
               y: 0,
               duration: DURATION.transform,
               ease: EASE_NAME,
@@ -276,7 +272,7 @@ export default function ScrollMotion() {
       // --- work cards: staggered in, in grid order ------------------------
       const cards = gsap.utils.toArray<HTMLElement>('[data-role="work-card"]');
       cards.forEach((card) => {
-        gsap.set(card, { autoAlpha: 0, y: 60 });
+        gsap.set(card, { opacity: 0, y: 60 });
         hidden.add(card);
         ScrollTrigger.create({
           trigger: card,
@@ -284,7 +280,7 @@ export default function ScrollMotion() {
           once: true,
           onEnter: () =>
             gsap.to(card, {
-              autoAlpha: 1,
+              opacity: 1,
               y: 0,
               duration: DURATION.roll,
               ease: EASE_NAME,
@@ -314,41 +310,50 @@ export default function ScrollMotion() {
         Observer.create({
           type: 'wheel,touch,scroll',
           onDown: () => {
-            if (lenis.scroll > 200) gsap.to(header, { yPercent: -100, duration: DURATION.roll, ease: EASE_NAME });
+            if (lenis.scroll > 200) {
+              gsap.to(header, {
+                yPercent: -100,
+                duration: DURATION.roll,
+                ease: EASE_NAME,
+                overwrite: 'auto',
+              });
+            }
           },
-          onUp: () => gsap.to(header, { yPercent: 0, duration: DURATION.roll, ease: EASE_NAME }),
+          onUp: () =>
+            gsap.to(header, {
+              yPercent: 0,
+              duration: DURATION.roll,
+              ease: EASE_NAME,
+              overwrite: 'auto',
+            }),
           tolerance: 12,
         });
       }
 
       // --- nav: mark the section in view ----------------------------------
+      // On the index the sections stand in for the pages the nav points at:
+      // the work section lights "Work", and so on. The hero lights nothing —
+      // the name on the left is the way back there.
       const navLinks = gsap.utils.toArray<HTMLAnchorElement>('[data-role="nav-link"]');
-      const setActive = (id: string) => {
-        navLinks.forEach((a) => a.classList.toggle('is--a', a.getAttribute('href') === `#${id}`));
-      };
-      ['index', 'work', 'about', 'contact'].forEach((id) => {
-        const section = document.getElementById(id);
-        if (!section) return;
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'top 50%',
-          end: 'bottom 50%',
-          onToggle: (self) => self.isActive && setActive(id),
-        });
-      });
-
-      // --- running counter ------------------------------------------------
-      const counter = document.querySelector<HTMLElement>('[data-role="nav-counter"]');
-      const sections = gsap.utils.toArray<HTMLElement>('section');
-      if (counter && sections.length) {
-        ScrollTrigger.create({
-          trigger: document.body,
-          start: 'top top',
-          end: 'bottom bottom',
-          onUpdate: (self) => {
-            const n = Math.min(sections.length, Math.max(1, Math.ceil(self.progress * sections.length)));
-            counter.textContent = String(n).padStart(2, '0');
-          },
+      if (window.location.pathname === '/') {
+        const setActive = (href: string | null) => {
+          navLinks.forEach((a) => a.classList.toggle('is--a', a.getAttribute('href') === href));
+        };
+        const spy: [string, string | null][] = [
+          ['index', null],
+          ['work', '/work'],
+          ['about', '/about'],
+          ['contact', '/contact'],
+        ];
+        spy.forEach(([id, href]) => {
+          const section = document.getElementById(id);
+          if (!section) return;
+          ScrollTrigger.create({
+            trigger: section,
+            start: 'top 50%',
+            end: 'bottom 50%',
+            onToggle: (self) => self.isActive && setActive(href),
+          });
         });
       }
 
@@ -433,6 +438,7 @@ export default function ScrollMotion() {
       window.clearTimeout(sweep);
       splashWatcher.disconnect();
       window.removeEventListener('load', onLoad);
+      documentRoot.classList.remove('is--dark');
       ctx.revert();
       splits.forEach((s) => s.revert());
       gsap.ticker.remove(raf);

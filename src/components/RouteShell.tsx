@@ -11,17 +11,20 @@ import WebGLLayer from '@/components/WebGLLayer';
 export default function RouteShell({
   label,
   heading,
+  nav = null,
   children,
 }: {
   label: string;
   heading: string;
+  /** The primary nav entry this route belongs under, if any. */
+  nav?: string | null;
   children?: React.ReactNode;
 }) {
   return (
     <>
       <ScrollMotion />
       <WebGLLayer />
-      <SiteHeader counter="01" />
+      <SiteHeader active={nav} />
 
       <div aria-hidden="true" className="scrollbar">
         <div className="scrollbar-track">

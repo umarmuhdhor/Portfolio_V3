@@ -8,7 +8,7 @@ export const metadata = { title: 'Contact' };
 /** /contact — how to reach the studio. */
 export default function Contact() {
   return (
-    <RouteShell heading={CONTACT.heading.join(' ')} label={CONTACT.label}>
+    <RouteShell heading={CONTACT.heading.join(' ')} label={CONTACT.label} nav="/contact">
       <section className="sec" data-role="section">
         <div className="ctr" data-role="container">
           <div className="grd" data-role="grid">

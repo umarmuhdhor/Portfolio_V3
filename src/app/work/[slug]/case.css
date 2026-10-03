@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Case study — /work/[slug]
+
+   Every block uses the same two-column rhythm as the rest of the site: a serif
+   label in the narrow column (1–4), content in the wide one (6–15). Rows are
+   separated by the same #e2e2e2 hairline the legal and next-link rows use, and
+   secondary text is the same #6e6e6e. Nothing here introduces a colour.
+   ========================================================================== */
+
+.cs {
+  margin-bottom: 0;
+  margin-top: 180rem;
+}
+
+.cs__label {
+  grid-column: 1 / 4;
+}
+
+.cs__body {
+  grid-column: 6 / -1;
+  min-width: 0;
+}
+
+.cs-muted {
+  color: #6e6e6e;
+}
+
+@media (max-width: 767.98px) {
+  .cs {
+    margin-top: 80rem;
+  }
+
+  .cs__body {
+    margin-top: 20rem;
+  }
+}
+
+/* --- overview ------------------------------------------------------------ */
+.cs-subtitle {
+  color: #6e6e6e;
+  margin-bottom: 24rem;
+}
+
+.cs-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.cs-private {
+  border-top: 1px solid #e2e2e2;
+  color: #6e6e6e;
+  padding-top: 20rem;
+}
+
+.cs-plate {
+  margin: 0;
+}
+
+.cs-plate__caption {
+  color: #6e6e6e;
+  margin-top: 16rem;
+  max-width: 700rem;
+}
+
+/* --- impact -------------------------------------------------------------- */
+.cs-impact {
+  display: grid;
+  gap: 60rem 20rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cs-impact__item {
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding-top: 24rem;
+}
+
+.cs-impact__value {
+  margin-bottom: 20rem;
+}
+
+@media (max-width: 767.98px) {
+  .cs-impact {
+    gap: 30rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- brief --------------------------------------------------------------- */
+.cs-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 60rem;
+}
+
+.cs-pair .fn-b2 {
+  margin-bottom: 16rem;
+}
+
+/* --- numbered rows: role, challenges ------------------------------------- */
+.cs-rows {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.cs-row,
+.cs-challenge {
+  border-top: 1px solid #e2e2e2;
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: 80rem 1fr;
+  padding: 24rem 0;
+}
+
+.cs-row p {
+  max-width: 900rem;
+}
+
+.cs-challenge {
+  grid-template-columns: 80rem 1fr 1fr;
+  padding: 30rem 0;
+}
+
+.cs-challenge .fn-b2 {
+  margin-bottom: 8rem;
+}
+
+@media (max-width: 767.98px) {
+  .cs-row,
+  .cs-challenge {
+    gap: 12rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- features: two columns of short numbered lines ----------------------- */
+.cs-features {
+  column-gap: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cs-feature {
+  border-top: 1px solid #e2e2e2;
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: 40rem 1fr;
+  padding: 18rem 0 24rem;
+}
+
+@media (max-width: 767.98px) {
+  .cs-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- architecture -------------------------------------------------------- */
+.cs-architecture {
+  margin-bottom: 60rem;
+}
+
+.cs-stack {
+  display: grid;
+  gap: 30rem 20rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cs-stack > div {
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding-top: 18rem;
+}
+
+@media (max-width: 767.98px) {
+  .cs-stack {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- lessons ------------------------------------------------------------- */
+.cs-lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 50rem;
+}
+
+.cs-lesson {
+  display: grid;
+  gap: 20rem;
+  grid-template-columns: 80rem 1fr;
+}
+
+@media (max-width: 767.98px) {
+  .cs-lessons {
+    gap: 30rem;
+  }
+
+  .cs-lesson {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- next ---------------------------------------------------------------- */
+.cs-next {
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  padding-top: 30rem;
+}
+
+.cs-next__title {
+  transition: transform 1.109s var(--ease);
+}
+
+.cs-next:hover .cs-next__title,
+.cs-next:focus-visible .cs-next__title {
+  transform: translateX(30rem);
+}

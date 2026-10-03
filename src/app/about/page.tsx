@@ -46,34 +46,30 @@ function Record({
 /** /about — the person, the skills, and the record behind the work. */
 export default function About() {
   return (
-    <RouteShell heading="Apps on the device, agents behind them" label="About">
+    <RouteShell heading="Apps on the device, agents behind them" label="About" nav="/about">
+      {/* The page heading already carries the "About" label, and the skill
+          lists that used to sit here are the Capabilities rows below. The
+          long bio lives here; the index has the short one. */}
       <section className="sec" data-role="section">
         <div className="ctr" data-role="container">
-          <div className="sec-about__lead">
-            <p className="fn-b1 sec-about__label" data-role="body-1">
-              {ABOUT.label}
-            </p>
-            <p className="fn-h5 sec-about__body" data-role="h5" data-split-scrub>
-              {ABOUT.body}
-            </p>
-          </div>
-
-          <div className="grd sec-about__cols" data-role="grid">
-            {ABOUT.columns.map((c, i) => (
-              <div className={`sec-about__col sec-about__col--${i === 0 ? 'a' : 'b'}`} data-reveal key={c.no}>
-                <h3 className="fn-b1 f-sf sec-about__col-no">{c.no}</h3>
-                <div className="sec-about__col-body">
-                  <p className="fn-b1">{c.heading}</p>
-                  <ul>
-                    {c.items.map((it) => (
-                      <li className="fn-b2" key={it}>
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div className="grd sec-about__grid" data-role="grid">
+            <div className="sec-about__lead">
+              <p className="fn-h5 sec-about__body" data-role="h5" data-split-scrub>
+                {ABOUT.lead}
+              </p>
+              <div className="sec-about__more">
+                {ABOUT.body.map((b) => (
+                  <p className="fn-b1" data-reveal key={b.slice(0, 20)}>
+                    {b}
+                  </p>
+                ))}
               </div>
-            ))}
+            </div>
+            {ABOUT.portrait ? (
+              <figure className="sec-about__portrait" data-reveal>
+                <img alt={ABOUT.portraitAlt} height={741} src={ABOUT.portrait} width={541} />
+              </figure>
+            ) : null}
           </div>
         </div>
       </section>
@@ -81,14 +77,16 @@ export default function About() {
       <section className="sec" data-role="section">
         <div className="ctr" data-role="container">
           <div className="grd" data-role="grid">
+            <p className="fn-b2 sec-caps__label">{CAPABILITIES.label}</p>
             <h2 className="fn-h3 sec-caps__heading" data-role="h3" data-split>
               {CAPABILITIES.heading}
             </h2>
-            <p className="fn-b2 sec-caps__label">{CAPABILITIES.label}</p>
             <ul className="sec-caps__list">
               {CAPABILITIES.items.map((i) => (
-                <li className="fn-h5 sec-caps__item" data-reveal key={i}>
-                  {i}
+                <li className="sec-caps__item" data-reveal key={i.no}>
+                  <span className="fn-b2 sec-caps__no">{i.no}</span>
+                  <span className="fn-h5 sec-caps__category">{i.category}</span>
+                  <span className="fn-b1 sec-caps__skills">{i.skills}</span>
                 </li>
               ))}
             </ul>
@@ -99,7 +97,23 @@ export default function About() {
       <Record
         id="experience"
         label="Experience"
-        rows={EXPERIENCE.map((e) => ({ key: e.no, aside: e.period, title: e.title, detail: e.company }))}
+        rows={EXPERIENCE.filter((e) => e.paid).map((e) => ({
+          key: e.no,
+          aside: e.period,
+          title: e.title,
+          detail: e.company,
+        }))}
+      />
+
+      <Record
+        id="beyond-work"
+        label="Beyond Work"
+        rows={EXPERIENCE.filter((e) => !e.paid).map((e) => ({
+          key: e.no,
+          aside: e.period,
+          title: e.title,
+          detail: e.company,
+        }))}
       />
 
       <Record

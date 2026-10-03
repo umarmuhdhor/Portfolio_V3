@@ -2,46 +2,42 @@ import { INDEX } from '@/lib/dummy';
 import './service-index.css';
 
 /**
- * The service index — the reference's office directory, rebuilt.
+ * The skill index.
  *
- * Structurally: a display heading that reveals line by line, a serif label in
- * the narrow column, and a stack of rows in the wide one. Each row is a
- * three-up text grid over a hairline rule, and inverts to white-on-black on
- * hover. The rule is a child rather than a border so it can invert with the
- * row instead of staying black on a black fill.
+ * A label and a display heading, then one block per category: the category
+ * named once on the left, its skills listed on the right with where each was
+ * used. Grouping says "Frameworks" once instead of on eight rows, and puts
+ * the left-hand columns — empty in a flat table — to work.
  */
 export default function ServiceIndex() {
   return (
     <section className="sec-index" data-role="section" id="services">
       <div className="ctr" data-role="container">
         <div className="grd" data-role="grid">
+          <p className="fn-b2 sec-index__label">{INDEX.label}</p>
+
           <h2 className="fn-h3 lh-open sec-index__heading" data-role="h3" data-split>
             {INDEX.heading}
           </h2>
 
-          <p className="fn-b1 f-sf sec-index__label">{INDEX.label}</p>
-
-          <ul className="sec-index__rows">
-            {INDEX.rows.map((r) => (
-              <li className="sec-index__row" data-index-row key={r.title}>
-                <div className="sec-index__cells">
-                  <p className="fn-b1 sec-index__title">{r.title}</p>
-                  <p className="fn-b1 sec-index__stack">{r.stack}</p>
-                  <p className="fn-b1 sec-index__detail">{r.detail}</p>
-                  <svg
-                    aria-hidden="true"
-                    className="sec-index__arrow"
-                    fill="none"
-                    viewBox="0 0 10 10"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" strokeWidth="1" />
-                  </svg>
-                </div>
-                <span aria-hidden="true" className="sec-index__rule" />
-              </li>
+          <div className="sec-index__groups">
+            {INDEX.groups.map((g) => (
+              <section className="sec-index__group" data-reveal key={g.category}>
+                <h3 className="fn-h5 sec-index__category">
+                  {g.category}
+                  <span className="fn-b2 sec-index__count">{String(g.rows.length).padStart(2, '0')}</span>
+                </h3>
+                <ul className="sec-index__rows">
+                  {g.rows.map((r) => (
+                    <li className="sec-index__row" key={r.title}>
+                      <p className="fn-b1 sec-index__title">{r.title}</p>
+                      <p className="fn-b1 sec-index__detail">{r.detail}</p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

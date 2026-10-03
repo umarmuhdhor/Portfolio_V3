@@ -82,8 +82,15 @@ export const img = (i: number) => IMAGES[i % IMAGES.length];
    1 — hero
    -------------------------------------------------------------------------- */
 
+/** The bar's left side: the name, which doubles as the link home. */
+export const HEADER = {
+  name: NAME,
+};
+
+/** Name and role are set apart: run together they read as one sentence. */
 export const HERO = {
-  lines: [NAME, ROLE],
+  name: NAME,
+  role: ROLE,
 };
 
 /* --------------------------------------------------------------------------
@@ -110,7 +117,8 @@ export const INTRO = {
   name: NAME,
   role: ROLE,
   portrait: asset(profile.avatar.src),
-  body: t(profile.bioLong).split(/\n\n+/),
+  /** The short bio: the index keeps this block to one screen. */
+  body: [t(profile.bioShort)],
   meta: [
     { key: 'Based', value: PLACE },
     { key: 'Focus', value: ROLE },
@@ -124,18 +132,24 @@ export const INTRO = {
       no: pad(i + 1),
       period: period(e.startDate, e.endDate, e.current),
       title: t(e.position),
-      body: `${t(e.company.name)}. ${t(e.summary)}`,
+      company: t(e.company.name),
+      body: t(e.summary),
     })),
   stack: featuredSkills.map((s) => s.name),
 };
 
 /** Every experience record, work and otherwise — the /about list. */
-export const EXPERIENCE = experience.map((e, i) => ({
-  no: pad(i + 1),
-  title: t(e.position),
-  company: t(e.company.name),
-  period: period(e.startDate, e.endDate, e.current),
-}));
+export const EXPERIENCE = experience
+  .slice()
+  .sort((a, b) => b.startDate.localeCompare(a.startDate))
+  .map((e, i) => ({
+    no: pad(i + 1),
+    title: t(e.position),
+    company: t(e.company.name),
+    period: period(e.startDate, e.endDate, e.current),
+    /** Paid roles apart from organising, teaching outside work and the rest. */
+    paid: e.category === 'work',
+  }));
 
 /* --------------------------------------------------------------------------
    Skills, grouped
@@ -150,17 +164,16 @@ const skillsIn = (category: string) =>
 /** Every category that describes technical work — soft skills excluded. */
 const techCategories = skillCategories.filter((c) => c.id !== 'soft');
 
-/** The /about route's opening block. */
+/** The /about route's opening block: the long bio, since the index carries
+    the short one. */
+const aboutParas = t(profile.bioLong).split(/\n\n+/);
+
 export const ABOUT = {
-  label: 'About',
-  body: t(profile.bioShort),
-  columns: ['framework', 'ai'].map((id, i) => ({
-    no: pad(i + 1),
-    heading: t(skillCategories.find((c) => c.id === id)?.label),
-    items: skillsIn(id)
-      .slice(0, 5)
-      .map((s) => s.name),
-  })),
+  lead: aboutParas[0],
+  body: aboutParas.slice(1),
+  /** The avatar with its studio backdrop cut away, for the white page. */
+  portrait: asset('assets/images/profile/avatar-cutout.webp'),
+  portraitAlt: t(profile.avatar.alt),
 };
 
 /* --------------------------------------------------------------------------
@@ -170,13 +183,14 @@ export const ABOUT = {
 export const CAPABILITIES = {
   heading: 'Capabilities',
   label: 'Skills',
-  items: techCategories.map(
-    (c) =>
-      `${t(c.label)} — ${skillsIn(c.id)
-        .slice(0, 3)
-        .map((s) => s.name)
-        .join(', ')}`,
-  ),
+  items: techCategories.map((c, i) => ({
+    no: pad(i + 1),
+    category: t(c.label),
+    skills: skillsIn(c.id)
+      .slice(0, 3)
+      .map((s) => s.name)
+      .join(', '),
+  })),
 };
 
 /* --------------------------------------------------------------------------
@@ -188,18 +202,25 @@ export const CAPABILITIES = {
 
 const LEVEL = ['', 'Familiar', 'Working', 'Proficient', 'Advanced', 'Expert'];
 
+const indexed = skills.filter((s) => s.category !== 'soft' && (s.featured || s.note));
+
+/** Skills grouped under their category, so the category is said once. */
 export const INDEX = {
   heading: 'Swift and Flutter on the device, Python and Claude behind it, and the tools that carry both into production.',
   label: 'Skills',
-  rows: skills
-    .filter((s) => s.category !== 'soft' && (s.featured || s.note))
-    .map((s) => ({
-      title: s.name,
-      stack: t(skillCategories.find((c) => c.id === s.category)?.label),
-      detail:
-        t(s.note) ||
-        (s.yearsOfExperience ? `${s.yearsOfExperience} years · ${LEVEL[s.level]}` : LEVEL[s.level]),
-    })),
+  groups: skillCategories
+    .map((c) => ({
+      category: t(c.label),
+      rows: indexed
+        .filter((s) => s.category === c.id)
+        .map((s) => ({
+          title: s.name,
+          detail:
+            t(s.note) ||
+            (s.yearsOfExperience ? `${s.yearsOfExperience} years · ${LEVEL[s.level]}` : LEVEL[s.level]),
+        })),
+    }))
+    .filter((g) => g.rows.length),
 };
 
 /* --------------------------------------------------------------------------
@@ -232,18 +253,29 @@ export const PROCESS = [
    7 — selected work, the featured projects
    -------------------------------------------------------------------------- */
 
+/** Wide banner, tall phone or square icon — each wants a different share of
+    the plate to sit at the same visual weight. */
+const shapeOf = (m?: { width?: number; height?: number } | null): 'wide' | 'tall' | 'square' | undefined => {
+  if (!m?.width || !m?.height) return undefined;
+  const r = m.width / m.height;
+  return r > 1.2 ? 'wide' : r < 0.83 ? 'tall' : 'square';
+};
+
 const card = (p: Project) => ({
   title: t(p.title),
   subtitle: t(p.subtitle),
+  category: p.category,
   metric: primaryStack(p),
   image: asset(p.media.thumbnail?.src),
+  shape: shapeOf(p.media.thumbnail),
   href: `/work/${p.id}`,
 });
 
 export const WORK = {
   heading: ['Selected', 'Work'],
-  cta: 'See All',
-  cards: projects.filter((p) => p.featured).map(card),
+  cta: `See all ${projects.length} projects →`,
+  /** The first three by the projects' own order; /work carries the rest. */
+  cards: projects.filter((p) => p.featured).slice(0, 3).map(card),
 };
 
 /* --------------------------------------------------------------------------
@@ -367,21 +399,26 @@ export const RING = {
    11 — contact
    -------------------------------------------------------------------------- */
 
+const link = (id: string) => {
+  const s = social(id);
+  return s ? { label: t(s.label), href: s.url } : null;
+};
+
 export const CONTACT = {
   label: 'Contact',
   heading: ['Start a', 'Conversation'],
   body: `${t(profile.availability.note)} Tell me what you are building — email is the fastest way to reach me.`,
   cta: EMAIL,
+  /** The quieter ways in, under the address: profiles and the CV. */
+  links: [link('linkedin'), link('github'), CV ? { label: 'CV (PDF)', href: CV } : null].filter(Boolean) as {
+    label: string;
+    href: string;
+  }[],
 };
 
 /* --------------------------------------------------------------------------
    12 — footer
    -------------------------------------------------------------------------- */
-
-const link = (id: string) => {
-  const s = social(id);
-  return s ? { label: t(s.label), href: s.url } : null;
-};
 
 export const FOOTER = {
   brand: profile.displayName.split(' ')[0].toUpperCase(),
@@ -398,7 +435,6 @@ export const FOOTER = {
       links: [
         { label: 'Work', href: '/work' },
         { label: 'About', href: '/about' },
-        { label: 'Design guide', href: '/styleguide' },
       ],
     },
     {
@@ -421,6 +457,29 @@ export const FOOTER = {
 
 const STATUS_LABEL: Record<string, string> = { completed: 'Completed', ongoing: 'Ongoing' };
 
+const STACK_LAYERS: [string, string][] = [
+  ['frontend', 'Front end'],
+  ['backend', 'Back end'],
+  ['database', 'Data'],
+  ['infra', 'Infrastructure'],
+  ['tools', 'Tools'],
+];
+
+/** Every public destination a project has, labelled by what it actually is. */
+function projectLinks(p: Project) {
+  if (p.private) return [];
+  const { demo, repo, repoPrivate, caseStudy, appStore, playStore, article } = p.links;
+  const host = (u: string) => new URL(u).hostname;
+  return [
+    demo && { label: host(demo).includes('testflight') ? 'TestFlight' : 'Live demo', href: demo },
+    appStore && { label: 'App Store', href: appStore },
+    playStore && { label: 'Google Play', href: playStore },
+    repo && !repoPrivate && { label: 'Repository', href: repo },
+    caseStudy && { label: host(caseStudy).includes('figma') ? 'Design file' : 'Case study', href: caseStudy },
+    article && { label: 'Article', href: article },
+  ].filter(Boolean) as { label: string; href: string }[];
+}
+
 /** Slugged project records — the source for /work and /work/[slug]. */
 export const PROJECT_PAGES = projects.map((p) => {
   const images = [p.media.thumbnail, ...p.media.gallery].filter(Boolean) as NonNullable<
@@ -429,10 +488,12 @@ export const PROJECT_PAGES = projects.map((p) => {
   const stack = Object.values(p.stack).flat();
   return {
     slug: p.id,
+    category: p.category,
     title: t(p.title),
     subtitle: t(p.subtitle),
     metric: primaryStack(p),
     image: asset(p.media.thumbnail?.src),
+    shape: shapeOf(p.media.thumbnail),
     year: p.startDate.slice(0, 4),
     discipline: upper(p.category),
     summary: t(p.summary),
@@ -449,11 +510,31 @@ export const PROJECT_PAGES = projects.map((p) => {
     gallery: images.map((m) => ({
       src: asset(m.src) as string,
       alt: t(m.alt),
+      caption: t(m.caption),
       portrait: !!m.width && !!m.height && m.height > m.width,
     })),
     href: projectLink(p),
+    links: projectLinks(p),
+    impact: p.impact.map((i) => ({ value: i.value, metric: t(i.metric), note: t(i.note) })),
+    problem: t(p.problem),
+    solution: t(p.solution),
+    responsibilities: tl(p.responsibilities),
+    features: tl(p.features),
+    challenges: p.challenges.map((c) => ({ problem: t(c.problem), solution: t(c.solution) })),
+    architecture: t(p.architecture),
+    stackLayers: STACK_LAYERS.map(([key, label]) => ({ label, items: p.stack[key] ?? [] }))
+      .concat([{ label: 'Integrations', items: p.integrations }])
+      .filter((l) => l.items.length),
+    lessons: tl(p.lessons),
   };
 });
+
+/** Discipline filter for /work — only the categories that actually occur. */
+export const PROJECT_FILTERS = Array.from(new Set(projects.map((p) => p.category))).map((id) => ({
+  id,
+  label: upper(id),
+  count: projects.filter((p) => p.category === id).length,
+}));
 
 export const LEGAL = {
   label: 'Legal',

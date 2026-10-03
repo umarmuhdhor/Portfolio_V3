@@ -64,6 +64,15 @@ export type Project = {
   description: I18n;
   role: I18n;
   teamSize: number | null;
+  problem: I18n;
+  solution: I18n;
+  responsibilities: I18n<string[]>;
+  features: I18n<string[]>;
+  challenges: { problem: I18n; solution: I18n }[];
+  impact: { metric: I18n; value: string; delta: string | null; note: I18n | null }[];
+  lessons: I18n<string[]>;
+  architecture: I18n | null;
+  integrations: string[];
   stack: Record<string, string[]>;
   media: { thumbnail: Image | null; gallery: Image[] };
   links: {

@@ -1,0 +1,144 @@
+/* --------------------------------------------------------------------------
+   /work — the discipline filter
+   -------------------------------------------------------------------------- */
+.work-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem 40rem;
+  margin-bottom: 120rem;
+}
+
+.work-filter__btn {
+  align-items: flex-start;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 4rem;
+  min-height: 44px;
+  padding: 0;
+  transition: transform 0.3s var(--ease);
+}
+
+.work-filter__btn[aria-pressed='false'] .link {
+  color: #6e6e6e;
+  transition: color 0.3s var(--ease);
+}
+
+.work-filter__btn:hover .link {
+  color: currentcolor;
+}
+
+.work-filter__btn:focus-visible {
+  outline: 1px solid currentcolor;
+  outline-offset: 6rem;
+}
+
+.work-filter__btn:active {
+  transform: translateY(1px);
+}
+
+.work-filter__count {
+  color: #6e6e6e;
+  line-height: 1;
+}
+
+@media (max-width: 767.98px) {
+  .work-filter {
+    gap: 10rem 24rem;
+    margin-bottom: 50rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   /work — an even grid instead of the home page's stagger
+
+   The stagger works as a teaser of a handful of projects; across the full
+   index it leaves holes and sizes every plate differently. Here every card
+   takes one of three equal columns and every plate the same 4:3 box, so rows
+   line up and the captions sit on one baseline. Selectors are three classes
+   deep to outrank the stagger's [data-role]:nth-child rules.
+   -------------------------------------------------------------------------- */
+.work-index .work-grid {
+  column-gap: 20rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 110rem;
+}
+
+.work-index .work-grid .work-card {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+.work-index .work-grid .work-card .work-frame {
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .work-index .work-grid {
+    gap: 50rem;
+  }
+}
+
+/* Caption: one typeface. The stack sits quiet and grey beside the title; on
+   hover it rolls to "View" in ink. No serif, no underline — in an even grid
+   those read as noise rather than accent. */
+.work-index .work-caption {
+  color: #6e6e6e;
+  font-family: inherit;
+  min-width: 3em;
+}
+
+.work-index .caption-in {
+  color: #000;
+}
+
+.work-index .caption-in::before {
+  display: none;
+}
+
+/* A tap is not a hover. Without this the roll sticks on touch screens after
+   the first tap, leaving "View" where the stack should be. */
+@media (hover: none) {
+  .work-index .work-card:hover .caption-out {
+    transform: none;
+  }
+
+  .work-index .work-card:hover .caption-in {
+    transform: translateY(101%);
+  }
+
+  .work-index .work-card:hover .work-frame img {
+    transform: none;
+  }
+}
+
+/* A filtered grid is new DOM that the scroll reveal never saw, so it brings
+   its own entrance: the same rise-and-fade, staggered by position. */
+.work-index.is--filtered .work-card {
+  animation: work-card-in 1.109s var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+@keyframes work-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(60rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-index.is--filtered .work-card {
+    animation: none;
+  }
+}
+
+/* The home page truncates the grid on phones, as the reference does. The
+   index is where every project has to be reachable, so it does not. */
+@media (max-width: 767.98px) {
+  .work-index .work-card:nth-child(n + 7) {
+    display: flex;
+  }
+}

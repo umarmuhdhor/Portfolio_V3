@@ -17,8 +17,13 @@
   align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 18rem;
   width: 100%;
+}
+
+.work-card > a,
+.work-card__body {
+  display: block;
+  height: 100%;
 }
 
 /* Frames that run tall. Written as one selector list, matching the source, so
@@ -91,15 +96,95 @@
   margin-top: 100rem;
 }
 
+/* Featured work uses one lead project and two supporting projects. */
+.work-grid--row {
+  grid-auto-rows: 320rem;
+}
+
+.work-grid--row [data-role="work-card"]:nth-child(n) {
+  grid-column: 10 / -1;
+  height: 100%;
+  margin-top: 0;
+}
+
+.work-grid--row [data-role="work-card"]:first-child {
+  grid-column: 1 / 10;
+  grid-row: span 2;
+}
+
+.work-grid--row [data-role="work-card"]:nth-child(n) [data-role="work-frame"] {
+  height: 100%;
+}
+
+/* Screenshots arrive in three shapes — a wide banner, a phone, an app icon
+   that fills its own canvas. One cap for all leaves the phone a sliver and
+   the icon a slab, so each shape gets its own share of the plate and the
+   three land at about the same visual weight. */
+.work-grid--row .work-visual {
+  padding: 24rem;
+}
+
+.work-grid--row .work-frame img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.work-frame.is--wide .work-visual {
+  padding: 0;
+}
+
+.work-frame.is--wide img {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.work-grid--row .work-frame.is--tall img {
+  max-height: 94%;
+}
+
+.work-grid--row .work-frame.is--square img {
+  max-height: 74%;
+  max-width: 74%;
+}
+
+.work-grid--row .work-title {
+  font-weight: 500;
+}
+
+/* The stack reads as a tag beside the name, in the page's sans and grey,
+   rather than a second serif voice. */
+.work-grid--row .work-caption {
+  color: #6e6e6e;
+  font-family: inherit;
+}
+
 /* --------------------------------------------------------------------------
    Frame + image
    -------------------------------------------------------------------------- */
 .work-frame {
-  align-items: center;
   background: #f2f2f2;
   display: flex;
+  flex-direction: column;
   height: 540rem;
+  overflow: hidden;
+  transition: background-color 0.5s var(--ease);
+  width: 100%;
+}
+
+.work-card:hover .work-frame,
+.work-card a:focus-visible .work-frame {
+  background: #ebebeb;
+}
+
+.work-visual {
+  align-items: center;
+  display: flex;
+  flex: 1;
   justify-content: center;
+  min-height: 0;
   overflow: hidden;
   padding: 40rem;
   width: 100%;
@@ -109,7 +194,7 @@
    dashboards — so each sits whole on a neutral plate instead of being
    cover-cropped. max-* rather than 100%: an image smaller than the plate stays
    at its own size and is never scaled up into blur. */
-.work-frame img {
+.work-visual img {
   height: auto;
   max-height: 100%;
   max-width: 100%;
@@ -146,13 +231,35 @@
    would otherwise show at the mask edge.
    -------------------------------------------------------------------------- */
 .work-meta-row {
+  align-items: center;
+  background: #e8e8e5;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
+  flex: 0 0 auto;
+  gap: 20rem;
   justify-content: space-between;
+  min-height: 58rem;
+  padding: 14rem 18rem;
 }
 
-.work-title,
-.work-metric {
+.work-title-group {
+  align-items: baseline;
+  display: flex;
+  gap: 14rem;
+  min-width: 0;
+}
+
+.work-card__index {
+  color: #868686;
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.work-title {
+  font-weight: 500;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .work-caption {
@@ -189,20 +296,27 @@
   transition-delay: 0s;
 }
 
-.work-card:hover .caption-out {
+.work-card:hover .caption-out,
+.work-card a:focus-visible .caption-out {
   transform: translateY(-101%);
 }
 
-.work-card:hover .caption-in {
+.work-card:hover .caption-in,
+.work-card a:focus-visible .caption-in {
   transform: translateY(0);
 }
 
 /* The incoming line's underline waits for the roll to be half over before it
    wipes, so the two motions read as one gesture rather than two. */
-.work-card:hover .caption-in::before {
+.work-card:hover .caption-in::before,
+.work-card a:focus-visible .caption-in::before {
   transform: scaleX(1);
   transform-origin: left;
   transition-delay: 0.3s;
+}
+
+.work-card a:active .work-frame img {
+  transform: scale(1.01);
 }
 
 /* --------------------------------------------------------------------------
@@ -231,7 +345,7 @@
 @media (max-width: 767.98px) {
   .work-grid {
     flex-direction: column;
-    gap: 60rem;
+    gap: 32rem;
   }
 
   /* The reference truncates the grid below the breakpoint rather than letting
@@ -241,14 +355,38 @@
   }
 
   .work-card {
-    gap: 10rem;
     grid-column: auto !important;
+    height: auto !important;
     margin-top: 0 !important;
     width: 100%;
   }
 
   .work-card .work-frame {
     height: 215rem !important;
+  }
+
+  .work-card .work-visual {
     padding: 16rem;
+  }
+
+  .work-meta-row {
+    min-height: 52rem;
+    padding: 12rem 14rem;
+  }
+}
+
+/* Three cards on the index, not a long list: each can afford a taller plate
+   on a phone, so the phone screenshot is not shrunk to a sliver. */
+@media (max-width: 767.98px) {
+  .work-grid--row .work-card .work-frame {
+    height: 320rem !important;
+  }
+
+  .work-grid--row .work-card .work-frame.is--tall {
+    height: 420rem !important;
+  }
+
+  .work-grid--row .work-card .work-frame.is--square {
+    height: 350rem !important;
   }
 }

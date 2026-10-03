@@ -211,13 +211,17 @@ export default function WebGLLayer() {
       },
     });
 
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer();
+    timer.connect(document);
     let frame = 0;
+    let running = false;
 
     const tick = () => {
+      if (!running) return;
       frame = requestAnimationFrame(tick);
       layout();
-      const t = clock.getElapsedTime();
+      timer.update();
+      const t = timer.getElapsed();
       for (const item of items) {
         item.material.uniforms.uTime.value = t;
         // Velocity feathers the edges — the faster the scroll, the softer the
@@ -227,7 +231,25 @@ export default function WebGLLayer() {
       velocity *= 0.92;
       renderer.render(scene, camera);
     };
-    tick();
+
+    const start = () => {
+      if (running) return;
+      running = true;
+      frame = requestAnimationFrame(tick);
+    };
+
+    const stop = () => {
+      running = false;
+      cancelAnimationFrame(frame);
+    };
+
+    const onVisibilityChange = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+
+    start();
+    document.addEventListener('visibilitychange', onVisibilityChange);
 
     const onResize = () => {
       const vw = window.innerWidth;
@@ -246,7 +268,8 @@ export default function WebGLLayer() {
     window.addEventListener('resize', onResize);
 
     return () => {
-      cancelAnimationFrame(frame);
+      stop();
+      document.removeEventListener('visibilitychange', onVisibilityChange);
       window.removeEventListener('resize', onResize);
       observer.kill();
       items.forEach((i) => {
@@ -255,6 +278,7 @@ export default function WebGLLayer() {
         i.material.dispose();
       });
       geometry.dispose();
+      timer.dispose();
       renderer.dispose();
       canvas.remove();
     };

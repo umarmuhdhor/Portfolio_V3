@@ -15,7 +15,7 @@
 }
 
 .sg__label {
-  color: #929292;
+  color: #6e6e6e;
   margin-bottom: 30rem;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .sg__row-key {
-  color: #929292;
+  color: #6e6e6e;
   flex-shrink: 0;
   width: 170rem;
 }
@@ -55,7 +55,7 @@
 }
 
 .sg__chip-label {
-  color: #929292;
+  color: #6e6e6e;
   margin-top: 10rem;
 }
 

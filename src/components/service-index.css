@@ -1,150 +1,108 @@
 /**
- * The service index.
+ * The skill index.
  *
- * Column spans are the reference's: the display heading runs the full
- * fifteen, the serif label sits at column 1, and the rows occupy columns
- * 6 through 15 — the same split the office directory uses.
+ * Label and heading run the full fifteen columns, as the introduction's do.
+ * Each category block sits on the same tracks as the experience rows above:
+ * the category where a role title sits (columns 1–5), its skills where the
+ * descriptions sit (6–15).
  */
 
 .sec-index {
   padding: 150rem 0;
 }
 
+.sec-index__label {
+  color: #6e6e6e;
+  grid-column: 1 / -1;
+}
+
 .sec-index__heading {
   grid-column: 1 / -1;
+  margin: 24rem 0 0;
+}
+
+.sec-index__groups {
+  grid-column: 1 / -1;
+  margin-top: 120rem;
+}
+
+.sec-index__group {
+  align-items: baseline;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  column-gap: 20rem;
+  display: grid;
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+  padding: 36rem 0;
+}
+
+.sec-index__group:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.sec-index__category {
+  align-items: baseline;
+  display: flex;
+  gap: 14rem;
+  grid-column: 1 / 6;
   margin: 0;
 }
 
-.sec-index__label {
-  grid-column: 1 / 2;
-  margin: 190rem 0 0;
+.sec-index__count {
+  color: #6e6e6e;
 }
 
 .sec-index__rows {
   grid-column: 6 / -1;
   list-style: none;
-  margin: 190rem 0 0;
+  margin: 0;
   padding: 0;
 }
 
-/* --------------------------------------------------------------------------
-   A row
-
-   overflow:hidden so the fill has an edge to arrive at; the rule is the last
-   child so it draws over the fill rather than under it.
-   -------------------------------------------------------------------------- */
+/* Name and where it was used, on one line; a hairline between skills. */
 .sec-index__row {
-  background-color: transparent;
-  color: #000;
-  cursor: default;
-  position: relative;
-  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
-}
-
-.sec-index__cells {
-  align-items: center;
+  align-items: baseline;
   display: grid;
   gap: 20rem;
-  grid-template-columns: 230rem 230rem 1fr 10rem;
-  padding: 14rem 0;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
+  padding: 12rem 0;
 }
 
-.sec-index__stack,
+.sec-index__row + .sec-index__row {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.sec-index__title,
 .sec-index__detail {
-  color: #929292;
-  margin: 0;
-  transition: color 0.3s var(--ease);
-}
-
-.sec-index__title {
   margin: 0;
 }
 
-.sec-index__arrow {
-  height: 10rem;
-  opacity: 0.6;
-  transition: transform 0.5s var(--ease);
-  width: 10rem;
-}
-
-/* The hairline between rows, and under the last one. */
-.sec-index__rule {
-  background-color: #000;
-  bottom: 0;
-  display: block;
-  height: 1px;
-  left: 0;
-  opacity: 0.15;
-  position: absolute;
-  right: 0;
-  transition: background-color 0.3s var(--ease);
-}
-
-/* The row inverts. Padding rather than a negative inset keeps the fill from
-   bleeding past the column the rows occupy. */
-.sec-index__row:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.sec-index__row:hover .sec-index__stack,
-.sec-index__row:hover .sec-index__detail {
-  color: #929292;
-}
-
-.sec-index__row:hover .sec-index__rule {
-  background-color: #fff;
-}
-
-.sec-index__row:hover .sec-index__arrow {
-  transform: translate(2rem, -2rem);
-}
-
-.sec-index__row:hover .sec-index__cells {
-  padding-left: 20rem;
-  padding-right: 20rem;
-}
-
-.sec-index__cells {
-  transition: padding 0.5s var(--ease);
+.sec-index__detail {
+  color: #6e6e6e;
 }
 
 /* --------------------------------------------------------------------------
-   Below the breakpoint the grid is a flex column, so the row collapses to a
-   stack: title, then stack and detail on one line.
+   Below the breakpoint each block stacks: category, then its skills, each
+   skill's note under its name.
    -------------------------------------------------------------------------- */
 @media (max-width: 767.98px) {
   .sec-index {
     padding: 80rem 0;
   }
 
-  .sec-index__label,
-  .sec-index__rows {
-    margin-top: 60rem;
+  .sec-index__groups {
+    margin-top: 50rem;
   }
 
-  .sec-index__cells {
-    grid-template-columns: 1fr 10rem;
-    grid-template-areas:
-      'title arrow'
-      'stack arrow'
-      'detail arrow';
-    row-gap: 4rem;
+  .sec-index__group {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+    padding: 24rem 0;
   }
 
-  .sec-index__title {
-    grid-area: title;
-  }
-
-  .sec-index__stack {
-    grid-area: stack;
-  }
-
-  .sec-index__detail {
-    grid-area: detail;
-  }
-
-  .sec-index__arrow {
-    grid-area: arrow;
+  .sec-index__row {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }

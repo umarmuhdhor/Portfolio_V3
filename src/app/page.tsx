@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import LogoRing from '@/components/LogoRing';
 import RadialDiagram from '@/components/RadialDiagram';
 import ScrollMotion from '@/components/ScrollMotion';
@@ -9,7 +10,6 @@ import WorkGrid from '@/components/WorkGrid';
 import {
   BAND,
   INTRO,
-  CAPABILITIES,
   CONTACT,
   DIAGRAM,
   HERO,
@@ -50,7 +50,7 @@ export default function Home() {
     <>
       <ScrollMotion />
       <WebGLLayer />
-      <SiteHeader counter="01" />
+      <SiteHeader overHero />
 
       <div aria-hidden="true" className="scrollbar">
         <div className="scrollbar-track">
@@ -75,9 +75,10 @@ export default function Home() {
                     does not collapse into itself. */}
                 <h1 className="fn-h4 f-mn" data-role="h4">
                   <span className="lh-open" data-split>
-                    {HERO.lines.join(' ')}
+                    {HERO.name}
                   </span>
                 </h1>
+                <p className="fn-b1 sec-hero__role">{HERO.role}</p>
               </div>
             </div>
           </section>
@@ -148,7 +149,10 @@ export default function Home() {
                       <span className="fn-b2 sec-intro__exp-no">{e.no}</span>
                       <span className="fn-b2 sec-intro__exp-period">{e.period}</span>
                       <span className="fn-h5 sec-intro__exp-title">{e.title}</span>
-                      <span className="fn-b1 sec-intro__exp-body">{e.body}</span>
+                      <span className="sec-intro__exp-body">
+                        <span className="fn-b1 sec-intro__exp-company">{e.company}</span>
+                        <span className="fn-b1 sec-intro__exp-summary">{e.body}</span>
+                      </span>
                     </li>
                   ))}
                 </ol>
@@ -160,24 +164,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-
-                {/* Capabilities live inside the introduction rather than in a
-                    section of their own. The reference carries its service
-                    list in the same block as its about copy, and splitting
-                    them into two sections put an extra section root ahead of
-                    the desktop-only diagram, which shifted every section
-                    index after it out of alignment with the reference. */}
-                <h2 className="fn-h3 sec-caps__heading" data-role="h3" data-split>
-                  {CAPABILITIES.heading}
-                </h2>
-                <p className="fn-b2 sec-caps__label">{CAPABILITIES.label}</p>
-                <ul className="sec-caps__list">
-                  {CAPABILITIES.items.map((i) => (
-                    <li className="fn-h5 sec-caps__item" data-reveal key={i}>
-                      {i}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </section>
@@ -185,39 +171,52 @@ export default function Home() {
           {/* 5 — the service index: a directory of what gets built ----------- */}
           <ServiceIndex />
 
-          {/* 6 — process, two editorial blocks ------------------------------- */}
+          {/* 6 — selected work, ahead of the process blocks ---------------- */}
+          <section className="sec-work" data-role="section" id="work">
+            <div className="ctr" data-role="container">
+              {/* Heading and the way to the rest on one line: the link is where
+                  the eye ends the heading, not a screen further down. */}
+              <div className="sec-work__head">
+                <h2 className="lh-open fn-h4 f-mn sec-work__heading" data-split>
+                  {WORK.heading.join(' ')}
+                </h2>
+                <Link className="link fn-b1 is--a sec-work__cta" href="/work">
+                  {WORK.cta}
+                </Link>
+              </div>
+              <WorkGrid layout="row" projects={WORK.cards} />
+              <Link className="link fn-b1 is--a sec-work__cta sec-work__cta--end" href="/work">
+                {WORK.cta}
+              </Link>
+            </div>
+          </section>
+
+          {/* 7 — process, two editorial blocks ------------------------------- */}
           <section className="sec-process" data-role="section">
             <div className="ctr" data-role="container">
               {PROCESS.map((b, i) => (
                 <div className="sec-process__block" key={b.note}>
-                  <h2 className="lh-open fn-h4 f-mn sec-process__heading" data-split>
-                    {b.heading.join(' ')}
-                  </h2>
-                  <Frame className="sec-process__plate" src={PLATES.process[i] ?? PLATES.process[0]} />
+                  {/* Label, heading and what it means read as one unit, with
+                      the photograph after them rather than between them. */}
                   <div className="grd sec-process__spread" data-role="grid">
-                    <p className="fn-h5 lh-open sec-process__lead" data-split-scrub>
-                      {b.lead}
+                    <p className="fn-b2 sec-process__label">
+                      {String(i + 1).padStart(2, '0')} — {b.note}
                     </p>
-                    <div className="sec-process__note" data-reveal>
-                      <p className="fn-b1 f-sf">{b.note}</p>
-                      <p className="fn-b1">{b.body}</p>
+                    <h2 className="lh-open fn-h4 f-mn sec-process__heading" data-split>
+                      {b.heading.join(' ')}
+                    </h2>
+                    <div className="sec-process__text">
+                      <p className="fn-h5 sec-process__lead" data-split-scrub>
+                        {b.lead}
+                      </p>
+                      <p className="fn-b1 sec-process__body" data-reveal>
+                        {b.body}
+                      </p>
                     </div>
                   </div>
+                  <Frame className="sec-process__plate" src={PLATES.process[i] ?? PLATES.process[0]} />
                 </div>
               ))}
-            </div>
-          </section>
-
-          {/* 6 — selected work ----------------------------------------------- */}
-          <section className="sec-work" data-role="section" id="work">
-            <div className="ctr" data-role="container">
-              <p className="lh-open fn-h4 f-mn sec-work__heading" data-split>
-                {WORK.heading.join(' ')}
-              </p>
-              <WorkGrid projects={WORK.cards} />
-              <a className="link fn-b1 is--a sec-work__cta" href="/work">
-                {WORK.cta}
-              </a>
             </div>
           </section>
 
@@ -287,14 +286,14 @@ export default function Home() {
               </div>
 
               <div className="sec-people__stats">
-                <div className="sec-people__stats-col">
+                <dl className="sec-people__stats-col">
                   {PEOPLE.stats.map((s) => (
                     <div className="sec-people__stat" data-reveal key={s.value}>
-                      <h3 className="fn-h2 f-mn">{s.value}</h3>
-                      <h3 className="fn-h3 lh-open">{s.label}</h3>
+                      <dt className="fn-h2 f-mn sec-people__stat-value">{s.value}</dt>
+                      <dd className="fn-b1 sec-people__stat-label">{s.label}</dd>
                     </div>
                   ))}
-                </div>
+                </dl>
               </div>
             </div>
           </section>
@@ -322,9 +321,25 @@ export default function Home() {
                 <p className="fn-b1 sec-contact__body" data-split-words>
                   {CONTACT.body}
                 </p>
-                <a className="link fn-h5 sec-contact__cta" href={`mailto:${CONTACT.cta}`}>
-                  {CONTACT.cta}
-                </a>
+                <div className="sec-contact__cta">
+                  <a className="link fn-h5" href={`mailto:${CONTACT.cta}`}>
+                    {CONTACT.cta}
+                  </a>
+                  <ul className="sec-contact__links">
+                    {CONTACT.links.map((l) => (
+                      <li key={l.href}>
+                        <a
+                          className="link fn-b1"
+                          href={l.href}
+                          rel="noreferrer noopener"
+                          target="_blank"
+                        >
+                          {l.label} ↗
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </section>

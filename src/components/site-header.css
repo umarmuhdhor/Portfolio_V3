@@ -1,23 +1,44 @@
-/* Header — measured from the reference's fixed bar.
+/* Header — fixed bar, name left, nav right.
 
-   mix-blend-mode: difference is what lets one white header sit over both the
-   light sections and the black footer without a colour swap, which is why the
-   transition covers mix-blend-mode as well as transform. */
+   Colour is state, not blend. Over the hero photograph the bar is clear and
+   the type white with a soft shadow; everywhere else it carries a frosted
+   backdrop in the page's own colour, so the type keeps full contrast over
+   text, screenshots and photographs alike. The bar slides away on the way
+   down and returns on the way up (ScrollMotion), so the backdrop is only
+   there when someone is reaching for the nav. */
 .site-header {
-  color: #fff;
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+  background-color: rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: #000;
   left: 0;
-  mix-blend-mode: difference;
-  padding: 20rem 0;
+  padding: 4rem 0;
   pointer-events: none;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: var(--z-header);
+}
+
+.site-header.is--over-hero {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background-color: transparent;
+  border-bottom-color: transparent;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+html.is--dark .site-header:not(.is--over-hero) {
+  background-color: rgba(0, 0, 0, 0.72);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
 }
 
 @media (max-width: 767.98px) {
   .site-header {
-    padding: 10rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -26,36 +47,35 @@
   pointer-events: all;
 }
 
-/* The document's first container is this one, and it is a flex box on the
-   reference — the row inside it is what actually does the distributing. */
 .site-header > .ctr {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
 }
 
 .site-header__row {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   justify-content: space-between;
+  min-height: 48px;
   position: relative;
   width: 100%;
 }
 
+/* The name, set as the brand: same size as the nav, a step heavier. */
 .site-header__brand {
-  overflow: hidden;
-  width: 103rem;
-}
-
-/* The counter value is a block inside the masked line so it can be rolled
-   vertically as the number changes. */
-.site-header__brand [data-role='nav-counter'] {
-  display: block;
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  min-height: 44px;
+  text-decoration: none;
 }
 
 .site-header__nav {
   align-items: center;
   display: flex;
-  gap: 0.5em;
+  gap: max(28rem, 20px);
 }
 
 .site-header__nav li {
@@ -63,15 +83,15 @@
 }
 
 .site-header__nav .link {
-  display: block;
+  align-items: center;
+  display: flex;
+  min-height: 44px;
   padding-bottom: 0.05em;
   will-change: transform;
 }
 
 @media (max-width: 767.98px) {
-  /* The reference keeps the row below the breakpoint and drops the first nav
-     item rather than wrapping four of them into 375px. */
-  .site-header__nav li:first-child {
-    display: none;
+  .site-header__nav {
+    gap: 16rem;
   }
 }
