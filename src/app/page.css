@@ -962,20 +962,6 @@
   color: #6e6e6e;
 }
 
-.sec-intro__stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20rem;
-  grid-column: 1 / -1;
-  margin-top: 60rem;
-}
-
-.sec-intro__stack li {
-  border: 1px solid #e2e2e2;
-  color: #6e6e6e;
-  padding: 8rem 20rem;
-}
-
 @media (max-width: 767.98px) {
   .sec-intro__body,
   .sec-intro__meta,

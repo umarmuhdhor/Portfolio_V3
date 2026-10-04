@@ -156,14 +156,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ol>
-
-                <ul className="sec-intro__stack" data-reveal>
-                  {INTRO.stack.map((t) => (
-                    <li className="fn-b2" key={t}>
-                      {t}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </section>
