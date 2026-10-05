@@ -348,9 +348,13 @@ export const EDUCATION = education.map((e, i) => ({
   period: period(e.startDate, e.endDate, false),
 }));
 
+/** The issuer already sits in the aside column, so drop it from a title that repeats it. */
+const withoutIssuer = (title: string, issuer: string | null) =>
+  issuer && title.endsWith(` — ${issuer}`) ? title.slice(0, -` — ${issuer}`.length) : title;
+
 export const AWARDS = awards.map((a, i) => ({
   no: pad(i + 1),
-  title: t(a.title),
+  title: withoutIssuer(t(a.title), a.issuer),
   detail: [a.issuer, a.date].filter(Boolean).join(' · '),
   href: a.url,
 }));
