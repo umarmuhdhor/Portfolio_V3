@@ -131,7 +131,7 @@ export default function About() {
               key: 'paper',
               aside: PUBLICATION.year,
               title: PUBLICATION.title,
-              detail: `${PUBLICATION.authors} — ${PUBLICATION.venue}. ${PUBLICATION.summary}`,
+              detail: `${PUBLICATION.authors}. ${PUBLICATION.venue}. ${PUBLICATION.summary}`,
               href: PUBLICATION.href,
             },
           ]}

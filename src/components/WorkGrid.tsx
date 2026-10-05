@@ -36,7 +36,7 @@ export default function WorkGrid({ projects, layout = 'stagger' }: { projects: C
             <div className={`work-frame${p.shape ? ` is--${p.shape}` : ''}`} data-role="work-frame">
               <div className="work-visual">
                 {p.image ? (
-                  <img alt={p.subtitle ? `${p.title} — ${p.subtitle}` : p.title} loading="lazy" src={p.image} />
+                  <img alt={p.subtitle ? `${p.title}: ${p.subtitle}` : p.title} loading="lazy" src={p.image} />
                 ) : null}
               </div>
 
@@ -73,7 +73,7 @@ export default function WorkGrid({ projects, layout = 'stagger' }: { projects: C
             {p.href ? (
               external ? (
                 <a
-                  aria-label={p.subtitle ? `${p.title} — ${p.subtitle}` : p.title}
+                  aria-label={p.subtitle ? `${p.title}: ${p.subtitle}` : p.title}
                   href={p.href}
                   rel="noreferrer noopener"
                   target="_blank"
@@ -81,7 +81,7 @@ export default function WorkGrid({ projects, layout = 'stagger' }: { projects: C
                   {content}
                 </a>
               ) : (
-                <Link aria-label={p.subtitle ? `${p.title} — ${p.subtitle}` : p.title} href={p.href}>
+                <Link aria-label={p.subtitle ? `${p.title}: ${p.subtitle}` : p.title} href={p.href}>
                   {content}
                 </Link>
               )

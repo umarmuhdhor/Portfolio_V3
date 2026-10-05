@@ -192,7 +192,7 @@ export default function Home() {
                       the photograph after them rather than between them. */}
                   <div className="grd sec-process__spread" data-role="grid">
                     <p className="fn-b2 sec-process__label">
-                      {String(i + 1).padStart(2, '0')} — {b.note}
+                      {String(i + 1).padStart(2, '0')} · {b.note}
                     </p>
                     <h2 className="lh-open fn-h4 f-mn sec-process__heading" data-split>
                       {b.heading.join(' ')}

@@ -19,8 +19,8 @@
       "url": "https://jurnal.polgan.ac.id/index.php/sinkron/article/view/15668",
       "pdfUrl": "https://jurnal.polgan.ac.id/index.php/sinkron/article/download/15668/3756",
       "summary": {
-        "en": "Evaluates successive MobileNet generations as feature extractors for classifying three Yogyakarta batik motifs — Parang, Kawung, and Truntum — with an SVM (RBF) classifier on a small, imbalanced dataset.",
-        "id": "Menguji beberapa generasi MobileNet sebagai feature extractor untuk mengklasifikasikan tiga motif batik Yogyakarta — Parang, Kawung, dan Truntum — dengan classifier SVM (RBF) pada dataset kecil yang tidak seimbang."
+        "en": "Evaluates successive MobileNet generations as feature extractors for classifying three Yogyakarta batik motifs (Parang, Kawung, and Truntum) with an SVM (RBF) classifier on a small, imbalanced dataset.",
+        "id": "Menguji beberapa generasi MobileNet sebagai feature extractor untuk mengklasifikasikan tiga motif batik Yogyakarta (Parang, Kawung, dan Truntum) dengan classifier SVM (RBF) pada dataset kecil yang tidak seimbang."
       },
       "highlights": {
         "en": [

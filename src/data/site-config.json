@@ -2,8 +2,8 @@
   "$schema": "../schema/site-config.schema.json",
   "site": {
     "title": {
-      "en": "Umar Muhdhor — iOS Developer & AI Automation",
-      "id": "Umar Muhdhor — iOS Developer & AI Automation"
+      "en": "Umar Muhdhor | iOS Developer & AI Automation",
+      "id": "Umar Muhdhor | iOS Developer & AI Automation"
     },
     "description": {
       "en": "Portfolio of Umar Muhdhor, a mobile developer working with iOS, Flutter, and Dart.",

@@ -175,11 +175,11 @@ export const social = (id: string) => socials.find((s) => s.id === id) ?? null;
 
 const year = (date: string | null) => (date ? date.slice(0, 4) : null);
 
-/** "2024", "2023 — 2024", or "2026 — now" for a record still running. */
+/** "2024", "2023 – 2024", or "2026 – now" for a record still running. */
 export function period(start: string, end: string | null, current = end === null): string {
   const a = year(start);
   const b = current ? 'now' : year(end);
-  return !b || a === b ? `${a}` : `${a} — ${b}`;
+  return !b || a === b ? `${a}` : `${a} – ${b}`;
 }
 
 /** The project's first-listed technology, front end before back end. */

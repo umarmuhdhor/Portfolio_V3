@@ -8,7 +8,7 @@ const metadataBase = new URL(SITE.url || process.env.NEXT_PUBLIC_SITE_URL || 'ht
 
 export const metadata: Metadata = {
   metadataBase,
-  title: { default: SITE.title, template: `%s — ${SITE.title.split(' — ')[0]}` },
+  title: { default: SITE.title, template: `%s | ${SITE.title.split(' | ')[0]}` },
   description: SITE.description,
   keywords: SITE.keywords,
   authors: [{ name: 'Umar Muhdhor' }],

@@ -37,13 +37,13 @@
       },
       "achievements": {
         "en": [
-          "Designed the architecture around a strict split — the model makes only four judgment calls per product while deterministic Python handles every mechanical step — keeping output consistent even at low reasoning effort",
+          "Designed the architecture around a strict split, the model makes only four judgment calls per product while deterministic Python handles every mechanical step, keeping output consistent even at low reasoning effort",
           "Cut Shopify API traffic to two MCP calls per product by folding collections, both option links, and verification into a single aliased GraphQL mutation",
           "Built a rule-by-rule verification gate that checks ten rule groups against the real product in Shopify before any run reports success",
           "Normalised two supplier sources, Alibaba and 1688, into one extraction schema, working around client-side translation and anti-bot systems that fail with HTTP 200"
         ],
         "id": [
-          "Merancang arsitektur di atas pemisahan ketat — model hanya mengambil empat keputusan penilaian per produk sementara Python deterministik menangani setiap langkah mekanis — sehingga keluaran tetap konsisten walau usaha penalaran rendah",
+          "Merancang arsitektur di atas pemisahan ketat, model hanya mengambil empat keputusan penilaian per produk sementara Python deterministik menangani setiap langkah mekanis, sehingga keluaran tetap konsisten walau usaha penalaran rendah",
           "Memangkas lalu lintas API Shopify menjadi dua panggilan MCP per produk dengan melipat collection, kedua penautan opsi, dan verifikasi ke satu mutation GraphQL ber-alias",
           "Membangun gerbang verifikasi aturan demi aturan yang memeriksa sepuluh kelompok aturan terhadap produk sungguhan di Shopify sebelum run mana pun melaporkan sukses",
           "Menormalkan dua sumber supplier, Alibaba dan 1688, ke satu skema ekstraksi, menyiasati terjemahan sisi klien dan sistem anti-bot yang gagal dengan status HTTP 200"
@@ -233,8 +233,8 @@
       "category": "organisational",
       "company": {
         "name": {
-          "en": "Campus Representative Organisation — Multi Data University Palembang",
-          "id": "Organisasi Representative Kampus — Universitas Multi Data Palembang"
+          "en": "Campus Representative Organisation, Multi Data University Palembang",
+          "id": "Organisasi Representative Kampus, Universitas Multi Data Palembang"
         },
         "logo": null,
         "url": "https://mdp.ac.id",
@@ -281,8 +281,8 @@
       "category": "organisational",
       "company": {
         "name": {
-          "en": "Informatics Student Association — Multi Data University Palembang",
-          "id": "Himpunan Mahasiswa Informatika — Universitas Multi Data Palembang"
+          "en": "Informatics Student Association, Multi Data University Palembang",
+          "id": "Himpunan Mahasiswa Informatika, Universitas Multi Data Palembang"
         },
         "logo": null,
         "url": "https://mdp.ac.id",
@@ -329,8 +329,8 @@
       "category": "organisational",
       "company": {
         "name": {
-          "en": "MIPA Intensif — Tunas Bangsa High School Palembang",
-          "id": "MIPA Intensif — SMA Tunas Bangsa Palembang"
+          "en": "MIPA Intensif, Tunas Bangsa High School Palembang",
+          "id": "MIPA Intensif, SMA Tunas Bangsa Palembang"
         },
         "logo": null,
         "url": null,

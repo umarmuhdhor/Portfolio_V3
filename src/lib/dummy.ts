@@ -233,7 +233,7 @@ export const PROCESS = [
   {
     heading: ['From Flutter', 'to Swift'],
     lead:
-      'Two years of Flutter and Dart — including ABSATA, the attendance system built for staff at Indonesia’s House of Representatives — and now building depth in Swift at the Apple Developer Academy.',
+      'Two years of Flutter and Dart, including ABSATA, the attendance system built for staff at Indonesia’s House of Representatives, and now building depth in Swift at the Apple Developer Academy.',
     note: 'Mobile',
     body:
       'Secure login, an informative dashboard, realtime attendance monitoring. At the academy the same care went into ARKit gaze tracking and a watchOS heart-rate companion.',
@@ -353,7 +353,7 @@ export const EDUCATION = education.map((e, i) => ({
 
 /** The issuer already sits in the aside column, so drop it from a title that repeats it. */
 const withoutIssuer = (title: string, issuer: string | null) =>
-  issuer && title.endsWith(` — ${issuer}`) ? title.slice(0, -` — ${issuer}`.length) : title;
+  issuer && title.endsWith(`, ${issuer}`) ? title.slice(0, -`, ${issuer}`.length) : title;
 
 export const AWARDS = awards.map((a, i) => ({
   no: pad(i + 1),
@@ -414,7 +414,7 @@ const link = (id: string) => {
 export const CONTACT = {
   label: 'Contact',
   heading: ['Start a', 'Conversation'],
-  body: `${t(profile.availability.note)} Tell me what you are building — email is the fastest way to reach me.`,
+  body: `${t(profile.availability.note)} Tell me what you are building. Email is the fastest way to reach me.`,
   cta: EMAIL,
   /** The quieter ways in, under the address: profiles and the CV. */
   links: [link('linkedin'), link('github'), CV ? { label: 'CV (PDF)', href: CV } : null].filter(Boolean) as {

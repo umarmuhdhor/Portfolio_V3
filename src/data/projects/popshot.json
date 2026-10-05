@@ -21,12 +21,12 @@
     "id": "Aplikasi iOS yang mengubah dokumentasi perjalanan kelompok menjadi permainan. Anggota menyelesaikan challenge foto selama trip, dan album kolektifnya baru terbuka setelah perjalanan selesai."
   },
   "description": {
-    "en": "PopShot!! targets travellers aged 13 to 25 who travel in groups. Instead of taking photos passively, members complete photography challenges together, compete lightly, and end up with a shared album that acts as the reward at the end of the trip.\n\nThe product rests on three ideas: gamification through challenges, sidequests, and a Gamemaster role; real-time collaboration over WebSocket so every member's screen stays in sync; and a collective album deliberately locked until the trip is marked complete.\n\nA trip is created with a destination type and a challenge type — Color Hunt or Pose Hunt — which generates a six-character invite code for up to ten members. Members gather in a real-time Waiting Room and each claim one exclusive sidequest card before the Gamemaster starts the trip. During the trip the camera screen overlays the active challenge, and photos are filed as main challenge, sidequest, or photo dump.",
-    "id": "PopShot!! menyasar pelancong usia 13 sampai 25 tahun yang bepergian berkelompok. Alih-alih memotret secara pasif, anggota menyelesaikan challenge fotografi bersama, berkompetisi ringan, dan berakhir dengan album bersama yang menjadi hadiah di ujung perjalanan.\n\nProduknya bertumpu pada tiga gagasan: gamifikasi lewat challenge, sidequest, dan peran Gamemaster; kolaborasi real-time lewat WebSocket agar layar setiap anggota tetap sinkron; serta album kolektif yang sengaja dikunci sampai trip ditandai selesai.\n\nTrip dibuat dengan tipe destinasi dan tipe challenge — Color Hunt atau Pose Hunt — yang menghasilkan kode undangan enam karakter untuk maksimal sepuluh anggota. Anggota berkumpul di Waiting Room real-time dan masing-masing mengambil satu sidequest card eksklusif sebelum Gamemaster memulai trip. Selama trip, layar kamera menampilkan challenge aktif sebagai overlay, dan foto dikategorikan sebagai challenge utama, sidequest, atau foto dump."
+    "en": "PopShot!! targets travellers aged 13 to 25 who travel in groups. Instead of taking photos passively, members complete photography challenges together, compete lightly, and end up with a shared album that acts as the reward at the end of the trip.\n\nThe product rests on three ideas: gamification through challenges, sidequests, and a Gamemaster role; real-time collaboration over WebSocket so every member's screen stays in sync; and a collective album deliberately locked until the trip is marked complete.\n\nA trip is created with a destination type and a challenge type, Color Hunt or Pose Hunt, which generates a six-character invite code for up to ten members. Members gather in a real-time Waiting Room and each claim one exclusive sidequest card before the Gamemaster starts the trip. During the trip the camera screen overlays the active challenge, and photos are filed as main challenge, sidequest, or photo dump.",
+    "id": "PopShot!! menyasar pelancong usia 13 sampai 25 tahun yang bepergian berkelompok. Alih-alih memotret secara pasif, anggota menyelesaikan challenge fotografi bersama, berkompetisi ringan, dan berakhir dengan album bersama yang menjadi hadiah di ujung perjalanan.\n\nProduknya bertumpu pada tiga gagasan: gamifikasi lewat challenge, sidequest, dan peran Gamemaster; kolaborasi real-time lewat WebSocket agar layar setiap anggota tetap sinkron; serta album kolektif yang sengaja dikunci sampai trip ditandai selesai.\n\nTrip dibuat dengan tipe destinasi dan tipe challenge, Color Hunt atau Pose Hunt, yang menghasilkan kode undangan enam karakter untuk maksimal sepuluh anggota. Anggota berkumpul di Waiting Room real-time dan masing-masing mengambil satu sidequest card eksklusif sebelum Gamemaster memulai trip. Selama trip, layar kamera menampilkan challenge aktif sebagai overlay, dan foto dikategorikan sebagai challenge utama, sidequest, atau foto dump."
   },
   "problem": {
-    "en": "Young people come back from a trip regretting how little of it they photographed — either because they were too present in the moment to reach for a camera, or because one person ended up as the group's only photographer. What does get taken is then scattered across WhatsApp, Instagram Stories, and each person's own gallery, and collecting it afterwards falls on whoever cares most.",
-    "id": "Anak muda pulang dari sebuah perjalanan dengan penyesalan karena begitu sedikit yang sempat mereka foto — entah karena terlalu menikmati momennya untuk meraih kamera, atau karena hanya satu orang yang akhirnya jadi juru foto seluruh rombongan. Yang sempat terambil pun lalu tercecer di WhatsApp, Instagram Stories, dan galeri masing-masing, dan mengumpulkannya kemudian jatuh ke siapa pun yang paling peduli."
+    "en": "Young people come back from a trip regretting how little of it they photographed, either because they were too present in the moment to reach for a camera, or because one person ended up as the group's only photographer. What does get taken is then scattered across WhatsApp, Instagram Stories, and each person's own gallery, and collecting it afterwards falls on whoever cares most.",
+    "id": "Anak muda pulang dari sebuah perjalanan dengan penyesalan karena begitu sedikit yang sempat mereka foto; entah karena terlalu menikmati momennya untuk meraih kamera, atau karena hanya satu orang yang akhirnya jadi juru foto seluruh rombongan. Yang sempat terambil pun lalu tercecer di WhatsApp, Instagram Stories, dan galeri masing-masing, dan mengumpulkannya kemudian jatuh ke siapa pun yang paling peduli."
   },
   "solution": {
     "en": "Give every member a concrete reason to shoot: timed photo challenges and a personal sidequest, synced live across the group. Withholding the shared album until the trip ends turns the collected photos into a payoff rather than a chore.",
@@ -61,7 +61,7 @@
       "Trip creation with destination type and challenge type, producing a six-character invite code",
       "Real-time Waiting Room where sidequest cards are claimed exclusively",
       "Gamemaster role that starts and ends the trip for everyone at once",
-      "Camera screen overlaying the active challenge — Color Hunt or Pose Hunt",
+      "Camera screen overlaying the active challenge: Color Hunt or Pose Hunt",
       "Photos filed as main challenge, sidequest, or photo dump",
       "Shared album locked until the trip is marked complete",
       "Memories screen showing photo counts per member"
@@ -70,7 +70,7 @@
       "Pembuatan trip dengan tipe destinasi dan tipe challenge, menghasilkan kode undangan enam karakter",
       "Waiting Room real-time tempat sidequest card diambil secara eksklusif",
       "Peran Gamemaster yang memulai dan mengakhiri trip untuk semua orang sekaligus",
-      "Layar kamera dengan overlay challenge aktif — Color Hunt atau Pose Hunt",
+      "Layar kamera dengan overlay challenge aktif: Color Hunt atau Pose Hunt",
       "Foto dikategorikan sebagai challenge utama, sidequest, atau foto dump",
       "Album bersama terkunci sampai trip ditandai selesai",
       "Layar Memories menampilkan jumlah foto tiap anggota"
@@ -83,8 +83,8 @@
         "id": "Tim diberi \"travel\" sebagai satu dari tiga topik yang mungkin, dan ruangnya ternyata sangat luas. Mereka mulai dengan menuliskan setiap masalah yang mereka alami sendiri di papan Miro lalu memilih satu untuk diselesaikan, dan pada hari keempat dari jendela enam minggu, diskusinya mentok."
       },
       "solution": {
-        "en": "The head of the Apple Developer Academy in Bali looked at the board on day four and gave two pieces of feedback: stop running a problem-then-solution flow, because the board itself was forcing the idea to narrow before it was understood, and stop rushing — four days into six weeks is not behind. The team deliberately slowed down, spent time bonding first, and re-ran the discussion from there. That is where the real problem statement came from.",
-        "id": "Kepala Apple Developer Academy Bali melihat papan itu pada hari keempat dan memberi dua masukan: berhenti menjalankan alur masalah lalu solusi, karena papan itu sendiri memaksa idenya menyempit sebelum dipahami, dan berhenti terburu-buru — hari keempat dari enam minggu itu belum tertinggal. Tim sengaja memperlambat, meluangkan waktu untuk bonding lebih dulu, lalu mengulang diskusinya dari sana. Dari situlah problem statement yang sebenarnya muncul."
+        "en": "The head of the Apple Developer Academy in Bali looked at the board on day four and gave two pieces of feedback: stop running a problem-then-solution flow, because the board itself was forcing the idea to narrow before it was understood, and stop rushing; four days into six weeks is not behind. The team deliberately slowed down, spent time bonding first, and re-ran the discussion from there. That is where the real problem statement came from.",
+        "id": "Kepala Apple Developer Academy Bali melihat papan itu pada hari keempat dan memberi dua masukan: berhenti menjalankan alur masalah lalu solusi, karena papan itu sendiri memaksa idenya menyempit sebelum dipahami, dan berhenti terburu-buru; hari keempat dari enam minggu itu belum tertinggal. Tim sengaja memperlambat, meluangkan waktu untuk bonding lebih dulu, lalu mengulang diskusinya dari sana. Dari situlah problem statement yang sebenarnya muncul."
       }
     },
     {
@@ -103,13 +103,13 @@
     "en": [
       "Four days into a six-week window is not behind. Rushing the framing cost more than the speed it bought.",
       "A board full of listed problems quietly steers a team into problem-then-solution thinking, which narrows an idea before anyone understands it.",
-      "A team assembled at random needs shared footing before it can make decisions together — bonding was not a detour from the work, it was what unblocked it.",
+      "A team assembled at random needs shared footing before it can make decisions together, bonding was not a detour from the work, it was what unblocked it.",
       "The problem statement that finally held was specific about the moment it described, not about the category it sat in."
     ],
     "id": [
       "Hari keempat dari jendela enam minggu itu belum tertinggal. Terburu-buru merumuskan justru lebih mahal daripada kecepatan yang didapat.",
       "Papan yang penuh daftar masalah diam-diam menggiring tim ke pola pikir masalah lalu solusi, yang menyempitkan sebuah ide sebelum ada yang memahaminya.",
-      "Tim yang dibentuk acak butuh pijakan bersama sebelum bisa mengambil keputusan bersama — bonding bukan pengalihan dari pekerjaan, justru itu yang membukanya.",
+      "Tim yang dibentuk acak butuh pijakan bersama sebelum bisa mengambil keputusan bersama, bonding bukan pengalihan dari pekerjaan, justru itu yang membukanya.",
       "Problem statement yang akhirnya bertahan bersikap spesifik tentang momen yang digambarkannya, bukan tentang kategori tempatnya berada."
     ]
   },

@@ -35,7 +35,7 @@ const PALETTE = [
 
 const MOTION = [
   { d: '0.3s', use: 'colour, opacity' },
-  { d: '0.4s', use: 'scrollbar thumb width + opacity — the one non-custom ease' },
+  { d: '0.4s', use: 'scrollbar thumb width + opacity, the one non-custom ease' },
   { d: '0.5s', use: 'transform' },
   { d: '0.6s', use: 'caption roll, header' },
   { d: '1.109s', use: 'image scale on hover, link underline' },
@@ -60,7 +60,7 @@ export default function Styleguide() {
           Design system
         </h1>
 
-        <Section title="Type scale — design px equals rem">
+        <Section title="Type scale: design px equals rem">
           {TYPE_SCALE.map((t) => (
             <div className="sg__row" key={t.role}>
               <span className="sg__row-key fn-b2">
@@ -73,20 +73,20 @@ export default function Styleguide() {
           ))}
         </Section>
 
-        <Section title="Palette — monochrome, no accent colour exists">
+        <Section title="Palette: monochrome, no accent colour exists">
           <div className="sg__swatches">
             {PALETTE.map((c) => (
               <div className="sg__swatch" key={c.hex}>
                 <div className="sg__chip" style={{ backgroundColor: c.hex }} />
                 <p className="sg__chip-label fn-b2">
-                  {c.hex} — {c.use}
+                  {c.hex} · {c.use}
                 </p>
               </div>
             ))}
           </div>
         </Section>
 
-        <Section title="Grid — 15 columns, 20rem gap, one breakpoint at 767.98px">
+        <Section title="Grid: 15 columns, 20rem gap, one breakpoint at 767.98px">
           <div className="sg__overlay">
             <div className="grd sg__overlay-grid" data-role="grid">
               {Array.from({ length: 15 }, (_, i) => (
@@ -96,7 +96,7 @@ export default function Styleguide() {
           </div>
         </Section>
 
-        <Section title="Motion — one curve, five durations, zero keyframes">
+        <Section title="Motion: one curve, five durations, zero keyframes">
           <div className="sg__row">
             <span className="sg__row-key fn-b2">curve</span>
             <span className="sg__row-value fn-b1" data-role="body-1">
@@ -111,13 +111,13 @@ export default function Styleguide() {
           ))}
         </Section>
 
-        <Section title="Link underline — scaled ::before, active route inverts">
+        <Section title="Link underline: scaled ::before, active route inverts">
           <div className="sg__links">
             <Link className="link fn-b1" data-role="link" href="/styleguide">
-              Default — wipes in on hover
+              Default: wipes in on hover
             </Link>
             <Link className="link fn-b1 is--a" href="/styleguide">
-              Active — rests underlined, collapses on hover
+              Active: rests underlined, collapses on hover
             </Link>
             <button className="btn fn-btn" data-role="btn" type="button">
               Button

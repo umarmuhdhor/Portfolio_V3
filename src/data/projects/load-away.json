@@ -21,8 +21,8 @@
     "id": "Game iOS satir yang membalik logika layar loading: bar progres hanya maju selama kamu tidak menatapnya. Menoleh balik terlambat dan bar runtuh sambil mengejekmu keras-keras."
   },
   "description": {
-    "en": "Load Away, built under the Xcode project name Wofoking, is a standoff with a camera. The progress bar fills only while you genuinely are not watching — head turned past your calibrated neutral and eyes off the screen, or both eyes shut. Guess when it hits 100% and look back inside a roughly two-second window to win; overshoot and the bar collapses.\n\nThe pitch came from internet culture: absurdity is what gets shared, so the team built the dumbest possible version of it. The app baits you into thinking it is an adventure game, or that loading is simply broken, until you glance away and it creeps forward. After early feedback the team leaned in and dressed the whole thing as a horror game — haunted forest, a red door, a warning splash. It is a prank wearing a horror mask.\n\nLevel 2, \"Unstable Loading\", is the shipped mode: the bar jitters, randomly drops, saves checkpoints, and near the top fakes completion at 99% before betraying you. A fake push notification chimes to bait your gaze back at the worst moment. With a paired Apple Watch, a spiking heart rate feeds the bar's volatility — the game runs on your panic.\n\nThere is no game engine. Load Away is a native SwiftUI app whose gameplay is a @MainActor GameEngine on a roughly 30 Hz timer, reading gaze from ARKit, heart rate from HealthKit over WatchConnectivity, haptics from CoreHaptics, and taunt audio from pre-baked clips. The Apple frameworks are the engine.",
-    "id": "Load Away, dibangun dengan nama project Xcode Wofoking, adalah adu tahan dengan kamera. Bar progres hanya terisi selama kamu benar-benar tidak menonton — kepala menoleh melewati titik netral hasil kalibrasi dan mata lepas dari layar, atau kedua mata terpejam. Tebak kapan bar menyentuh 100% dan menoleh balik dalam jendela sekitar dua detik untuk menang; kelewatan, bar runtuh.\n\nGagasannya berangkat dari budaya internet: keabsurdan itulah yang dibagikan orang, jadi tim membangun versi paling konyolnya. Aplikasinya memancing kamu mengira ini game petualangan, atau mengira loading-nya rusak, sampai kamu memalingkan pandangan dan bar merayap maju. Setelah masukan awal, tim justru mempertebal leluconnya dan mendandani semuanya sebagai game horor — hutan berhantu, pintu merah, splash peringatan. Ini prank yang memakai topeng horor.\n\nLevel 2, \"Unstable Loading\", adalah mode yang dirilis: bar bergetar, turun acak, menyimpan checkpoint, dan menjelang puncak memalsukan penyelesaian di 99% sebelum mengkhianatimu. Notifikasi push palsu berbunyi untuk memancing pandanganmu kembali di saat terburuk. Dengan Apple Watch terpasang, detak jantung yang melonjak menambah keliaran bar — game ini benar-benar berjalan di atas kepanikanmu.\n\nTidak ada game engine. Load Away adalah aplikasi SwiftUI native yang gameplay-nya berupa GameEngine @MainActor pada timer sekitar 30 Hz, membaca arah pandang dari ARKit, detak jantung dari HealthKit lewat WatchConnectivity, haptic dari CoreHaptics, dan audio ejekan dari klip yang sudah dipanggang. Framework Apple itulah engine-nya."
+    "en": "Load Away, built under the Xcode project name Wofoking, is a standoff with a camera. The progress bar fills only while you genuinely are not watching; head turned past your calibrated neutral and eyes off the screen, or both eyes shut. Guess when it hits 100% and look back inside a roughly two-second window to win; overshoot and the bar collapses.\n\nThe pitch came from internet culture: absurdity is what gets shared, so the team built the dumbest possible version of it. The app baits you into thinking it is an adventure game, or that loading is simply broken, until you glance away and it creeps forward. After early feedback the team leaned in and dressed the whole thing as a horror game: haunted forest, a red door, a warning splash. It is a prank wearing a horror mask.\n\nLevel 2, \"Unstable Loading\", is the shipped mode: the bar jitters, randomly drops, saves checkpoints, and near the top fakes completion at 99% before betraying you. A fake push notification chimes to bait your gaze back at the worst moment. With a paired Apple Watch, a spiking heart rate feeds the bar's volatility; the game runs on your panic.\n\nThere is no game engine. Load Away is a native SwiftUI app whose gameplay is a @MainActor GameEngine on a roughly 30 Hz timer, reading gaze from ARKit, heart rate from HealthKit over WatchConnectivity, haptics from CoreHaptics, and taunt audio from pre-baked clips. The Apple frameworks are the engine.",
+    "id": "Load Away, dibangun dengan nama project Xcode Wofoking, adalah adu tahan dengan kamera. Bar progres hanya terisi selama kamu benar-benar tidak menonton; kepala menoleh melewati titik netral hasil kalibrasi dan mata lepas dari layar, atau kedua mata terpejam. Tebak kapan bar menyentuh 100% dan menoleh balik dalam jendela sekitar dua detik untuk menang; kelewatan, bar runtuh.\n\nGagasannya berangkat dari budaya internet: keabsurdan itulah yang dibagikan orang, jadi tim membangun versi paling konyolnya. Aplikasinya memancing kamu mengira ini game petualangan, atau mengira loading-nya rusak, sampai kamu memalingkan pandangan dan bar merayap maju. Setelah masukan awal, tim justru mempertebal leluconnya dan mendandani semuanya sebagai game horor: hutan berhantu, pintu merah, splash peringatan. Ini prank yang memakai topeng horor.\n\nLevel 2, \"Unstable Loading\", adalah mode yang dirilis: bar bergetar, turun acak, menyimpan checkpoint, dan menjelang puncak memalsukan penyelesaian di 99% sebelum mengkhianatimu. Notifikasi push palsu berbunyi untuk memancing pandanganmu kembali di saat terburuk. Dengan Apple Watch terpasang, detak jantung yang melonjak menambah keliaran bar; game ini benar-benar berjalan di atas kepanikanmu.\n\nTidak ada game engine. Load Away adalah aplikasi SwiftUI native yang gameplay-nya berupa GameEngine @MainActor pada timer sekitar 30 Hz, membaca arah pandang dari ARKit, detak jantung dari HealthKit lewat WatchConnectivity, haptic dari CoreHaptics, dan audio ejekan dari klip yang sudah dipanggang. Framework Apple itulah engine-nya."
   },
   "problem": {
     "en": "A loading screen is dead time nobody engages with. The design question was whether the wait itself could become the game rather than something to sit through.",
@@ -33,20 +33,20 @@
     "id": "Mengunci bar loading pada arah pandang dan membuat kecurangan mustahil: menoleh terlalu sedikit dan tidak terjadi apa-apa, menggeser mata kembali dan kena pinalti, memejamkan mata dan bar terisi tapi kamu tak bisa melihat kapan harus berhenti."
   },
   "role": {
-    "en": "iOS Developer — gaze tracking and watchOS heart rate",
-    "id": "iOS Developer — pelacakan arah pandang dan detak jantung watchOS"
+    "en": "iOS Developer, gaze tracking and watchOS heart rate",
+    "id": "iOS Developer, pelacakan arah pandang dan detak jantung watchOS"
   },
   "responsibilities": {
     "en": [
       "Built the ARKit gaze pipeline: calibrated face→camera classification, the eye-gaze peek guard, the eyes-closed path, the frozen-mesh guard, and the continuous player identity lock",
       "Built the watchOS companion and the heart rate path: HKWorkoutSession and HKLiveWorkoutBuilder streaming BPM over WatchConnectivity, with a stale-sample watchdog and a resting-low baseline",
-      "Diagnosed the watch pairing failure down to build configuration — embedding the watch app as a companion with WKApplication and WKCompanionAppBundleIdentifier",
+      "Diagnosed the watch pairing failure down to build configuration, embedding the watch app as a companion with WKApplication and WKCompanionAppBundleIdentifier",
       "Worked as one of three engineers in a five-person team alongside two designers"
     ],
     "id": [
       "Membangun pipeline arah pandang ARKit: klasifikasi terkalibrasi wajah→kamera, penjaga intip berbasis mata, jalur mata terpejam, penjaga mesh beku, dan kunci identitas pemain berkelanjutan",
       "Membangun aplikasi pendamping watchOS dan jalur detak jantung: HKWorkoutSession dan HKLiveWorkoutBuilder yang mengalirkan BPM lewat WatchConnectivity, dengan pengawas sampel basi dan baseline istirahat",
-      "Melacak kegagalan pemasangan jam sampai ke konfigurasi build — menyematkan aplikasi jam sebagai pendamping dengan WKApplication dan WKCompanionAppBundleIdentifier",
+      "Melacak kegagalan pemasangan jam sampai ke konfigurasi build; menyematkan aplikasi jam sebagai pendamping dengan WKApplication dan WKCompanionAppBundleIdentifier",
       "Bekerja sebagai satu dari tiga engineer dalam tim lima orang bersama dua desainer"
     ]
   },
@@ -99,8 +99,8 @@
     },
     {
       "problem": {
-        "en": "Judging head angle in ARKit world axes drifted with phone motion and inverted the reading — turning right went undetected while turning left registered as a peek.",
-        "id": "Menilai sudut kepala memakai sumbu dunia ARKit ikut melenceng saat ponsel bergerak dan membalik pembacaan — menoleh ke kanan tak terdeteksi sementara menoleh ke kiri terbaca sebagai mengintip."
+        "en": "Judging head angle in ARKit world axes drifted with phone motion and inverted the reading, turning right went undetected while turning left registered as a peek.",
+        "id": "Menilai sudut kepala memakai sumbu dunia ARKit ikut melenceng saat ponsel bergerak dan membalik pembacaan; menoleh ke kanan tak terdeteksi sementara menoleh ke kiri terbaca sebagai mengintip."
       },
       "solution": {
         "en": "Re-derived the whole classification as face→camera relative geometry, which depends only on where the camera sits in the face's own frame and stays drift-immune in landscape.",
@@ -149,8 +149,8 @@
     },
     {
       "problem": {
-        "en": "A watch app that looked installed never paired — WCSession.activationState stayed at 0 and heart rate never reached the phone.",
-        "id": "Aplikasi jam yang tampak terpasang tak pernah terhubung — WCSession.activationState mandek di 0 dan detak jantung tak pernah sampai ke ponsel."
+        "en": "A watch app that looked installed never paired; WCSession.activationState stayed at 0 and heart rate never reached the phone.",
+        "id": "Aplikasi jam yang tampak terpasang tak pernah terhubung; WCSession.activationState mandek di 0 dan detak jantung tak pernah sampai ke ponsel."
       },
       "solution": {
         "en": "The fix was build configuration, not code: embed the watch app as a companion inside the iOS app with WKApplication and WKCompanionAppBundleIdentifier set, then erase the stale simulator install shadowing the rebuild.",
@@ -171,13 +171,13 @@
   "impact": [],
   "lessons": {
     "en": [
-      "The central assumption — that looking away is just an angle — was wrong. Calibration and face-relative geometry were mandatory, not polish.",
+      "The central assumption, that looking away is just an angle, was wrong. Calibration and face-relative geometry were mandatory, not polish.",
       "The hard bugs were physical sensor behaviour and Xcode target wiring, and only surfaced on real hardware. Documentation and AI described the happy path; the device described reality.",
       "Anti-cheat signals doubled as comedy: because the camera already knew the eyes, brow, and heart rate, frustration taunts and the notification trap came nearly for free.",
       "Cutting Level 1 from play sharpened the hook even though it was built and working."
     ],
     "id": [
-      "Asumsi utamanya — bahwa tidak melihat itu sekadar soal sudut — ternyata salah. Kalibrasi dan geometri relatif wajah wajib ada, bukan sekadar pemolesan.",
+      "Asumsi utamanya, bahwa tidak melihat itu sekadar soal sudut, ternyata salah. Kalibrasi dan geometri relatif wajah wajib ada, bukan sekadar pemolesan.",
       "Bug tersulit berasal dari perilaku sensor fisik dan penyusunan target Xcode, dan hanya muncul di perangkat asli. Dokumentasi dan AI menjelaskan jalur mulusnya; perangkatnya menjelaskan kenyataannya.",
       "Sinyal anti-curang sekaligus jadi bahan lelucon: karena kamera sudah mengetahui mata, alis, dan detak jantung, ejekan frustrasi dan jebakan notifikasi nyaris didapat cuma-cuma.",
       "Mencabut Level 1 dari permainan justru menajamkan daya tariknya, walau level itu sudah dibangun dan berfungsi."

@@ -6,8 +6,8 @@
     "id": "PELICAN"
   },
   "subtitle": {
-    "en": "Attendance app built in FlutterFlow — a first freelance project.",
-    "id": "Aplikasi absensi berbasis FlutterFlow — project freelance pertama."
+    "en": "Attendance app built in FlutterFlow, a first freelance project.",
+    "id": "Aplikasi absensi berbasis FlutterFlow, project freelance pertama."
   },
   "category": "mobile",
   "type": "client",
@@ -21,8 +21,8 @@
     "id": "Aplikasi absensi berbasis FlutterFlow yang dikerjakan tim freelance bertiga, diambil tepat setelah magang DPR RI berakhir. Ini project berbayar pertama sekaligus pengalaman pertama memakai FlutterFlow."
   },
   "description": {
-    "en": "PELICAN is an attendance application, taken on as a freelance job immediately after the DPR RI internship ended in December 2024. It was the first paid project, built by a team of three — a designer, a backend developer, and a frontend developer.\n\nThe team built it in FlutterFlow rather than writing Flutter by hand. That was also a first: coming in with Flutter experience but none in FlutterFlow, the tool had to be learned in two days before the build could start.\n\nWorking in a visual builder turned out to be a different discipline from writing Flutter directly. FlutterFlow is more rigid, and some designs could not be reproduced exactly as intended — the constraint had to be worked around rather than argued with.",
-    "id": "PELICAN adalah aplikasi absensi yang diambil sebagai pekerjaan freelance tepat setelah magang DPR RI berakhir pada Desember 2024. Ini project berbayar pertama, dikerjakan tim bertiga — seorang desainer, seorang backend developer, dan seorang frontend developer.\n\nTim membangunnya dengan FlutterFlow alih-alih menulis Flutter secara manual. Itu juga pengalaman pertama: datang dengan bekal Flutter tapi belum pernah menyentuh FlutterFlow, alatnya harus dipelajari dalam dua hari sebelum pembangunan bisa dimulai.\n\nBekerja di dalam visual builder ternyata disiplin yang berbeda dari menulis Flutter langsung. FlutterFlow lebih kaku, dan sebagian desain tidak bisa direproduksi persis seperti yang diinginkan — batasannya harus disiasati, bukan dilawan."
+    "en": "PELICAN is an attendance application, taken on as a freelance job immediately after the DPR RI internship ended in December 2024. It was the first paid project, built by a team of three: a designer, a backend developer, and a frontend developer.\n\nThe team built it in FlutterFlow rather than writing Flutter by hand. That was also a first: coming in with Flutter experience but none in FlutterFlow, the tool had to be learned in two days before the build could start.\n\nWorking in a visual builder turned out to be a different discipline from writing Flutter directly. FlutterFlow is more rigid, and some designs could not be reproduced exactly as intended; the constraint had to be worked around rather than argued with.",
+    "id": "PELICAN adalah aplikasi absensi yang diambil sebagai pekerjaan freelance tepat setelah magang DPR RI berakhir pada Desember 2024. Ini project berbayar pertama, dikerjakan tim bertiga: seorang desainer, seorang backend developer, dan seorang frontend developer.\n\nTim membangunnya dengan FlutterFlow alih-alih menulis Flutter secara manual. Itu juga pengalaman pertama: datang dengan bekal Flutter tapi belum pernah menyentuh FlutterFlow, alatnya harus dipelajari dalam dua hari sebelum pembangunan bisa dimulai.\n\nBekerja di dalam visual builder ternyata disiplin yang berbeda dari menulis Flutter langsung. FlutterFlow lebih kaku, dan sebagian desain tidak bisa direproduksi persis seperti yang diinginkan; batasannya harus disiasati, bukan dilawan."
   },
   "problem": {
     "en": "The client needed an attendance application, and the team had to deliver it on a low-code platform none of them had used before.",
