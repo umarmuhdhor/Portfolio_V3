@@ -47,6 +47,50 @@
   gap: 6rem;
 }
 
+/* --- read more ----------------------------------------------------------- */
+.cs-more__toggle {
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.cs-more__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.cs-more__toggle:hover {
+  text-decoration-thickness: 2px;
+}
+
+.cs-more__toggle:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+
+.cs-more__close,
+.cs-more[open] .cs-more__open {
+  display: none;
+}
+
+.cs-more[open] .cs-more__close {
+  display: inline;
+}
+
+.cs-more__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+  margin-top: 24rem;
+}
+
+.cs-more__body p {
+  color: #6e6e6e;
+  max-width: 1110rem;
+}
+
 .cs-private {
   border-top: 1px solid #e2e2e2;
   color: #6e6e6e;

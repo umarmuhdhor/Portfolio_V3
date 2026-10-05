@@ -30,7 +30,9 @@
   color: #6e6e6e;
 }
 
-.detail__summary {
+/* Summary and write-up are one column, so the write-up follows the summary
+   directly instead of waiting for the (taller) facts list beside it. */
+.detail__main {
   grid-column: 6 / 13;
 }
 
@@ -38,18 +40,25 @@
    them underneath instead of beside it. */
 @media (min-width: 768px) {
   .detail__facts,
-  .detail__summary {
+  .detail__main {
     grid-row: 1;
+  }
+
+  /* The facts ride beside the long column instead of leaving the left empty. */
+  .detail__facts {
+    align-self: start;
+    position: sticky;
+    top: 120px;
   }
 }
 
 @media (max-width: 767.98px) {
   .detail__facts,
-  .detail__summary {
+  .detail__main {
     margin-top: 40rem;
   }
 
-  .detail__summary {
+  .detail__main {
     order: -1;
   }
 }
@@ -131,8 +140,7 @@
   display: flex;
   flex-direction: column;
   gap: 24rem;
-  grid-column: 6 / 13;
-  margin-top: 80rem;
+  margin-top: 60rem;
 }
 
 .detail__body p {

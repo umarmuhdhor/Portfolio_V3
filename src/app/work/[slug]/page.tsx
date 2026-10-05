@@ -94,20 +94,39 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               ) : null}
             </dl>
 
-            <div className="detail__summary">
-              <p className="fn-b2 cs-subtitle">{project.subtitle}</p>
-              <p className="fn-h5" data-split-scrub>
-                {project.summary}
-              </p>
-            </div>
-
-            <div className="detail__body" data-reveal>
-              {project.description.map((d) => (
-                <p className="fn-b1" key={d.slice(0, 24)}>
-                  {d}
+            <div className="detail__main">
+              <div className="detail__summary">
+                <p className="fn-b2 cs-subtitle">{project.subtitle}</p>
+                <p className="fn-h5" data-split-scrub>
+                  {project.summary}
                 </p>
-              ))}
-              {project.privateNote ? <p className="fn-b2 cs-private">{project.privateNote}</p> : null}
+              </div>
+
+              {/* The lead paragraph stays in view; the rest opens on demand so
+                  a long write-up does not push the screenshots off the page. */}
+              <div className="detail__body" data-reveal>
+                {project.description.slice(0, 1).map((d) => (
+                  <p className="fn-b1" key={d.slice(0, 24)}>
+                    {d}
+                  </p>
+                ))}
+                {project.description.length > 1 ? (
+                  <details className="cs-more">
+                    <summary className="fn-b1 cs-more__toggle">
+                      <span className="cs-more__open">Read more</span>
+                      <span className="cs-more__close">Show less</span>
+                    </summary>
+                    <div className="cs-more__body">
+                      {project.description.slice(1).map((d) => (
+                        <p className="fn-b1" key={d.slice(0, 24)}>
+                          {d}
+                        </p>
+                      ))}
+                    </div>
+                  </details>
+                ) : null}
+                {project.privateNote ? <p className="fn-b2 cs-private">{project.privateNote}</p> : null}
+              </div>
             </div>
           </div>
 
