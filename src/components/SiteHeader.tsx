@@ -1,11 +1,12 @@
 /**
  * Fixed header — name left, nav right.
  *
- * The name is the way home, so the nav does not repeat it with an "Index"
- * item. Colour comes from state rather than mix-blend-mode: difference turns
- * white type mid-grey over a mid-grey photograph, which is most of the hero.
- * HeaderOverHero keeps `is--over-hero` on while the hero is under the bar;
- * away from it the bar takes a frosted backdrop so it reads over anything.
+ * The name links home, but a logo is easy to miss as a link, so the nav also
+ * carries an explicit Home item. Colour comes from state rather than
+ * mix-blend-mode: difference turns white type mid-grey over a mid-grey
+ * photograph, which is most of the hero. HeaderOverHero keeps `is--over-hero`
+ * on while the hero is under the bar; away from it the bar takes a frosted
+ * backdrop so it reads over anything.
  */
 import Link from 'next/link';
 import { HEADER } from '@/lib/dummy';
@@ -14,6 +15,7 @@ import LogoMark from './LogoMark';
 import './site-header.css';
 
 const NAV = [
+  { label: 'Home', href: '/' },
   { label: 'Work', href: '/work' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -24,11 +26,7 @@ export default function SiteHeader({ active = '/', overHero = false }: { active?
     <header className={`site-header t-header${overHero ? ' is--over-hero' : ''}`} data-role="header">
       <div className="ctr" data-role="container">
         <div className="site-header__row">
-          <Link
-            aria-current={active === '/' ? 'page' : undefined}
-            className="site-header__brand fn-b1"
-            href="/"
-          >
+          <Link className="site-header__brand fn-b1" href="/">
             <LogoMark className="site-header__mark" />
             <span>{HEADER.name}</span>
           </Link>
