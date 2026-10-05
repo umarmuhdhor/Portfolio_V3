@@ -214,18 +214,32 @@
   "media": {
     "thumbnail": {
       "src": "assets/images/projects/load-away/thumb.webp",
-      "width": 1024,
-      "height": 1024,
+      "width": 1672,
+      "height": 941,
       "alt": {
-        "en": "Load Away app icon: a door standing ajar, red light spilling across the floor",
-        "id": "Ikon aplikasi Load Away: pintu yang terbuka sedikit, cahaya merah tumpah ke lantai"
+        "en": "Load Away horror-game cover with a glowing red door in a dead forest and a progress bar frozen at 99 percent",
+        "id": "Sampul game horor Load Away dengan pintu merah bercahaya di hutan mati dan progress bar yang tertahan pada 99 persen"
       },
       "caption": {
-        "en": "App icon. Screens are not published yet.",
-        "id": "Ikon aplikasi. Tangkapan layar belum dipublikasikan."
+        "en": "A gaze-driven horror game: the bar moves only when the player looks away.",
+        "id": "Game horor berbasis arah pandang: bar hanya bergerak saat pemain memalingkan pandangan."
       }
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/load-away/gallery-01-player-flow.webp",
+        "width": 1280,
+        "height": 720,
+        "alt": {
+          "en": "Load Away player flow from home and face scan through the gaze-driven loop, progress check, and final jumpscare",
+          "id": "Alur pemain Load Away dari beranda dan pemindaian wajah melalui siklus berbasis arah pandang, pengecekan progres, hingga jumpscare akhir"
+        },
+        "caption": {
+          "en": "Looking away raises progress; getting caught pauses the run and triggers a taunt.",
+          "id": "Memalingkan pandangan menaikkan progres; tertangkap akan menjeda permainan dan memicu ejekan."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -256,5 +270,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-06-23",
-  "updatedAt": "2026-09-08"
+  "updatedAt": "2026-10-05"
 }

@@ -210,13 +210,27 @@
     "thumbnail": {
       "src": "assets/images/projects/live-collab/thumb.webp",
       "alt": {
-        "en": "Live Collab banner: the session replay, the desktop app's Tasks board, and a locked code block where one teammate's Bob is blocked and queued",
-        "id": "Banner Live Collab: replay sesi, papan Tasks di aplikasi desktop, dan blok kode terkunci tempat Bob milik seorang anggota diblokir dan diantrekan"
+        "en": "Live Collab case study cover showing a three-person IBM Bob session replay with near-miss, decision, and timing metrics",
+        "id": "Sampul studi kasus Live Collab yang menampilkan replay sesi IBM Bob tiga orang beserta metrik near-miss, keputusan, dan waktu"
       },
-      "width": 1600,
-      "height": 900
+      "width": 1280,
+      "height": 720
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/live-collab/gallery-01-edit-safety-flow.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Live Collab edit-safety flow showing lock checks, blocked writes, PM handoff proposals, human approval, and review before commit",
+          "id": "Alur keamanan edit Live Collab yang menampilkan pengecekan lock, penulisan terblokir, usulan handoff PM, persetujuan manusia, dan review sebelum commit"
+        },
+        "caption": {
+          "en": "Hooks block unsafe writes while a human controls every handoff decision.",
+          "id": "Hook memblokir penulisan tidak aman sementara manusia mengendalikan setiap keputusan handoff."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -246,5 +260,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-09-25",
-  "updatedAt": "2026-09-28"
+  "updatedAt": "2026-10-05"
 }

@@ -137,15 +137,15 @@
   "media": {
     "thumbnail": {
       "src": "assets/images/projects/hisplora/thumb.webp",
-      "width": 726,
-      "height": 1494,
+      "width": 1600,
+      "height": 900,
       "alt": {
-        "en": "Hisplora trip brief screen showing route distance and duration on a typewriter card",
-        "id": "Layar ringkasan trip Hisplora yang menampilkan jarak dan durasi rute pada kartu mesin tik"
+        "en": "Hisplora case-study cover combining an illustrated historical Bali streetscape with the mobile story experience",
+        "id": "Sampul studi kasus Hisplora yang menggabungkan ilustrasi jalan bersejarah Bali dengan pengalaman cerita di perangkat seluler"
       },
       "caption": {
-        "en": "Trip brief for the walking route \"The Last Traces of Badung\".",
-        "id": "Ringkasan trip untuk rute jalan kaki \"The Last Traces of Badung\"."
+        "en": "A location-based historical quest for walking through Bali and collecting its stories.",
+        "id": "Quest sejarah berbasis lokasi untuk menyusuri Bali dan mengumpulkan kisahnya."
       }
     },
     "gallery": [
@@ -226,6 +226,19 @@
           "en": "The quest stays locked until the visitor is physically at the site.",
           "id": "Quest tetap terkunci sampai pengunjung benar-benar berada di lokasi."
         }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-07-product-flow.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Hisplora primary user flow from onboarding and route discovery through arrival, story reveal, quest response, rewards, and journal memories",
+          "id": "Alur pengguna utama Hisplora dari onboarding dan penemuan rute melalui kedatangan, pembukaan cerita, respons quest, hadiah, hingga kenangan jurnal"
+        },
+        "caption": {
+          "en": "Each checkpoint repeats the arrival, reveal, response, and reward loop before the journey is stored.",
+          "id": "Setiap checkpoint mengulang siklus kedatangan, pembukaan, respons, dan hadiah sebelum perjalanan disimpan."
+        }
       }
     ],
     "video": {
@@ -257,5 +270,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-07-20",
-  "updatedAt": "2026-09-08"
+  "updatedAt": "2026-10-05"
 }

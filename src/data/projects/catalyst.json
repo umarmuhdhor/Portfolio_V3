@@ -180,13 +180,27 @@
     "thumbnail": {
       "src": "assets/images/projects/catalyst/thumb.webp",
       "alt": {
-        "en": "Catalyst dashboard with a causal map linking sources and mechanisms to the watched issuers ADRO, ANTM, PGAS, INCO, and TINS and their business impact",
-        "id": "Dashboard Catalyst dengan peta sebab akibat yang menghubungkan sumber dan mekanisme ke emiten pantauan ADRO, ANTM, PGAS, INCO, dan TINS serta dampak bisnisnya"
+        "en": "Catalyst case-study cover beside a dashboard that maps sources and mechanisms to watched IDX issuers",
+        "id": "Sampul studi kasus Catalyst di samping dashboard yang memetakan sumber dan mekanisme ke emiten IDX pantauan"
       },
-      "width": 1600,
-      "height": 900
+      "width": 2560,
+      "height": 1440
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/catalyst/gallery-01-product-flow.webp",
+        "width": 2560,
+        "height": 1440,
+        "alt": {
+          "en": "Catalyst product flow from market records through material-change signals, causal reasoning, evidence checks, and a research decision",
+          "id": "Alur produk Catalyst dari rekaman pasar melalui sinyal perubahan material, penalaran sebab akibat, uji bukti, hingga keputusan riset"
+        },
+        "caption": {
+          "en": "The investigation loop turns a market change into an evidence-backed research action.",
+          "id": "Siklus investigasi mengubah perubahan pasar menjadi tindakan riset berbasis bukti."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -217,5 +231,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-09-12",
-  "updatedAt": "2026-09-28"
+  "updatedAt": "2026-10-05"
 }

@@ -142,18 +142,32 @@
   "media": {
     "thumbnail": {
       "src": "assets/images/projects/popshot/thumb.webp",
-      "width": 686,
-      "height": 1498,
+      "width": 1600,
+      "height": 900,
       "alt": {
-        "en": "PopShot!! welcome screen with the mascot and log in or sign up options",
-        "id": "Layar sambutan PopShot!! dengan maskot dan opsi masuk atau daftar"
+        "en": "PopShot case-study cover showing friends turning a night out into photo quests",
+        "id": "Sampul studi kasus PopShot yang menampilkan teman-teman mengubah perjalanan malam menjadi photo quest"
       },
       "caption": {
-        "en": "Onboarding screen: \"Shoot your trip\".",
-        "id": "Layar onboarding: \"Shoot your trip\"."
+        "en": "A real-time iOS social game built around playful group photo missions.",
+        "id": "Game sosial iOS real-time yang dibangun di sekitar misi foto kelompok yang menyenangkan."
       }
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/popshot/gallery-01-user-flow.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "PopShot user flow from authentication and room creation through private quests, photo hunting, voting, winner reveal, and memories",
+          "id": "Alur pengguna PopShot dari autentikasi dan pembuatan room melalui private quest, perburuan foto, voting, pengumuman pemenang, hingga memories"
+        },
+        "caption": {
+          "en": "The ten-step room journey moves from social setup to a shared photo recap.",
+          "id": "Perjalanan room sepuluh langkah bergerak dari persiapan sosial menuju rangkuman foto bersama."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -183,5 +197,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-05-25",
-  "updatedAt": "2026-09-08"
+  "updatedAt": "2026-10-05"
 }

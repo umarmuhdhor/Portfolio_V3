@@ -273,18 +273,32 @@
   "media": {
     "thumbnail": {
       "src": "assets/images/projects/logic-and-code/thumb.webp",
-      "width": 2400,
-      "height": 1260,
+      "width": 1600,
+      "height": 900,
       "alt": {
-        "en": "Logic & Code title card on a grid, with side panels reading Materi, a 90:00 timer, and server-side scoring",
-        "id": "Kartu judul Logic & Code di atas grid, dengan panel samping bertuliskan Materi, timer 90:00, dan penilaian server"
+        "en": "Logic & Code portfolio cover showing its measured learning system, Logic Core module, 45-minute timer, and server-verified scoring",
+        "id": "Sampul portofolio Logic & Code yang menampilkan sistem belajar terukur, modul Logic Core, timer 45 menit, dan penilaian terverifikasi server"
       },
       "caption": {
         "en": "An independent try-out platform at gerbangdev.com — structured material, a server-set timer, and scoring the browser cannot reach.",
         "id": "Platform try out independen di gerbangdev.com — materi terstruktur, timer yang diset server, dan skor yang tak terjangkau browser."
       }
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/logic-and-code/gallery-01-user-flow.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Logic & Code user flow from landing page and authentication through package selection, timed questions, server scoring, and result review",
+          "id": "Alur pengguna Logic & Code dari landing page dan autentikasi melalui pemilihan paket, soal bertimer, penilaian server, hingga review hasil"
+        },
+        "caption": {
+          "en": "The core try-out journey keeps timing and scoring under server control.",
+          "id": "Perjalanan inti try out menjaga timer dan penilaian di bawah kendali server."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -317,5 +331,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-06-30",
-  "updatedAt": "2026-09-11"
+  "updatedAt": "2026-10-05"
 }
