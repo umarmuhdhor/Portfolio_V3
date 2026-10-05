@@ -271,11 +271,14 @@ const card = (p: Project) => ({
   href: `/work/${p.id}`,
 });
 
+/** The three shown on the home page, in this order. Picked here rather than by
+    `order` so /work keeps the projects' own sequence. */
+const HOME_WORK = ['hisplora', 'popshot', 'load-away'];
+
 export const WORK = {
   heading: ['Selected', 'Work'],
   cta: `See all ${projects.length} projects →`,
-  /** The first three by the projects' own order; /work carries the rest. */
-  cards: projects.filter((p) => p.featured).slice(0, 3).map(card),
+  cards: HOME_WORK.map((id) => projects.find((p) => p.id === id)).filter((p): p is Project => !!p).map(card),
 };
 
 /* --------------------------------------------------------------------------
