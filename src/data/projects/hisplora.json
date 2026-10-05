@@ -189,55 +189,29 @@
         }
       },
       {
-        "src": "assets/images/projects/hisplora/gallery-04-quest-detail.webp",
-        "width": 776,
-        "height": 1578,
-        "alt": {
-          "en": "Quest detail on a scroll card with a skip option when no camera is available",
-          "id": "Detail quest pada kartu gulungan dengan opsi lewati saat kamera tidak tersedia"
-        },
-        "caption": {
-          "en": "Quest detail on a scroll card, with a fallback when the device has no camera.",
-          "id": "Detail quest pada kartu gulungan, dengan jalan keluar saat perangkat tidak punya kamera."
-        }
-      },
-      {
-        "src": "assets/images/projects/hisplora/gallery-05-photo-task.webp",
-        "width": 698,
-        "height": 1482,
-        "alt": {
-          "en": "Photo quest asking the visitor to find an iron statue, with the camera trigger",
-          "id": "Quest foto yang meminta pengunjung menemukan patung besi, dengan pemicu kamera"
-        },
-        "caption": {
-          "en": "The clue describes the object; the visitor proves the find with a photo.",
-          "id": "Petunjuk menjelaskan objeknya; pengunjung membuktikan temuan lewat foto."
-        }
-      },
-      {
-        "src": "assets/images/projects/hisplora/gallery-06-geofence.webp",
-        "width": 586,
-        "height": 1218,
-        "alt": {
-          "en": "Geofence guard screen with a map, shown while the visitor is outside the quest radius",
-          "id": "Layar penjaga geofence dengan peta, muncul saat pengunjung di luar radius quest"
-        },
-        "caption": {
-          "en": "The quest stays locked until the visitor is physically at the site.",
-          "id": "Quest tetap terkunci sampai pengunjung benar-benar berada di lokasi."
-        }
-      },
-      {
-        "src": "assets/images/projects/hisplora/gallery-07-product-flow.webp",
+        "src": "assets/images/projects/hisplora/gallery-08-discovery.webp",
         "width": 1600,
         "height": 900,
         "alt": {
-          "en": "Hisplora primary user flow from onboarding and route discovery through arrival, story reveal, quest response, rewards, and journal memories",
-          "id": "Alur pengguna utama Hisplora dari onboarding dan penemuan rute melalui kedatangan, pembukaan cerita, respons quest, hadiah, hingga kenangan jurnal"
+          "en": "Hisplora app gallery showing the quest catalogue, an illustrated Bali map, and The Last Traces of Badung preview on three iPhones",
+          "id": "Galeri aplikasi Hisplora yang menampilkan katalog quest, peta Bali berilustrasi, dan pratinjau The Last Traces of Badung pada tiga iPhone"
         },
         "caption": {
-          "en": "Each checkpoint repeats the arrival, reveal, response, and reward loop before the journey is stored.",
-          "id": "Setiap checkpoint mengulang siklus kedatangan, pembukaan, respons, dan hadiah sebelum perjalanan disimpan."
+          "en": "Discovery and route selection move from the quest catalogue to the illustrated map and story preview.",
+          "id": "Penemuan dan pemilihan rute bergerak dari katalog quest menuju peta berilustrasi dan pratinjau cerita."
+        }
+      },
+      {
+        "src": "assets/images/projects/hisplora/gallery-09-checkpoint-experience.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Four Hisplora screens showing a location story, photo response, collectible stamps, and a sealed journey letter",
+          "id": "Empat layar Hisplora yang menampilkan cerita lokasi, respons foto, koleksi stempel, dan surat perjalanan tersegel"
+        },
+        "caption": {
+          "en": "Each checkpoint connects story, action, reward, and journal in one continuous loop.",
+          "id": "Tiap checkpoint menyambungkan cerita, aksi, hadiah, dan jurnal dalam satu alur berkelanjutan."
         }
       }
     ],

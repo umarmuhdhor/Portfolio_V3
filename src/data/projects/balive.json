@@ -107,11 +107,11 @@
     "thumbnail": {
       "src": "assets/images/projects/balive/thumb.webp",
       "alt": {
-        "en": "Balive swipe-card screen",
-        "id": "Layar kartu geser Balive"
+        "en": "Balive boarding house discovery app shown on an iPhone",
+        "id": "Aplikasi pencarian kos Balive yang ditampilkan di iPhone"
       },
-      "width": 1280,
-      "height": 720
+      "width": 1672,
+      "height": 941
     },
     "gallery": [],
     "video": {

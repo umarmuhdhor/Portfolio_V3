@@ -238,6 +238,32 @@
           "en": "Looking away raises progress; getting caught pauses the run and triggers a taunt.",
           "id": "Memalingkan pandangan menaikkan progres; tertangkap akan menjeda permainan dan memicu ejekan."
         }
+      },
+      {
+        "src": "assets/images/projects/load-away/gallery-02-threshold-home.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "The Threshold home screen concept showing Load Away inside a landscape iPhone with a glowing red door",
+          "id": "Konsep layar beranda The Threshold yang menampilkan Load Away di dalam iPhone lanskap dengan pintu merah bercahaya"
+        },
+        "caption": {
+          "en": "The home screen presents Load Away as a horror game before the player discovers its gaze-driven trick.",
+          "id": "Layar beranda membingkai Load Away sebagai game horor sebelum pemain menemukan tipu daya berbasis arah pandangnya."
+        }
+      },
+      {
+        "src": "assets/images/projects/load-away/gallery-03-loading-screen.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "Load Away key art with a glowing red door in a dead forest and a loading bar frozen at 99 percent",
+          "id": "Key art Load Away dengan pintu merah bercahaya di hutan mati dan bar loading yang tertahan pada 99 persen"
+        },
+        "caption": {
+          "en": "The 99% loading screen turns an ordinary progress bar into the game's central threat.",
+          "id": "Layar loading 99% mengubah bar progres biasa menjadi ancaman utama dalam game."
+        }
       }
     ],
     "video": {

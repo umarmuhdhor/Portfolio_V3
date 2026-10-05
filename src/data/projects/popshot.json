@@ -166,6 +166,32 @@
           "en": "The ten-step room journey moves from social setup to a shared photo recap.",
           "id": "Perjalanan room sepuluh langkah bergerak dari persiapan sosial menuju rangkuman foto bersama."
         }
+      },
+      {
+        "src": "assets/images/projects/popshot/gallery-02-room-setup.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "PopShot room setup screens showing the Bali Escape trip, invite code, members, and selected Pose Hunt quest",
+          "id": "Layar persiapan room PopShot yang menampilkan trip Bali Escape, kode undangan, anggota, dan quest Pose Hunt terpilih"
+        },
+        "caption": {
+          "en": "Friends join a room, gather the crew, and choose a photo quest before the trip starts.",
+          "id": "Teman-teman bergabung ke room, mengumpulkan anggota, dan memilih photo quest sebelum trip dimulai."
+        }
+      },
+      {
+        "src": "assets/images/projects/popshot/gallery-03-photo-challenge.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "PopShot challenge and results screens showing a candid Pose Hunt photo, voting, and the winning shot",
+          "id": "Layar challenge dan hasil PopShot yang menampilkan foto candid Pose Hunt, voting, dan foto pemenang"
+        },
+        "caption": {
+          "en": "The live challenge turns candid moments into shots the group can rate, save, and share.",
+          "id": "Challenge langsung mengubah momen candid menjadi foto yang dapat dinilai, disimpan, dan dibagikan bersama."
+        }
       }
     ],
     "video": {

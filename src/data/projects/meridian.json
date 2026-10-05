@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "meridian",
+  "title": {
+    "en": "Meridian",
+    "id": "Meridian"
+  },
+  "subtitle": {
+    "en": "A wallet-consensus agent for opening, rebalancing, and closing concentrated liquidity positions on Robinhood Chain.",
+    "id": "Agent konsensus dompet untuk membuka, menyeimbangkan ulang, dan menutup posisi likuiditas terkonsentrasi di Robinhood Chain."
+  },
+  "category": "web",
+  "type": "personal",
+  "status": "ongoing",
+  "featured": true,
+  "order": 16,
+  "startDate": "2026-09-13",
+  "endDate": null,
+  "summary": {
+    "en": "An autonomous liquidity-provisioning system that turns weighted activity from tracked wallets into auditable entry, rebalance, and exit decisions for Uniswap V3 pools on Robinhood Chain, with a mock-first operator dashboard and strict safety controls.",
+    "id": "Sistem penyediaan likuiditas otonom yang mengubah aktivitas berbobot dari dompet terlacak menjadi keputusan entry, rebalance, dan exit yang dapat diaudit untuk pool Uniswap V3 di Robinhood Chain, dilengkapi dashboard operator mock-first dan kontrol keamanan ketat."
+  },
+  "description": {
+    "en": "Concentrated liquidity in fast-moving token pools creates a narrow opportunity: fees are strongest while volume is rising and TVL is still thin, but entering late or leaving late can turn the position into a concentrated bag of a falling token. Manual monitoring cannot consistently combine Telegram signals, wallet activity, pool state, range status, and exit timing around the clock.\n\nMeridian turns the active commitments of operator-selected wallets into one consensus score. Each wallet has a manual weight, time decay, a size multiplier, and a cluster cap so several wallets funded by one actor cannot masquerade as independent confirmation. Crossing the entry threshold opens a position; a price move outside the active range triggers a rebalance only while consensus remains healthy; a score below the floor closes the position. Every decision records its score, contributors, selected range, and reason.\n\nThe current implementation is a mock-first Next.js operator dashboard. Overview, Wallets, and Pools are implemented with realistic fixtures, live event simulation, loading and failure states, weight-impact previews, contributor inspection, and write guards when the daemon is unavailable. A single DataSource contract isolates every component from its source, so the mock adapter can later be replaced by the server-side bridge without rewriting the interface. The remaining execution daemon and bridge integration are still in progress.\n\nThe target daemon uses LP Agent data as the primary commitment feed and Robinhood RPC as its fallback and source of truth for funds under management. It executes Uniswap V3 positions through viem, stores event history in PostgreSQL, distributes live updates through Redis and SSE, supports dry-run before real capital, and keeps a persistent multi-level kill switch. Net PnL, not gross fees, is the primary performance measure.",
+    "id": "Likuiditas terkonsentrasi di pool token yang bergerak cepat menciptakan peluang sempit: fee paling kuat ketika volume naik dan TVL masih tipis, tetapi terlambat masuk atau keluar dapat mengubah posisi menjadi tumpukan terkonsentrasi dari token yang sedang jatuh. Pemantauan manual tidak dapat terus-menerus menggabungkan sinyal Telegram, aktivitas dompet, keadaan pool, status range, dan waktu exit sepanjang hari.\n\nMeridian mengubah komitmen aktif dari dompet pilihan operator menjadi satu consensus score. Setiap dompet memiliki bobot manual, peluruhan waktu, pengali ukuran, dan cluster cap agar beberapa dompet yang didanai satu pihak tidak menyamar sebagai konfirmasi independen. Skor yang menembus ambang entry membuka posisi; harga yang keluar dari range aktif memicu rebalance hanya ketika konsensus tetap sehat; skor di bawah floor menutup posisi. Setiap keputusan mencatat skor, kontributor, range yang dipilih, dan alasannya.\n\nImplementasi saat ini berupa dashboard operator Next.js yang mock-first. Overview, Wallets, dan Pools sudah dibangun dengan fixture realistis, simulasi event live, keadaan loading dan gagal, preview dampak bobot, pemeriksaan kontributor, serta write guard saat daemon tidak tersedia. Satu kontrak DataSource mengisolasi semua komponen dari sumber datanya, sehingga adapter mock dapat diganti dengan bridge server-side tanpa menulis ulang antarmuka. Daemon eksekusi dan integrasi bridge lainnya masih dalam pengembangan.\n\nTarget daemon memakai data LP Agent sebagai feed komitmen utama dan RPC Robinhood sebagai fallback sekaligus sumber kebenaran untuk dana yang dikelola. Sistem mengeksekusi posisi Uniswap V3 melalui viem, menyimpan riwayat event di PostgreSQL, menyalurkan pembaruan live melalui Redis dan SSE, mendukung dry-run sebelum memakai modal nyata, dan mempertahankan kill switch bertingkat yang persisten. Net PnL, bukan fee kotor, menjadi ukuran performa utama."
+  },
+  "problem": {
+    "en": "The best fee window in a new concentrated-liquidity pool can last only minutes, while a safe decision requires combining signals, independent wallet conviction, live on-chain pool state, range health, and exit timing. A manual operator cannot watch all of those continuously, and following raw wallet counts can mistake one actor split across several addresses for genuine consensus.",
+    "id": "Jendela fee terbaik di pool likuiditas terkonsentrasi baru dapat berlangsung hanya beberapa menit, sementara keputusan aman perlu menggabungkan sinyal, keyakinan independen dompet, keadaan pool on-chain secara live, kesehatan range, dan waktu exit. Operator manual tidak dapat memantau semuanya terus-menerus, dan mengikuti jumlah dompet mentah dapat salah mengira satu pihak yang membagi dana ke beberapa alamat sebagai konsensus nyata."
+  },
+  "solution": {
+    "en": "A single auditable decision loop scores weighted wallet commitments with time decay, size confidence, and cluster caps, then uses fixed rules to open, rebalance, or close a Uniswap V3 position. RPC verifies every value involving managed funds, dry-run proves the path before capital is enabled, and the dashboard exposes the score, contributors, PnL decomposition, stale-data state, and kill switch.",
+    "id": "Satu loop keputusan yang dapat diaudit menilai komitmen dompet berbobot dengan peluruhan waktu, keyakinan ukuran, dan cluster cap, lalu memakai aturan tetap untuk membuka, menyeimbangkan ulang, atau menutup posisi Uniswap V3. RPC memverifikasi setiap nilai yang menyangkut dana kelolaan, dry-run membuktikan jalur sebelum modal diaktifkan, dan dashboard menampilkan skor, kontributor, rincian PnL, keadaan data basi, serta kill switch."
+  },
+  "role": {
+    "en": "Product Designer & Full-stack Engineer",
+    "id": "Product Designer & Full-stack Engineer"
+  },
+  "responsibilities": {
+    "en": [
+      "Defined the product rules, system boundaries, data model, bridge contract, milestones, and acceptance criteria in the Meridian v2 PRD",
+      "Designed the consensus model with wallet weights, time decay, size confidence, hysteresis, cluster caps, and a cold-start ceiling",
+      "Built the mock-first Next.js dashboard foundation, design system, navigation shell, operator overview, wallet registry, and pool-monitoring surfaces",
+      "Created one typed DataSource interface for mock and bridge adapters so UI components never depend on fixture files or daemon transport",
+      "Added realistic fixtures and scenarios for happy, empty, cold-start, halted, and daemon-down states, plus simulated live events",
+      "Specified safety controls for dry-run, multi-level kill switch, daily limits, stale data, write guards, dedicated hot-wallet isolation, and auditable decisions",
+      "Wrote contract and unit tests for fixture validity, data-source behavior, formatting, accessibility contrast, and mock import boundaries"
+    ],
+    "id": [
+      "Mendefinisikan aturan produk, batas sistem, model data, kontrak bridge, milestone, dan acceptance criteria dalam PRD Meridian v2",
+      "Merancang model konsensus dengan bobot dompet, peluruhan waktu, keyakinan ukuran, histeresis, cluster cap, dan plafon cold-start",
+      "Membangun fondasi dashboard Next.js yang mock-first, design system, navigation shell, overview operator, registry dompet, dan tampilan pemantauan pool",
+      "Membuat satu antarmuka DataSource bertipe untuk adapter mock dan bridge agar komponen UI tidak bergantung pada file fixture atau transport daemon",
+      "Menambahkan fixture dan skenario realistis untuk keadaan happy, empty, cold-start, halted, dan daemon-down, beserta simulasi event live",
+      "Menentukan kontrol keamanan untuk dry-run, kill switch bertingkat, batas kerugian harian, data basi, write guard, isolasi hot wallet khusus, dan keputusan yang dapat diaudit",
+      "Menulis contract test dan unit test untuk validitas fixture, perilaku data source, formatting, kontras aksesibilitas, dan batas impor mock"
+    ]
+  },
+  "teamSize": 1,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Operator overview with equity, net PnL, open-position, loss-limit, fee, daemon, and equity-curve states",
+      "Wallet registry with add, edit, enable, remove, CSV import, inline weighting, impact preview, and weight suggestions",
+      "Pool monitoring with consensus score, threshold state, tier filters, tracked-wallet flow, contributor breakdown, and manual evaluation",
+      "Cluster-coverage warning and cold-start score cap to reduce false consensus from related or unclassified wallets",
+      "Swappable mock and bridge data sources behind one typed interface, with TanStack Query caching and live cache updates",
+      "Happy, empty, cold-start, halted, and daemon-down scenarios for deterministic development and review",
+      "Write actions disabled with a visible reason when daemon health is unavailable, while stale read data remains visible",
+      "Multi-level kill-switch and dry-run controls designed around explicit confirmation and an audit trail",
+      "Net PnL decomposition that keeps claimed fees, unclaimed fees, impermanent loss, and gas distinct"
+    ],
+    "id": [
+      "Overview operator dengan keadaan equity, net PnL, posisi terbuka, batas kerugian, fee, daemon, dan kurva equity",
+      "Registry dompet dengan tambah, edit, aktif/nonaktif, hapus, impor CSV, bobot inline, preview dampak, dan saran bobot",
+      "Pemantauan pool dengan consensus score, keadaan ambang, filter tier, aliran dompet terlacak, rincian kontributor, dan evaluasi manual",
+      "Peringatan cakupan cluster dan batas skor cold-start untuk mengurangi konsensus palsu dari dompet terkait atau belum terklasifikasi",
+      "Data source mock dan bridge yang dapat ditukar di balik satu antarmuka bertipe, dengan cache TanStack Query dan pembaruan cache live",
+      "Skenario happy, empty, cold-start, halted, dan daemon-down untuk pengembangan dan peninjauan yang deterministik",
+      "Aksi tulis dinonaktifkan dengan alasan yang terlihat saat kesehatan daemon tidak tersedia, sementara data baca yang basi tetap terlihat",
+      "Kontrol kill switch bertingkat dan dry-run yang dirancang dengan konfirmasi eksplisit serta audit trail",
+      "Rincian net PnL yang memisahkan fee terklaim, fee belum diklaim, impermanent loss, dan gas"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Counting wallets directly lets one actor split capital across several addresses and appear to be independent conviction, especially before funding relationships have been classified.",
+        "id": "Menghitung dompet secara langsung membuat satu pihak dapat membagi modal ke beberapa alamat dan terlihat sebagai keyakinan independen, terutama sebelum hubungan pendanaan selesai diklasifikasikan."
+      },
+      "solution": {
+        "en": "Grouped related wallets under a shared cluster cap, tracked classification coverage explicitly, and limited the total score during cold start until enough active wallets had been classified.",
+        "id": "Mengelompokkan dompet terkait di bawah cluster cap bersama, melacak cakupan klasifikasi secara eksplisit, dan membatasi skor total selama cold-start sampai cukup banyak dompet aktif selesai diklasifikasikan."
+      }
+    },
+    {
+      "problem": {
+        "en": "The dashboard had to be built before the execution daemon without letting mock fixture shapes become an accidental backend contract or leak into UI components.",
+        "id": "Dashboard harus dibangun sebelum daemon eksekusi tanpa membiarkan bentuk fixture mock menjadi kontrak backend tidak sengaja atau bocor ke komponen UI."
+      },
+      "solution": {
+        "en": "Defined runtime-validated schemas and one DataSource interface first, implemented mock and bridge adapters behind it, and added tests that reject direct mock imports outside the adapter layer.",
+        "id": "Mendefinisikan skema tervalidasi runtime dan satu antarmuka DataSource lebih dulu, membangun adapter mock dan bridge di belakangnya, serta menambahkan test yang menolak impor mock langsung di luar lapisan adapter."
+      }
+    },
+    {
+      "problem": {
+        "en": "An autonomous system managing funds cannot turn a daemon outage into a blank screen, silently accept stale state, or leave write actions available when health is unknown.",
+        "id": "Sistem otonom yang mengelola dana tidak boleh mengubah kegagalan daemon menjadi layar kosong, diam-diam menerima keadaan basi, atau membiarkan aksi tulis tersedia saat kesehatan sistem tidak diketahui."
+      },
+      "solution": {
+        "en": "Kept the last readable state on screen with a clear stale-data banner, disabled writes with an explanatory tooltip, and modelled daemon-down, halted, and cold-start as first-class test scenarios.",
+        "id": "Mempertahankan keadaan terakhir yang dapat dibaca di layar dengan banner data basi yang jelas, menonaktifkan aksi tulis dengan tooltip penjelas, dan memodelkan daemon-down, halted, serta cold-start sebagai skenario pengujian kelas satu."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "A consensus score is useful only when every contribution, cap, threshold, and state change can be reconstructed later.",
+      "Build the data boundary before the backend: a strict adapter contract lets the interface mature on realistic fixtures without coupling it to mocks.",
+      "Failure and uncertainty are product states, not edge cases; stale data, partial classification, and disabled writes need deliberate UI treatment.",
+      "For an automated liquidity system, net PnL after impermanent loss and gas matters more than gross fees."
+    ],
+    "id": [
+      "Consensus score hanya berguna ketika setiap kontribusi, cap, ambang, dan perubahan keadaan dapat direkonstruksi kemudian.",
+      "Bangun batas data sebelum backend: kontrak adapter yang ketat membuat antarmuka dapat berkembang di atas fixture realistis tanpa terikat ke mock.",
+      "Kegagalan dan ketidakpastian adalah keadaan produk, bukan edge case; data basi, klasifikasi parsial, dan aksi tulis nonaktif memerlukan perlakuan UI yang sengaja dirancang.",
+      "Untuk sistem likuiditas otomatis, net PnL setelah impermanent loss dan gas lebih penting daripada fee kotor."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "TanStack Query",
+      "Recharts",
+      "Zustand"
+    ],
+    "backend": [
+      "Node.js",
+      "Zod",
+      "viem"
+    ],
+    "database": [
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Redis"
+    ],
+    "infra": [
+      "PM2",
+      "systemd"
+    ],
+    "tools": [
+      "Vitest",
+      "ESLint",
+      "Excalidraw"
+    ]
+  },
+  "architecture": {
+    "en": "The implemented dashboard is a Next.js App Router application whose pages depend only on a runtime-validated DataSource contract. A fixture-backed mock adapter supports deterministic scenarios and simulated live events; a server-side bridge adapter is the planned swap point for the daemon. TanStack Query owns server-state caching, live events update that cache directly, and Zustand holds local UI state. The target daemon follows inward dependencies: pure consensus, range, position, sizing, limit, and PnL domains sit behind ports; LP Agent and Robinhood RPC commitment readers, Uniswap V3 execution, PostgreSQL, Redis, Telegram, and the dashboard bridge remain adapters. SSE carries live state to the dashboard, while all write commands pass through one allowlisted tool endpoint.",
+    "id": "Dashboard yang sudah dibangun berupa aplikasi Next.js App Router dengan halaman yang hanya bergantung pada kontrak DataSource tervalidasi runtime. Adapter mock berbasis fixture mendukung skenario deterministik dan simulasi event live; adapter bridge server-side menjadi titik penggantian yang direncanakan untuk daemon. TanStack Query mengelola cache server-state, event live memperbarui cache itu secara langsung, dan Zustand menyimpan state UI lokal. Target daemon memakai dependensi ke dalam: domain consensus, range, position, sizing, limit, dan PnL yang murni berada di balik port; pembaca komitmen LP Agent dan RPC Robinhood, eksekusi Uniswap V3, PostgreSQL, Redis, Telegram, serta bridge dashboard tetap menjadi adapter. SSE membawa state live ke dashboard, sementara semua perintah tulis melewati satu endpoint tool berbasis allowlist."
+  },
+  "integrations": [
+    "Robinhood Chain RPC",
+    "Uniswap V3",
+    "LP Agent API",
+    "Telegram Bot API"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/meridian/thumb.webp",
+      "alt": {
+        "en": "Meridian case-study cover beside the dark operator dashboard showing equity, net PnL, and scored liquidity pools",
+        "id": "Sampul studi kasus Meridian di samping dashboard operator gelap yang menampilkan equity, net PnL, dan pool likuiditas berskor"
+      },
+      "width": 1280,
+      "height": 720
+    },
+    "gallery": [
+      {
+        "src": "assets/images/projects/meridian/gallery-01-decision-flow.webp",
+        "width": 1280,
+        "height": 720,
+        "alt": {
+          "en": "Meridian decision flow from discovery and commitment verification through consensus scoring, position monitoring, rebalancing, and exit",
+          "id": "Alur keputusan Meridian dari penemuan dan verifikasi komitmen melalui skoring konsensus, pemantauan posisi, rebalance, dan exit"
+        },
+        "caption": {
+          "en": "One auditable loop turns tracked-wallet activity into open, hold, rebalance, or close decisions.",
+          "id": "Satu loop yang dapat diaudit mengubah aktivitas dompet terlacak menjadi keputusan open, hold, rebalance, atau close."
+        }
+      }
+    ],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    },
+    "accentColor": "#2F6FEB"
+  },
+  "links": {
+    "demo": null,
+    "repo": "https://github.com/umarmuhdhor/Robinboot",
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": false
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "web3",
+    "defi",
+    "liquidity-provisioning",
+    "uniswap-v3",
+    "robinhood-chain",
+    "automation",
+    "nextjs",
+    "typescript"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-09-13",
+  "updatedAt": "2026-10-05"
+}

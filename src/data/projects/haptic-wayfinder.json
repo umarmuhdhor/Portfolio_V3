@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/project.schema.json",
+  "id": "haptic-wayfinder",
+  "title": {
+    "en": "Haptic Wayfinder",
+    "id": "Haptic Wayfinder"
+  },
+  "subtitle": {
+    "en": "Eyes-free walking navigation through a small language of taps.",
+    "id": "Navigasi berjalan tanpa menatap layar melalui bahasa ketukan sederhana."
+  },
+  "category": "mobile",
+  "type": "personal",
+  "status": "concept",
+  "featured": true,
+  "order": 17,
+  "startDate": "2026-10-05",
+  "endDate": null,
+  "summary": {
+    "en": "A watchOS navigation concept that turns walking directions into nine haptic patterns across four distance zones, so a route can be followed without repeatedly checking a phone or screen.",
+    "id": "Konsep navigasi watchOS yang mengubah petunjuk berjalan menjadi sembilan pola haptic dalam empat zona jarak, sehingga rute dapat diikuti tanpa terus memeriksa ponsel atau layar."
+  },
+  "description": {
+    "en": "Haptic Wayfinder explores eyes-free walking navigation on Apple Watch. The user searches for or dictates a destination, MapKit builds a walking route, and the watch translates that route into a small language of taps. After the route starts, the screen becomes optional: a maneuver pattern communicates left or right, cadence increases as the next turn gets closer, and an arrival pattern confirms the destination.\n\nThe experience is organized into five stages: set the destination, build the route, feel the maneuver, pace by distance, and confirm arrival. Its haptic system contains nine patterns and four distance zones. The interface remains available as a glanceable fallback, but the primary interaction is designed to stay on the wrist and keep the phone away.",
+    "id": "Haptic Wayfinder mengeksplorasi navigasi berjalan tanpa menatap layar melalui Apple Watch. Pengguna mencari atau mendikte tujuan, MapKit membangun rute berjalan, lalu jam menerjemahkan rute itu menjadi bahasa ketukan sederhana. Setelah rute dimulai, layar menjadi opsional: pola manuver menyampaikan arah kiri atau kanan, ritme semakin cepat saat belokan berikutnya mendekat, dan pola kedatangan mengonfirmasi tujuan.\n\nPengalaman ini disusun dalam lima tahap: menetapkan tujuan, membangun rute, merasakan manuver, mengikuti ritme jarak, dan mengonfirmasi kedatangan. Sistem haptic-nya memiliki sembilan pola dan empat zona jarak. Antarmuka tetap tersedia sebagai cadangan yang mudah dilirik, tetapi interaksi utama dirancang agar tetap di pergelangan tangan dan tidak membutuhkan ponsel."
+  },
+  "problem": {
+    "en": "Conventional walking navigation repeatedly pulls attention toward a phone or watch screen, interrupting awareness of the street and the surrounding environment.",
+    "id": "Navigasi berjalan konvensional berulang kali menarik perhatian ke layar ponsel atau jam, sehingga mengganggu kesadaran terhadap jalan dan lingkungan sekitar."
+  },
+  "solution": {
+    "en": "Separate direction and proximity into a tactile vocabulary: distinct patterns communicate maneuvers, while a faster cadence communicates that the next action is getting closer.",
+    "id": "Memisahkan arah dan kedekatan ke dalam kosakata taktil: pola berbeda menyampaikan manuver, sementara ritme yang semakin cepat menandakan tindakan berikutnya semakin dekat."
+  },
+  "role": {
+    "en": "Product Designer and watchOS Prototyper",
+    "id": "Product Designer dan Prototyper watchOS"
+  },
+  "responsibilities": {
+    "en": [
+      "Defined the five-stage eyes-free navigation flow from destination input through arrival",
+      "Designed a tactile system of nine haptic patterns across four distance zones",
+      "Designed the glanceable watch interface and its relationship with the haptic signals"
+    ],
+    "id": [
+      "Menetapkan alur navigasi tanpa layar dalam lima tahap, dari input tujuan sampai kedatangan",
+      "Merancang sistem taktil berisi sembilan pola haptic dalam empat zona jarak",
+      "Merancang antarmuka jam yang mudah dilirik serta hubungannya dengan sinyal haptic"
+    ]
+  },
+  "teamSize": 1,
+  "client": {
+    "name": null,
+    "logo": null,
+    "url": null
+  },
+  "features": {
+    "en": [
+      "Destination input by search or dictation",
+      "Walking-route construction with MapKit",
+      "Nine haptic patterns for route guidance and arrival",
+      "Distinct tactile signals for left and right maneuvers",
+      "Four distance zones with cadences from 5.0 seconds at 150 meters to 0.7 seconds at 8 meters",
+      "Watch-first navigation that does not require a phone after the route starts"
+    ],
+    "id": [
+      "Input tujuan melalui pencarian atau dikte",
+      "Pembuatan rute berjalan dengan MapKit",
+      "Sembilan pola haptic untuk panduan rute dan kedatangan",
+      "Sinyal taktil berbeda untuk manuver kiri dan kanan",
+      "Empat zona jarak dengan ritme dari 5,0 detik pada 150 meter sampai 0,7 detik pada 8 meter",
+      "Navigasi berbasis jam yang tidak membutuhkan ponsel setelah rute dimulai"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": {
+        "en": "Direction and distance must both be understandable through the same haptic channel without the signals becoming ambiguous.",
+        "id": "Arah dan jarak harus sama-sama dipahami melalui satu kanal haptic tanpa membuat sinyalnya menjadi ambigu."
+      },
+      "solution": {
+        "en": "Use pattern shape for maneuver meaning and cadence for proximity, keeping what to do separate from when to do it.",
+        "id": "Menggunakan bentuk pola untuk makna manuver dan ritme untuk kedekatan, sehingga apa yang harus dilakukan terpisah dari kapan harus melakukannya."
+      }
+    }
+  ],
+  "impact": [],
+  "lessons": {
+    "en": [
+      "A tactile navigation language becomes easier to learn when maneuver type and distance use separate signal dimensions.",
+      "A glanceable interface can remain as a fallback without becoming the primary navigation channel."
+    ],
+    "id": [
+      "Bahasa navigasi taktil lebih mudah dipelajari saat jenis manuver dan jarak memakai dimensi sinyal yang berbeda.",
+      "Antarmuka yang mudah dilirik dapat tetap menjadi cadangan tanpa berubah menjadi kanal navigasi utama."
+    ]
+  },
+  "stack": {
+    "frontend": [
+      "Swift",
+      "SwiftUI"
+    ],
+    "backend": [],
+    "database": [],
+    "infra": [],
+    "tools": []
+  },
+  "architecture": {
+    "en": "A watchOS experience where destination input feeds a MapKit walking route. A guidance layer maps each upcoming maneuver to a haptic pattern and the remaining distance to one of four cadence zones, then switches to a distinct signal when the destination is reached.",
+    "id": "Pengalaman watchOS dengan input tujuan yang diteruskan ke rute berjalan MapKit. Lapisan panduan memetakan setiap manuver berikutnya ke pola haptic dan sisa jarak ke salah satu dari empat zona ritme, lalu beralih ke sinyal berbeda saat tujuan tercapai."
+  },
+  "integrations": [
+    "watchOS",
+    "MapKit"
+  ],
+  "media": {
+    "thumbnail": {
+      "src": "assets/images/projects/haptic-wayfinder/thumb.webp",
+      "width": 1672,
+      "height": 941,
+      "alt": {
+        "en": "Haptic Wayfinder cover with an Apple Watch showing a right turn in 25 meters over a dark route map",
+        "id": "Sampul Haptic Wayfinder dengan Apple Watch yang menampilkan belokan kanan dalam 25 meter di atas peta rute gelap"
+      },
+      "caption": {
+        "en": "Eyes-free walking navigation designed around haptic signals on Apple Watch.",
+        "id": "Navigasi berjalan tanpa menatap layar yang dirancang dengan sinyal haptic di Apple Watch."
+      }
+    },
+    "gallery": [
+      {
+        "src": "assets/images/projects/haptic-wayfinder/gallery-01-experience-flow.webp",
+        "width": 1280,
+        "height": 720,
+        "alt": {
+          "en": "Haptic Wayfinder experience flow from destination input through route building, tactile maneuvers, distance cadence, and arrival",
+          "id": "Alur pengalaman Haptic Wayfinder dari input tujuan, pembuatan rute, manuver taktil, ritme jarak, sampai kedatangan"
+        },
+        "caption": {
+          "en": "Five-stage flow built from nine haptic patterns and four distance zones.",
+          "id": "Alur lima tahap yang dibangun dari sembilan pola haptic dan empat zona jarak."
+        }
+      }
+    ],
+    "video": {
+      "src": null,
+      "poster": null,
+      "url": null
+    },
+    "accentColor": "#FF6B2C"
+  },
+  "links": {
+    "demo": null,
+    "repo": null,
+    "caseStudy": null,
+    "appStore": null,
+    "playStore": null,
+    "article": null,
+    "repoPrivate": false
+  },
+  "private": false,
+  "privateNote": null,
+  "tags": [
+    "watchos",
+    "swiftui",
+    "mapkit",
+    "haptics",
+    "accessibility",
+    "navigation"
+  ],
+  "relatedExperienceId": null,
+  "testimonialIds": [],
+  "createdAt": "2026-10-05",
+  "updatedAt": "2026-10-05"
+}
