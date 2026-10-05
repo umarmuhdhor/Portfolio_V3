@@ -1,0 +1,172 @@
+/* --------------------------------------------------------------------------
+   Case-study carousel
+
+   A scroll-snap strip: one slide per view, the picture shown whole on a quiet
+   plate. Controls are monochrome and sit on the plate, so they read over any
+   screenshot without a colour of their own.
+   -------------------------------------------------------------------------- */
+.pcar {
+  margin-top: 160rem;
+}
+
+@media (max-width: 767.98px) {
+  .pcar {
+    margin-top: 60rem;
+  }
+}
+
+.pcar__viewport {
+  background: #f2f2f2;
+  position: relative;
+}
+
+.pcar__track {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.pcar__track::-webkit-scrollbar {
+  display: none;
+}
+
+.pcar__track:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+
+.pcar__slide {
+  aspect-ratio: 16 / 9;
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Contain, not cover: 16:9 covers and flow diagrams fill the plate exactly,
+   and anything taller or wider still sits whole instead of being cropped. */
+.pcar__slide img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.pcar__btn {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s var(--ease), opacity 0.3s var(--ease);
+  width: 48px;
+}
+
+.pcar__btn svg {
+  height: 22px;
+  width: 22px;
+}
+
+.pcar__btn--prev {
+  left: 20px;
+}
+
+.pcar__btn--next {
+  right: 20px;
+}
+
+.pcar__btn:hover:not(:disabled) {
+  background: #fff;
+}
+
+.pcar__btn:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.pcar__btn:disabled {
+  cursor: default;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pcar__bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pcar__count {
+  color: #6e6e6e;
+  font-variant-numeric: tabular-nums;
+}
+
+.pcar__dots {
+  display: flex;
+  gap: 4px;
+}
+
+/* The dot is a 24px tap target around a 6px mark. */
+.pcar__dot {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 24px;
+  padding: 0;
+  position: relative;
+  width: 24px;
+}
+
+.pcar__dot::after {
+  background: #cfcfcf;
+  border-radius: 50%;
+  content: '';
+  height: 6px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s var(--ease), transform 0.3s var(--ease);
+  width: 6px;
+}
+
+.pcar__dot.is--a::after {
+  background: #000;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.pcar__dot:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 0;
+}
+
+.pcar__caption {
+  color: #6e6e6e;
+  margin-top: 12px;
+  max-width: 700rem;
+}
+
+@media (max-width: 767.98px) {
+  .pcar__btn {
+    height: 40px;
+    width: 40px;
+  }
+
+  .pcar__btn--prev {
+    left: 10px;
+  }
+
+  .pcar__btn--next {
+    right: 10px;
+  }
+}

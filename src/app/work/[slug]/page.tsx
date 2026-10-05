@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import ProjectCarousel from '@/components/ProjectCarousel';
 import RouteShell from '@/components/RouteShell';
 import { PROJECT_PAGES } from '@/lib/dummy';
 import '../../page.css';
@@ -60,7 +61,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
   const project = PROJECT_PAGES[i];
   const next = PROJECT_PAGES[(i + 1) % PROJECT_PAGES.length];
-  const [cover, ...rest] = project.gallery;
+  const gallery = project.gallery;
 
   return (
     <RouteShell heading={project.title} label={`${project.discipline} · ${project.year}`} nav="/work">
@@ -110,7 +111,20 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
           </div>
 
-          {cover ? <Plate n={0} plate={cover} title={project.title} /> : null}
+          {/* Every screenshot rides one carousel, cover first; a lone image
+              needs no controls and stays a plain plate. */}
+          {gallery.length > 1 ? (
+            <ProjectCarousel
+              plates={gallery.map((g, n) => ({
+                src: g.src,
+                alt: g.alt || `${project.title}, view ${n + 1}`,
+                caption: g.caption,
+              }))}
+              title={project.title}
+            />
+          ) : gallery[0] ? (
+            <Plate n={0} plate={gallery[0]} title={project.title} />
+          ) : null}
         </div>
       </section>
 
@@ -215,17 +229,6 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             ))}
           </ol>
         </Block>
-      ) : null}
-
-      {/* The rest of the screenshots --------------------------------------- */}
-      {rest.length ? (
-        <section className="sec" data-role="section">
-          <div className="ctr" data-role="container">
-            {rest.map((m, n) => (
-              <Plate key={m.src} n={n + 1} plate={m} title={project.title} />
-            ))}
-          </div>
-        </section>
       ) : null}
 
       {/* Lessons ------------------------------------------------------------ */}
