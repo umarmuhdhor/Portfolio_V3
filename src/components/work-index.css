@@ -56,8 +56,9 @@
 
    The stagger works as a teaser of a handful of projects; across the full
    index it leaves holes and sizes every plate differently. Here every card
-   takes one of three equal columns and every plate the same 4:3 box, so rows
-   line up and the captions sit on one baseline. Selectors are three classes
+   takes one of three equal columns and every plate the same 16:9 box, so rows
+   line up and the captions sit on one baseline. Thumbnails are 16:9 covers, so
+   they fill the plate edge to edge. Selectors are three classes
    deep to outrank the stagger's [data-role]:nth-child rules.
    -------------------------------------------------------------------------- */
 .work-index .work-grid {
@@ -72,8 +73,14 @@
 }
 
 .work-index .work-grid .work-card .work-frame {
-  aspect-ratio: 4 / 3;
   height: auto;
+}
+
+/* The ratio belongs to the plate, not the frame — the frame also holds the
+   caption row, so sizing it would shave the picture short of 16:9. */
+.work-index .work-grid .work-card .work-frame .work-visual {
+  aspect-ratio: 16 / 9;
+  flex: none;
 }
 
 @media (max-width: 767.98px) {
