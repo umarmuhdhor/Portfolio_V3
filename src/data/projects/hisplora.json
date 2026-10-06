@@ -150,45 +150,6 @@
     },
     "gallery": [
       {
-        "src": "assets/images/projects/hisplora/gallery-01-prologue.webp",
-        "width": 764,
-        "height": 1556,
-        "alt": {
-          "en": "Illustrated prologue with a line drawing of a horse carriage in front of a Balinese gate",
-          "id": "Prolog berilustrasi dengan gambar garis dokar di depan gerbang Bali"
-        },
-        "caption": {
-          "en": "The prologue narrates the history of the route before the first quest opens.",
-          "id": "Prolog menceritakan sejarah rute sebelum quest pertama terbuka."
-        }
-      },
-      {
-        "src": "assets/images/projects/hisplora/gallery-02-trip-brief.webp",
-        "width": 760,
-        "height": 1546,
-        "alt": {
-          "en": "Trip brief with a historical portrait and a summary of the route",
-          "id": "Ringkasan trip dengan potret sejarah dan rangkuman rute"
-        },
-        "caption": {
-          "en": "Each route opens with its historical context, distance, and estimated walking time.",
-          "id": "Tiap rute dibuka dengan konteks sejarah, jarak, dan perkiraan waktu jalan kaki."
-        }
-      },
-      {
-        "src": "assets/images/projects/hisplora/gallery-03-quest-list.webp",
-        "width": 814,
-        "height": 1592,
-        "alt": {
-          "en": "Quest list at Puri Agung Pemecutan, each card describing a photo task",
-          "id": "Daftar quest di Puri Agung Pemecutan, tiap kartu menjelaskan satu tugas foto"
-        },
-        "caption": {
-          "en": "One location holds several quests; the bar at the bottom points to the next place.",
-          "id": "Satu lokasi memuat beberapa quest; bar di bawah menunjuk tempat berikutnya."
-        }
-      },
-      {
         "src": "assets/images/projects/hisplora/gallery-08-discovery.webp",
         "width": 1600,
         "height": 900,
