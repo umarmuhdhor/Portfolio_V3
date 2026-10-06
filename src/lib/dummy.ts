@@ -171,8 +171,9 @@ const aboutParas = t(profile.bioLong).split(/\n\n+/);
 export const ABOUT = {
   lead: aboutParas[0],
   body: aboutParas.slice(1),
-  /** The avatar with its studio backdrop cut away, for the white page. */
-  portrait: asset('assets/images/profile/avatar-cutout.webp'),
+  /** The avatar with its studio backdrop cut away, for the white page. Made
+      for this site, so it lives outside public/assets, which sync-data wipes. */
+  portrait: '/images/profile/avatar-cutout.webp',
   portraitAlt: t(profile.avatar.alt),
 };
 

@@ -172,7 +172,34 @@
       "width": 1672,
       "height": 941
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/briefly/gallery-01-trend-intelligence.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Briefly trend discovery dashboard showing live social signals, filters, and ranked trend cards",
+          "id": "Dashboard trend discovery Briefly yang menampilkan sinyal sosial langsung, filter, dan kartu tren berperingkat"
+        },
+        "caption": {
+          "en": "Trend intelligence keeps discovery, filtering, and action in one workspace.",
+          "id": "Trend intelligence menyatukan discovery, filtering, dan tindakan dalam satu workspace."
+        }
+      },
+      {
+        "src": "assets/images/projects/briefly/gallery-02-human-agent-workflow.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": {
+          "en": "Briefly human and agent workflow showing shared business context, an AI proposal, and the content brief editor",
+          "id": "Alur kerja manusia dan agent Briefly yang menampilkan konteks bisnis bersama, proposal AI, dan editor content brief"
+        },
+        "caption": {
+          "en": "Shared context turns an agent proposal into a reviewable brief with human approval.",
+          "id": "Konteks bersama mengubah proposal agent menjadi brief yang dapat ditinjau dengan persetujuan manusia."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,

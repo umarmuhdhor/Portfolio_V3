@@ -113,7 +113,60 @@
       "width": 1672,
       "height": 941
     },
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "assets/images/projects/balive/gallery-01-explore.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "Balive Explore screen on an iPhone beside the headline Discover with a Swipe",
+          "id": "Layar Explore Balive pada iPhone di samping judul Discover with a Swipe"
+        },
+        "caption": {
+          "en": "The Explore deck turns boarding-house discovery into a quick visual swipe.",
+          "id": "Deck Explore mengubah pencarian kos menjadi penelusuran visual dengan geseran cepat."
+        }
+      },
+      {
+        "src": "assets/images/projects/balive/gallery-02-filter.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "Balive listing screen and filter sheet on an iPhone beside the headline Find What Fits",
+          "id": "Layar daftar dan panel filter Balive pada iPhone di samping judul Find What Fits"
+        },
+        "caption": {
+          "en": "Search and filters narrow listings by place, price, and availability.",
+          "id": "Pencarian dan filter menyaring daftar berdasarkan tempat, harga, dan ketersediaan."
+        }
+      },
+      {
+        "src": "assets/images/projects/balive/gallery-03-detail.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "Balive boarding-house detail screen on an iPhone showing facilities, location, and WhatsApp contact",
+          "id": "Layar detail kos Balive pada iPhone yang menampilkan fasilitas, lokasi, dan kontak WhatsApp"
+        },
+        "caption": {
+          "en": "Each detail view brings facilities, location, rating, and owner contact into one flow.",
+          "id": "Tiap halaman detail menyatukan fasilitas, lokasi, penilaian, dan kontak pemilik dalam satu alur."
+        }
+      },
+      {
+        "src": "assets/images/projects/balive/gallery-04-filter-alt.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": {
+          "en": "Alternate Balive filter showcase with a listing screen and filter sheet displayed on an iPhone",
+          "id": "Tampilan alternatif filter Balive dengan layar daftar dan panel filter pada iPhone"
+        },
+        "caption": {
+          "en": "The filter sheet keeps key controls visible without leaving the listing context.",
+          "id": "Panel filter menjaga kontrol utama tetap terlihat tanpa keluar dari konteks daftar."
+        }
+      }
+    ],
     "video": {
       "src": null,
       "poster": null,
@@ -140,5 +193,5 @@
   "relatedExperienceId": null,
   "testimonialIds": [],
   "createdAt": "2026-03-01",
-  "updatedAt": "2026-09-06"
+  "updatedAt": "2026-10-06"
 }

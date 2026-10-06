@@ -274,74 +274,61 @@
   "media": {
     "thumbnail": {
       "src": "assets/images/projects/regulens/thumb.webp",
-      "width": 2148,
-      "height": 1230,
+      "width": 2560,
+      "height": 1440,
       "alt": {
-        "en": "ReguLens question-and-answer view, with the answer citing the exact clauses it came from",
-        "id": "Tampilan tanya-jawab ReguLens, dengan jawaban yang mengutip klausul asalnya"
+        "en": "ReguLens automatically updates a compliance verdict after detecting a new regulation",
+        "id": "ReguLens memperbarui verdict kepatuhan secara otomatis setelah mendeteksi regulasi baru"
       },
       "caption": {
-        "en": "A plain-English question answered from the regulations, every claim traced to a clause.",
-        "id": "Pertanyaan bahasa sehari-hari dijawab dari regulasi, tiap klaim ditelusuri ke klausulnya."
+        "en": "A new rule triggers a new product verdict automatically.",
+        "id": "Aturan baru memicu verdict produk baru secara otomatis."
       }
     },
     "gallery": [
       {
-        "src": "assets/images/projects/regulens/gallery-01-architecture.webp",
-        "width": 2112,
-        "height": 1182,
+        "src": "assets/images/projects/regulens/gallery-01-overview.webp",
+        "width": 2560,
+        "height": 1440,
         "alt": {
-          "en": "ReguLens architecture diagram covering Cloud Run services, ADK agents, Pub/Sub, and Firestore",
-          "id": "Diagram arsitektur ReguLens yang mencakup layanan Cloud Run, agen ADK, Pub/Sub, dan Firestore"
+          "en": "ReguLens overview dashboard showing products, market verdicts, review queues, and autonomous changes",
+          "id": "Dashboard ringkasan ReguLens yang menampilkan produk, verdict pasar, antrean tinjauan, dan perubahan otomatis"
         },
         "caption": {
-          "en": "System architecture: watched sources feed an async Pub/Sub pipeline into in-process ADK agents.",
-          "id": "Arsitektur sistem: sumber yang dipantau mengalir lewat pipeline Pub/Sub asinkron ke agen ADK in-process."
+          "en": "One operational view for every product and market.",
+          "id": "Satu tampilan operasional untuk setiap produk dan pasar."
         }
       },
       {
-        "src": "assets/images/projects/regulens/gallery-02-add-rules.webp",
-        "width": 2148,
-        "height": 1230,
+        "src": "assets/images/projects/regulens/gallery-02-product-verdict.webp",
+        "width": 2560,
+        "height": 1440,
         "alt": {
-          "en": "Add rules screen offering a starter rule set or a document upload",
-          "id": "Layar tambah aturan yang menawarkan set aturan awal atau unggah dokumen"
+          "en": "ReguLens product verdict comparing an ingredient amount with the legal limit in Germany",
+          "id": "Verdict produk ReguLens yang membandingkan jumlah bahan dengan batas legal di Jerman"
         },
         "caption": {
-          "en": "Rules enter the system either from the bundled set or from a regulation the user uploads.",
-          "id": "Aturan masuk ke sistem lewat set bawaan atau regulasi yang diunggah pengguna."
+          "en": "Each verdict shows the measured amount, legal limit, source, and required fix.",
+          "id": "Setiap verdict menampilkan jumlah terukur, batas legal, sumber, dan perbaikan yang diperlukan."
         }
       },
       {
-        "src": "assets/images/projects/regulens/gallery-03-clause-extraction.webp",
-        "width": 2148,
-        "height": 1230,
+        "src": "assets/images/projects/regulens/gallery-03-monitoring.webp",
+        "width": 2560,
+        "height": 1440,
         "alt": {
-          "en": "Clauses extracted from an uploaded document, each shown with its limits and source passage",
-          "id": "Klausul yang diekstrak dari dokumen unggahan, tiap klausul disertai batasan dan kutipan sumbernya"
+          "en": "ReguLens monitoring screen listing official regulatory sources checked every 24 hours",
+          "id": "Layar pemantauan ReguLens yang menampilkan sumber regulasi resmi yang diperiksa setiap 24 jam"
         },
         "caption": {
-          "en": "Extracted clauses stay linked to the passage they were read from.",
-          "id": "Klausul hasil ekstraksi tetap tertaut ke bagian teks asalnya."
-        }
-      },
-      {
-        "src": "assets/images/projects/regulens/gallery-04-watchtower.webp",
-        "width": 2148,
-        "height": 1230,
-        "alt": {
-          "en": "Watch screen with counters for regulations read, rules extracted, and verdicts changed, plus a form to add a country",
-          "id": "Layar pemantauan berisi hitungan regulasi terbaca, aturan terekstrak, dan putusan berubah, plus formulir tambah negara"
-        },
-        "caption": {
-          "en": "The watcher reports what it did unattended, and a new country can be added to the queue.",
-          "id": "Pemantau melaporkan apa yang dikerjakannya tanpa diawasi, dan negara baru bisa ditambahkan ke antrean."
+          "en": "Official sources are re-read every 24 hours for regulatory changes.",
+          "id": "Sumber resmi dibaca ulang setiap 24 jam untuk menemukan perubahan regulasi."
         }
       }
     ],
     "video": {
       "src": null,
-      "poster": "assets/images/projects/regulens/video-poster.webp",
+      "poster": null,
       "url": null
     },
     "accentColor": "#111111"
