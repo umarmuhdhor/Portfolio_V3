@@ -12,7 +12,7 @@ export default function Contact() {
       <section className="sec" data-role="section">
         <div className="ctr" data-role="container">
           <div className="grd" data-role="grid">
-            <p className="fn-h5 detail__summary" data-split-words>
+            <p className="fn-h5 detail__main" data-split-words>
               {CONTACT.body}
             </p>
 
