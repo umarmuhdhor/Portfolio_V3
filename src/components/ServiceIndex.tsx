@@ -1,3 +1,4 @@
+import Linked from '@/components/Linked';
 import { INDEX } from '@/lib/dummy';
 import './service-index.css';
 
@@ -31,7 +32,9 @@ export default function ServiceIndex() {
                   {g.rows.map((r) => (
                     <li className="sec-index__row" key={r.title}>
                       <p className="fn-b1 sec-index__title">{r.title}</p>
-                      <p className="fn-b1 sec-index__detail">{r.detail}</p>
+                      <p className="fn-b1 sec-index__detail">
+                        <Linked>{r.detail}</Linked>
+                      </p>
                     </li>
                   ))}
                 </ul>

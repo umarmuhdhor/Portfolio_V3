@@ -1,4 +1,5 @@
 import RouteShell from '@/components/RouteShell';
+import Linked from '@/components/Linked';
 import { ABOUT, AWARDS, CAPABILITIES, EDUCATION, EXPERIENCE, PEOPLE, PUBLICATION, img } from '@/lib/dummy';
 import '../page.css';
 import '../work/work.css';
@@ -31,9 +32,15 @@ function Record({
                     {r.title}
                   </a>
                 ) : (
-                  <p className="fn-h5">{r.title}</p>
+                  <p className="fn-h5">
+                    <Linked>{r.title}</Linked>
+                  </p>
                 )}
-                {r.detail ? <p className="fn-b1">{r.detail}</p> : null}
+                {r.detail ? (
+                  <p className="fn-b1">
+                    <Linked>{r.detail}</Linked>
+                  </p>
+                ) : null}
               </div>
             </div>
           ))}
@@ -55,12 +62,12 @@ export default function About() {
           <div className="grd sec-about__grid" data-role="grid">
             <div className="sec-about__lead">
               <p className="fn-h5 sec-about__body" data-role="h5" data-split-scrub>
-                {ABOUT.lead}
+                <Linked>{ABOUT.lead}</Linked>
               </p>
               <div className="sec-about__more">
                 {ABOUT.body.map((b) => (
                   <p className="fn-b1" data-reveal key={b.slice(0, 20)}>
-                    {b}
+                    <Linked>{b}</Linked>
                   </p>
                 ))}
               </div>

@@ -552,6 +552,27 @@ sup {
   transform-origin: 100% 100%;
 }
 
+/* A link inside running text. It can wrap across lines, which the absolutely
+   placed ::before above cannot follow, so it rests on a real underline and
+   thins it on hover. */
+.link-inline {
+  color: currentcolor;
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, 0.05em);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.4s var(--ease);
+}
+
+/* Split words are inline-blocks, which an ancestor's underline skips. */
+.link-inline .wd {
+  text-decoration: inherit;
+  text-underline-offset: inherit;
+}
+
+.link-inline:hover {
+  text-decoration-color: transparent;
+}
+
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */

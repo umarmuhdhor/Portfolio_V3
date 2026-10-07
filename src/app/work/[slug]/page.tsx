@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Linked from '@/components/Linked';
 import { notFound } from 'next/navigation';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import RouteShell from '@/components/RouteShell';
@@ -96,9 +97,11 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
             <div className="detail__main">
               <div className="detail__summary">
-                <p className="fn-b2 cs-subtitle">{project.subtitle}</p>
+                <p className="fn-b2 cs-subtitle">
+                  <Linked>{project.subtitle}</Linked>
+                </p>
                 <p className="fn-h5" data-split-scrub>
-                  {project.summary}
+                  <Linked>{project.summary}</Linked>
                 </p>
               </div>
 
@@ -107,7 +110,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               <div className="detail__body" data-reveal>
                 {project.description.slice(0, 1).map((d) => (
                   <p className="fn-b1" key={d.slice(0, 24)}>
-                    {d}
+                    <Linked>{d}</Linked>
                   </p>
                 ))}
                 {project.description.length > 1 ? (
@@ -119,7 +122,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                     <div className="cs-more__body">
                       {project.description.slice(1).map((d) => (
                         <p className="fn-b1" key={d.slice(0, 24)}>
-                          {d}
+                          <Linked>{d}</Linked>
                         </p>
                       ))}
                     </div>
@@ -169,13 +172,17 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             {project.problem ? (
               <div data-reveal>
                 <p className="fn-b2 cs-muted">Problem</p>
-                <p className="fn-h5">{project.problem}</p>
+                <p className="fn-h5">
+                  <Linked>{project.problem}</Linked>
+                </p>
               </div>
             ) : null}
             {project.solution ? (
               <div data-reveal>
                 <p className="fn-b2 cs-muted">Solution</p>
-                <p className="fn-h5">{project.solution}</p>
+                <p className="fn-h5">
+                  <Linked>{project.solution}</Linked>
+                </p>
               </div>
             ) : null}
           </div>
@@ -238,11 +245,15 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 <span className="fn-b2 cs-muted">{pad(n)}</span>
                 <div>
                   <p className="fn-b2 cs-muted">Problem</p>
-                  <p className="fn-b1">{c.problem}</p>
+                  <p className="fn-b1">
+                    <Linked>{c.problem}</Linked>
+                  </p>
                 </div>
                 <div>
                   <p className="fn-b2 cs-muted">Solution</p>
-                  <p className="fn-b1">{c.solution}</p>
+                  <p className="fn-b1">
+                    <Linked>{c.solution}</Linked>
+                  </p>
                 </div>
               </li>
             ))}

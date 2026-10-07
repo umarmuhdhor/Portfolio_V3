@@ -234,7 +234,7 @@ export const PROCESS = [
   {
     heading: ['From Flutter', 'to Swift'],
     lead:
-      'Two years of Flutter and Dart, including ABSATA, the attendance system built for staff at Indonesia’s House of Representatives, and now building depth in Swift at the Apple Developer Academy.',
+      'Two years of Flutter and Dart, including ABSATA, the attendance system built for staff at Indonesia’s House of Representatives, and now building depth in Swift at the Apple Developer Academy @BINUS.',
     note: 'Mobile',
     body:
       'Secure login, an informative dashboard, realtime attendance monitoring. At the academy the same care went into ARKit gaze tracking and a watchOS heart-rate companion.',

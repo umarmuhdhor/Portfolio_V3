@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import LogoRing from '@/components/LogoRing';
+import Linked from '@/components/Linked';
 import RadialDiagram from '@/components/RadialDiagram';
 import ScrollMotion from '@/components/ScrollMotion';
 import ServiceIndex from '@/components/ServiceIndex';
@@ -95,7 +96,7 @@ export default function Home() {
                 <div className="sec-statement__meta">
                   {STATEMENT.meta.map((m) => (
                     <span className="fn-b1" key={m}>
-                      {m}
+                      <Linked>{m}</Linked>
                     </span>
                   ))}
                 </div>
@@ -129,7 +130,7 @@ export default function Home() {
                 <div className="sec-intro__body">
                   {INTRO.body.map((b) => (
                     <p className="fn-b1" data-reveal key={b.slice(0, 20)}>
-                      {b}
+                      <Linked>{b}</Linked>
                     </p>
                   ))}
                 </div>
@@ -138,7 +139,9 @@ export default function Home() {
                   {INTRO.meta.map((m) => (
                     <div key={m.key}>
                       <dt className="fn-b2">{m.key}</dt>
-                      <dd className="fn-b1">{m.value}</dd>
+                      <dd className="fn-b1">
+                        <Linked>{m.value}</Linked>
+                      </dd>
                     </div>
                   ))}
                 </dl>
@@ -199,7 +202,7 @@ export default function Home() {
                     </h2>
                     <div className="sec-process__text">
                       <p className="fn-h5 sec-process__lead" data-split-scrub>
-                        {b.lead}
+                        <Linked>{b.lead}</Linked>
                       </p>
                       <p className="fn-b1 sec-process__body" data-reveal>
                         {b.body}
