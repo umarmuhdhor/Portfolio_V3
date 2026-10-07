@@ -16,7 +16,9 @@
     "motion:ref": "node scripts/motion-ab.mjs --url https://kononenkogroup.com/ --side ref --out ab-report/motion-ref.json",
     "motion:build": "node scripts/motion-ab.mjs --url http://localhost:3000/ --side build --out ab-report/motion-build.json",
     "ab": "node scripts/verify-harness.mjs && npm run fingerprint:build && npm run compare && npm run visual",
-    "gate": "node scripts/gate.mjs"
+    "gate": "node scripts/gate.mjs",
+    "deploy": "next build && wrangler deploy",
+    "preview": "next build && wrangler dev"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -42,6 +44,7 @@
     "playwright": "^1.61.1",
     "pngjs": "^7.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.148.0"
   }
 }
